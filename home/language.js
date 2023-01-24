@@ -1,16 +1,10 @@
-function criarCookies() {
-  document.cookie =
-    "language_value=" +
-    sessionStorage.getItem("language") +
-    "; expires=Thu, 31 Dec 2030 23:59:59 UTC";
-}
 /**
  * ! LINGUAGEM DA PÁGINA
  * ? Português JQUERY
  */
 $(function () {
   $(".pt").click(function () {
-    sessionStorage.setItem("language", 1);
+    localStorage.setItem("language", 1);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Início');
     $(".li")
@@ -108,7 +102,7 @@ $(function () {
  */
 $(function () {
   $(".en").click(function () {
-    sessionStorage.setItem("language", 2);
+    localStorage.setItem("language", 2);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Home');
     $(".li")
@@ -204,7 +198,7 @@ $(function () {
  */
 $(function () {
   $(".fr").click(function () {
-    sessionStorage.setItem("language", 3);
+    localStorage.setItem("language", 3);
     //Header
     $(".li")
       .children()
@@ -302,9 +296,9 @@ $(function () {
  * ! LINGUAGEM RESPONISVA
  */
 addEventListener("DOMContentLoaded", (event) => {
-  if (sessionStorage.getItem("language") == 1) {
+  if (localStorage.getItem("language") == 1) {
     $(function () {
-      sessionStorage.setItem("language", 1);
+      localStorage.setItem("language", 1);
       //Header
       $(".li")
         .children()
@@ -399,9 +393,9 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".chart-caption").eq(3).text("Sudão do Sul");
       $(".chart-caption").eq(4).text("Outros");
     });
-  } else if (sessionStorage.getItem("language") == 2) {
+  } else if (localStorage.getItem("language") == 2) {
     $(function () {
-      sessionStorage.setItem("language", 2);
+      localStorage.setItem("language", 2);
       //Header
       $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Home');
       $(".li")
@@ -491,9 +485,9 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".chart-caption").eq(3).text("Southern Sudan");
       $(".chart-caption").eq(4).text("Others");
     });
-  } else if (sessionStorage.getItem("language") == 3) {
+  } else if (localStorage.getItem("language") == 3) {
     $(function () {
-      sessionStorage.setItem("language", 3);
+      localStorage.setItem("language", 3);
       //Header
       $(".li")
         .children()
@@ -590,14 +584,9 @@ addEventListener("DOMContentLoaded", (event) => {
   }
 });
 
-function getCookie() {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`language_value=`);
-  if (parts.length === 2) return parts.pop().split(";").shift();
-}
-if (getCookie() == 1) {
+if (localStorage.getItem("language") == 1) {
   $(function () {
-    sessionStorage.setItem("language", 1);
+    localStorage.setItem("language", 1);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Início');
     $(".li")
@@ -687,9 +676,9 @@ if (getCookie() == 1) {
     $(".chart-caption").eq(3).text("Sudão do Sul");
     $(".chart-caption").eq(4).text("Outros");
   });
-} else if (getCookie() == 2) {
+} else if (localStorage.getItem("language") == 2) {
   $(function () {
-    sessionStorage.setItem("language", 2);
+    localStorage.setItem("language", 2);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Home');
     $(".li")
@@ -777,9 +766,9 @@ if (getCookie() == 1) {
     $(".chart-caption").eq(3).text("Southern Sudan");
     $(".chart-caption").eq(4).text("Others");
   });
-} else if (getCookie() == 3) {
+} else if (localStorage.getItem("language") == 3) {
   $(function () {
-    sessionStorage.setItem("language", 3);
+    localStorage.setItem("language", 3);
     //Header
     $(".li")
       .children()

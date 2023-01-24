@@ -27,6 +27,7 @@ function associacoes_pt() {
             </div>
             <p>
             ${element.detail}
+            <br><button class="button-28"><a class="button-28-link" href="http://localhost/STR/voluntariado/associacoes/associacao.php">Ver mais</a></button>
         </div>
       </div>`;
         document.getElementById("results").appendChild(newLine);
@@ -64,6 +65,7 @@ function associacoes_en() {
             </div>
             <p>
             ${element.detail}
+            <br><button class="button-28"><a class="button-28-link" href="http://localhost/STR/voluntariado/associacoes/associacao.php">See More</a></button>
         </div>
       </div>
       </div>`;
@@ -102,6 +104,7 @@ function associacoes_fr() {
             </div>
             <p>
             ${element.detail}
+            <br><button class="button-28"><a class="button-28-link" href="http://localhost/STR/voluntariado/associacoes/associacao.php">Voir plus</a></button>
         </div>
       </div>
       </div>`;
@@ -111,19 +114,14 @@ function associacoes_fr() {
   };
   xhr.send(null);
 }
-function criarCookies() {
-  document.cookie =
-    "language_value=" +
-    sessionStorage.getItem("language") +
-    "; expires=Thu, 31 Dec 2030 23:59:59 UTC";
-}
+
 /**
  * ! LINGUAGEM DA PÁGINA
  * ? Português JQUERY
  */
 $(function () {
   $(".pt").click(function () {
-    sessionStorage.setItem("language", 1);
+    localStorage.setItem("language", 1);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Início');
     $(".li")
@@ -169,7 +167,6 @@ $(function () {
       '<img id="flags" src="images/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português'
     );
     associacoes_pt();
-    criarCookies();
   });
 });
 /**
@@ -178,7 +175,7 @@ $(function () {
  */
 $(function () {
   $(".en").click(function () {
-    sessionStorage.setItem("language", 2);
+    localStorage.setItem("language", 2);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Home');
     $(".li")
@@ -222,7 +219,6 @@ $(function () {
       '<img id="flags" src="images/flags/gb-eng.png" width="35px" height="25px" style="margin-right:10px;">English'
     );
     associacoes_en();
-    criarCookies();
   });
 });
 /**
@@ -231,7 +227,7 @@ $(function () {
  */
 $(function () {
   $(".fr").click(function () {
-    sessionStorage.setItem("language", 3);
+    localStorage.setItem("language", 3);
     //Header
     $(".li")
       .children()
@@ -279,16 +275,15 @@ $(function () {
       '<img id="flags" src="images/flags/fr.png" width="35px" height="25px" style="margin-right:10px;">Français'
     );
     associacoes_fr();
-    criarCookies();
   });
 });
 /**
  * ! LINGUAGEM RESPONISVA
  */
 addEventListener("DOMContentLoaded", (event) => {
-  if (sessionStorage.getItem("language") == 1) {
+  if (localStorage.getItem("language") == 1) {
     $(function () {
-      sessionStorage.setItem("language", 1);
+      localStorage.setItem("language", 1);
       //Header
       $(".li")
         .children()
@@ -340,9 +335,9 @@ addEventListener("DOMContentLoaded", (event) => {
       );
       associacoes_pt();
     });
-  } else if (sessionStorage.getItem("language") == 2) {
+  } else if (localStorage.getItem("language") == 2) {
     $(function () {
-      sessionStorage.setItem("language", 2);
+      localStorage.setItem("language", 2);
       //Header
       $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Home');
       $(".li")
@@ -389,9 +384,9 @@ addEventListener("DOMContentLoaded", (event) => {
       );
       associacoes_en();
     });
-  } else if (sessionStorage.getItem("language") == 3) {
+  } else if (localStorage.getItem("language") == 3) {
     $(function () {
-      sessionStorage.setItem("language", 3);
+      localStorage.setItem("language", 3);
       //Header
       $(".li")
         .children()
@@ -445,14 +440,9 @@ addEventListener("DOMContentLoaded", (event) => {
   }
 });
 
-function getCookie() {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`language_value=`);
-  if (parts.length === 2) return parts.pop().split(";").shift();
-}
-if (getCookie() == 1) {
+if (localStorage.getItem("language") == 1) {
   $(function () {
-    sessionStorage.setItem("language", 1);
+    localStorage.setItem("language", 1);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Início');
     $(".li")
@@ -498,9 +488,9 @@ if (getCookie() == 1) {
       '<img id="flags" src="images/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português'
     );
   });
-} else if (getCookie() == 2) {
+} else if (localStorage.getItem("language") == 2) {
   $(function () {
-    sessionStorage.setItem("language", 2);
+    localStorage.setItem("language", 2);
     //Header
     $(".li").children().eq(0).html('<i class="fa-solid fa-house"></i> Home');
     $(".li")
@@ -544,9 +534,9 @@ if (getCookie() == 1) {
       '<img id="flags" src="images/flags/gb-eng.png" width="35px" height="25px" style="margin-right:10px;">English'
     );
   });
-} else if (getCookie() == 3) {
+} else if (localStorage.getItem("language") == 3) {
   $(function () {
-    sessionStorage.setItem("language", 3);
+    localStorage.setItem("language", 3);
     //Header
     $(".li")
       .children()
