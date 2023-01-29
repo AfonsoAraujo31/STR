@@ -1,0 +1,42 @@
+[
+    {
+        "name":"Cruz Vermelha",
+        "detail":"La Croix-Rouge est une institution humanitaire internationale sans affiliation étatique qui œuvre pour défendre les personnes en situation de vulnérabilité causée par les conflits armés. <br> Les volontaires de la Croix-Rouge portugaise sont ceux qui consciemment, dans un esprit de solidarité et d'engagement, apportent leur contribution à la population.",
+        "photo": "cv.png",
+        "reveal": "",
+        "class": "big-image-cv",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    },
+    {
+        "name":"Conselho Português para os Refugiados",
+        "detail":"En 30 ans, le CPR a soutenu environ 14 000 demandeurs et réfugiés au Portugal, créé des réponses spécialisées aux besoins juridiques, sociaux et d'intégration de cette population, construit trois centres d'accueil, étant un pionnier dans l'enseignement du portugais comme langue étrangère et alphabétisation.",
+        "photo": "cpr.png",
+        "reveal": "reveal",
+        "class": "big-image",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    },
+    {
+        "name":"Associação de Apoio a Imigrantes e Refugiados em Portugal",
+        "detail": "Apirp a été constituée à but non lucratif conformément à la loi portugaise, le 18 septembre 2015. Les membres de l'Association de soutien aux immigrés et réfugiés au Portugal qui, quels que soient leur origine, leur langue et leur sexe, ont décidé de s'unir pour améliorer la vie les conditions.",
+        "photo": "apirp.png",
+        "reveal": "reveal",
+        "class": "big-image",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    },
+    {
+        "name":"Associação Lusofonia, Cultura e Cidadania (ALCC)",
+        "detail": "L'ALCC, est une association à but non lucratif, constituée aux termes de la loi en vigueur avec l'hypothèse de défendre les intérêts légitimes de la population immigrée au Portugal, reconnue par le Haut Commissariat aux Migrations ACM, en tant qu'association représentative du Brésil communauté au Portugal, est ouvert à toutes les nationalités.",
+        "photo": "alcc.png",
+        "reveal": "reveal",
+        "class": "big-image",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    },
+    {
+        "name":"Casa do Brasil de Lisboa",
+        "detail": "Depuis sa fondation, la CBL a été active dans la réflexion et la mise en œuvre de politiques publiques, assumant un rôle fondamental dans l'activisme et revendiquant des politiques égalitaires pour les communautés immigrées au Portugal. Nous développons des projets avec des actions qui visent à promouvoir l'égalité d'accès aux droits et aux services pour les immigrants.",
+        "photo": "cb.png",
+        "reveal": "reveal",
+        "class": "big-image-cb",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    }
+]
