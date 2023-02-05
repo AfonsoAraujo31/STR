@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STR</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="associacao.scss" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <!-- LOGO *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
+        <a href="http://localhost/STR/home/home.php">
+            <p class="tittle">STR</p>
+            <img class="logo" src="images/logo.png" />
+        </a>
+        <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
+        <ul class="nav_links">
+            <li class="li"><a href="http://localhost/STR/home/home.php"><i class="fa-solid fa-house"></i> Início</a>
+            </li>
+            <li class="li"><a class="active" href="http://localhost/STR/voluntariado/voluntariado.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
+            <li class="li"><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
+            <li class="li"><a href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
+            <li>
+                <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
+                <div class="language">
+                    <div class="language-selected"><img id="flags" src="images/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
+                    <ul cl>
+                        <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a>
+                        </li>
+                        <li class="lang"><a href="#" class="en" style="text-align:left; margin-left:10px;">Inglês</a>
+                        </li>
+                        <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a>
+                        </li>
+                    </ul>
+                </div>
+            <li class="user-container"><a href="teste.html"><span><img class="user" src="images/user.png" /></span></a>
+            </li>
+            </li>
+        </ul>
+    </header>
+    <div id="results">
+        <main>
+            <div class="container">
+                <div class="grid second-nav">
+                    <div class="column-xs-12">
+                        <nav>
+                            <ol class="breadcrumb-list">
+                                <li class="breadcrumb-item"><a href="http://localhost/STR/voluntariado/voluntariado.php">Voluntariado</a></li>
+                                <li class="breadcrumb-item active">Cruz Vermelha Portuguesa</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="grid product">
+                    <div class="column-xs-12 column-md-7">
+                        <div class="product-gallery">
+                            <div class="product-image">
+                                <img class="active" src="https://source.unsplash.com/W1yjvf5idqA">
+                            </div>
+                            <ul class="image-list" id="image-list">
+                                <li class="image-item"><img src="https://source.unsplash.com/W1yjvf5idqA"></li>
+                                <li class="image-item"><img src="https://source.unsplash.com/VgbUxvW3gS4"></li>
+                                <li class="image-item"><img src="https://source.unsplash.com/5WbYFH0kf_8"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column-xs-12 column-md-5">
+                        <h1 class="h1">Cruz Vermelha Portuguesa</h1>
+                        <div class="stars">
+                            <i class='fa fa-star'></i>
+                            <i class='fa fa-star'></i>
+                            <i class='fa fa-star'></i>
+                            <i class='fa fa-star'></i>
+                        </div>
+                        <div class="description">
+                            <p>A Cruz Vermelha é uma instituição humanitária internacional sem vinculação estatal que atua na defesa de pessoas em situação de vulnerabilidade causada por conflitos armados.</p>
+                            <p>Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="wrapper">
+            <div class="faq">
+                <button class="accordion" aria-haspopup="true" aria-expanded="false">
+                    <span id="tab-title-dimensions_tab">Missão</span>
+                    <div class="circle-animation closed">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </button>
+                <div class="panel" style="">
+                    <p>A Cruz Vermelha Portuguesa esforça-se para prevenir e aliviar o sofrimento humano, em Portugal e no mundo. Constitui missão da CVP prestar assistência humanitária e social, em especial aos mais vulneraveis, prevenindo e reparando o sofrimento e contribuindo para a defesa da vida, da saúde e da dignidade humana. [Artigo 5º, Decreto-lei nº 281/2007, 7 de Agosto.<br><br>Para o desenvolvimento da nossa actividade, mobilizamos o “Poder da Humanidade”, bem como a generosidade dos doadores e parceiros por todo o país. Na qualidade de Sociedade Nacional do Movimento Internacional da Cruz Vermelha e do Crescente Vermelho, agimos no respeito pelos princípios fundamentais da Humanidade, Imparcialidade, Neutralidade, Independência, Voluntariado, Unidade e Universalidade.<br><br>Saiba mais explorando a nossa infografia repleta de dados e números que explicam como os nossos voluntários, doadores e colaboradores ajudam as pessoas em Portugal e noutras partes do mundo.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion" aria-haspopup="true" aria-expanded="false">
+                    <span id="tab-title-dimensions_tab">Quem somos</span>
+                    <div class="circle-animation closed">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </button>
+                <div class="panel">
+                    <p>A Juventude Cruz Vermelha (JCV) é o departamento juvenil da Cruz Vermelha Portuguesa. Guiados pelos Princípios Fundamentais da instituição, desenvolvemos o nosso trabalho com base no voluntariado e com o objectivo principal de promover a resiliência das crianças e jovens nas comunidades locais. Somos já mais de 2.000 voluntários jovens a trabalhar em mais de 90 locais, com mais de 250 projectos no terreno e cerca de 50.000 beneficiários directos por ano.<br><br>Na JVC encontrarás um espaço aberto à tua energia, às tuas ideias e à tua vontade de fazer mais. Assim, se tens vontade de aumentar os teus conhecimentos e competências pessoais e interesse em contribuir para a felicidade dos mais desfavorecidos, não percas tempo e junta-te a nós!</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="accordion" aria-haspopup="true" aria-expanded="false">
+                    <span id="tab-title-dimensions_tab">O que te pedimos</span>
+                    <div class="circle-animation closed">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </button>
+                <div class="panel">
+                    <ul>
+                        <li><i class="fa-solid fa-square squareli"></i>Compromisso, com os valores da instituição;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Proactividade, ter espírito crítico, tomar a iniciativa, querer fazer mais e chegar mais longe;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Envolvimento, acreditar nos objectivos e propósitos da organização, perspectivando sempre resultados positivos;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Entrega, ter a capacidade de abraçar os diversos projectos, mostrando o melhor de ti.</li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="asa()">asasas</button>
+
+            <div class="faq">
+                <button class="accordion" aria-haspopup="true" aria-expanded="false">
+                    <span id="tab-title-dimensions_tab">O que fazemos</span>
+                    <div class="circle-animation closed">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </button>
+                <div class="panel">
+                    <p>O público-alvo da JCV são crianças (5-11 anos), adolescentes (12-17 anos) e jovens adultos (18-35 anos), os quais participam na organização enquanto voluntários, beneficiários ou líderes/ agentes de mudança positiva.<br><br>Desenvolvemos o nosso trabalho numa perspetiva de educação por pares, de jovens para jovens, e com recurso a metodologias de educação não formal, nas seguintes áreas de intervenção:Pode consultar aqui, o Relatório 2021 e projeções para o ano 2022 da Juventuude Cruz Vermelha. </p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion" aria-haspopup="true" aria-expanded="false">
+                    <span id="tab-title-dimensions_tab">Comentários</span>
+                    <div class="circle-animation closed">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </button>
+                <div class="panel">
+                    <section id="comments">
+                        <p class="col-8">Para comentar é necessário entrar na sua conta!</p>
+                        <form class="col-8 justify-content-center" method="GET">
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form2Example1" class="form-control" name="email" value=""/>
+                                <label class="form-label" for="form2Example1">Email address</label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form2Example2" class="form-control" name="pass" value=""/>
+                                <label class="form-label" for="form2Example2">Password</label>
+                            </div>
+
+                            <!-- 2 column grid layout for inline styling -->
+                            <div class="row mb-4">
+                                <div class="col d-flex justify-content-center">
+                                    <!-- Checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                        <label class="form-check-label" for="form2Example31"> Remember me</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <!-- Simple link -->
+                                    <a href="#!">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="button" class="btn btn-primary btn-block mb-4" onclick="teste();">Sign in</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <div class="separator120"></div>
+            <div class="separator20"></div>
+        </div>
+    </div>
+    <!-- FOOTER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Encontra-nos</h4>
+                                <span>R. Dr. Eduardo Neves 3A, 1050-077 Lisboa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Contacta-nos</h4>
+                                <span>910 947 908</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Escreve-nos</h4>
+                                <span>2220100@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="http://localhost/STR/home/home.php"><img src="images/3logo" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
+                                    incididuntut consec tetur adipisicing
+                                    elit,Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Segue-nos</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Links</h3>
+                            </div>
+                            <ul>
+                                <li class="footer_info"><a href="http://localhost/STR/home/home.php">Início</a></li>
+                                <li class="footer_info"><a href="http://localhost/STR/voluntariado/voluntariado.php">Voluntariado</a>
+                                </li>
+                                <li class="footer_info"><a href="#">Doação Especial</a></li>
+                                <li class="footer_info"><a href="#">Iniciar sessão</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscreve</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Não te esqueças de subscrever para não perder nenhuma novidade.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2023</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul class="footer-menu-li">
+                                <li><a href="http://localhost/STR/home/home.php">Início</a></li>
+                                <li><a href="#">Termos</a></li>
+                                <li><a href="#">Privacidade</a></li>
+                                <li><a href="#">Politica</a></li>
+                                <li><a href="#">Contactos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- BOTÃO BACKTOP *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+    <a href="#" class="to-top"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>
+    <!-- JavaSricpt -->
+    <script type="module" src="associacao.js"></script>
+    <script type="module" src="language.js"></script>
+    <script type="module" src="cv_lang.js"></script>
+    <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.2/dist/iconify-icon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
