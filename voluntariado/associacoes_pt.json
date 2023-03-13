@@ -1,0 +1,48 @@
+[
+    {
+        "name":"Cruz Vermelha Portuguesa",
+        "detail":"A Cruz Vermelha é uma instituição humanitária internacional sem vinculação estatal que atua na defesa de pessoas em situação de vulnerabilidade causada por conflitos armados.<br> Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população. ",
+        "photo": "cv.png",
+        "reveal": "",
+        "class": "big-image",
+        "id": "http://localhost/STR/voluntariado/associacoes/associacao_cv.php",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    },
+    {
+        "name":"Conselho Português para os Refugiados",
+        "detail":"Ao longo de 30 anos, o CPR prestou apoio a cerca de 14,000 requerentes e refugiados em Portugal, criou respostas especializadas para as necessidades jurídicas, sociais e de integração desta população, construiu três centros de acolhimento, sendo pioneiro no ensino da Língua Portuguesa como Língua Estrangeira e Alfabetização.",
+        "photo": "cpr.png",
+        "reveal": "reveal",
+        "class": "big-image",
+        "id": "http://localhost/STR/voluntariado/associacoes/associacao_cpr.php",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    },
+    {
+        "name":"Associação de Apoio a Imigrantes e Refugiados em Portugal",
+        "detail": "A Apirp foi constituída sem fins lucrativos de acordo com a lei portuguesa, no dia 18 de setembro de 2015. Os membros da Associação de apoio a Imigrantes e Refugiados em Portugal que, independentemente da sua origem, língua e género, decidiram unir-se para melhorar as condições de vida.",
+        "photo": "apirp.png",
+        "reveal": "reveal",
+        "class": "big-image",
+        "id": "http://localhost/STR/voluntariado/associacoes/associacao_apirp.php",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+        
+    },
+    {
+        "name":"Associação Lusofonia, Cultura e Cidadania (ALCC)",
+        "detail": "A ALCC, é uma associação sem fins lucrativos, constituída nos termos da Lei em vigor com o pressuposto da defesa dos legítimos interesses da população imigrante em Portugal, reconhecida pelo Alto Comissariado para as Migrações ACM, como associação representativa da comunidade Brasileira em Portugal, está aberta a todas as nacionalidades.",
+        "photo": "alcc.png",
+        "reveal": "reveal",
+        "class": "big-image",
+        "id": "http://localhost/STR/voluntariado/associacoes/associacao_alcc.php",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    },
+    {
+        "name":"Casa do Brasil de Lisboa",
+        "detail": "Desde a sua fundação, a CBL tem um trabalho ativo na reflexão e implementação das políticas públicas, assumindo um papel fundamental de ativismo e reivindicação de políticas igualitárias para as comunidades imigrantes em Portugal. Desenvolvemos projetos com ações que pretendem promover o acesso aos direitos e aos serviços de forma igualitária para as pessoas imigrantes.",
+        "photo": "cb.png",
+        "reveal": "reveal",
+        "class": "big-image",
+        "id": "http://localhost/STR/voluntariado/associacoes/associacao_cbl.php",
+        "star": "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
+    }
+]
