@@ -1,0 +1,158 @@
+.img_icon {
+  position: relative;
+  bottom: 4px;
+  color: #1f1f1f;
+}
+.img_icon1 {
+  position: relative;
+  bottom: 2px;
+}
+.tittle {
+  font-style: normal;
+  font-size: 55px;
+  color: white;
+  position: absolute;
+  left: 110px;
+  top: 5px;
+  letter-spacing: 4px;
+}
+header {
+  background-color: #2e2e2e;
+  height: 90px;
+}
+.logo {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  left: 30px;
+  top: 21px;
+}
+header ul {
+  text-align: center;
+}
+header ul .li {
+  display: inline-block;
+  line-height: 80px;
+}
+header ul .li a {
+  color: white;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  top: 6px;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+.user-container {
+  position: absolute;
+  right: 25px;
+  top: 22px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.5s ease;
+}
+.user {
+  margin-top: 7px;
+}
+.user-container:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 1200px) {
+  .checkbtn {
+    display: block;
+  }
+  .nav_links {
+    position: fixed;
+    margin-top: 0px !important;
+  }
+  .nav_links {
+    max-width: 70%;
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    background: #2e2e2e;
+    top: 90px;
+    left: -100%;
+    text-align: left;
+    display: block;
+    transition: all 0.5s;
+  }
+  .nav_links .li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ .nav_links {
+    left: 0;
+  }
+  .slideshow_position {
+    position: relative;
+    bottom: 18px;
+  }
+
+  .user-container {
+    position: absolute;
+    right: 100px;
+    top: 420px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+  }
+  .user {
+    margin-left: 9px;
+  }
+  .language {
+    position: absolute;
+    padding-right: 150px;
+    padding-top: 330px;
+    width: 120px;
+    margin-left: 40px;
+    font-weight: normal;
+    z-index: 5;
+  }
+}
+
+.nav_links .li a {
+  position: relative;
+  text-decoration: none;
+  color: #d1cfcf;
+  letter-spacing: 1.5px;
+  padding: 0 15px;
+}
+
+.nav_links .li a:after {
+  content: "";
+  position: absolute;
+  color: white;
+  background-color: white;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.4s;
+}
+
+.nav_links .li a:hover {
+  color: white;
+}
+.nav_links .li .active {
+  color: white;
+}

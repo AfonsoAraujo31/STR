@@ -1,0 +1,78 @@
+.language {
+  position: absolute;
+  right: 110px;
+  top: 33px;
+  width: 120px;
+  margin-left: 40px;
+  font-weight: normal;
+  z-index: 5;
+}
+
+.language-selected {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: rgb(253, 253, 253);
+  cursor: pointer;
+}
+
+.language-selected::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.language ul {
+  position: absolute;
+  width: 140px;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  padding-top: 10px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.language ul li a {
+  display: block;
+  color: #252525;
+  padding-top: 5px 10px;
+}
+.language ul li a {
+  display: block;
+  color: #252525;
+  padding-top: 5px 10px;
+}
+.language ul li:hover {
+  background-color: #f8f8f8;
+  align-items: çe;
+}
+.language ul li a:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+a.pt:before {
+  background-image: url(../assets/flags/pt.png);
+}
+a.en:before {
+  background-image: url(../assets/flags/gb-eng.png);
+}
+a.fr:before {
+  background-image: url(../assets/flags/fr.png);
+}
+
+.language:hover ul {
+  display: block;
+  z-index: 5;
+  position: relative;
+}
