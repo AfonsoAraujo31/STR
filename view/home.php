@@ -47,6 +47,7 @@
           </ul>
         </div>
         <?php
+        ini_set('display_errors', 0);
         if ($_COOKIE["temp_user"] == "") {
           echo "<li class='user-container'><a href='./login.php'><span><img class='user' src='../view/assets/others/user.png' /></span></a></li></li>";
         } else {
