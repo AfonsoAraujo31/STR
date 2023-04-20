@@ -1,16 +1,6 @@
 <?php 
 ini_set('display_errors', 0);
-$host = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "str";
-
-$conn = new mysqli($host, $usuario, $senha, $banco);
-
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
-//require_once '/wamp64/www/STR/configurations/dbconnection.php';
+require '/wamp64/www/STR/configurations/dbconnection.php';
 $sql = "SELECT * FROM familias_doacaoespecial";
 $result = $conn->query($sql);
 $count = 0;
