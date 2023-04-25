@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/common/header.css" />
     <link rel="stylesheet" href="./css/common/language.css" />
     <link rel="stylesheet" href="./css/common/scrollbar.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap/Font Awsome -->
@@ -21,28 +22,28 @@
 </head>
 
 <body>
-    <header>
+    <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
         <!-- LOGO *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-        <a href="../view/home.php">
-            <p class="tittle">STR</p>
-            <img class="logo" src="./assets/logo/logo.png" />
+        <a href="./home.php">
+            <p class="tittle text-white">STR</p>
+            <img class="logo" src="../view/assets/logo/logo.png" />
         </a>
         <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-        <ul class="nav_links">
-            <li class="li"><a href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
-            <li class="li"><a href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
-            <li class="li"><a href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
+        <ul class="nav_links bg-strong-gray" id="routesList">
+            <li class="li"><a class="text-label-gray hover:text-white" href="#" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
+            <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
+            <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
+            <li class="li"><a class="text-label-gray hover:text-white" href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
                 <div class="language">
-                    <div class="language-selected"><img id="flags" src="./assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
-                    <ul cl>
+                    <div class="language-selected text-white"><img id="flags" src="../view/assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
+                    <ul cl class="bg-white border-white">
                         <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a></li>
                         <li class="lang"><a href="#" class="en" style="text-align:left; margin-left:10px;">Inglês</a></li>
                         <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a></li>
@@ -61,7 +62,7 @@
                         }
                     }
                 }
-                
+
                 ?>
         </ul>
     </header>
@@ -455,4 +456,5 @@
     <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </body>
+
 </html>

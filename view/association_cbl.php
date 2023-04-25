@@ -7,19 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STR</title>
     <!-- CSS -->
-   <link rel="stylesheet" href="./css/association.scss" />
+    <link rel="stylesheet" href="./css/association.scss" />
     <link rel="stylesheet" href="./css/common/header.css" />
     <link rel="stylesheet" href="./css/common/language.css" />
     <link rel="stylesheet" href="./css/common/backTop.css" />
     <link rel="stylesheet" href="./css/common/footer.css" />
     <link rel="stylesheet" href="./css/common/scrollbar.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
     <!-- Bootstrap -->
     <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
 
 <body>
-    <header>
+    <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn">
@@ -27,31 +28,26 @@
         </label>
         <!-- LOGO *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <a href="./home.php">
-            <p class="tittle">STR</p>
-            <img class="logo" src="./assets/logo/logo.png" />
+            <p class="tittle text-white">STR</p>
+            <img class="logo" src="../view/assets/logo/logo.png" />
         </a>
         <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-        <ul class="nav_links">
-            <li class="li"><a href="./home.php"><i class="fa-solid fa-house"></i> Início</a>
-            </li>
+        <ul class="nav_links bg-strong-gray" id="routesList">
+            <li class="li"><a class="text-label-gray hover:text-white" href="#" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="active" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
-            <li class="li"><a href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
+            <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
+            <li class="li"><a class="text-label-gray hover:text-white" href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
                 <div class="language">
-                    <div class="language-selected"><img id="flags" src="./assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
-                    <ul cl>
-                        <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a>
-                        </li>
-                        <li class="lang"><a href="#" class="en" style="text-align:left; margin-left:10px;">Inglês</a>
-                        </li>
-                        <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a>
-                        </li>
+                    <div class="language-selected text-white"><img id="flags" src="../view/assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
+                    <ul cl class="bg-white border-white">
+                        <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a></li>
+                        <li class="lang"><a href="#" class="en" style="text-align:left; margin-left:10px;">Inglês</a></li>
+                        <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a></li>
                     </ul>
                 </div>
-                <?php include '../model/common/load_profilephoto.php';?>
-            </li>
+                <?php include '../model/common/load_profilephoto.php'; ?>
         </ul>
     </header>
     <div id="results">
@@ -158,7 +154,7 @@
                     <p><b>Centro de documentação</b></p>
                     <p>O CEDOC – Centro de Documentação é um espaço vocacionado para o atendimento a estudantes, investigadores/as e jornalistas, entre outros.
 
-A Casa do Brasil de Lisboa dispõe de um espaço de pesquisa de temas relacionados ao Brasil, às relações entre o Brasil e Portugal, à lusofonia em geral e às questões dos e das imigrantes em Portugal.</p>
+                        A Casa do Brasil de Lisboa dispõe de um espaço de pesquisa de temas relacionados ao Brasil, às relações entre o Brasil e Portugal, à lusofonia em geral e às questões dos e das imigrantes em Portugal.</p>
                 </div>
             </div>
 
@@ -311,7 +307,7 @@ A Casa do Brasil de Lisboa dispõe de um espaço de pesquisa de temas relacionad
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     </div>
     </div>
     </div>
@@ -351,34 +347,34 @@ A Casa do Brasil de Lisboa dispõe de um espaço de pesquisa de temas relacionad
     </div>
     </div>
     <!-- FOOTER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-    <footer class="footer-section">
+    <footer class="footer-section bg-extra-strong-gray">
         <div class="container">
-            <div class="footer-cta pt-5 pb-5">
+            <div class="footer-cta pt-5 pb-5 border-b-[1px] border-footer-line-gray">
                 <div class="row">
                     <div class="col-xl-4 col-md-4 mb-30">
                         <div class="single-cta">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="cta-text">
+                            <i class="fas fa-map-marker-alt text-strong-oragen"></i>
+                            <div class="cta-text text-white">
                                 <h4>Encontra-nos</h4>
-                                <span>R. Dr. Eduardo Neves 3A, 1050-077 Lisboa</span>
+                                <span class="text-footer-weak-gray">R. Dr. Eduardo Neves 3A, 1050-077 Lisboa</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-4 mb-30">
                         <div class="single-cta">
-                            <i class="fas fa-phone"></i>
-                            <div class="cta-text">
+                            <i class="fas fa-phone text-strong-oragen"></i>
+                            <div class="cta-text text-white">
                                 <h4>Contacta-nos</h4>
-                                <span>910 947 908</span>
+                                <span class="text-footer-weak-gray">910 947 908</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
+                        <div class="single-cta text-strong-oragen">
                             <i class="far fa-envelope-open"></i>
-                            <div class="cta-text">
+                            <div class="cta-text text-white">
                                 <h4>Escreve-nos</h4>
-                                <span>2220100@info.com</span>
+                                <span class="text-footer-weak-gray">2220100@info.com</span>
                             </div>
                         </div>
                     </div>
@@ -389,47 +385,46 @@ A Casa do Brasil de Lisboa dispõe de um espaço de pesquisa de temas relacionad
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="http://localhost/STR/home/home.php"><img src="images/3logo" class="img-fluid" alt="logo"></a>
+                                <a href="index.html"><img src="../view/assets/3logo" class="img-fluid" alt="logo"></a>
                             </div>
                             <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
-                                    incididuntut consec tetur adipisicing
+                                <p class="text-footer-weak-gray">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec
+                                    tetur adipisicing
                                     elit,Lorem ipsum dolor sit amet.</p>
                             </div>
                             <div class="footer-social-icon">
-                                <span>Segue-nos</span>
-                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                <span class="text-white ">Segue-nos</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg text-white"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg text-white"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg text-white"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                         <div class="footer-widget">
                             <div class="footer-widget-heading">
-                                <h3>Links</h3>
+                                <h3 class="text-white before:bg-strong-oragen">Links</h3>
                             </div>
                             <ul>
-                                <li class="footer_info"><a href="http://localhost/STR/home/home.php">Início</a></li>
-                                <li class="footer_info"><a href="http://localhost/STR/voluntariado/voluntariado.php">Voluntariado</a>
-                                </li>
-                                <li class="footer_info"><a href="#">Doação Especial</a></li>
-                                <li class="footer_info"><a href="#">Iniciar sessão</a></li>
+                                <li class="footer_info hover:text-strong-oragen"><a href="./home.php">Início</a></li>
+                                <li class="footer_info hover:text-strong-oragen"><a href="./volunteer.php">Voluntariado</a></li>
+                                <li class="footer_info hover:text-strong-oragen"><a href="#">Doação Especial</a></li>
+                                <li class="footer_info hover:text-strong-oragen"><a href="#">Iniciar sessão</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                         <div class="footer-widget">
                             <div class="footer-widget-heading">
-                                <h3>Subscreve</h3>
+                                <h3 class="text-white before:bg-strong-oragen">Subscreve</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Não te esqueças de subscrever para não perder nenhuma novidade.</p>
+                                <p class="text-footer-weak-gray">Não te esqueças de subscrever para não perder nenhuma novidade.</p>
                             </div>
                             <div class="subscribe-form">
                                 <form action="#">
-                                    <input type="text" placeholder="Email">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                    <input type="text" placeholder="Email" class="text-white bg-strong-gray">
+                                    <button class="bg-strong-oragen border-strong-gray"><i class="fab fa-telegram-plane text-white"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -437,18 +432,18 @@ A Casa do Brasil de Lisboa dispõe de um espaço de pesquisa de temas relacionad
                 </div>
             </div>
         </div>
-        <div class="copyright-area">
+        <div class="copyright-area bg-strong-gray">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2023</p>
+                            <p class="text-footer-copyright-gray">Copyright &copy; 2023</p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                         <div class="footer-menu">
-                            <ul class="footer-menu-li">
-                                <li><a href="http://localhost/STR/home/home.php">Início</a></li>
+                            <ul class="footer-menu-li text-footer-copyright-gray">
+                                <li><a href="./home.php">Início</a></li>
                                 <li><a href="#">Termos</a></li>
                                 <li><a href="#">Privacidade</a></li>
                                 <li><a href="#">Politica</a></li>
@@ -462,13 +457,13 @@ A Casa do Brasil de Lisboa dispõe de um espaço de pesquisa de temas relacionad
     </footer>
     <script src="../controller/association/script.js"></script>
     <!-- BOTÃO BACKTOP *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-    <a href="#" class="to-top"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>
+    <a href="#" class="to-top bg-wrapper-oragen text-whitesmoke hover:bg-strong-oragen hover:text-white"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>
     <!-- JavaSricpt -->
     <script type="module" src="../controller/association.js"></script>
     <script type="module" src="./lang/association/association_lang.js"></script>
     <script type="module" src="./lang/association/cbl.js"></script>
-   <!-- Font Awesome Kit -->
-   <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>

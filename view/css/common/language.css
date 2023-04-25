@@ -12,7 +12,6 @@
   border-radius: 5px;
   display: flex;
   align-items: center;
-  color: rgb(253, 253, 253);
   cursor: pointer;
 }
 
@@ -29,8 +28,6 @@
 .language ul {
   position: absolute;
   width: 140px;
-  background-color: #fff;
-  border: 1px solid #f8f8f8;
   padding-top: 10px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
   display: none;
@@ -43,7 +40,6 @@
 }
 .language ul li a {
   display: block;
-  color: #252525;
   padding-top: 5px 10px;
 }
 .language ul li:hover {
