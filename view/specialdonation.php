@@ -64,17 +64,15 @@
           <p>Somos também membro honorário da<b> World Compliance Association</b>, com o objetivo de impulsionar e dar visibilidade ao nosso esforço de integração no nosso modelo de gestão de mecanismos para monitorizar os riscos a que estamos expostos, de forma a garantir a máxima qualidade da nossa intervenção.</p>
         </div>
       </div>
-      <section class="services" id="services">
-        <div class="content">
-          <div class="card">
-
-          </div>
-          <div class="card">
-
-          </div>
-          <div class="card">
-
-          </div>
+      <section class="cards-container reveal">
+        <div class="card">
+          <h2 class="card-concept">Básico</h2>
+        </div>
+        <div class="card">
+          <h2 class="card-concept">Básico</h2>
+        </div>
+        <div class="card">
+          <h2 class="card-concept">Básico</h2>
         </div>
       </section>
       <!--include '../model/specialdonation/load_familys.php';-->
