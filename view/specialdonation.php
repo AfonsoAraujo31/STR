@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<header class="bg-strong-gray">
+  <header class="bg-strong-gray">
     <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <input type="checkbox" id="check" />
     <label for="check" class="checkbtn">
@@ -47,12 +47,14 @@
             <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a></li>
           </ul>
         </div>
-        <?php include '../model/common/load_profilephoto.php';?>
+        <?php include '../model/common/load_profilephoto.php'; ?>
     </ul>
   </header>
   <div id="cover" class="cover blur-in">
     <main class="page-content">
-      <img src="./assets/others/image.png" class="presentation-image" />
+      <div class="shapedividers_com-9461">
+        <img src="./assets/others/image.png" class="presentation-image" />
+      </div>
       <div class="column">
         <div class="wrapper">
           <div class="title uppercase">O que é a Doação Especial ?</div>
@@ -68,14 +70,14 @@
 
           </div>
           <div class="card">
-              
+
           </div>
           <div class="card">
 
           </div>
         </div>
       </section>
-      <!-- include '../model/specialdonation/load_familys.php'; -->
+      <!--include '../model/specialdonation/load_familys.php';-->
     </main>
   </div>
   <!-- FOOTER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
@@ -175,7 +177,7 @@
           <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
             <div class="footer-menu">
               <ul class="footer-menu-li text-footer-copyright-gray">
-                <li><a href="./home.php" >Início</a></li>
+                <li><a href="./home.php">Início</a></li>
                 <li><a href="#">Termos</a></li>
                 <li><a href="#">Privacidade</a></li>
                 <li><a href="#">Politica</a></li>
