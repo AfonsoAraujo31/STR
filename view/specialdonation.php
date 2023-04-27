@@ -13,10 +13,13 @@
   <link rel="stylesheet" href="./css/common/backTop.css" />
   <link rel="stylesheet" href="./css/common/footer.css" />
   <link rel="stylesheet" href="./css/common/scrollbar.css" />
+  <link rel="stylesheet" href="./css/specialdonation/style.css" />
   <link rel="stylesheet" href="../dist/output.css" />
   <!-- Bootstrap -->
   <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
 </head>
 
 <body>
@@ -64,18 +67,13 @@
           <p>Somos também membro honorário da<b> World Compliance Association</b>, com o objetivo de impulsionar e dar visibilidade ao nosso esforço de integração no nosso modelo de gestão de mecanismos para monitorizar os riscos a que estamos expostos, de forma a garantir a máxima qualidade da nossa intervenção.</p>
         </div>
       </div>
-      <section class="cards-container reveal">
-        <div class="card">
-          <h2 class="card-concept">Básico</h2>
+      <!-- retangulos -->
+      <div class="blog-slider">
+        <div class="blog-slider__wrp swiper-wrapper">
+          <?php include '../model/specialdonation/load_familys.php'; ?>
         </div>
-        <div class="card">
-          <h2 class="card-concept">Básico</h2>
-        </div>
-        <div class="card">
-          <h2 class="card-concept">Básico</h2>
-        </div>
-      </section>
-      <!--include '../model/specialdonation/load_familys.php';-->
+        <div class="blog-slider__pagination"></div>
+      </div>
     </main>
   </div>
   <!-- FOOTER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
@@ -198,6 +196,8 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
   <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 </body>
 
 </html>
