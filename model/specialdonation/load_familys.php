@@ -1,12 +1,11 @@
 <?php 
 ini_set('display_errors', 1);
-
 require '/wamp64/www/STR/configurations/dbconnection.php';
 $sql = "SELECT * FROM familias_doacaoespecial";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = mysqli_fetch_array($result)) {
-        $foto_familia = base64_encode($row['foto_familia']);
+         $foto_familia = base64_encode($row['foto_familia']);
         echo '
         <div class="blog-slider__item swiper-slide">
             <div class="blog-slider__img">
@@ -16,7 +15,7 @@ if ($result->num_rows > 0) {
                 <span class="blog-slider__code">'.$row['data_chegada'].'</span>
                 <div class="blog-slider__title">Familia '.$row['nome_familia'].'</div>
                     <div class="blog-slider__text">'.$row['descricao'].'</div>
-                    <a href="#" class="blog-slider__button">READ MORE</a>
+                    <a href="http://localhost/STR/view/specialdonation_detail.php?id='.$row['id'].'" class="blog-slider__button">VER MAIS</a>
                 </div>
             </div>  
         ';
