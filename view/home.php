@@ -47,7 +47,7 @@
             <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a></li>
           </ul>
         </div>
-        <?php include '../model/common/load_profilephoto.php';?>
+        <?php include '../model/common/load_profilephoto.php'; ?>
     </ul>
   </header>
   <!-- SLIDESHOW *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -195,21 +195,23 @@
       </div>
     </div>
   </div>
-  <div class="about-section-2 reveal bg-white">
-    <div class="reveal">
-      <h2 class="content-title text-black">Quantos refugiados existem no mundo?</h2>
-      <p class="content-text text-weak-gray">Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas.
-        Entre elas estão quase 27,1 milhões de refugiados, cerca de metade dos quais têm menos de 18 anos, pessoas a
-        quem foi negada a nacionalidade e
-        que não têm acesso a direitos básicos como educação, saúde, emprego e liberdade de movimento. <br><br>O gráfico
-        ao lado mostra que 65% saíram de apenas cinco países.
-        Os números não somam 100 por cento devido a arredondamentos, este também exclui refugiados palestinos sob
-        mandato da UNRWA. Este é o número de refugiados venezuelanos
-        e venezuelanos deslocados no exterior.
-      </p>
+  <div class="container_bars reveal">
+    <div class="item1">
+      <div class="relative">
+        <h2 class="content-title text-black pb-4">Quantos refugiados existem no mundo?</h2>
+        <p class="content-text text-weak-gray">Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas.
+          Entre elas estão quase 27,1 milhões de refugiados, cerca de metade dos quais têm menos de 18 anos, pessoas a
+          quem foi negada a nacionalidade e
+          que não têm acesso a direitos básicos como educação, saúde, emprego e liberdade de movimento. <br><br>O gráfico
+          ao lado mostra que 65% saíram de apenas cinco países.
+          Os números não somam 100 por cento devido a arredondamentos, este também exclui refugiados palestinos sob
+          mandato da UNRWA. Este é o número de refugiados venezuelanos
+          e venezuelanos deslocados no exterior.
+        </p>
+      </div>
     </div>
-    <div class="inner-container-2 bg-white">
-      <section class="bar-chart">
+    <div class="item2">
+      <div class="bar-chart">
         <div class="chart-row '">
           <p class="chart-caption">Síria</p>
           <div class="bar-wrap bg-bar-wrap hover:bg-bar-wrap-hover">
@@ -245,7 +247,7 @@
             <div class="chart-bar" data-bar-value="50.64%"> </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   </div>
   <!-- FOOTER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
@@ -345,7 +347,7 @@
           <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
             <div class="footer-menu">
               <ul class="footer-menu-li text-footer-copyright-gray">
-                <li><a href="./home.php" >Início</a></li>
+                <li><a href="./home.php">Início</a></li>
                 <li><a href="#">Termos</a></li>
                 <li><a href="#">Privacidade</a></li>
                 <li><a href="#">Politica</a></li>

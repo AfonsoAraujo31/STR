@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -59,8 +60,8 @@
         <img src="./assets/others/image.png" class="presentation-image" />
       </div>
       <div class="column">
-        <div class="wrapper">
-          <div class="title uppercase">O que é a Doação Especial ?</div>
+        <div class="wrapper animate__animated animate__fadeIn">
+          <div class="title uppercase ">O que é a Doação Especial ?</div>
           <p>Na Ajuda em Ação promovemos a <b>transparência e a prestação</b> de contas perante todos os nossos atores, doadores públicos e privados, pessoas e organizações com e para as quais trabalhamos e a sociedade em geral.</p>
           <p>A transparência é o princípio básico que rege a nossa gestão interna,<b> assegurando boas práticas e fomentando a eficiência e eficácia para alcançar os nossos objetivos.</b></p>
           <p>Para isso, utilizamos diferentes instrumentos de acompanhamento e <b> avaliação, externos e internos,</b> com o objetivo de reforçar o compromisso com os nossos grupos de interesse e identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>, como parte de um processo de melhoria contínua.</p>

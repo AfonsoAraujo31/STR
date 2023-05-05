@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
 var swiper = new Swiper('.blog-slider', {
   spaceBetween: 30,
   effect: 'fade',

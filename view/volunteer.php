@@ -17,6 +17,7 @@
     <!-- Bootstrap -->
     <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -63,14 +64,14 @@
             <li></li>
             <li></li>
         </ul>
-        <div class="content-box">
+        <div class="content-box animate__animated animate__fadeIn">
             <h2 class="big-text">Os nossos associados</h2>
             <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
-        <section class="number-line">
+        <section class="number-line animate__animated animate__fadeIn">
             <div class="container">
                 <div class="number-container" id="number-container">
                     <div class="number-cell1" id="number-cell1">

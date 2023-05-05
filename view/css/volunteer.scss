@@ -441,6 +441,7 @@ section {
   padding-top: 60px;
   text-align: center;
   height: 200px;
+  --animate-duration: 1.5s;
 }
 
 .big-text {
@@ -467,6 +468,7 @@ section {
 
 .number-line {
   color: #000000;
+  --animate-duration: 1.5s;
 }
 
 .number-container {
