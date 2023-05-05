@@ -167,6 +167,13 @@ $(function () {
       '<img id="flags" src="./assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português'
     );
     associacoes_pt();
+    $(".big-text").text("OS NOSSOS ASSOCIADOS");
+    $(".content-text").text("Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para nossos projetos.");
+    $(".number-text").eq(0).text("ASSOCIAÇÕES");
+    $(".number-text").eq(1).text("VOLUNTÁRIOS");
+    $(".number-text").eq(2).text("PAÍSES");
+    $(".number-text").eq(3).text("COLABORADORES");
+    $(".number-text").eq(4).text("MEMBROS");
   });
 });
 /**
@@ -219,6 +226,13 @@ $(function () {
       '<img id="flags" src="./assets/flags/gb-eng.png" width="35px" height="25px" style="margin-right:10px;">English'
     );
     associacoes_en();
+    $(".big-text").text("OUR ASSOCIATES");
+    $(".content-text").text("Our associates are critical to the success of our volunteer program. Through their dedication and commitment, we have been able to help more and more important people and causes in our community. Each associate brings with them unique skills and experiences that are valuable to our projects.");
+    $(".number-text").eq(0).text("ASSOCIATIONS");
+    $(".number-text").eq(1).text("VOLUNTEERS");
+    $(".number-text").eq(2).text("COUNTRIES");
+    $(".number-text").eq(3).text("COLLABORATORS");
+    $(".number-text").eq(4).text("MEMBERS");
   });
 });
 /**
@@ -275,6 +289,13 @@ $(function () {
       '<img id="flags" src="./assets/flags/fr.png" width="35px" height="25px" style="margin-right:10px;">Français'
     );
     associacoes_fr();
+    $(".big-text").text("NOS ASSOCIÉS");
+    $(".content-text").text("Nos associés sont essentiels au succès de notre programme de bénévolat. Grâce à leur dévouement et à leur engagement, nous avons pu aider de plus en plus de personnes et de causes importantes dans notre communauté. Chaque associé apporte avec lui des compétences et des expériences uniques qui sont précieuses pour nos projets.");
+    $(".number-text").eq(0).text("LES ASSOCIATIONS");
+    $(".number-text").eq(1).text("BÉNÉVOLES");
+    $(".number-text").eq(2).text("DES PAYS");
+    $(".number-text").eq(3).text("COLLABORATRICES");
+    $(".number-text").eq(4).text("MEMBRES");
   });
 });
 /**
@@ -334,6 +355,13 @@ addEventListener("DOMContentLoaded", (event) => {
         '<img id="flags" src="./assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português'
       );
       associacoes_pt();
+      $(".big-text").text("OS NOSSOS ASSOCIADOS");
+    $(".content-text").text("Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para nossos projetos.");
+    $(".number-text").eq(0).text("ASSOCIAÇÕES");
+    $(".number-text").eq(1).text("VOLUNTÁRIOS");
+    $(".number-text").eq(2).text("PAÍSES");
+    $(".number-text").eq(3).text("COLABORADORES");
+    $(".number-text").eq(4).text("MEMBROS");
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
@@ -383,6 +411,13 @@ addEventListener("DOMContentLoaded", (event) => {
         '<img id="flags" src="./assets/flags/gb-eng.png" width="35px" height="25px" style="margin-right:10px;">English'
       );
       associacoes_en();
+      $(".big-text").text("OUR ASSOCIATES");
+    $(".content-text").text("Our associates are critical to the success of our volunteer program. Through their dedication and commitment, we have been able to help more and more important people and causes in our community. Each associate brings with them unique skills and experiences that are valuable to our projects.");
+    $(".number-text").eq(0).text("ASSOCIATIONS");
+    $(".number-text").eq(1).text("VOLUNTEERS");
+    $(".number-text").eq(2).text("COUNTRIES");
+    $(".number-text").eq(3).text("COLLABORATORS");
+    $(".number-text").eq(4).text("MEMBERS");
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
@@ -436,6 +471,13 @@ addEventListener("DOMContentLoaded", (event) => {
         '<img id="flags" src="./assets/flags/fr.png" width="35px" height="25px" style="margin-right:10px;">Français'
       );
       associacoes_fr();
+      $(".big-text").text("NOS ASSOCIÉS");
+    $(".content-text").text("Nos associés sont essentiels au succès de notre programme de bénévolat. Grâce à leur dévouement et à leur engagement, nous avons pu aider de plus en plus de personnes et de causes importantes dans notre communauté. Chaque associé apporte avec lui des compétences et des expériences uniques qui sont précieuses pour nos projets.");
+    $(".number-text").eq(0).text("LES ASSOCIATIONS");
+    $(".number-text").eq(1).text("BÉNÉVOLES");
+    $(".number-text").eq(2).text("DES PAYS");
+    $(".number-text").eq(3).text("COLLABORATRICES");
+    $(".number-text").eq(4).text("MEMBRES");
     });
   }
 });
@@ -487,6 +529,21 @@ if (localStorage.getItem("language") == 1) {
     $(".language-selected").html(
       '<img id="flags" src="./assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português'
     );
+    $(".big-text").text("OUR ASSOCIATES");
+    $(".content-text").text("Our associates are critical to the success of our volunteer program. Through their dedication and commitment, we have been able to help more and more important people and causes in our community. Each associate brings with them unique skills and experiences that are valuable to our projects.");
+    $(".number-text").eq(0).text("ASSOCIATIONS");
+    $(".number-text").eq(1).text("VOLUNTEERS");
+    $(".number-text").eq(2).text("COUNTRIES");
+    $(".number-text").eq(3).text("COLLABORATORS");
+    $(".number-text").eq(4).text("MEMBERS");
+    $(".big-text").text("OS NOSSOS ASSOCIADOS");
+    $(".content-text").text("Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para nossos projetos.");
+    $(".number-text").eq(0).text("ASSOCIAÇÕES");
+    $(".number-text").eq(1).text("VOLUNTÁRIOS");
+    $(".number-text").eq(2).text("PAÍSES");
+    $(".number-text").eq(3).text("COLABORADORES");
+    $(".number-text").eq(4).text("MEMBROS");
+    
   });
 } else if (localStorage.getItem("language") == 2) {
   $(function () {
@@ -533,6 +590,13 @@ if (localStorage.getItem("language") == 1) {
     $(".language-selected").html(
       '<img id="flags" src="./assets/flags/gb-eng.png" width="35px" height="25px" style="margin-right:10px;">English'
     );
+    $(".big-text").text("OUR ASSOCIATES");
+    $(".content-text").text("Our associates are critical to the success of our volunteer program. Through their dedication and commitment, we have been able to help more and more important people and causes in our community. Each associate brings with them unique skills and experiences that are valuable to our projects.");
+    $(".number-text").eq(0).text("ASSOCIATIONS");
+    $(".number-text").eq(1).text("VOLUNTEERS");
+    $(".number-text").eq(2).text("COUNTRIES");
+    $(".number-text").eq(3).text("COLLABORATORS");
+    $(".number-text").eq(4).text("MEMBERS");
   });
 } else if (localStorage.getItem("language") == 3) {
   $(function () {
@@ -583,5 +647,12 @@ if (localStorage.getItem("language") == 1) {
     $(".language-selected").html(
       '<img id="flags" src="./assets/flags/fr.png" width="35px" height="25px" style="margin-right:10px;">Français'
     );
+    $(".big-text").text("NOS ASSOCIÉS");
+    $(".content-text").text("Nos associés sont essentiels au succès de notre programme de bénévolat. Grâce à leur dévouement et à leur engagement, nous avons pu aider de plus en plus de personnes et de causes importantes dans notre communauté. Chaque associé apporte avec lui des compétences et des expériences uniques qui sont précieuses pour nos projets.");
+    $(".number-text").eq(0).text("LES ASSOCIATIONS");
+    $(".number-text").eq(1).text("BÉNÉVOLES");
+    $(".number-text").eq(2).text("DES PAYS");
+    $(".number-text").eq(3).text("COLLABORATRICES");
+    $(".number-text").eq(4).text("MEMBRES");
   });
 }
