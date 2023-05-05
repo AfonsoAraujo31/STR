@@ -22,6 +22,11 @@
 </head>
 
 <body>
+<style>
+    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
+    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
+    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
+  </style>
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -38,7 +43,6 @@
             <li class="li"><a class="text-label-gray hover:text-white" href="#" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a class="text-label-gray hover:text-white" href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
                 <div class="language">

@@ -21,6 +21,11 @@
 </head>
 
 <body>
+    <style>
+    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
+    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
+    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
+     </style>
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -37,10 +42,9 @@
             <li class="li"><a class="text-label-gray hover:text-white" href="./home.php" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="active" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a class="text-label-gray hover:text-white" href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-                <div class="language">
+                <div class="language" style="font-size:16px;">
                     <div class="language-selected text-white"><img id="flags" src="../view/assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
                     <ul cl class="bg-white border-white">
                         <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a></li>
@@ -66,33 +70,35 @@
         </ul>
         <div class="content-box animate__animated animate__fadeIn">
             <h2 class="big-text">Os nossos associados</h2>
-            <p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="content-text">Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. 
+                Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e 
+                causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que 
+                são valiosas para nossos projetos. 
+            </p>
         </div>
 
         <section class="number-line animate__animated animate__fadeIn">
             <div class="container">
                 <div class="number-container" id="number-container">
                     <div class="number-cell1" id="number-cell1">
-                        <p class="number-value"><span class="num" data-val="42">0</span></p>
-                        <p class="number-text">web design projects</p>
+                        <p class="number-value"><span class="num" data-val="5">0</span></p>
+                        <p class="number-text">Associações</p>
                     </div>
                     <div class="number-cell2 " id="number-cell2">
-                        <p class="number-value"><span class="num" data-val="123">0</span></p>
-                        <p class="number-text">happy client</p>
+                        <p class="number-value"><span class="num" data-val="357">0</span></p>
+                        <p class="number-text">Voluntários</p>
                     </div>
                     <div class="number-cell3" id="number-cell3">
-                        <p class="number-value"><span class="num" data-val="15">0</span></p>
-                        <p class="number-text">award winner</p>
+                        <p class="number-value"><span class="num" data-val="9">0</span></p>
+                        <p class="number-text">Países</p>
                     </div>
                     <div class="number-cell4" id="number-cell4">
-                        <p class="number-value"><span class="num" data-val="99">0</span></p>
-                        <p class="number-text">cup of coffee</p>
+                        <p class="number-value"><span class="num" data-val="58">0</span></p>
+                        <p class="number-text">Colaboradores</p>
                     </div>
                     <div class="number-cell5" id="number-cell5">
-                        <p class="number-value"><span class="num" data-val="24">0</span></p>
-                        <p class="number-text">members</p>
+                        <p class="number-value"><span class="num" data-val="167">0</span></p>
+                        <p class="number-text">Membros</p>
                     </div>
                 </div>
             </div>
@@ -152,7 +158,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="../view/assets/3logo" class="img-fluid" alt="logo"></a>
+                                <a href="index.html"><img src="../view/assets/logo/3logo.png" class="img-fluid" alt="logo"></a>
                             </div>
                             <div class="footer-text">
                                 <p class="text-footer-weak-gray">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec

@@ -1,6 +1,7 @@
 <?php 
 ini_set('display_errors', 0);
 require '/wamp64/www/STR/configurations/dbconnection.php';
+/*echo("<script>alert('".$_COOKIE['temp_user']."');</script>");*/
 if ($_COOKIE["temp_user"] == "") {
     echo "<li class='user-container'><a href='./login.php'><span><img class='user' style='margin-left:9px' src='../view/assets/others/user.png' /></span></a></li></li>";
   } else {

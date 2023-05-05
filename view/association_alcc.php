@@ -20,6 +20,11 @@
 </head>
 
 <body>
+<style>
+    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
+    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
+    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
+  </style>
 <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -36,7 +41,6 @@
             <li class="li"><a class="text-label-gray hover:text-white" href="#" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="active" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a class="text-label-gray hover:text-white" href="#"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
                 <div class="language">
@@ -386,7 +390,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="../view/assets/3logo" class="img-fluid" alt="logo"></a>
+                                <a href="index.html"><img src="../view/assets/logo/3logo.png" class="img-fluid" alt="logo"></a>
                             </div>
                             <div class="footer-text">
                                 <p class="text-footer-weak-gray">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec
