@@ -1,7 +1,7 @@
 <?php 
 ini_set('display_errors', 1);
 require '/wamp64/www/STR/configurations/dbconnection.php';
-$sql = "SELECT * FROM familias_doacaoespecial";
+$sql = "SELECT * FROM familias_doacaoespecial ORDER BY id ASC";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = mysqli_fetch_array($result)) {

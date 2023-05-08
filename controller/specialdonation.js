@@ -1,4 +1,4 @@
-document.cookie = 'temp_user='+localStorage.getItem('temp_user');
+document.cookie = "temp_user=" + localStorage.getItem("temp_user");
 /**
  * ! EFEITO SHOW ON SCROLL *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*
  */
@@ -31,23 +31,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("sing_in") == 1) {
     document.getElementById("cover").classList.remove("blur-in");
-    document.getElementById("cover").classList.remove("blur-out");
+      document.body.style.overflow = "scroll";
   }
 });
 
-var swiper = new Swiper('.blog-slider', {
+var swiper = new Swiper(".blog-slider", {
   spaceBetween: 30,
-  effect: 'fade',
+  effect: "fade",
   loop: true,
   mousewheel: {
     invert: false,
   },
   // autoHeight: true,
   pagination: {
-    el: '.blog-slider__pagination',
+    el: ".blog-slider__pagination",
     clickable: true,
-  }
+  },
 });

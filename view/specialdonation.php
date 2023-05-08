@@ -20,14 +20,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
-<style>
-    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
-    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
-    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
+<body style="overflow: hidden;">
+  <style>
+    a.pt:before {
+      background-image: url(../view/assets/flags/pt.png);
+    }
+
+    a.en:before {
+      background-image: url(../view/assets/flags/gb-eng.png);
+    }
+
+    a.fr:before {
+      background-image: url(../view/assets/flags/fr.png);
+    }
   </style>
   <header class="bg-strong-gray">
     <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -58,7 +66,7 @@
         <?php include '../model/common/load_profilephoto.php'; ?>
     </ul>
   </header>
-  <div id="cover" class="cover blur-in">
+  <div id="cover" class="blur-in">
     <main class="page-content">
       <div class="shapedividers_com-9461">
         <img src="./assets/others/image.png" class="presentation-image" />
@@ -66,14 +74,31 @@
       <div class="column">
         <div class="wrapper animate__animated animate__fadeIn">
           <div class="title uppercase ">O que é a Doação Especial ?</div>
-          <p>Na Ajuda em Ação promovemos a <b>transparência e a prestação</b> de contas perante todos os nossos atores, doadores públicos e privados, pessoas e organizações com e para as quais trabalhamos e a sociedade em geral.</p>
-          <p>A transparência é o princípio básico que rege a nossa gestão interna,<b> assegurando boas práticas e fomentando a eficiência e eficácia para alcançar os nossos objetivos.</b></p>
-          <p>Para isso, utilizamos diferentes instrumentos de acompanhamento e <b> avaliação, externos e internos,</b> com o objetivo de reforçar o compromisso com os nossos grupos de interesse e identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>, como parte de um processo de melhoria contínua.</p>
-          <p>Somos também membro honorário da<b> World Compliance Association</b>, com o objetivo de impulsionar e dar visibilidade ao nosso esforço de integração no nosso modelo de gestão de mecanismos para monitorizar os riscos a que estamos expostos, de forma a garantir a máxima qualidade da nossa intervenção.</p>
+          <div class="content-text">
+            <p>
+              Este novo conceito permite ao utilizador, caso se identifique com
+              alguma família refugiada, proceder à doação, apenas a essa família, desde uma
+              habitação, bens alimentares ou até mesmo algumas despesas mensais enquanto se
+              reintegram na sociedade. Ao longo desta Ação promovemos a <b>transparência e a prestação</b>
+              de contas perante todos os nossos doadores para as quais desejamos trabalhar.
+            </p>
+            <p>A transparência é o princípio básico que rege a nossa gestão interna,<b> assegurando boas
+                práticas e fomentando a eficiência e eficácia para alcançar os nossos objetivos.</b>
+              Para isso, utilizamos diferentes instrumentos de acompanhamento e <b> avaliação, externos e
+                internos,</b> com o objetivo de reforçar o compromisso com os nossos grupos de interesse e
+              identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>,
+              como parte de um processo de melhoria contínua.
+            </p>
+            <p>A privacidade dos utilizadores e das famílias aqui reigstadas é uma questão de <b>extrema importância
+                na nossa comunidade</b>. As informações fornecidas pelos utilizadores podem incluir dados de identificação
+              pessoal, informações de contato, dados de localização e outras informações sensíveis. Portanto, é essencial
+              que o website em questão tenha <b>medidas adequadas em vigor para proteger a privacidade dos seus utilizadores</b>.
+            </p>
+          </div>
         </div>
       </div>
       <!-- retangulos -->
-      <div class="blog-slider">
+      <div id="blog-slider" class="blog-slider">
         <div class="blog-slider__wrp swiper-wrapper">
           <?php include '../model/specialdonation/load_familys.php'; ?>
         </div>

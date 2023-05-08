@@ -22,11 +22,19 @@
 </head>
 
 <body>
-<style>
-    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
-    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
-    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
-  </style>
+    <style>
+        a.pt:before {
+            background-image: url(../view/assets/flags/pt.png);
+        }
+
+        a.en:before {
+            background-image: url(../view/assets/flags/gb-eng.png);
+        }
+
+        a.fr:before {
+            background-image: url(../view/assets/flags/fr.png);
+        }
+    </style>
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -109,7 +117,6 @@
 
         <div class="menu-bar">
             <div class="menu">
-
                 <ul class="menu-links">
                     <li class="nav-link main">
                         <a href="#" onclick="perfil();">
@@ -117,210 +124,199 @@
                             <span class="text nav-text">Perfil</span>
                         </a>
                     </li>
-
                     <li class="nav-link">
                         <a href="#" onclick="doacao();">
                             <i class='bx bxs-spreadsheet icon'></i>
                             <span class="text nav-text">Candidaturas</span>
                         </a>
                     </li>
-
                     <li class="nav-link">
                         <a href="#" onclick="obs();">
                             <i class='bx bxs-chat icon'></i>
                             <span class="text nav-text">Observações</span>
                         </a>
                     </li>
-
                     <li class="nav-link">
                         <a href="http://localhost/STR/view/login.php" onclick="teste();">
                             <i class='bx bx-log-out-circle icon'></i>
                             <span class="text nav-text">Sair</span>
                         </a>
                     </li>
-
                 </ul>
             </div>
-
         </div>
-
     </nav>
-    <section class="home">
-        <div id="home-box" class="box-visible">
-            <div class="container">
-                <div id="errorAlert" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
-                <div class="title">Definições de perfil</div>
-                <div class="content">
-                    <form action="../model/userpage/update_user.php" method="GET">
-                        <div class="user-details">
-                            <div class="input-box">
-                                <span class="details">Nome</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $sql = "SELECT nome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<input type='text' name='nome' class='custom-select' value='" . $row["nome"] . "'/>";
-                                        }
+    <div id="home-box" class="box-visible home">
+        <div class="container_definicoes">
+            <div id="errorAlert" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
+            <div class="title">Definições de perfil</div>
+            <div class="content">
+                <form action="../model/userpage/update_user.php" method="GET">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Nome</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT nome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<input type='text' name='nome' class='custom-select' value='" . $row["nome"] . "'/>";
                                     }
                                 }
-                                ?>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Sobrenome</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $sql = "SELECT sobrenome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<input type='text' name='sobrenome' value='" . $row["sobrenome"] . "'/>";
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Endereço de email</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $sql = "SELECT email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<input type='text' name='email' disabled value='" . $row["email"] . "'/>";
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Número de telemóvel</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $sql = "SELECT num_telefone, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<input type='number' name='num_telefone' pattern='[0-9]{9}' value='" . $row["num_telefone"] . "'/>";
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Morada</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $sql = "SELECT morada, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<input type='text' name='morada' value='" . $row["morada"] . "'/>";
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Data de nascimento</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $conn = new mysqli("localhost", "root", "", "str");
-                                if ($conn->connect_error) {
-                                    die("Connection failed: " . $conn->connect_error);
-                                }
-                                $sql = "SELECT data_nascimento, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<input type='date' name='data_nascimento' value='" . $row["data_nascimento"] . "'/>";
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Nacionalidade</span>
-                                <select class="select" name='nacionalidade'>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $sql = "SELECT nacionalidade, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                    $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            if ($row["email"] == $_GET["email"]) {
-                                                echo "<option selected>" . $row['nacionalidade'] . "</option>";
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $sql = "SELECT * FROM paises";
-                                    $result = mysqli_query($connect, $sql);
-                                    while ($row = mysqli_fetch_array($result)) {
-                                        $id = $row['id'];
-                                        $nome = $row['nome'];
-                                        $iso = $row['iso'];
-                                        echo "<option value='$nome ($iso)'>$nome ($iso)</option>";
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Palavra chave</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $sql = "SELECT pass, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<input type='text' name='pass' value='" . $row["pass"] . "'/>";
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Descrição</span>
-                                <?php
-                                ini_set('display_errors', 0);
-                                $sql = "SELECT descricao, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                $result = $conn->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        if ($row["email"] == $_GET["email"]) {
-                                            echo "<textarea name='descricao' id='textarea' cols='30' rows='4'>" . $row["descricao"] . "</textarea>";
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
+                            }
+                            ?>
                         </div>
-                        <div class="button">
-                            <input type="submit" value="Atualizar" />
+                        <div class="input-box">
+                            <span class="details">Sobrenome</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT sobrenome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<input type='text' name='sobrenome' value='" . $row["sobrenome"] . "'/>";
+                                    }
+                                }
+                            }
+                            ?>
                         </div>
-                    </form>
-                </div>
+                        <div class="input-box">
+                            <span class="details">Endereço de email</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<input type='text' name='email' disabled value='" . $row["email"] . "'/>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Número de telemóvel</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT num_telefone, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<input type='number' name='num_telefone' pattern='[0-9]{9}' value='" . $row["num_telefone"] . "'/>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Morada</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT morada, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<input type='text' name='morada' value='" . $row["morada"] . "'/>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Data de nascimento</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $conn = new mysqli("localhost", "root", "", "str");
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+                            $sql = "SELECT data_nascimento, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<input type='date' name='data_nascimento' value='" . $row["data_nascimento"] . "'/>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Nacionalidade</span>
+                            <select class="select" name='nacionalidade'>
+                                <?php
+                                ini_set('display_errors', 0);
+                                $sql = "SELECT nacionalidade, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                $result = $conn->query($sql);
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        if ($row["email"] == $_GET["email"]) {
+                                            echo "<option selected>" . $row['nacionalidade'] . "</option>";
+                                        }
+                                    }
+                                }
+                                ?>
+                                <?php
+                                ini_set('display_errors', 0);
+                                $sql = "SELECT * FROM paises";
+                                $result = mysqli_query($connect, $sql);
+                                while ($row = mysqli_fetch_array($result)) {
+                                    $id = $row['id'];
+                                    $nome = $row['nome'];
+                                    $iso = $row['iso'];
+                                    echo "<option value='$nome ($iso)'>$nome ($iso)</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Palavra chave</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT pass, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<input type='text' name='pass' value='" . $row["pass"] . "'/>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Descrição</span>
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT descricao, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo "<textarea name='descricao' id='textarea' cols='30' rows='4'>" . $row["descricao"] . "</textarea>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Atualizar" />
+                    </div>
+                </form>
             </div>
-            <div class="container_pref">
+        </div>
+        <div class="container_preferencias_fotoperfil">
+            <div class="container_preferencias">
                 <div class="title">Preferências/Opcões</div>
                 <br>
                 <style>
-                    form {
-                        display: table;
-
-                    }
-
                     p {
                         display: table-row;
                     }
@@ -400,12 +396,12 @@
                         ?>
                     </div>
                     <div class="button">
-                        <input type="submit" style="width: 130%;" value="Atualizar" />
+                        <input type="submit" value="Atualizar" />
                     </div>
                 </form>
-
             </div>
-            <div class="content1">
+
+            <div class="container_fotoperfil">
                 <div class="title">Foto de perfil</div>
                 <br>
                 <form action="../model/userpage/update_fotoperfil.php" method="POST" enctype="multipart/form-data">
@@ -430,14 +426,15 @@
                     </div>
                 </form>
             </div>
+
         </div>
-        <div id="doacao-box" class="box">
-            <h2>Profile</h2>
-        </div>
-        <div id="obs-box" class="box">
-            <h2>Profila12323e</h2>
-        </div>
-    </section>
+    </div>
+    <div id="doacao-box" class="box home">
+
+    </div>
+    <div id="obs-box" class="box home">
+        <h2>Profila12323e</h2>
+    </div>
     <script>
         addEventListener("DOMContentLoaded", (event) => {
             if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=updatefail") {
