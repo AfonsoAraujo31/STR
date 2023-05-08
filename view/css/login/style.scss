@@ -296,6 +296,7 @@ body.dark .home .text {
 }
 .container_preferencias_fotoperfil{
   display: flex;
+  
 }
 @media (max-width: 1000px) {
   .container_preferencias_fotoperfil{
@@ -325,15 +326,21 @@ body.dark .home .text {
   border-radius: 5px;
   background: linear-gradient(135deg, #ff9564bb, #f75308);
 }
-
+.teste{
+  width: 100%;
+  //background-color: #aa2929;
+  
+}
 .container_preferencias {
-  flex: 70%;
+  flex: 40%;
   background-color: #f9f9f9;
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
   margin-top: 25px;
   margin-right: 25px;
+  width: 100%;
+  position: relative;
 }
 .container_preferencias .title {
   font-size: 25px;
@@ -350,13 +357,15 @@ body.dark .home .text {
   border-radius: 5px;
   background: linear-gradient(135deg, #ff9564bb, #f75308);
 }
+
 .container_fotoperfil {
-  flex: 30%;
+  flex: 20%;
   background-color: #f9f9f9;
   padding: 25px 30px;
   border-radius: 10px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
   margin-top: 25px;
+  margin-right: 25px;
 }
 
 .container_fotoperfil .title {
@@ -375,6 +384,30 @@ body.dark .home .text {
   background: linear-gradient(135deg, #ff9564bb, #f75308);
 }
 
+.container_obs {
+  flex: 40%;
+  background-color: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 25px;
+}
+
+.container_obs .title {
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+}
+.container_obs .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #ff9564bb, #f75308);
+}
 .content form .user-details {
   display: flex;
   flex-wrap: wrap;
@@ -386,6 +419,7 @@ form .user-details .input-box {
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
 }
+
 form .input-box span.details {
   display: block;
   font-weight: 500;
@@ -401,6 +435,16 @@ form .input-box span.details {
   border: 1px solid #ccc;
 
   transition: all 0.3s ease;
+}
+.input-box textarea {
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  resize: none;
+  width: 100%;
 }
 .user-details .input-box textarea {
   outline: none;
@@ -569,8 +613,8 @@ input::-webkit-inner-spin-button {
 
 .picture {
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 138px;
+  height: 138px;
   border-radius: 50%;
   margin: 0px auto;
   overflow: hidden;

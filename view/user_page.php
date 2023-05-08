@@ -290,21 +290,6 @@
                             }
                             ?>
                         </div>
-                        <div class="input-box">
-                            <span class="details">Descrição</span>
-                            <?php
-                            ini_set('display_errors', 0);
-                            $sql = "SELECT descricao, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                            $result = $conn->query($sql);
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    if ($row["email"] == $_GET["email"]) {
-                                        echo "<textarea name='descricao' id='textarea' cols='30' rows='4'>" . $row["descricao"] . "</textarea>";
-                                    }
-                                }
-                            }
-                            ?>
-                        </div>
                     </div>
                     <div class="button">
                         <input type="submit" value="Atualizar" />
@@ -342,7 +327,7 @@
                 </style>
 
                 <form action="../model/userpage/update_pref.php">
-                    <div style="position:relative;left:50px;">
+                    <div class="teste">
                         <?php
                         ini_set('display_errors', 0);
                         $sql = "SELECT * FROM preferencias WHERE email='" . $_GET['email'] . "'";
@@ -427,6 +412,29 @@
                 </form>
             </div>
 
+            <div class="container_obs">
+                <div class="title">Sobre ti</div>
+                <br>
+                <form action="../model/userpage/update_user_description.php" method="GET">
+                    <div class="input-box" style="margin-bottom:25px;">
+                        <?php
+                        ini_set('display_errors', 0);
+                        $sql = "SELECT descricao, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                if ($row["email"] == $_GET["email"]) {
+                                    echo "<textarea name='descricao' id='textarea' cols='30' rows='6'>" . $row["descricao"] . "</textarea>";
+                                }
+                            }
+                        }
+                        ?>
+                    </div>
+                    <div class="button">
+                        <button name="submit" id="btn_atualizar" class="save">Atualizar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <div id="doacao-box" class="box home">
