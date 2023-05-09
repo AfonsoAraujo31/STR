@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -22,13 +23,12 @@
   --tran-04: all 0.3s ease;
   --tran-05: all 0.3s ease;
 }
-
 /* ===== Sidebar ===== */
 .sidebar {
   position: absolute;
   top: 90px;
   left: 0;
-  height: 100%;
+  height: 115%;
   display: block;
   width: 250px;
   padding: 10px 14px;
@@ -39,7 +39,9 @@
 .sidebar.close {
   width: 88px;
 }
-
+@media (max-width: 1000px) {
+  .sidebar {height: 200%;}
+}
 /* ===== Reusable code - Here ===== */
 .sidebar li {
   height: 50px;
@@ -48,8 +50,7 @@
   align-items: center;
   margin-top: 10px;
 }
-
-.sidebar .header .image_panel,
+.sidebar .header-nav .image_panel,
 .sidebar .icon {
   min-width: 60px;
   border-radius: 6px;
@@ -82,43 +83,43 @@
 }
 /* =========================== */
 
-.sidebar .header {
+.sidebar .header-nav {
   position: relative;
 }
 
-.sidebar .header .image_panel-text {
+.sidebar .header-nav .image_panel-text {
   display: flex;
   align-items: center;
 }
-.sidebar .header .logo-text {
+.sidebar .header-nav .logo-text {
   display: flex;
   flex-direction: column;
   margin-top: 5px;
   align-items: center;
 }
-.header .image_panel-text .profession {
+.header-nav .image_panel-text .profession {
   margin-top: 2px;
   font-size: 20px;
   font-weight: 600;
 }
 
-.header .image_panel-text .profession {
+.header-nav .image_panel-text .profession {
   font-size: 16px;
   margin-top: -2px;
 }
 
-.sidebar .header .image_panel {
+.sidebar .header-nav .image_panel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sidebar .header .image_panel img {
+.sidebar .header-nav .image_panel img {
   width: 50px;
   border-radius: 6px;
 }
 
-.sidebar .header .toggle {
+.sidebar .header-nav .toggle {
   position: absolute;
   top: 50%;
   right: -25px;
@@ -136,7 +137,7 @@
   transition: var(--tran-05);
 }
 
-body.dark .sidebar .header .toggle {
+body.dark .sidebar .header-nav .toggle {
   color: var(--text-color);
 }
 
@@ -326,11 +327,7 @@ body.dark .home .text {
   border-radius: 5px;
   background: linear-gradient(135deg, #ff9564bb, #f75308);
 }
-.teste{
-  width: 100%;
-  //background-color: #aa2929;
-  
-}
+
 .container_preferencias {
   flex: 40%;
   background-color: #f9f9f9;
@@ -366,6 +363,12 @@ body.dark .home .text {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
   margin-top: 25px;
   margin-right: 25px;
+}
+
+@media (max-width: 1000px) {
+  .container_fotoperfil {
+    margin-right: 0px;
+  }
 }
 
 .container_fotoperfil .title {

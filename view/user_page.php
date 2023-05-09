@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!----======== CSS ======== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/login/style.scss">
     <link rel="stylesheet" href="./css/common/header.css" />
     <link rel="stylesheet" href="./css/common/language.css" />
@@ -17,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>STR</title>
 </head>
 
@@ -79,7 +79,7 @@
         </ul>
     </header>
     <nav class="sidebar close">
-        <div class="header">
+        <div class="header-nav">
             <div class="image-text">
                 <span class="image_panel">
                     <?php
@@ -264,6 +264,7 @@
                                 ?>
                                 <?php
                                 ini_set('display_errors', 0);
+                                $connect = mysqli_connect("localhost", "root", "", "str");
                                 $sql = "SELECT * FROM paises";
                                 $result = mysqli_query($connect, $sql);
                                 while ($row = mysqli_fetch_array($result)) {
@@ -336,7 +337,7 @@
                             while ($row = $result->fetch_assoc()) {
                                 if ($row["email"] == $_GET["email"]) {
                                     echo '
-                                <p>
+                                    <p>
                                     <label class="preferencias">Linguagem pré definida ao iniciar sessão</label>
                                     <select class="opc" name="linguagem">
                                         <option selected class="selected_linguagem">' . $row["linguagem"] . '</option>
@@ -373,8 +374,7 @@
                                     <option class="dados_login">Não</option>
                                 </select>
                             </p>
-                                            
-                            ';
+                                ';
                                 }
                             }
                         }
@@ -438,10 +438,10 @@
         </div>
     </div>
     <div id="doacao-box" class="box home">
-
+        <h2>cand</h2>
     </div>
     <div id="obs-box" class="box home">
-        <h2>Profila12323e</h2>
+        <h2>obs</h2>
     </div>
     <script>
         addEventListener("DOMContentLoaded", (event) => {
@@ -461,6 +461,7 @@
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
     <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

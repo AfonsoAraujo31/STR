@@ -64,7 +64,6 @@ if ($result->num_rows > 0) {
           </ul>
         </div>
         <?php include '../model/common/load_profilephoto.php'; ?>
-        <!-- <li class="user-container"><a href="./login.php"><span><img class="user" src="./assets/others/user.png" /></span></a></li> -->
     </ul>
   </header>
   <!-- LOGIN/REGISTO *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
