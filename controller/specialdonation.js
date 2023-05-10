@@ -31,13 +31,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("sing_in") == 1) {
-    document.getElementById("cover").classList.remove("blur-in");
-      document.body.style.overflow = "scroll";
-  }
-});
-
 var swiper = new Swiper(".blog-slider", {
   spaceBetween: 30,
   effect: "fade",

@@ -88,5 +88,6 @@ function teste(){
   localStorage.setItem('temp_user', '');
   document.cookie = "current_user=";
   document.cookie = "current_user=; expires=0; path=/";
+  document.cookie = "sing_in=; expires=0; path=/";
   localStorage.setItem("sing_in",0);
 }
