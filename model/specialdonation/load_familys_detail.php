@@ -8,42 +8,7 @@ if ($result->num_rows > 0) {
         $foto_familia = base64_encode($row['foto_familia']);
         /*$row['descricao']*/
         echo '
-        <main>
-            <div class="container">
-                <div class="grid second-nav">
-                    <div class="column-xs-12">
-                        <nav>
-                            <ol class="breadcrumb-list">
-                                <li class="breadcrumb-item"><a href="../view/specialdonation.php">Doação Especial</a></li>
-                                <li class="breadcrumb-item active">nao sei o que escrever</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-                <div class="grid product">
-                    <div class="column-xs-12 column-md-7">
-                        <div class="product-gallery" id="product-gallery">
-                            <div class="product-image">
-                                <img src="data:image/*;base64,'.$foto_familia.'">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column-xs-12 column-md-5">
-                        <h1 class="h1">Cruz Vermelha Portuguesa</h1>
-                        <div class="description">
-                            <div>
-                            <p>A Cruz Vermelha é uma instituição humanitária internacional sem vinculação estatal que atua na defesa de pessoas em situação de vulnerabilidade causada por conflitos armados.</p>
-                            <p>Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população.</p> <p>Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população.</p>
-                            <p>Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população.</p>
-                            <p>Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população.</p>
-                            <p>Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população.</p>
-                            <p>Voluntários da Cruz Vermelha Portuguesa são aqueles que de forma consciente, num espírito de solidariedade e compromisso, prestam o seu contributo à população.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+        
         ';
     }
 }

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>STR</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/association.scss" />
+  <link rel="stylesheet" href="./css/specialdonation-details.scss" />
   <link rel="stylesheet" href="./css/common/header.css" />
   <link rel="stylesheet" href="./css/common/language.css" />
   <link rel="stylesheet" href="./css/common/backTop.css" />

@@ -71,7 +71,7 @@
     <div class="center-div">
       <section class="container animate__animated animate__bounceIn">
         <div class="pricing-card">
-        <img src="./image-removebg-preview.png" alt="">
+        <img src="./assets/specialdonation/image-removebg-preview.png" alt="">
         <div class="text-center texto">
           <div class="pb-2 title_widget">Oops, parece que aconteceu algo de inesperado!</div>
           <div class="content-text_widget">
