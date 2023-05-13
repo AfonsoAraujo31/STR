@@ -31,18 +31,18 @@ $(function () {
       '<img id="flags" src="images/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português'
     );
     //login
-    $("#title_login").text("Iniciar sessão");
-    $("#label_email").text("Endereço de email");
-    $("#label_pass").text("Palavra chave");
+    $("#title_login").text("Iniciar sessão em STR");
     $(".btn_login").text("Entrar");
+    $("#input_email").attr('placeholder','Endereço de email');
+    $("#input_password").attr('placeholder','Palavra chave');
     //register
-    $("#title_register").text("Criar conta");
-    $("#label_nome_reg").text("Nome");
-    $("#label_sobrenome_reg").text("Sobrenome");
-    $("#label_email_reg").text("Endereço de email");
-    $("#label_tel_reg").text("Número de telemóvel");
-    $("#label_pais_reg").text("Escolha...");
-    $("#label_pass_reg").text("Palavra chave");
+    $("#title_register").text("Criar conta STR");
+    $("#input_nome_reg").attr('placeholder','Nome');
+    $("#input_sobrenome_reg").attr('placeholder','Sobrenome');
+    $("#input_email_reg").attr('placeholder','Edereço de email');
+    $("#input_telemovel_reg").attr('placeholder','Telemóvel');
+    $("#label_pais_reg").text("Nacionalidade");
+    $("#password").attr('placeholder','Palavra chave');
     $("#label_1").html(
       '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Maiúsculas e Minúsculas</li>'
     );
@@ -170,18 +170,18 @@ $(function () {
       '<img id="flags" src="images/flags/gb-eng.png" width="35px" height="25px" style="margin-right:10px;">English'
     );
     //login
-    $("#title_login").text("Login");
-    $("#label_email").text("Email");
-    $("#label_pass").text("Password");
+    $("#title_login").text("Sing in into STR");
     $(".btn_login").text("Login");
+    $("#input_email").attr('placeholder','Email');
+    $("#input_password").attr('placeholder','Password');
     //register
-    $("#title_register").text("Create an account");
-    $("#label_nome_reg").text("Name");
-    $("#label_sobrenome_reg").text("Second name");
-    $("#label_email_reg").text("Email");
-    $("#label_tel_reg").text("Phone number");
-    $("#label_pais_reg").text("Choose...");
-    $("#label_pass_reg").text("Password");
+    $("#title_register").text("Create an account STR");
+    $("#input_nome_reg").attr('placeholder','Name');
+    $("#input_sobrenome_reg").attr('placeholder','Second Name');
+    $("#input_email_reg").attr('placeholder','Email');
+    $("#input_telemovel_reg").attr('placeholder','Phone number');
+    $("#label_pais_reg").text("Nationality");
+    $("#password").attr('placeholder','Password');
     $("#label_1").html(
       '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Upper and lowercase</li>'
     );
@@ -312,18 +312,18 @@ $(function () {
       '<img id="flags" src="images/flags/fr.png" width="35px" height="25px" style="margin-right:10px;">Français'
     );
     //login
-    $("#title_login").text("Connexion");
-    $("#label_email").text("Email");
-    $("#label_pass").text("Mot de passe");
-    $(".btn_login").text("Connexion");
+    $("#title_login").text("Connexion un STR");
+    $(".input_email").attr('placeholder','Email');
+    $("#input_password").attr('placeholder','Mot de passe');
+    $("#btn_login").text("Connexion");
     //register
-    $("#title_register").text("Créer un compte");
-    $("#label_nome_reg").text("Nom");
-    $("#label_sobrenome_reg").text("Nom de famille");
-    $("#label_email_reg").text("Email");
-    $("#label_tel_reg").text("Numéro de téléphone");
-    $("#label_pais_reg").text("Choisir...");
-    $("#label_pass_reg").text("Mot de passe");
+    $("#title_register").text("Créer un compte STR");
+    $("#input_nome_reg").attr('placeholder','Nom');
+    $("#input_sobrenome_reg").attr('placeholder','Nom de famille');
+    $("#input_email_reg").attr('placeholder','Email');
+    $("#input_telemovel_reg").attr('placeholder','Numéro de téléphone');
+    $("#label_pais_reg").text("Nationalité");
+    $("#password").attr('placeholder','Mot de passe');
     $("#label_1").html(
       '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Majuscule et minuscule</li>'
     );
@@ -460,18 +460,18 @@ addEventListener("DOMContentLoaded", (event) => {
         '<img id="flags" src="images/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português'
       );
       //login
-      $("#title_login").text("Iniciar sessão");
-      $("#label_email").text("Endereço de email");
-      $("#label_pass").text("Palavra chave");
+      $("#title_login").text("Iniciar sessão em STR");
       $(".btn_login").text("Entrar");
+      $("#input_email").attr('placeholder','Endereço de email');
+    $("#input_password").attr('placeholder','Palavra chave');
       //register
-      $("#title_register").text("Criar conta");
-      $("#label_nome_reg").text("Nome");
-      $("#label_sobrenome_reg").text("Sobrenome");
-      $("#label_email_reg").text("Endereço de email");
-      $("#label_tel_reg").text("Número de telemóvel");
-      $("#label_pais_reg").text("Escolha...");
-      $("#label_pass_reg").text("Palavra chave");
+      $("#title_register").text("Criar conta STR");
+      $("#input_nome_reg").attr('placeholder','Nome');
+    $("#input_sobrenome_reg").attr('placeholder','Sobrenome');
+    $("#input_email_reg").attr('placeholder','Edereço de email');
+    $("#input_telemovel_reg").attr('placeholder','Telemóvel');
+    $("#label_pais_reg").text("Nacionalidade");
+    $("#password").attr('placeholder','Palavra chave');
       $("#label_1").html(
         '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Maiúsculas e Minúsculas</li>'
       );
@@ -595,18 +595,18 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".language-selected_linguagem").html(
         '<img id="flags" src="images/flags/gb-eng.png" width="35px" height="25px" style="margin-right:10px;">English'
       );
-      $("#title_login").text("Login");
-      $("#label_email").text("Email");
-      $("#label_pass").text("Password");
-      $(".btn_login").text("Login");
+      $("#title_login").text("Sing in into STR");
+      $(".input_email").attr('placeholder','Email');
+    $("#input_password").attr('placeholder','Password');
+      $("#btn_login").text("Login");
       //register
-      $("#title_register").text("Create an account");
-      $("#label_nome_reg").text("Name");
-      $("#label_sobrenome_reg").text("Second name");
-      $("#label_email_reg").text("Email");
-      $("#label_tel_reg").text("Phone number");
-      $("#label_pais_reg").text("Choose...");
-      $("#label_pass_reg").text("Password");
+      $("#title_register").text("Create an account STR");
+      $("#input_nome_reg").attr('placeholder','Name');
+    $("#input_sobrenome_reg").attr('placeholder','Second Name');
+    $("#input_email_reg").attr('placeholder','Email');
+    $("#input_telemovel_reg").attr('placeholder','Phone number');
+    $("#label_pais_reg").text("Nationality");
+    $("#password").attr('placeholder','Password');
       $("#label_1").html(
         '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Upper and lowercase</li>'
       );
@@ -731,18 +731,18 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".language-selected_linguagem").html(
         '<img id="flags" src="images/flags/fr.png" width="35px" height="25px" style="margin-right:10px;">Français'
       );
-      $("#title_login").text("Connexion");
-      $("#label_email").text("Email");
-      $("#label_pass").text("Mot de passe");
-      $(".btn_login").text("Connexion");
+      $("#title_login").text("Connexion un STR");
+      $(".input_email").attr('placeholder','Email');
+    $("#input_password").attr('placeholder','Mot de passe');
+      $("#btn_login").text("Connexion");
       //register
-      $("#title_register").text("Créer un compte");
-      $("#label_nome_reg").text("Nom");
-      $("#label_sobrenome_reg").text("Nom de famille");
-      $("#label_email_reg").text("Email");
-      $("#label_tel_reg").text("Numéro de téléphone");
-      $("#label_pais_reg").text("Choisir...");
-      $("#label_pass_reg").text("Mot de passe");
+      $("#title_register").text("Créer un compte STR");
+      $("#input_nome_reg").attr('placeholder','Nom');
+    $("#input_sobrenome_reg").attr('placeholder','Nom de famille');
+    $("#input_email_reg").attr('placeholder','Email');
+    $("#input_telemovel_reg").attr('placeholder','Numéro de téléphone');
+    $("#label_pais_reg").text("Nationalité");
+    $("#password").attr('placeholder','Mot de passe');
       $("#label_1").html(
         '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Majuscule et minuscule</li>'
       );

@@ -32,10 +32,18 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
-<style>
-    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
-    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
-    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
+  <style>
+    a.pt:before {
+      background-image: url(../view/assets/flags/pt.png);
+    }
+
+    a.en:before {
+      background-image: url(../view/assets/flags/gb-eng.png);
+    }
+
+    a.fr:before {
+      background-image: url(../view/assets/flags/fr.png);
+    }
   </style>
   <header class="bg-strong-gray">
     <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -69,7 +77,7 @@ if ($result->num_rows > 0) {
   <!-- LOGIN/REGISTO *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
   <style>
     .form-rounded {
-      border-radius: 1rem;
+      border-radius: 5px;
     }
 
     .form-control:focus {
@@ -84,33 +92,29 @@ if ($result->num_rows > 0) {
       box-shadow: none;
     }
 
-    .form-control {
-      font-size: 20px;
-    }
-
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
   </style>
-
   <div id="container" class="cont">
     <div class="signin-signup">
       <!-- LOGIN -->
-      <form action="" class="sign-in-form">
-        <h2 class="title" id="title_login">Iniciar sessão</h2>
-        <br>
+      <form action="" class="sign-in-form" >
         <div id="errorAlertlogin" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
-        <div class="form-outline mb-4">
-          <input type="email" id="input_email" class="form-control form-control-lg form-rounded" />
-          <label class="form-label label" id="label_email" for="form3Example8">Endereço de email</label>
-        </div>
-        <div class="form-outline mb-4">
-          <input type="email" id="input_password" class="form-control form-control-lg form-rounded" />
-          <label class="form-label label" id="label_pass" for="form3Example8">Palavra chave</label>
-        </div>
-        <div class="pt-1 mb-4">
-          <button class="btn btn-dark btn-lg btn-block btn_login" onclick="login();" type="button" style="margin:5px;">Entrar</button>
+        <div class="container">
+          <h2 id="title_login">Iniciar sessão em STR</h2><br>
+          <div class="row">
+            <div class="col-md-12 mb-4">
+              <input type="text" id="input_email" placeholder="Endereço de email" class="form-control form-control-lg form-rounded" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mb-4">
+              <input type="text" id="input_password" placeholder="Palavra chave" class="form-control form-control-lg form-rounded" />
+            </div>
+          </div>
+          <button class="btn btn-dark btn-lg btn-block btn_login" onclick="login();" type="button">Entrar</button>
         </div>
       </form>
       <script>
@@ -133,41 +137,32 @@ if ($result->num_rows > 0) {
       </script>
       <!-- REGISTO -->
       <form action="" class="sign-up-form">
-        <h2 class="title" id="title_register">Criar conta</h2>
-        <br>
         <div id="errorAlertlogin1" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
-        <!-- NOME/SOBRENOME -->
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <div class="form-outline">
-              <input type="text" id="input_nome_reg" class="form-control form-control-lg form-rounded" />
-              <label class="form-label" id="label_nome_reg" for="form3Example1m1">Nome</label>
+        <div class="container">
+          <h2 id="title_register">Criar conta no STR</h2><br>
+          <div class="row">
+            <!-- NOME/SOBRENOME -->
+            <div class="col-md-6 mb-4">
+              <input type="text" id="input_nome_reg" placeholder="Nome" class="form-control form-control-lg form-rounded" />
+            </div>
+            <div class="col-md-6 mb-4">
+              <input type="text" id="input_sobrenome_reg" placeholder="Sobrenome" class="form-control form-control-lg form-rounded" />
             </div>
           </div>
-          <div class="col-md-6 mb-4">
-            <div class="form-outline">
-              <input type="text" id="input_sobrenome_reg" class="form-control form-control-lg form-rounded" />
-              <label class="form-label" id="label_sobrenome_reg" for="form3Example1n1">Sobrenome</label>
+          <div class="row">
+            <!-- EMAIL -->
+            <div class="col-md-12 mb-4">
+              <input type="email" id="input_email_reg" placeholder="Endereço de email" class="form-control form-control-lg form-rounded" />
             </div>
           </div>
-        </div>
-        <!-- EMAIL -->
-        <div class="form-outline mb-4">
-          <input type="email" id="input_email_reg" class="form-control form-control-lg form-rounded" />
-          <label class="form-label label" id="label_email_reg" for="form3Example8">Endereço de email</label>
-        </div>
-        <!-- TELEMÓVEL/DATA NASCIMENTO -->
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <div class="form-outline">
-              <input type="tel" id="input_telemovel_reg" class="form-control form-control-lg form-rounded" pattern="[0-9]{9}" />
-              <label class="form-label" id="label_tel_reg" for="form3Example1m1">Número de telemóvel</label>
+          <div class="row">
+            <!-- TELEMÓVEL/DATA NASCIMENTO -->
+            <div class="col-md-6 mb-4">
+              <input type="tel" id="input_telemovel_reg" placeholder="Telemóvel" class="form-control form-control-lg form-rounded" pattern="[0-9]{9}" />
             </div>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="input-group mb-3">
-              <select class="custom-select form-rounded" id="input_pais_reg" style="width:280px;height:50px;">
-                <option selected id="label_pais_reg">Escolha...</option>
+            <div class="col-md-6 mb-4">
+              <select class="custom-select form-rounded" id="input_pais_reg" style="height:50px;">
+                <option selected id="label_pais_reg">Nacionalidade</option>
                 <?php
                 ini_set('display_errors', 0);
                 $connect = mysqli_connect("localhost", "root", "", "str");
@@ -183,37 +178,25 @@ if ($result->num_rows > 0) {
               </select>
             </div>
           </div>
-        </div>
-        <!-- PALAVRA CHAVE -->
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-            <form class="form-horizontal mar-top-bot-50" id="validateForm" action="signup.html">
-              <fieldset>
-                <!-- Password input-->
-                <div class="form-group">
-                  <div class="col-md-12">
-                    <input style="width:600px;" id="password" name="password" type="password" placeholder="" class="form-control input-md form-rounded" data-placement="bottom" data-toggle="popover" data-container="body" type="button" data-html="true">
-                    <label class="form-label" id="label_pass_reg" for="form3Example4cg">Palavra chave</label>
-                    <br>
-                    <div id="popover-password">
-                      <div class="progress">
-                        <div id="password-strength" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div>
-                      </div>
-                      <ul class="list-unstyled">
-                        <li class=""><span class="low-upper-case" id="label_1"><i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; </li>
-                        <li class=""><span class="one-number" id="label_2"><i class="fa fa-file-text" aria-hidden="true"></i></span> &nbsp;</li>
-                        <li class=""><span class="one-special-char" id="label_3"><i class="fa fa-file-text" aria-hidden="true"></i></span> &nbsp;</li>
-                        <li class=""><span class="eight-character" id="label_4"><i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; </li>
-                      </ul>
-                    </div>
-                  </div>
+          <div class="row">
+            <!-- PALAVRA CHAVE -->
+            <div class="col-md-12 mb-4">
+              <input id="password" name="password" type="password" placeholder="Palavra chave" class="form-control form-control-lg form-rounded" />
+              <br>
+              <div id="popover-password">
+                <div class="progress">
+                  <div id="password-strength" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div>
                 </div>
-              </fieldset>
-            </form>
+                <ul class="list-unstyled">
+                  <li class=""><span class="low-upper-case" id="label_1"><i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; </li>
+                  <li class=""><span class="one-number" id="label_2"><i class="fa fa-file-text" aria-hidden="true"></i></span> &nbsp;</li>
+                  <li class=""><span class="one-special-char" id="label_3"><i class="fa fa-file-text" aria-hidden="true"></i></span> &nbsp;</li>
+                  <li class=""><span class="eight-character" id="label_4"><i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="pt-1 mb-4" id="button">
-
+          <div class="pt-1 mb-4" id="button"></div>
         </div>
       </form>
       <script>
@@ -248,7 +231,7 @@ if ($result->num_rows > 0) {
           <script>
             function showbutton() {
               setTimeout(() => {
-                document.getElementById("button").innerHTML = '<button class="btn btn-dark btn-lg btn-block btn_reg" onclick="registo();" type="button" style="margin:5px;width:115px;position:relative;left:415px;top:15px;">Criar</button>';
+                document.getElementById("button").innerHTML = '<button class="btn btn-dark btn-lg btn-block btn_reg" onclick="registo();" type="button">Criar</button>';
               }, 750);
             }
 
@@ -272,6 +255,7 @@ if ($result->num_rows > 0) {
       </div>
     </div>
   </div>
+
   <!-- JavaSricpt -->
   <script type="module" src="../controller/login.js"></script>
   <script type="module" src="../controller/login/script.js"></script>

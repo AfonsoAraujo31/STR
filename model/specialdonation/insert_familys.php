@@ -8,8 +8,8 @@
 ?>
 
 <?php 
-require_once '/wamp64/www/STR/configurations/dbconnection.php';
-$sql = "UPDATE familias_doacaoespecial SET descricao = 'Olá, somos a família Al-Abdullah! A nossa família é constituída por cinco pessoas, e infelizmente, tivemos que de fugir da Síria devido à guerra civil e buscar refugio aqui num país onde nos pudéssemos sentir confortáveis e seguros.' WHERE id = 11";
+require_once '/wamp64/www/STR/configurations/dbconnection.php';   
+$sql = "UPDATE familias_doacaoespecial SET descricao = 'Somos mãe e filha, vindas da Nigéria, mas bastantes resilientes. Deixamos para trás a nossa terra em busca de um futuro melhor e em segurança. Com amor e determinação, mantemos viva a esperança de uma vida cheia de oportunidades.' WHERE id = 26";
 if ($conn->query($sql) === TRUE) {
         echo "top";
       }else{
