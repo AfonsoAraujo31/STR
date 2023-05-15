@@ -18,7 +18,8 @@ if ($result->num_rows > 0) {
     }
   }
   if ($login = 1) {
-    echo "<script>location.href='http://localhost/STR/view/login/login.php?error=login';</script>";
+    echo "<script>location.href='http://localhost/STR/view/login.php?error=login';</script>";
   }
 }
 $conn->close();
+?>

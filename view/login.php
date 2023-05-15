@@ -84,6 +84,7 @@ if ($result->num_rows > 0) {
       outline: none !important;
       border-color: #ff5e14a8;
       box-shadow: none;
+      
     }
 
     .custom-select:focus {
@@ -100,8 +101,9 @@ if ($result->num_rows > 0) {
   <div id="container" class="cont">
     <div class="signin-signup">
       <!-- LOGIN -->
-      <form action="" class="sign-in-form" >
+      <form action="" class="sign-in-form">
         <div id="errorAlertlogin" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
+        <div id="errorAlertlogin2" class="alert alert-danger hide-item errorAlertlogin2" role="alert">Endereço de email ou palavra chave incorretos.</div>
         <div class="container">
           <h2 id="title_login">Iniciar sessão em STR</h2><br>
           <div class="row">
@@ -111,33 +113,16 @@ if ($result->num_rows > 0) {
           </div>
           <div class="row">
             <div class="col-md-12 mb-4">
-              <input type="text" id="input_password" placeholder="Palavra chave" class="form-control form-control-lg form-rounded" />
+              <input type="password" id="input_password" placeholder="Palavra chave" class="form-control form-control-lg form-rounded" />
             </div>
           </div>
           <button class="btn btn-dark btn-lg btn-block btn_login" onclick="login();" type="button">Entrar</button>
         </div>
       </form>
-      <script>
-        function login() {
-          if (document.getElementById("input_email").value.length == 0 || document.getElementById("input_password").value.length == 0) {
-            $("#errorAlertlogin").show("medium");
-            setTimeout(function() {
-              $("#errorAlertlogin").hide("medium");
-            }, 4000);
-          } else {
-            localStorage.setItem("sing_in", 1);
-            localStorage.setItem("temp_user", document.getElementById("input_email").value);
-            document.cookie = "current_user=" + document.getElementById("input_email").value;
-            document.cookie = "temp_user=" + document.getElementById("input_email").value;
-            const variavel1 = document.getElementById("input_email").value;
-            const variavel2 = document.getElementById("input_password").value;
-            window.location.href = "http://localhost/STR/model/login/login.php?email=" + variavel1 + "&pass=" + variavel2;
-          }
-        }
-      </script>
       <!-- REGISTO -->
       <form action="" class="sign-up-form">
         <div id="errorAlertlogin1" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
+        <div id="errorAlertlogin3" class="alert alert-danger hide-item errorAlertlogin2" role="alert">Endereço de email ou palavra chave incorretos.</div>
         <div class="container">
           <h2 id="title_register">Criar conta no STR</h2><br>
           <div class="row">
@@ -158,7 +143,7 @@ if ($result->num_rows > 0) {
           <div class="row">
             <!-- TELEMÓVEL/DATA NASCIMENTO -->
             <div class="col-md-6 mb-4">
-              <input type="tel" id="input_telemovel_reg" placeholder="Telemóvel" class="form-control form-control-lg form-rounded" pattern="[0-9]{9}" />
+              <input type="number" id="input_telemovel_reg" placeholder="Telemóvel" class="form-control form-control-lg form-rounded" pattern="[0-9]{9}" />
             </div>
             <div class="col-md-6 mb-4">
               <select class="custom-select form-rounded" id="input_pais_reg" style="height:50px;">
@@ -199,27 +184,6 @@ if ($result->num_rows > 0) {
           <div class="pt-1 mb-4" id="button"></div>
         </div>
       </form>
-      <script>
-        function registo() {
-          if (document.getElementById("input_nome_reg").value.length == 0 || document.getElementById("input_sobrenome_reg").value.length == 0 || document.getElementById("input_email_reg").value.length == 0 || document.getElementById("input_telemovel_reg").value.length == 0 || document.getElementById("input_pais_reg").value.length == 0 || document.getElementById("password").value.length == 0) {
-            $("#errorAlertlogin1").show("medium");
-            setTimeout(function() {
-              $("#errorAlertlogin1").hide("medium");
-            }, 4000);
-          } else {
-            localStorage.setItem("sing_in", 1);
-            localStorage.setItem("temp_user", document.getElementById("input_email").value);
-            document.cookie = "current_user=" + document.getElementById("input_email").value;
-            const variavel1 = document.getElementById("input_nome_reg").value;
-            const variavel2 = document.getElementById("input_sobrenome_reg").value;
-            const variavel3 = document.getElementById("input_email_reg").value;
-            const variavel4 = document.getElementById("input_telemovel_reg").value;
-            const variavel5 = document.getElementById("input_pais_reg").value;
-            const variavel6 = document.getElementById("password").value;
-            window.location.href = "http://localhost/STR/model/login/register.php?nome=" + variavel1 + "&sobrenome=" + variavel2 + "&email=" + variavel3 + "&telemovel=" + variavel4 + "&pais=" + variavel5 + "&pass=" + variavel6;
-          }
-        }
-      </script>
     </div>
 
     <div class="panels-container">
@@ -227,36 +191,86 @@ if ($result->num_rows > 0) {
         <div class="content" id="content_login">
           <h3>Ainda não têm uma conta?</h3>
           <p>Crie a sua agora e comece a ajudar e explorar o nosso mundo!</p>
-          <button class="btn transparent" id="sign-up-btn" onclick="showbutton();">Criar conta</button>
-          <script>
-            function showbutton() {
-              setTimeout(() => {
-                document.getElementById("button").innerHTML = '<button class="btn btn-dark btn-lg btn-block btn_reg" onclick="registo();" type="button">Criar</button>';
-              }, 750);
-            }
-
-            function closebutton() {
-              setTimeout(() => {
-                document.getElementById("button").innerHTML = '';
-              }, 850);
-            }
-          </script>
+          <button class="btn transparent form-control" id="sign-up-btn" onclick="showbutton();">Criar conta</button>
         </div>
-        <img src="" class="image" alt="">
       </div>
 
       <div class="panel right-panel">
         <div class="content" id="content_reg">
           <h3>Já têm uma conta?</h3>
           <p>Entre agora na sua conta para ter acesso ao nosso mundo!</p>
-          <button class="btn transparent" id="sign-in-btn" onclick="closebutton();">Entrar</button>
+          <button class="btn transparent form-control" id="sign-in-btn" onclick="closebutton();">Entrar</button>
         </div>
-        <img src="" class="image" alt="">
       </div>
     </div>
   </div>
-
   <!-- JavaSricpt -->
+  <script>
+    function login() {
+      if (document.getElementById("input_email").value.length == 0 || document.getElementById("input_password").value.length == 0) {
+        $("#errorAlertlogin").show("medium");
+        setTimeout(function() {
+          $("#errorAlertlogin").hide("medium");
+        }, 4000);
+      } else {
+        localStorage.setItem("sing_in", 1);
+        localStorage.setItem("temp_user", document.getElementById("input_email").value);
+        document.cookie = "current_user=" + document.getElementById("input_email").value;
+        document.cookie = "temp_user=" + document.getElementById("input_email").value;
+        const variavel1 = document.getElementById("input_email").value;
+        const variavel2 = document.getElementById("input_password").value;
+        window.location.href = "http://localhost/STR/model/login/login.php?email=" + variavel1 + "&pass=" + variavel2;
+      }
+    }
+
+    function registo() {
+      if (document.getElementById("input_nome_reg").value.length == 0 || document.getElementById("input_sobrenome_reg").value.length == 0 || document.getElementById("input_email_reg").value.length == 0 || document.getElementById("input_telemovel_reg").value.length == 0 || document.getElementById("input_pais_reg").value.length == 0 || document.getElementById("password").value.length == 0) {
+        $("#errorAlertlogin1").show("medium");
+        setTimeout(function() {
+          $("#errorAlertlogin1").hide("medium");
+        }, 4000);
+      } else {
+        localStorage.setItem("sing_in", 1);
+        localStorage.setItem("temp_user", document.getElementById("input_email").value);
+        document.cookie = "current_user=" + document.getElementById("input_email").value;
+        const variavel1 = document.getElementById("input_nome_reg").value;
+        const variavel2 = document.getElementById("input_sobrenome_reg").value;
+        const variavel3 = document.getElementById("input_email_reg").value;
+        const variavel4 = document.getElementById("input_telemovel_reg").value;
+        const variavel5 = document.getElementById("input_pais_reg").value;
+        const variavel6 = document.getElementById("password").value;
+        window.location.href = "http://localhost/STR/model/login/register.php?nome=" + variavel1 + "&sobrenome=" + variavel2 + "&email=" + variavel3 + "&telemovel=" + variavel4 + "&pais=" + variavel5 + "&pass=" + variavel6;
+      }
+    }
+
+    function showbutton() {
+      setTimeout(() => {
+        document.getElementById("button").innerHTML = '<button class="btn btn-dark btn-lg btn-block btn_reg" onclick="registo();" type="button">Criar</button>';
+      }, 750);
+    }
+
+    function closebutton() {
+      setTimeout(() => {
+        document.getElementById("button").innerHTML = '';
+      }, 850);
+    }
+
+    addEventListener("DOMContentLoaded", (event) => {
+      if (window.location == "http://localhost/STR/view/login.php?error=login") {
+        $('#errorAlertlogin2').show('medium');
+        setTimeout(function() {
+          $('#errorAlertlogin2').hide('medium');
+        }, 4000);
+      }
+      if (window.location == "http://localhost/STR/view/login.php?error=register") {
+        $('#errorAlertlogin3').show('medium');
+        setTimeout(function() {
+          $('#errorAlertlogin3').hide('medium');
+        }, 4000);
+        container.classList.add("sign-up-mode");
+      }
+    });
+  </script>
   <script type="module" src="../controller/login.js"></script>
   <script type="module" src="../controller/login/script.js"></script>
   <script type="module" src="./lang/login_lang.js"></script>

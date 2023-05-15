@@ -12,7 +12,10 @@ if ($conn->query($sql) === TRUE) {
       echo "<script>localStorage.setItem('temp_user', '".$_GET["email"]."');</script>";
       setcookie("current_user", $_GET['email'],0,"/");
       echo "<script>location.href='http://localhost/STR/view/user_page.php?email=".$_GET["email"]."';</script>";
+    }else{
+      echo "<script>location.href='http://localhost/STR/view/login.php?error=register';</script>";
     }
    } else {
- // echo "<script>location.href='http://localhost/STR/login/user_page.php?email=".$_COOKIE["current_user"]."&error=updatefail';</script>";
+    echo "<script>location.href='http://localhost/STR/view/login.php?error=register';</script>";
 }
+?>

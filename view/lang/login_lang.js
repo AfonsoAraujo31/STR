@@ -199,7 +199,7 @@ $(function () {
       .children()
       .eq(1)
       .text("Create yours now and start helping and exploring our world!");
-    $("#sign-up-btn").text("Create an account");
+    $("#sign-up-btn").text("Sing up");
     $("#content_reg").children().eq(0).text("Already have an account?");
     $("#content_reg")
       .children()
@@ -624,7 +624,7 @@ addEventListener("DOMContentLoaded", (event) => {
         .children()
         .eq(1)
         .text("Create yours now and start helping and exploring our world!");
-      $("#sign-up-btn").text("Create an account");
+      $("#sign-up-btn").text("Sing up");
       $("#content_reg").children().eq(0).text("Already have an account?");
       $("#content_reg")
         .children()

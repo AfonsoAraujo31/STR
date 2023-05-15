@@ -24,7 +24,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body class=<?php ini_set('display_errors', 0); if($_COOKIE["sing_in"]===1){echo "";}else if($_COOKIE["sing_in"]===""){echo "overflow";}?>>
+<body class=<?php ini_set('display_errors', 0);
+            if ($_COOKIE["sing_in"] === 1) {
+              echo "";
+            } else if ($_COOKIE["sing_in"] === "") {
+              echo "overflow";
+            } ?>>
   <style>
     a.pt:before {
       background-image: url(../view/assets/flags/pt.png);
@@ -67,10 +72,15 @@
         <?php include '../model/common/load_profilephoto.php'; ?>
     </ul>
   </header>
-  <?php ini_set('display_errors', 0);if($_COOKIE["sing_in"]==1){echo '<div class="hidden">';}else if($_COOKIE["sing_in"]==""){echo '<div class="">';}?>
-    <div class="center-div">
-      <section class="container animate__animated animate__bounceIn">
-        <div class="pricing-card">
+  <?php ini_set('display_errors', 0);
+  if ($_COOKIE["sing_in"] == 1) {
+    echo '<div class="hidden">';
+  } else if ($_COOKIE["sing_in"] == "") {
+    echo '<div class="">';
+  } ?>
+  <div class="center-div">
+    <section class="container animate__animated animate__bounceIn">
+      <div class="pricing-card">
         <img src="./assets/specialdonation/image-removebg-preview.png" alt="">
         <div class="text-center texto">
           <div class="pb-2 title_widget">Oops, parece que aconteceu algo de inesperado!</div>
@@ -78,47 +88,57 @@
             De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito.
           </div>
         </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
-  <div class=<?php ini_set('display_errors', 0); if($_COOKIE["sing_in"]===1){echo "blur-out";}else if($_COOKIE["sing_in"]===""){echo "blur-in";}?>>
+  </div>
+  <div class=<?php ini_set('display_errors', 0);
+              if ($_COOKIE["sing_in"] === 1) {
+                echo "blur-out";
+              } else if ($_COOKIE["sing_in"] === "") {
+                echo "blur-in";
+              } ?>>
     <div class="shapedividers_com-9461">
       <img src="./assets/others/image.png" class="presentation-image" />
     </div>
     <div class="column">
-    <?php ini_set('display_errors', 0);if($_COOKIE["sing_in"]==1){echo '<div class="wrapper animate__animated animate__fadeIn">';}else if($_COOKIE["sing_in"]==""){echo '<div class="wrapper">';}?>
-        <div class="title uppercase ">O que é a Doação Especial ?</div>
-        <div class="content-text">
-          <p>
-            Este novo conceito permite ao utilizador, caso se identifique com
-            alguma família refugiada, proceder à doação, apenas a essa família, desde uma
-            habitação, bens alimentares ou até mesmo algumas despesas mensais enquanto se
-            reintegram na sociedade. Ao longo desta Ação promovemos a <b>transparência e a prestação</b>
-            de contas perante todos os nossos doadores para as quais desejamos trabalhar.
-          </p>
-          <p>A transparência é o princípio básico que rege a nossa gestão interna,<b> assegurando boas
-              práticas e fomentando a eficiência e eficácia para alcançar os nossos objetivos.</b>
-            Para isso, utilizamos diferentes instrumentos de acompanhamento e <b> avaliação, externos e
-              internos,</b> com o objetivo de reforçar o compromisso com os nossos grupos de interesse e
-            identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>,
-            como parte de um processo de melhoria contínua.
-          </p>
-          <p>A privacidade dos utilizadores e das famílias aqui reigstadas é uma questão de <b>extrema importância
-              na nossa comunidade</b>. As informações fornecidas pelos utilizadores podem incluir dados de identificação
-            pessoal, informações de contato, dados de localização e outras informações sensíveis. Portanto, é essencial
-            que o website em questão tenha <b>medidas adequadas em vigor para proteger a privacidade dos seus utilizadores</b>.
-          </p>
-        </div>
+      <?php ini_set('display_errors', 0);
+      if ($_COOKIE["sing_in"] == 1) {
+        echo '<div class="wrapper animate__animated animate__fadeIn">';
+      } else if ($_COOKIE["sing_in"] == "") {
+        echo '<div class="wrapper">';
+      } ?>
+      <div class="title uppercase ">O que é a Doação Especial ?</div>
+      <div class="content-text">
+        <p>
+          Este novo conceito permite ao utilizador, caso se identifique com
+          alguma família refugiada, proceder à doação, apenas a essa família, desde uma
+          habitação, bens alimentares ou até mesmo algumas despesas mensais enquanto se
+          reintegram na sociedade. Ao longo desta Ação promovemos a <b>transparência e a prestação</b>
+          de contas perante todos os nossos doadores para as quais desejamos trabalhar.
+        </p>
+        <p>A transparência é o princípio básico que rege a nossa gestão interna,<b> assegurando boas
+            práticas e fomentando a eficiência e eficácia para alcançar os nossos objetivos.</b>
+          Para isso, utilizamos diferentes instrumentos de acompanhamento e <b> avaliação, externos e
+            internos,</b> com o objetivo de reforçar o compromisso com os nossos grupos de interesse e
+          identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>,
+          como parte de um processo de melhoria contínua.
+        </p>
+        <p>A privacidade dos utilizadores e das famílias aqui reigstadas é uma questão de <b>extrema importância
+            na nossa comunidade</b>. As informações fornecidas pelos utilizadores podem incluir dados de identificação
+          pessoal, informações de contato, dados de localização e outras informações sensíveis. Portanto, é essencial
+          que o website em questão tenha <b>medidas adequadas em vigor para proteger a privacidade dos seus utilizadores</b>.
+        </p>
       </div>
     </div>
-   
-    <div id="blog-slider" class="blog-slider">
-      <div class="blog-slider__wrp swiper-wrapper">
-        <?php include '../model/specialdonation/load_familys.php'; ?>
-      </div>
-      <div class="blog-slider__pagination"></div>
+  </div>
+  
+  <div id="blog-slider" class="blog-slider">
+    <div class="blog-slider__wrp swiper-wrapper">
+      <?php include '../model/specialdonation/load_familys.php'; ?>
     </div>
+    <div class="blog-slider__pagination"></div>
+  </div>
   </div>
   <!-- FOOTER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
   <footer class="footer-section bg-extra-strong-gray">
