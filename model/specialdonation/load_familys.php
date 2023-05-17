@@ -10,7 +10,7 @@ if ($result->num_rows > 0) {
         $result1 = $conn->query($sql1);
         if ($result1->num_rows > 0) {
             while ($row1 = $result1->fetch_assoc()) {
-                if ($row1["doador_especial"] = true) {
+                if ($row1["doador_especial"] == true) {
                     echo '
                         <div class="blog-slider__item swiper-slide">
                         <div class="blog-slider__img">
@@ -20,11 +20,11 @@ if ($result->num_rows > 0) {
                             <span class="blog-slider__code">'.$row['data_chegada'].'</span>
                             <div class="blog-slider__title">Familia '.$row['nome_familia'].'</div>
                                 <div class="blog-slider__text">'.$row['descricao'].'</div>
-                                <a href="http://localhost/STR/view/specialdonation_detail.php?id='.$row['id'].'"  class="blog-slider__button">VER MAIS</a>
+                                <a href="http://localhost/STR/view/specialdonation_detail.php?id='.$row['id'].'" class="blog-slider__button">VER MAIS</a>
                             </div>
                         </div>
                     ';
-                }else{
+                }else if($row1["doador_especial"] == false){
                     $sql = "SELECT * FROM familias_doacaoespecial ORDER BY id ASC";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
                                     <span class="blog-slider__code">'.$row['data_chegada'].'</span>
                                     <div class="blog-slider__title">Familia '.$row['nome_familia'].'</div>
                                         <div class="blog-slider__text">'.$row['descricao'].'</div>
-                                        
+                                        <a class="blog-slider__button text-white" onclick="teste();">VER MAIS</a>
                                     </div>
                                 </div>
                             ';

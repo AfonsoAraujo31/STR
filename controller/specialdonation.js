@@ -44,3 +44,10 @@ var swiper = new Swiper(".blog-slider", {
     clickable: true,
   },
 });
+
+function teste(){
+  $('#errorAlertlogin').show('medium');
+  setTimeout(function () {
+    $('#errorAlertlogin').hide('medium');
+  }, 4000);
+}

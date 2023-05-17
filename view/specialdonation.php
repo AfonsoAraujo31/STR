@@ -108,7 +108,7 @@
       } else if ($_COOKIE["sing_in"] == "") {
         echo '<div class="wrapper">';
       } ?>
-      <div class="title uppercase ">O que é a Doação Especial ?</div>
+      <div class="title uppercase">O que é a Doação Especial ?</div>
       <div class="content-text">
         <p>
           Este novo conceito permite ao utilizador, caso se identifique com
@@ -132,10 +132,11 @@
       </div>
     </div>
   </div>
-  
+  <div id="errorAlertlogin" class="alert alert-warning  " role="alert">É necessário preencher o(s) campo(s)!</div>
   <div id="blog-slider" class="blog-slider">
     <div class="blog-slider__wrp swiper-wrapper">
       <?php include '../model/specialdonation/load_familys.php'; ?>
+      <p>teste</p>
     </div>
     <div class="blog-slider__pagination"></div>
   </div>

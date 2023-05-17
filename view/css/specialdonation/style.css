@@ -184,7 +184,9 @@
   text-align: center;
   letter-spacing: 1px;
   text-decoration: none;
+  cursor: pointer;
 }
+
 .blog-slider__button:hover {
   text-decoration: none;
   color: white;
