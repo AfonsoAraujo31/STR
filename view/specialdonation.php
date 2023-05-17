@@ -136,7 +136,7 @@
   <div id="blog-slider" class="blog-slider">
     <div class="blog-slider__wrp swiper-wrapper">
       <?php include '../model/specialdonation/load_familys.php'; ?>
-      <p>teste</p>
+      <p>teste1</p>
     </div>
     <div class="blog-slider__pagination"></div>
   </div>
