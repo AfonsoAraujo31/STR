@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
                                     <span class="blog-slider__code">'.$row['data_chegada'].'</span>
                                     <div class="blog-slider__title">Familia '.$row['nome_familia'].'</div>
                                         <div class="blog-slider__text">'.$row['descricao'].'</div>
-                                        <a class="blog-slider__button text-white" onclick="teste();">VER MAIS</a>
+                                        <a class="blog-slider__button text-white" tooltip="Não é doador especial">VER MAIS</a>
                                     </div>
                                 </div>
                             ';

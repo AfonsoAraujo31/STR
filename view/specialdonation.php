@@ -56,7 +56,7 @@
     </a>
     <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <ul class="nav_links bg-strong-gray" id="routesList">
-      <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
+      <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
       <li class="li"><a class="active" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
       <li>
@@ -132,11 +132,9 @@
       </div>
     </div>
   </div>
-  <div id="errorAlertlogin" class="alert alert-warning  " role="alert">É necessário preencher o(s) campo(s)!</div>
   <div id="blog-slider" class="blog-slider">
     <div class="blog-slider__wrp swiper-wrapper">
       <?php include '../model/specialdonation/load_familys.php'; ?>
-      <p>teste1</p>
     </div>
     <div class="blog-slider__pagination"></div>
   </div>

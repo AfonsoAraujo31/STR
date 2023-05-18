@@ -80,6 +80,7 @@ $(function () {
       $(".content-text_widget").text(
         "De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito."
       );
+      $('.blog-slider__button').text('VER MAIS');
   });
 });
 /**
@@ -157,6 +158,7 @@ $(function () {
     $(".content-text_widget").text(
       "In order to access the Special Donation page, create an account or if you already have an account, log in by accessing the icon in the upper right corner."
     );
+    $('.blog-slider__button').text('SEE MORE');
   });
 });
 /**
@@ -238,6 +240,7 @@ $(function () {
     $(".content-text_widget").text(
       "Pour accéder à la page de don spécial, créez un compte ou si vous avez déjà un compte, connectez-vous en accédant à l'icône dans le coin supérieur droit."
     );
+    $('.blog-slider__button').text('VOIR PLUS');
   });
 });
 /**
@@ -342,6 +345,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".content-text_widget").text(
         "De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito."
       );
+      $('.blog-slider__button').text('VER MAIS');
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
@@ -436,6 +440,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".content-text_widget").text(
         "In order to access the Special Donation page, create an account or if you already have an account, log in by accessing the icon in the upper right corner."
       );
+      $('.blog-slider__button').text('SEE MORE');
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
@@ -533,6 +538,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".content-text_widget").text(
         "Pour accéder à la page de don spécial, créez un compte ou si vous avez déjà un compte, connectez-vous en accédant à l'icône dans le coin supérieur droit."
       );
+      $('.blog-slider__button').text('VOIR PLUS');
     });
   }
 });
