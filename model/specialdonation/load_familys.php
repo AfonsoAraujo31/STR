@@ -10,7 +10,7 @@ if ($result->num_rows > 0) {
         $result1 = $conn->query($sql1);
         if ($result1->num_rows > 0) {
             while ($row1 = $result1->fetch_assoc()) {
-                if ($row1["doador_especial"] == true) {
+                if ($row1["doador_especial"]) {
                     echo '
                         <div class="blog-slider__item swiper-slide">
                         <div class="blog-slider__img">
@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                     ';
-                }else if($row1["doador_especial"] == false){
+                }else if(!$row1["doador_especial"]){
                     $sql = "SELECT * FROM familias_doacaoespecial ORDER BY id ASC";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {

@@ -12,13 +12,9 @@ if ($result->num_rows > 0) {
       setcookie("temp_user", $_GET['email'],0,"/");
       setcookie("sing_in", "1",0,"/");
       echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_GET["email"] . "';</script>";
-      $login = 0;
     } else {
-      $login = 1;
+      echo "<script>location.href='http://localhost/STR/view/login.php?error=login';</script>";
     }
-  }
-  if ($login = 1) {
-    echo "<script>location.href='http://localhost/STR/view/login.php?error=login';</script>";
   }
 }
 $conn->close();

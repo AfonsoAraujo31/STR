@@ -1,12 +1,14 @@
 <?php
-ini_set('display_errors', 0);
-require_once '../configurations/dbconnection.php';
-$sql = "SELECT dados_login FROM preferencias WHERE email = '" . $_COOKIE['current_user'] . "'";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while ($row = $result->fetch_assoc()) {
-    if ($row["dados_login"] == "Sim") {
-      echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_COOKIE['current_user'] . "';</script>";
+if($_COOKIE['sing_in']){
+  ini_set('display_errors', 0);
+  require_once '../configurations/dbconnection.php';
+  $sql = "SELECT dados_login FROM preferencias WHERE email = '" . $_COOKIE['current_user'] . "'";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+      if ($row["dados_login"] == "Sim") {
+        echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_COOKIE['current_user'] . "';</script>";
+      }
     }
   }
 }
