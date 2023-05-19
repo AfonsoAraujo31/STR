@@ -17,15 +17,23 @@
     <!-- Bootstrap -->
     <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
     <style>
-    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
-    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
-    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
-     </style>
+        a.pt:before {
+            background-image: url(../view/assets/flags/pt.png);
+        }
+
+        a.en:before {
+            background-image: url(../view/assets/flags/gb-eng.png);
+        }
+
+        a.fr:before {
+            background-image: url(../view/assets/flags/fr.png);
+        }
+    </style>
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -70,10 +78,10 @@
         </ul>
         <div class="content-box animate__animated animate__fadeIn">
             <h2 class="big-text">Os nossos associados</h2>
-            <p class="content-text">Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. 
-                Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e 
-                causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que 
-                são valiosas para nossos projetos. 
+            <p class="content-text">Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado.
+                Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e
+                causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que
+                são valiosas para nossos projetos.
             </p>
         </div>
 
@@ -230,9 +238,13 @@
     </footer>
     <!-- BOTÃO BACKTOP *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <a href="#" class="to-top bg-wrapper-oragen text-whitesmoke hover:bg-strong-oragen hover:text-white"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>
+    <!-- Language -->
+    <script type="module" src="./lang/common/header_lang.js"></script>
+    <script type="module" src="./lang/common/language_lang.js"></script>
+    <script type="module" src="./lang/common/footer_lang.js"></script>
+    <script type="module" src="./lang/volunteer_lang.js"></script>
     <!-- JavaSricpt -->
     <script type="module" src="../controller/volunteer.js"></script>
-    <script type="module" src="./lang/volunteer_lang.js"></script>
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->

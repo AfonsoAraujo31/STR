@@ -464,6 +464,9 @@
     <script src="../controller/login/script.js"></script>
     <script src="../controller/login/script2.js"></script>
     <script src="../controller/login/script3.js"></script>
+    <!-- Language -->
+    <script type="module" src="./lang/common/header_lang.js"></script>
+    <script type="module" src="./lang/common/language_lang.js"></script>
     <script type="module" src="./lang/login_lang.js"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <!-- Font Awesome Kit -->

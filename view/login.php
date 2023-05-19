@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 0);
 if($_COOKIE['sing_in']){
   ini_set('display_errors', 0);
   require_once '../configurations/dbconnection.php';

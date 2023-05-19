@@ -460,10 +460,13 @@
     <script src="../controller/association/script.js"></script>
     <!-- BOTÃO BACKTOP *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <a href="#" class="to-top bg-wrapper-oragen text-whitesmoke hover:bg-strong-oragen hover:text-white"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>
+    <!-- Language -->
+    <script type="module" src="./lang/common/header_lang.js"></script>
+    <script type="module" src="./lang/common/language_lang.js"></script>
+    <script type="module" src="./lang/common/footer_lang.js"></script>
+    <script type="module" src="./lang/association/cpr_lang.js"></script>
     <!-- JavaSricpt -->
     <script type="module" src="../controller/association.js"></script>
-    <script type="module" src="./lang/association/association_lang.js"></script>
-    <script type="module" src="./lang/association/cpr_lang.js"></script>
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
