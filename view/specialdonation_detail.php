@@ -59,115 +59,7 @@
     </ul>
   </header>
   <?php include '../model/specialdonation/load_familys_detail.php';?>
-  <!-- FOOTER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-  <footer class="footer-section bg-extra-strong-gray">
-    <div class="container">
-      <div class="footer-cta pt-5 pb-5 border-b-[1px] border-footer-line-gray">
-        <div class="row">
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="fas fa-map-marker-alt text-strong-oragen"></i>
-              <div class="cta-text text-white">
-                <h4>Encontra-nos</h4>
-                <span class="text-footer-weak-gray">R. Dr. Eduardo Neves 3A, 1050-077 Lisboa</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="fas fa-phone text-strong-oragen"></i>
-              <div class="cta-text text-white">
-                <h4>Contacta-nos</h4>
-                <span class="text-footer-weak-gray">910 947 908</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta text-strong-oragen">
-              <i class="far fa-envelope-open"></i>
-              <div class="cta-text text-white">
-                <h4>Escreve-nos</h4>
-                <span class="text-footer-weak-gray">2220100@info.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-content pt-5 pb-5">
-        <div class="row">
-          <div class="col-xl-4 col-lg-4 mb-50">
-            <div class="footer-widget">
-              <div class="footer-logo">
-                <a href="index.html"><img src="../view/assets/logo/3logo.png" class="img-fluid" alt="logo"></a>
-              </div>
-              <div class="footer-text">
-                <p class="text-footer-weak-gray">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec
-                  tetur adipisicing
-                  elit,Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="footer-social-icon">
-                <span class="text-white ">Segue-nos</span>
-                <a href="#"><i class="fab fa-facebook-f facebook-bg text-white"></i></a>
-                <a href="#"><i class="fab fa-twitter twitter-bg text-white"></i></a>
-                <a href="#"><i class="fab fa-google-plus-g google-bg text-white"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-            <div class="footer-widget">
-              <div class="footer-widget-heading">
-                <h3 class="text-white before:bg-strong-oragen">Links</h3>
-              </div>
-              <ul>
-                <li class="footer_info hover:text-strong-oragen"><a href="./home.php">Início</a></li>
-                <li class="footer_info hover:text-strong-oragen"><a href="./volunteer.php">Voluntariado</a></li>
-                <li class="footer_info hover:text-strong-oragen"><a href="#">Doação Especial</a></li>
-                <li class="footer_info hover:text-strong-oragen"><a href="#">Iniciar sessão</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-            <div class="footer-widget">
-              <div class="footer-widget-heading">
-                <h3 class="text-white before:bg-strong-oragen">Subscreve</h3>
-              </div>
-              <div class="footer-text mb-25">
-                <p class="text-footer-weak-gray">Não te esqueças de subscrever para não perder nenhuma novidade.</p>
-              </div>
-              <div class="subscribe-form">
-                <form action="#">
-                  <input type="text" placeholder="Email" class="text-white bg-strong-gray">
-                  <button class="bg-strong-oragen border-strong-gray"><i class="fab fa-telegram-plane text-white"></i></button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyright-area bg-strong-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-            <div class="copyright-text">
-              <p class="text-footer-copyright-gray">Copyright &copy; 2023</p>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-            <div class="footer-menu">
-              <ul class="footer-menu-li text-footer-copyright-gray">
-                <li><a href="./home.php">Início</a></li>
-                <li><a href="#">Termos</a></li>
-                <li><a href="#">Privacidade</a></li>
-                <li><a href="#">Politica</a></li>
-                <li><a href="#">Contactos</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="includedFooterContent"></div>
   <!-- BOTÃO BACK TO TOP *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
   <a href="#" class="to-top bg-wrapper-oragen text-whitesmoke hover:bg-strong-oragen hover:text-white"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>
   <!-- Language -->
@@ -177,7 +69,8 @@
   <!-- JavaSricpt -->
   <script type="module" src="../controller/specialdonation.js"></script>
   <script type="module" src="../controller/common/scroll_animation.js"></script>
-    <script type="module" src="../controller/common/backtop.js"></script>
+  <script type="module" src="../controller/common/backtop.js"></script>
+  <script type="module" src="../controller/common/include_components.js"></script>
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
   <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
