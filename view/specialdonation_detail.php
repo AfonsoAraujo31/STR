@@ -176,6 +176,8 @@
   <script type="module" src="./lang/common/footer_lang.js"></script>
   <!-- JavaSricpt -->
   <script type="module" src="../controller/specialdonation.js"></script>
+  <script type="module" src="../controller/common/scroll_animation.js"></script>
+    <script type="module" src="../controller/common/backtop.js"></script>
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
   <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
