@@ -8,34 +8,32 @@
   <title>STR</title>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/home.scss" />
-  <link rel="stylesheet" href="./css/common/header.css" />
-  <link rel="stylesheet" href="./css/common/language.css" />
-  <link rel="stylesheet" href="./css/common/backTop.css" />
-  <link rel="stylesheet" href="./css/common/footer.css" />
-  <link rel="stylesheet" href="./css/common/scrollbar.css" />
-  <link rel="stylesheet" href="../dist/output.css" />
+  <div id="includedCssContent"></div>
   <!-- Bootstrap -->
   <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
 
-<body>
-  <style>
-    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
-    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
-    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
-  </style>
+<body id="body" style="display:none;">
+<style>
+        a.pt:before {
+            background-image: url(../view/assets/flags/pt.png);
+        }
+
+        a.en:before {
+            background-image: url(../view/assets/flags/gb-eng.png);
+        }
+
+        a.fr:before {
+            background-image: url(../view/assets/flags/fr.png);
+        }
+    </style>
   <header class="bg-strong-gray">
-    <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <input type="checkbox" id="check" />
     <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars text-white"></i>
     </label>
-    <!-- LOGO *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-    <a href="./home.php">
-      <p class="tittle text-white">STR</p>
-      <img class="logo" src="../view/assets/logo/logo.png" />
-    </a>
+    <div id="includedLogoContent"></div>
     <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <ul class="nav_links bg-strong-gray" id="routesList">
       <li class="li"><a class="active hover:text-white" href="#" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
@@ -267,6 +265,7 @@
   <script type="module" src="../controller/common/scroll_animation.js"></script>
   <script type="module" src="../controller/common/backtop.js"></script>
   <script type="module" src="../controller/common/include_components.js"></script>
+  <script type="module" src="../configurations/loadcontent.js"></script>
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
   <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->

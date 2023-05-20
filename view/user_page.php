@@ -21,7 +21,7 @@
     <title>STR</title>
 </head>
 
-<body>
+<body style="display:none;" id="body">
     <style>
         a.pt:before {
             background-image: url(../view/assets/flags/pt.png);
@@ -41,11 +41,7 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <!-- LOGO *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-        <a href="./home.php">
-            <p class="tittle text-white">STR</p>
-            <img class="logo" src="../view/assets/logo/logo.png" />
-        </a>
+        <div id="includedLogoContent"></div>
         <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <ul class="nav_links bg-strong-gray" id="routesList">
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
@@ -468,6 +464,8 @@
     <script type="module" src="./lang/common/header_lang.js"></script>
     <script type="module" src="./lang/common/language_lang.js"></script>
     <script type="module" src="./lang/login_lang.js"></script>
+    <script type="module" src="../controller/common/include_components.js"></script>
+    <script type="module" src="../configurations/loadcontent.js"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
