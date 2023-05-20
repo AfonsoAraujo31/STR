@@ -1,4 +1,4 @@
-var acc = document.getElementsByClassName("accordion");
+let acc = document.getElementsByClassName("accordion");
 let i;
 
 for (i = 0; i < acc.length; i++) {
@@ -28,16 +28,31 @@ for (i = 0; i < acc.length; i++) {
  */
 document.body.onresize = function () {
   if ($(window).width() < "850") {
-    if(window.location.href == "http://localhost/STR/view/association_cv.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/cv/cv3.png">';
-    }else if(window.location.href == "http://localhost/STR/view/association_cpr.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/cpr/cpr1.png">';
-    }else if(window.location.href == "http://localhost/STR/view/association_apirp.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/apirp/apirp3.png">';
-    }else if(window.location.href == "http://localhost/STR/view/association_alcc.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/alcc/alcc3.png">';
-    }else if(window.location.href == "http://localhost/STR/view/association_cbl.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/cbl/cbl3.png">';
+    if (
+      window.location.href == "http://localhost/STR/view/association_cv.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/cv/cv3.png">';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_cpr.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/cpr/cpr1.png">';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_apirp.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/apirp/apirp3.png">';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_alcc.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/alcc/alcc3.png">';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_cbl.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/cbl/cbl3.png">';
     }
   } else {
     window.location.reload(true);
@@ -45,22 +60,37 @@ document.body.onresize = function () {
 };
 addEventListener("DOMContentLoaded", (event) => {
   if ($(window).width() < "850") {
-    if(window.location.href == "http://localhost/STR/view/association_cv.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/cv/cv3.png">';
-    }else if(window.location.href == "http://localhost/STR/view/association_cpr.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/cpr/cpr1.png">';
-    }else if(window.location.href == "http://localhost/STR/view/association_apirp.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/apirp/apirp3.png>';
-    }else if(window.location.href == "http://localhost/STR/view/association_alcc.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/alcc/alcc3.png">';
-    }else if(window.location.href == "http://localhost/STR/view/association_cbl.php"){
-      document.getElementById("product-gallery").innerHTML = '<img class="active" src="http://localhost/STR/view/assets/association/cbl/cbl3.png">';
+    if (
+      window.location.href == "http://localhost/STR/view/association_cv.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/cv/cv3.png">';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_cpr.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/cpr/cpr1.png">';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_apirp.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/apirp/apirp3.png>';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_alcc.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/alcc/alcc3.png">';
+    } else if (
+      window.location.href == "http://localhost/STR/view/association_cbl.php"
+    ) {
+      document.getElementById("product-gallery").innerHTML =
+        '<img class="active" src="http://localhost/STR/view/assets/association/cbl/cbl3.png">';
     }
   }
 });
 
 addEventListener("DOMContentLoaded", (event) => {
-  const db = "";
+  let db = null;
   //0 = login por fazer || 1 == login feito
   if (localStorage.getItem("sing_in") == 1) {
     document.getElementById("login").innerHTML = ``;
@@ -77,7 +107,7 @@ function clear_text() {
  */
 function send_comment() {
   if (document.getElementById("textAreaExample").value.length == 0) {
-    var myButton = document.querySelectorAll(".teste");
+    let myButton = document.querySelectorAll(".teste");
     myButton.type = "button";
     $("#errorAlert").show("medium");
     setTimeout(function () {
@@ -87,7 +117,13 @@ function send_comment() {
   } else {
     const variavel1 = document.getElementById("textAreaExample").value;
     const variavel2 = document.getElementById("idUnico").value;
-    window.location.href = "http://localhost/STR/model/association/insert_comment.php?user=" + variavel2 + "&comentario=" + variavel1 + "&db=" + db;
+    window.location.href =
+      "http://localhost/STR/model/association/insert_comment.php?user=" +
+      variavel2 +
+      "&comentario=" +
+      variavel1 +
+      "&db=" +
+      db;
   }
 }
 
@@ -101,7 +137,13 @@ function login() {
   } else {
     const variavel1 = document.getElementById("form2Example17").value;
     const variavel2 = document.getElementById("form2Example27").value;
-    window.location.href = "http://localhost/STR/model/association/login.php?email=" + variavel1 + "&pass=" + variavel2+ "&db=" + db;
+    window.location.href =
+      "http://localhost/STR/model/association/login.php?email=" +
+      variavel1 +
+      "&pass=" +
+      variavel2 +
+      "&db=" +
+      db;
   }
 }
 
@@ -110,57 +152,27 @@ $(".sendButton .close").click(function () {
 });
 
 addEventListener("DOMContentLoaded", (event) => {
-  if(window.location == "http://localhost/STR/view/association_cv.php?error=login"){
-    $('#errorAlertlogin2').show('medium');
+  const currentLocation = window.location.href;
+
+  const pages = [
+    "association_cv.php?error=login",
+    "association_cpr.php?error=login",
+    "association_apirp.php?error=login",
+    "association_alcc.php?error=login",
+    "association_cbl.php?error=login",
+  ];
+
+  if (pages.some((page) => currentLocation.includes(page))) {
+    $("#errorAlertlogin2").show("medium");
     setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_cpr.php?error=login"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_apirp.php?error=login"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_alcc.php?error=login"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_cbl.php?error=login"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
+      $("#errorAlertlogin2").hide("medium");
     }, 4000);
   }
 
-  if(window.location == "http://localhost/STR/view/association_cv.php?error=comment"){
-    $('#errorAlertcomentarios').show('medium');
+  if (pages.some((page) => currentLocation.includes(page))) {
+    $("#errorAlertcomentarios").show("medium");
     setTimeout(function () {
-      $('#errorAlertcomentarios').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_cpr.php?error=comment"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_apirp.php?error=comment"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_alcc.php?error=comment"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
-    }, 4000);
-  }else if(window.location == "http://localhost/STR/view/association_cbl.php?error=comment"){
-    $('#errorAlertlogin2').show('medium');
-    setTimeout(function () {
-      $('#errorAlertlogin2').hide('medium');
+      $("#errorAlertcomentarios").hide("medium");
     }, 4000);
   }
 });

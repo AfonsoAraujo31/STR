@@ -706,7 +706,7 @@ video {
 }
 
 .text-black {
-  color: #00000;
+  color: #000;
 }
 
 .text-footer-copyright-gray {
@@ -777,7 +777,7 @@ video {
 }
 
 .hover\:text-black:hover {
-  color: #00000;
+  color: #000;
 }
 
 .hover\:text-strong-oragen:hover {

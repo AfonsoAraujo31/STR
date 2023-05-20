@@ -52,7 +52,7 @@ if($_COOKIE['sing_in']){
     <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <input type="checkbox" id="check" />
     <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars text-white"></i>
     </label>
     <div id="includedLogoContent"></div>
     <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
