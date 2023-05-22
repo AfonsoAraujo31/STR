@@ -29,7 +29,7 @@
               echo "";
             } else if ($_COOKIE["sing_in"] === "") {
               echo "overflow";
-            } ?> style="display:none;" id="body">
+            } ?>>
   <style>
     a.pt:before {
       background-image: url(../view/assets/flags/pt.png);
@@ -43,30 +43,32 @@
       background-image: url(../view/assets/flags/fr.png);
     }
   </style>
-   <header class="bg-strong-gray">
-    <input type="checkbox" id="check" />
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars text-white"></i>
-    </label>
-    <div id="includedLogoContent"></div>
-    <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-    <ul class="nav_links bg-strong-gray" id="routesList">
-      <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
-      <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
-      <li class="li"><a class="active hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-      <li>
-        <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-        <div class="language">
-          <div class="language-selected text-white"><img id="flags" src="../view/assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
-          <ul cl class="bg-white border-white">
-            <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a></li>
-            <li class="lang"><a href="#" class="en" style="text-align:left; margin-left:10px;">Inglês</a></li>
-            <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a></li>
-          </ul>
-        </div>
-        <?php include '../model/common/load_profilephoto.php'; ?>
-    </ul>
-  </header>
+  <div id="body" style="display:none;">
+    <header class="bg-strong-gray">
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars text-white"></i>
+      </label>
+      <div id="includedLogoContent"></div>
+      <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
+      <ul class="nav_links bg-strong-gray" id="routesList">
+        <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
+        <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
+        <li class="li"><a class="active hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
+        <li>
+          <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
+          <div class="language">
+            <div class="language-selected text-white"><img id="flags" src="../view/assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
+            <ul cl class="bg-white border-white">
+              <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a></li>
+              <li class="lang"><a href="#" class="en" style="text-align:left; margin-left:10px;">Inglês</a></li>
+              <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a></li>
+            </ul>
+          </div>
+          <?php include '../model/common/load_profilephoto.php'; ?>
+      </ul>
+    </header>
+  </div>
   <?php ini_set('display_errors', 0);
   if ($_COOKIE["sing_in"] == 1) {
     echo '<div class="hidden">';
@@ -93,37 +95,39 @@
               } else if ($_COOKIE["sing_in"] === "") {
                 echo "blur-in";
               } ?>>
-    <div class="shapedividers_com-9461">
-      <img src="./assets/others/image.png" class="presentation-image" />
-    </div>
-    <div class="column">
-      <?php ini_set('display_errors', 0);
-      if ($_COOKIE["sing_in"] == 1) {
-        echo '<div class="wrapper animate__animated animate__fadeIn">';
-      } else if ($_COOKIE["sing_in"] == "") {
-        echo '<div class="wrapper">';
-      } ?>
-      <div class="title uppercase">O que é a Doação Especial ?</div>
-      <div class="content-text">
-        <p>
-          Este novo conceito permite ao utilizador, caso se identifique com
-          alguma família refugiada, proceder à doação, apenas a essa família, desde uma
-          habitação, bens alimentares ou até mesmo algumas despesas mensais enquanto se
-          reintegram na sociedade. Ao longo desta Ação promovemos a <b>transparência e a prestação</b>
-          de contas perante todos os nossos doadores para as quais desejamos trabalhar.
-        </p>
-        <p>A transparência é o princípio básico que rege a nossa gestão interna,<b> assegurando boas
-            práticas e fomentando a eficiência e eficácia para alcançar os nossos objetivos.</b>
-          Para isso, utilizamos diferentes instrumentos de acompanhamento e <b> avaliação, externos e
-            internos,</b> com o objetivo de reforçar o compromisso com os nossos grupos de interesse e
-          identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>,
-          como parte de um processo de melhoria contínua.
-        </p>
-        <p>A privacidade dos utilizadores e das famílias aqui reigstadas é uma questão de <b>extrema importância
-            na nossa comunidade</b>. As informações fornecidas pelos utilizadores podem incluir dados de identificação
-          pessoal, informações de contato, dados de localização e outras informações sensíveis. Portanto, é essencial
-          que o website em questão tenha <b>medidas adequadas em vigor para proteger a privacidade dos seus utilizadores</b>.
-        </p>
+    <div style="display:none;" id="teste">
+      <div class="shapedividers_com-9461">
+        <img src="./assets/others/image.png" class="presentation-image" />
+      </div>
+      <div class="column">
+        <?php ini_set('display_errors', 0);
+        if ($_COOKIE["sing_in"] == 1) {
+          echo '<div class="wrapper animate__animated animate__fadeIn">';
+        } else if ($_COOKIE["sing_in"] == "") {
+          echo '<div class="wrapper">';
+        } ?>
+        <div class="title uppercase">O que é a Doação Especial ?</div>
+        <div class="content-text">
+          <p>
+            Este novo conceito permite ao utilizador, caso se identifique com
+            alguma família refugiada, proceder à doação, apenas a essa família, desde uma
+            habitação, bens alimentares ou até mesmo algumas despesas mensais enquanto se
+            reintegram na sociedade. Ao longo desta Ação promovemos a <b>transparência e a prestação</b>
+            de contas perante todos os nossos doadores para as quais desejamos trabalhar.
+          </p>
+          <p>A transparência é o princípio básico que rege a nossa gestão interna,<b> assegurando boas
+              práticas e fomentando a eficiência e eficácia para alcançar os nossos objetivos.</b>
+            Para isso, utilizamos diferentes instrumentos de acompanhamento e <b> avaliação, externos e
+              internos,</b> com o objetivo de reforçar o compromisso com os nossos grupos de interesse e
+            identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>,
+            como parte de um processo de melhoria contínua.
+          </p>
+          <p>A privacidade dos utilizadores e das famílias aqui reigstadas é uma questão de <b>extrema importância
+              na nossa comunidade</b>. As informações fornecidas pelos utilizadores podem incluir dados de identificação
+            pessoal, informações de contato, dados de localização e outras informações sensíveis. Portanto, é essencial
+            que o website em questão tenha <b>medidas adequadas em vigor para proteger a privacidade dos seus utilizadores</b>.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -134,7 +138,7 @@
     <div class="blog-slider__pagination"></div>
   </div>
   </div>
-  <div id="includedFooterContent"></div>
+  <div style="display:none;" id="includedFooterContent"></div>
   <!-- BOTÃO BACK TO TOP *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
   <a href="#" class="to-top bg-wrapper-oragen text-whitesmoke hover:bg-strong-oragen hover:text-white"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>
   <!-- Language -->
