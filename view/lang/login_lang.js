@@ -62,7 +62,7 @@ $(function () {
     $(".preferencias").eq(0).text("Linguagem pré definida ao iniciar sessão");
     $(".preferencias").eq(1).text("Em caso de contacto, forma preferida");
     $(".preferencias").eq(2).text("Preferência do estado dos cookies");
-    $(".preferencias").eq(3).text("Memorizar dados ao iniciar sessão");
+    $(".preferencias").eq(3).text("Exibir definicões após iniciar sessão");
     if ($(".selected_linguagem").text() == "Português") {
       $(".selected_linguagem").text("Português");
     } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -178,7 +178,7 @@ $(function () {
     $(".preferencias").eq(0).text("Predefined language when logging in");
     $(".preferencias").eq(1).text("In case of contact, preferred method");
     $(".preferencias").eq(2).text("Cookie state preference");
-    $(".preferencias").eq(3).text("Memorize data when logging in");
+    $(".preferencias").eq(3).text("Show settings after login");
     if ($(".selected_linguagem").text() == "Português") {
       $(".selected_linguagem").text("Portuguese");
     } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -298,7 +298,7 @@ $(function () {
     $(".preferencias").eq(0).text("Langue prédéfinie lors de la connexion");
     $(".preferencias").eq(1).text("En cas de contact, méthode privilégiée");
     $(".preferencias").eq(2).text("Préférence d'état des cookies");
-    $(".preferencias").eq(3).text("Mémoriser les données lors de la connexion");
+    $(".preferencias").eq(3).text("Afficher les paramètres après la connexion");
     if ($(".selected_linguagem").text() == "Português") {
       $(".selected_linguagem").text("Portugais");
     } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -414,7 +414,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".preferencias").eq(0).text("Linguagem pré definida ao iniciar sessão");
       $(".preferencias").eq(1).text("Em caso de contacto, forma preferida");
       $(".preferencias").eq(2).text("Preferência do estado dos cookies");
-      $(".preferencias").eq(3).text("Memorizar dados ao iniciar sessão");
+      $(".preferencias").eq(3).text("Exibir definicões após iniciar sessão");
       if ($(".selected_linguagem").text() == "Português") {
         $(".selected_linguagem").text("Português");
       } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -524,7 +524,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".preferencias").eq(0).text("Predefined language when logging in");
       $(".preferencias").eq(1).text("In case of contact, preferred method");
       $(".preferencias").eq(2).text("Cookie state preference");
-      $(".preferencias").eq(3).text("Memorize data when logging in");
+      $(".preferencias").eq(3).text("Show settings after login");
       if ($(".selected_linguagem").text() == "Português") {
         $(".selected_linguagem").text("Portuguese");
       } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -640,7 +640,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".preferencias").eq(2).text("Préférence d'état des cookies");
       $(".preferencias")
         .eq(3)
-        .text("Mémoriser les données lors de la connexion");
+        .text("Afficher les paramètres après la connexion");
       if ($(".selected_linguagem").text() == "Português") {
         $(".selected_linguagem").text("Portugais");
       } else if ($(".selected_linguagem").text() == "Inglês") {

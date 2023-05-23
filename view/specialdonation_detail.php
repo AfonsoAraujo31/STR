@@ -9,20 +9,26 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/specialdonation-details.scss" />
   <div id="includedCssContent"></div>
-  <!-- Bootstrap --> <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
 </head>
 
-<body style="display:none;" id="body"> 
-<style>
-    a.pt:before {background-image: url(../view/assets/flags/pt.png);}
-    a.en:before {background-image: url(../view/assets/flags/gb-eng.png);}
-    a.fr:before {background-image: url(../view/assets/flags/fr.png);}
+<body style="display:none;" id="body">
+  <style>
+    a.pt:before {
+      background-image: url(../view/assets/flags/pt.png);
+    }
+
+    a.en:before {
+      background-image: url(../view/assets/flags/gb-eng.png);
+    }
+
+    a.fr:before {
+      background-image: url(../view/assets/flags/fr.png);
+    }
   </style>
   <header class="bg-strong-gray">
     <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -49,7 +55,8 @@
         <?php include '../model/common/load_profilephoto.php'; ?>
     </ul>
   </header>
-  <?php include '../model/specialdonation/load_familys_detail.php';?>
+  <?php include '../model/specialdonation/load_familys_detail.php'; ?>
+  
   <div id="includedFooterContent"></div>
   <!-- BOTÃO BACK TO TOP *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
   <a href="#" class="to-top bg-wrapper-oragen text-whitesmoke hover:bg-strong-oragen hover:text-white"><i class="fa-sharp fa-solid fa-arrow-up"></i></i></a>

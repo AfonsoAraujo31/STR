@@ -65,9 +65,9 @@
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         if ($row["email"] == $_GET['email']) {
-                            if($row["foto_perfil"] == null){
+                            if ($row["foto_perfil"] == null) {
                                 echo "<li class='user-container'><a href='http://localhost/STR/view/login.php'><span><img alt='' style='width:50px;border-radius: 50%; position:relative;top:0.5px;' src='./assets/others/teste.png'/></span></a></li></li>";
-                            }else{
+                            } else {
                                 $foto_perfil = base64_encode($row['foto_perfil']);
                                 echo "<li class='user-container'><a href='http://localhost/STR/view/login.php'><span><img alt='' style='width:50px;border-radius: 50%; position:relative;top:0.5px;  ' src='data:image/*;base64," . $foto_perfil . "' /></span></a></li></li>";
                             }
@@ -89,9 +89,9 @@
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             if ($row["email"] == $_GET["email"]) {
-                                if($row["foto_perfil"] == null){
+                                if ($row["foto_perfil"] == null) {
                                     echo "<img alt='' src='./assets/others/teste.png' />";
-                                }else{
+                                } else {
                                     $foto_perfil = base64_encode($row['foto_perfil']);
                                     echo "<img alt='' src='data:image/*;base64," . $foto_perfil . "' />";
                                 }
@@ -122,24 +122,24 @@
         <div class="menu-bar">
             <div class="menu">
                 <ul class="menu-links">
-                    <li class="nav-link main">
-                        <a href="#" onclick="perfil();">
+                    <li class="nav-link">
+                        <a href="#" id="perfil" style="background-color:#ff9564;" onclick="perfil();">
                             <i class='bx bxs-home icon'></i>
                             <span class="text nav-text">Perfil</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#" onclick="doacao();">
+                        <a href="#" id="doacao" onclick="doacao();">
                             <i class='bx bxs-spreadsheet icon'></i>
                             <span class="text nav-text">Candidaturas</span>
                         </a>
                     </li>
-                    <li class="nav-link">
+                    <!-- <li class="nav-link">
                         <a href="#" onclick="obs();">
                             <i class='bx bxs-chat icon'></i>
                             <span class="text nav-text">Observações</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-link">
                         <a href="http://localhost/STR/view/login.php" onclick="teste();">
                             <i class='bx bx-log-out-circle icon'></i>
@@ -332,15 +332,27 @@
                 </style>
 
                 <form action="../model/userpage/update_pref.php">
-                    <div class="teste">
-                        <?php
-                        ini_set('display_errors', 0);
-                        $sql = "SELECT * FROM preferencias WHERE email='" . $_GET['email'] . "'";
-                        $result = $conn->query($sql);
-                        if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
-                                if ($row["email"] == $_GET["email"]) {
-                                    echo '
+                    <style>
+                        .container {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .elemento {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    </style>
+                    <div class="container ">
+                        <div class="elemento ">
+                            <?php
+                            ini_set('display_errors', 0);
+                            $sql = "SELECT * FROM preferencias WHERE email='" . $_GET['email'] . "'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if ($row["email"] == $_GET["email"]) {
+                                        echo '
                                     <p>
                                     <label class="preferencias">Linguagem pré definida ao iniciar sessão</label>
                                     <select class="opc" name="linguagem">
@@ -370,7 +382,7 @@
                                 </select>
                             </p>
                             <p>
-                                <label for="b" class="preferencias">Memorizar dados ao iniciar sessão</label>
+                                <label for="b" class="preferencias">Exibir definicões após iniciar sessão</label>
                                 <select class="opc" name="dados_login">
                                 <option selected class="selected_dados_login">' . $row["dados_login"] . '</option>
                                     <option class="dados_login">Sem preferência</option>
@@ -379,10 +391,11 @@
                                 </select>
                             </p>
                                 ';
+                                    }
                                 }
                             }
-                        }
-                        ?>
+                            ?>
+                        </div>
                     </div>
                     <div class="button">
                         <input type="submit" value="Atualizar" />
