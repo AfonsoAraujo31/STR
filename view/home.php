@@ -15,19 +15,6 @@
 </head>
 
 <body id="body" style="display:none;">
-<style>
-        a.pt:before {
-            background-image: url(../view/assets/flags/pt.png);
-        }
-
-        a.en:before {
-            background-image: url(../view/assets/flags/gb-eng.png);
-        }
-
-        a.fr:before {
-            background-image: url(../view/assets/flags/fr.png);
-        }
-    </style>
   <header class="bg-strong-gray">
     <input type="checkbox" id="check" />
     <label for="check" class="checkbtn">

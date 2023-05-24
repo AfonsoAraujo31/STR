@@ -16,19 +16,6 @@
 </head>
 
 <body style="display:none;" id="body">
-    <style>
-        a.pt:before {
-            background-image: url(../view/assets/flags/pt.png);
-        }
-
-        a.en:before {
-            background-image: url(../view/assets/flags/gb-eng.png);
-        }
-
-        a.fr:before {
-            background-image: url(../view/assets/flags/fr.png);
-        }
-    </style>
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />

@@ -8,10 +8,7 @@
     <!----======== CSS ======== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/login/style.scss">
-    <link rel="stylesheet" href="./css/common/header.css" />
-    <link rel="stylesheet" href="./css/common/language.css" />
-    <link rel="stylesheet" href="./css/common/scrollbar.css" />
-    <link rel="stylesheet" href="../dist/output.css" />
+    <div id="includedCssContent"></div>
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap/Font Awsome -->
@@ -22,19 +19,6 @@
 </head>
 
 <body style="display:none;" id="body">
-    <style>
-        a.pt:before {
-            background-image: url(../view/assets/flags/pt.png);
-        }
-
-        a.en:before {
-            background-image: url(../view/assets/flags/gb-eng.png);
-        }
-
-        a.fr:before {
-            background-image: url(../view/assets/flags/fr.png);
-        }
-    </style>
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -134,14 +118,14 @@
                             <span class="text nav-text">Candidaturas</span>
                         </a>
                     </li>
-                    <!-- <li class="nav-link">
+                    <li class="nav-link">
                         <a href="#" onclick="obs();">
                             <i class='bx bxs-chat icon'></i>
                             <span class="text nav-text">Observações</span>
                         </a>
-                    </li> -->
+                    </li> 
                     <li class="nav-link">
-                        <a href="http://localhost/STR/view/login.php" onclick="teste();">
+                        <a href="http://localhost/STR/view/login.php" onclick="singOut();">
                             <i class='bx bx-log-out-circle icon'></i>
                             <span class="text nav-text">Sair</span>
                         </a>

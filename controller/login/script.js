@@ -84,10 +84,10 @@ $(document).ready(function () {
   }
 });
 
-function teste(){
+function singOut(){
   localStorage.setItem('temp_user', '');
-  document.cookie = "current_user=";
-  document.cookie = "current_user=; expires=0; path=/";
+  document.cookie = "temp_user=";
   document.cookie = "sing_in=; expires=0; path=/";
   localStorage.setItem("sing_in",0);
+  location.href = "http://localhost/STR/view/login.php";
 }

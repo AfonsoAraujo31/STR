@@ -24,10 +24,7 @@ if($_COOKIE['sing_in']){
   <title>STR</title>
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="./css/login.scss">
-  <link rel="stylesheet" href="./css/common/header.css" />
-  <link rel="stylesheet" href="./css/common/language.css" />
-  <link rel="stylesheet" href="./css/common/scrollbar.css" />
-  <link rel="stylesheet" href="../dist/output.css" />
+  <div id="includedCssContent"></div>
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- GOOGLE FONTS -->
@@ -35,19 +32,6 @@ if($_COOKIE['sing_in']){
 </head>
 
 <body style="display:none;" id="body">
-  <style>
-    a.pt:before {
-      background-image: url(../view/assets/flags/pt.png);
-    }
-
-    a.en:before {
-      background-image: url(../view/assets/flags/gb-eng.png);
-    }
-
-    a.fr:before {
-      background-image: url(../view/assets/flags/fr.png);
-    }
-  </style>
   <header class="bg-strong-gray">
     <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <input type="checkbox" id="check" />
@@ -57,7 +41,7 @@ if($_COOKIE['sing_in']){
     <div id="includedLogoContent"></div>
     <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <ul class="nav_links bg-strong-gray" id="routesList">
-      <li class="li"><a class="text-label-gray hover:text-white" href="../view/home   .php" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
+      <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
       <li>
