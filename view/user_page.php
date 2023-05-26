@@ -118,12 +118,23 @@
                             <span class="text nav-text">Candidaturas</span>
                         </a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#" onclick="obs();">
-                            <i class='bx bxs-chat icon'></i>
-                            <span class="text nav-text">Observações</span>
+                    <li class="nav-link" style="display: none;<?php
+                                                                ini_set('display_errors', 0);
+                                                                $sql = "SELECT is_admin FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                                                $result = $conn->query($sql);
+                                                                if ($result->num_rows > 0) {
+                                                                    while ($row = $result->fetch_assoc()) {
+                                                                        if ($row["is_admin"] == 1) {
+                                                                            echo 'display: block;';
+                                                                        }
+                                                                    }
+                                                                }
+                                                                ?>">
+                        <a href="#" id="admin" onclick="admin();">
+                            <i class='bx bxs-edit icon'></i>
+                            <span class="text nav-text">Admin</span>
                         </a>
-                    </li> 
+                    </li>
                     <li class="nav-link">
                         <a href="http://localhost/STR/view/login.php" onclick="singOut();">
                             <i class='bx bx-log-out-circle icon'></i>
@@ -442,7 +453,26 @@
         <h2>cand</h2>
     </div>
     <div id="obs-box" class="box home">
-        <h2>obs</h2>
+        <div class="container_definicoes" style="overflow-x:auto;">
+            <div class="title">Lista de utilizadores</div>
+            <table class="table align-middle mt-2 mb-0 bg-white">
+                <thead class="bg-light">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data de Nascimento</th>
+                        <th>Morada</th>
+                        <th>Telemóvel</th>
+                        <th>Nacionalidade</th>
+                        <th>Doador Especial</th>
+                        <th>Ações</th>
+                        <th>Admin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php include '../model/common/load_users.php'; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script>
         addEventListener("DOMContentLoaded", (event) => {

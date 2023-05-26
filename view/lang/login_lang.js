@@ -45,7 +45,7 @@ $(function () {
     $(".btn_reg").text("Criar");
     $(".nav-text").eq(0).text("Perfil");
     $(".nav-text").eq(1).text("Candidaturas");
-    $(".nav-text").eq(2).text("Observações");
+    $(".nav-text").eq(2).text("Admin");
     $(".nav-text").eq(3).text("Sair");
     $(".title").eq(0).text("Definições de perfil");
     $(".title").eq(1).text("Preferências/Opcões");
@@ -161,7 +161,7 @@ $(function () {
     $(".btn_reg").text("Create");
     $(".nav-text").eq(0).text("Profile");
     $(".nav-text").eq(1).text("Applications");
-    $(".nav-text").eq(2).text("Comments");
+    $(".nav-text").eq(2).text("Admin");
     $(".nav-text").eq(3).text("Logout");
     $(".title").eq(0).text("Profile settings");
     $(".title").eq(1).text("Preferences/Options");
@@ -281,7 +281,7 @@ $(function () {
     $(".btn_reg").text("Créer");
     $(".nav-text").eq(0).text("Profil");
     $(".nav-text").eq(1).text("Applications");
-    $(".nav-text").eq(2).text("Commentaires");
+    $(".nav-text").eq(2).text("Admin");
     $(".nav-text").eq(3).text("Se déconnecter");
     $(".title").eq(0).text("Paramètres de profil");
     $(".title").eq(1).text("Préférences/Options");
@@ -397,7 +397,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".btn_reg").text("Criar");
       $(".nav-text").eq(0).text("Perfil");
       $(".nav-text").eq(1).text("Candidaturas");
-      $(".nav-text").eq(2).text("Observações");
+      $(".nav-text").eq(2).text("Admin");
       $(".nav-text").eq(3).text("Sair");
       $(".title").eq(0).text("Definições de perfil");
       $(".title").eq(1).text("Preferências/Opcões");
@@ -507,7 +507,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".btn_reg").text("Create");
       $(".nav-text").eq(0).text("Profile");
       $(".nav-text").eq(1).text("Applications");
-      $(".nav-text").eq(2).text("Comments");
+      $(".nav-text").eq(2).text("Admin");
       $(".nav-text").eq(3).text("Logout");
       $(".title").eq(0).text("Profile settings");
       $(".title").eq(1).text("Preferences/Options");
@@ -621,7 +621,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".btn_reg").text("Créer");
       $(".nav-text").eq(0).text("Profil");
       $(".nav-text").eq(1).text("Applications");
-      $(".nav-text").eq(2).text("Commentaires");
+      $(".nav-text").eq(2).text("Admin");
       $(".nav-text").eq(3).text("Se déconnecter");
       $(".title").eq(0).text("Paramètres de profil");
       $(".title").eq(1).text("Préférences/Options");

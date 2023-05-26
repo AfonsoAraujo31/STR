@@ -19,6 +19,7 @@ function perfil() {
   $(document).ready(function () {
     $("#perfil").css("background-color", "#ff9564");
     $("#doacao").css("background-color", "#2e2e2e");
+    $("#admin").css("background-color", "#2e2e2e");
   });
 }
 function doacao() {
@@ -28,10 +29,16 @@ function doacao() {
   $(document).ready(function () {
     $("#perfil").css("background-color", "#2e2e2e ");
     $("#doacao").css("background-color", "#ff9564");
+    $("#admin").css("background-color", "#2e2e2e");
   });
 }
-function obs() {
+function admin() {
   $(".box").css("display", "none");
   $(".box-visible").css("display", "none");
   $("#obs-box").css("display", "block");
+  $(document).ready(function () {
+    $("#perfil").css("background-color", "#2e2e2e ");
+    $("#doacao").css("background-color", "#2e2e2e");
+    $("#admin").css("background-color", "#ff9564");
+  });
 }

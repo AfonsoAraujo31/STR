@@ -149,47 +149,44 @@
             <div id="errorAlertlogin2" class="alert alert-danger  hide-item errorAlertlogin2" role="alert">Endereço de email ou palavra chave incorretos.</div>
             <div id="errorAlertcomentarios" class="alert alert-danger  hide-item errorAlertcomentarios" role="alert">Oops, algo de inesperado aconteceu. Por favor recarregue a página ou tente novamente mais tarde.</div>
             <div class="row d-flex justify-content-center align-items-center h-100 login" id="login">
-                <div class="col col-xl-6">
-                    <div class="card" style="border-radius: 1rem; background-color:#f9f9f9;">
-                        <div class="row">
-                            <div class="d-flex align-items-center">
-                                <div class="card-body p-4 p-lg-5 text-black">
-
-                                    <div class="text-center p-3">
-                                        <img clas="rounded mx-auto" src="./assets/others/user_login.png" />
-                                    </div>
-                                    <style>
-                                        .form-control:focus {
-                                            outline: none !important;
-                                            border-color: #ff5e14a8;
-                                            box-shadow: none;
-                                        }
-
-                                        .form-control {
-                                            font-size: 20px;
-                                        }
-                                    </style>
-                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Entre na sua conta</h5>
-
-                                    <div class="form-outline mb-4">
-                                        <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form2Example17">Endereço de email</label>
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <input type="password" id="form2Example27" name="pass" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form2Example27">Palavra chave</label>
-                                    </div>
-
-                                    <div class="pt-1 mb-4">
-                                        <button onclick="login();" class="btn btn-dark btn-lg btn-block btn_login" type="button">Entrar</button>
-                                    </div>
-
-                                    <a class="small text-muted" href="#!">Esqueceu-se da palavra chave?</a>
-                                    <p class="mb-5 pb-lg-2 text" style="color: #202020;">Não têm conta? <a href="http://localhost/STR/login/login.php" class="link" style="color: #202020;">Registe-se aqui!</a></p>
-                                    <a href="#!" class="small text-muted">Termos.</a>
-                                    <a href="#!" class="small text-muted">Política de privacidade</a>
+                <div class="card" style="border-radius: 1rem; background-color:#f9f9f9;">
+                    <div class="row">
+                        <div class="d-flex align-items-center">
+                            <div class="p-5">
+                                <div class="text-center p-3">
+                                    <img clas="rounded mx-auto" src="./assets/others/user_login.png" />
                                 </div>
+                                <style>
+                                    .form-control:focus {
+                                        outline: none !important;
+                                        border-color: #ff5e14a8;
+                                        box-shadow: none;
+                                    }
+
+                                    .form-control {
+                                        font-size: 20px;
+                                    }
+                                </style>
+                                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Entre na sua conta</h5>
+
+                                <div class="form-outline mb-4">
+                                    <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form2Example17">Endereço de email</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="form2Example27" name="pass" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form2Example27">Palavra chave</label>
+                                </div>
+
+                                <div class="pt-1 mb-4">
+                                    <button onclick="login();" class="btn btn-dark btn-lg btn-block btn_login" type="button">Entrar</button>
+                                </div>
+
+                                <a class="small text-muted" href="#!">Esqueceu-se da palavra chave?</a>
+                                <p class="mb-5 pb-lg-2 text" style="color: #202020;">Não têm conta? <a href="http://localhost/STR/login/login.php" class="link" style="color: #202020;">Registe-se aqui!</a></p>
+                                <a href="#!" class="small text-muted">Termos.</a>
+                                <a href="#!" class="small text-muted">Política de privacidade</a>
                             </div>
                         </div>
                     </div>
@@ -204,7 +201,9 @@
                                 <div id="errorAlert" class="alert alert-warning hide-item errorAlert" role="alert">É necessário preencher o campo!</div>
                                 <textarea class="form-control" id="textAreaExample" rows="4" style="background: #fff;" name="comment"></textarea>
                                 <input name="user" id="idUnico" hidden>
-                                <script>let db = "cv";</script>
+                                <script>
+                                    let db = "cv";
+                                </script>
                             </div>
                         </div>
                         <div class="float-end mt-2 pt-1">
