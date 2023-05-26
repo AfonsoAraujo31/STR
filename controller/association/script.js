@@ -3,7 +3,7 @@ let i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
-    const panel = this.nextElementSibling;
+    let panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
       panel.classList.remove("open");
@@ -115,15 +115,10 @@ function send_comment() {
     }, 4000);
     document.getElementById("comment_form").reset();
   } else {
-    const variavel1 = document.getElementById("textAreaExample").value;
-    const variavel2 = document.getElementById("idUnico").value;
+    let variavel1 = document.getElementById("textAreaExample").value;
+    let variavel2 = document.getElementById("idUnico").value;
     window.location.href =
-      "http://localhost/STR/model/association/insert_comment.php?user=" +
-      variavel2 +
-      "&comentario=" +
-      variavel1 +
-      "&db=" +
-      db;
+      "http://localhost/STR/model/association/insert_comment.php?user=" +variavel2 +"&comentario=" +variavel1 +"&db=" +db;
   }
 }
 
@@ -135,8 +130,8 @@ function login() {
     }, 4000);
     document.getElementById("login").reset();
   } else {
-    const variavel1 = document.getElementById("form2Example17").value;
-    const variavel2 = document.getElementById("form2Example27").value;
+    let variavel1 = document.getElementById("form2Example17").value;
+    let variavel2 = document.getElementById("form2Example27").value;
     window.location.href =
       "http://localhost/STR/model/association/login.php?email=" +
       variavel1 +
@@ -152,9 +147,9 @@ $(".sendButton .close").click(function () {
 });
 
 addEventListener("DOMContentLoaded", (event) => {
-  const currentLocation = window.location.href;
+  let currentLocation = window.location.href;
 
-  const pages = [
+  let pages = [
     "association_cv.php?error=login",
     "association_cpr.php?error=login",
     "association_apirp.php?error=login",

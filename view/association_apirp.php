@@ -24,7 +24,7 @@
         <div id="includedLogoContent"></div>
         <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <ul class="nav_links bg-strong-gray" id="routesList">
-            <li class="li"><a class="text-label-gray hover:text-white" href="#" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
+            <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="active" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
             <li>
@@ -189,10 +189,7 @@
                                 <textarea class="form-control" id="textAreaExample" rows="4" style="background: #fff;" name="comment"></textarea>
 
                                 <input name="user" id="idUnico" hidden>
-                                <script>
-                                    document.getElementById("idUnico").value = localStorage.getItem("temp_user");
-                                    const db = "apirp";
-                                </script>
+                                <script>const db = "apirp";</script>
                             </div>
                         </div>
                         <div class="float-end mt-2 pt-1">
@@ -209,7 +206,7 @@
                             </script>
                             <?php
                             ini_set('display_errors', 0);
-                            require_once '../configurations/dbconnection.php';
+                            require '../configurations/dbconnection.php';
                             $sql = "SELECT * FROM comentarios_apirp ORDER BY id LIMIT 2";
                             $result = mysqli_query($conn, $sql);
                             $video_id = '';
@@ -324,6 +321,7 @@
     <script type="module" src="./lang/common/footer_lang.js"></script>
     <script type="module" src="./lang/association/apirp.js"></script>
     <!-- JavaSricpt -->
+    <script src="../controller/association/cookie.js"></script>
     <script type="module" src="../controller/association.js"></script>
     <script type="module" src="../controller/common/scroll_animation.js"></script>
     <script type="module" src="../controller/common/backtop.js"></script>

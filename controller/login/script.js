@@ -1,4 +1,3 @@
-document.cookie = 'temp_user='+localStorage.getItem('temp_user');
 $(document).ready(function () {
   $("#password").keyup(function () {
     var password = $("#password").val();
@@ -9,7 +8,6 @@ $(document).ready(function () {
   function checkStrength(password) {
     var strength = 0;
 
-    //If password contains both lower and uppercase characters, increase strength value.
     if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
       strength += 1;
       $(".low-upper-case").addClass("text-success");
@@ -20,7 +18,7 @@ $(document).ready(function () {
       $(".low-upper-case i").addClass("fa-file-text").removeClass("fa-check");
       $("#popover-password-top").removeClass("hide");
     }
-    //If it has numbers and characters, increase strength value.
+    
     if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/)) {
       strength += 1;
       $(".one-number").addClass("text-success");
@@ -32,7 +30,6 @@ $(document).ready(function () {
       $("#popover-password-top").removeClass("hide");
     }
 
-    //If it has one special character, increase strength value.
     if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
       strength += 1;
       $(".one-special-char").addClass("text-success");
@@ -54,8 +51,6 @@ $(document).ready(function () {
       $(".eight-character i").addClass("fa-file-text").removeClass("fa-check");
       $("#popover-password-top").removeClass("hide");
     }
-
-    // If value is less than 2
 
     if (strength < 2) {
       $("#result").removeClass();
@@ -85,8 +80,6 @@ $(document).ready(function () {
 });
 
 function singOut(){
-  localStorage.setItem('temp_user', '');
-  document.cookie = "temp_user=";
   document.cookie = "sing_in=; expires=0; path=/";
   localStorage.setItem("sing_in",0);
   location.href = "http://localhost/STR/view/login.php";

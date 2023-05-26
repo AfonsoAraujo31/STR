@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 0);
-require_once '/wamp64/www/STR/configurations/dbconnection.php';
+require '/wamp64/www/STR/configurations/dbconnection.php';
 if (date("m") == 1) {
   $mes = "Jan";
 } else if (date("m") == 2) {
@@ -29,6 +29,7 @@ if (date("m") == 1) {
 $data = "$mes  " . date("d") . ",   " . date("Y");
 
 $sql_nome = "SELECT nome FROM utilizadores WHERE email = '".$_GET['user']."'";
+
 $result = $conn->query($sql_nome);
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {

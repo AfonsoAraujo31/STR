@@ -1,4 +1,3 @@
-document.cookie = 'temp_user='+localStorage.getItem('temp_user');
 window.addEventListener('beforeunload', (event) => {
   localStorage.setItem("temp_user","")
 });

@@ -230,5 +230,3 @@ function sizeBarChart() {
     $(this).css("width", $(this).data("bar-value"));
   });
 }
-document.cookie = "temp_user=" + localStorage.getItem("temp_user");
-

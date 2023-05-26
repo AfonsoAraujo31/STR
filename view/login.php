@@ -41,7 +41,7 @@ if($_COOKIE['sing_in']){
     <div id="includedLogoContent"></div>
     <!-- HEADER *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
     <ul class="nav_links bg-strong-gray" id="routesList">
-      <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php" id="homeLink"><i class="fa-solid fa-house"></i>Início</a></li>
+      <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i> Início</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
       <li>
@@ -196,12 +196,8 @@ if($_COOKIE['sing_in']){
           $("#errorAlertlogin").hide("medium");
         }, 4000);
       } else {
-        localStorage.setItem("sing_in", 1);
-        localStorage.setItem("temp_user", document.getElementById("input_email").value);
-        document.cookie = "current_user=" + document.getElementById("input_email").value;
-        document.cookie = "temp_user=" + document.getElementById("input_email").value;
-        const variavel1 = document.getElementById("input_email").value;
-        const variavel2 = document.getElementById("input_password").value;
+        let variavel1 = document.getElementById("input_email").value;
+        let variavel2 = document.getElementById("input_password").value;
         window.location.href = "http://localhost/STR/model/login/login.php?email=" + variavel1 + "&pass=" + variavel2;
       }
     }
@@ -213,15 +209,12 @@ if($_COOKIE['sing_in']){
           $("#errorAlertlogin1").hide("medium");
         }, 4000);
       } else {
-        localStorage.setItem("sing_in", 1);
-        localStorage.setItem("temp_user", document.getElementById("input_email").value);
-        document.cookie = "current_user=" + document.getElementById("input_email").value;
-        const variavel1 = document.getElementById("input_nome_reg").value;
-        const variavel2 = document.getElementById("input_sobrenome_reg").value;
-        const variavel3 = document.getElementById("input_email_reg").value;
-        const variavel4 = document.getElementById("input_telemovel_reg").value;
-        const variavel5 = document.getElementById("input_pais_reg").value;
-        const variavel6 = document.getElementById("password").value;
+        let variavel1 = document.getElementById("input_nome_reg").value;
+        let variavel2 = document.getElementById("input_sobrenome_reg").value;
+        let variavel3 = document.getElementById("input_email_reg").value;
+        let variavel4 = document.getElementById("input_telemovel_reg").value;
+        let variavel5 = document.getElementById("input_pais_reg").value;
+        let variavel6 = document.getElementById("password").value;
         window.location.href = "http://localhost/STR/model/login/register.php?nome=" + variavel1 + "&sobrenome=" + variavel2 + "&email=" + variavel3 + "&telemovel=" + variavel4 + "&pais=" + variavel5 + "&pass=" + variavel6;
       }
     }

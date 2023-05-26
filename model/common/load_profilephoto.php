@@ -1,16 +1,16 @@
 <?php 
 ini_set('display_errors', 0);
 require '/wamp64/www/STR/configurations/dbconnection.php';
-/*echo("<script>alert('".$_COOKIE['temp_user']."');</script>");*/
-if ($_COOKIE["temp_user"] == "") {
+if($_COOKIE["sing_in"]){
+  if ($_COOKIE["current_user"] == "") {
     echo "<li class='user-container' style='background-color: white;'><a href='./login.php'><span><img class='user' style='margin-left:9px' src='../view/assets/others/user.png' /></span></a></li></li>";
   } else {
     require_once '../configurations/dbconnection.php';
-    $sql = "SELECT email, foto_perfil FROM utilizadores WHERE email='" . $_COOKIE['temp_user'] . "'";
+    $sql = "SELECT email, foto_perfil FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-        if ($row["email"] == $_COOKIE['temp_user']) {
+        if ($row["email"] == $_COOKIE['current_user']) {
           if($row["foto_perfil"] == null){
             echo "<li class='user-container'><a href='http://localhost/STR/view/login.php'><span><img alt='' style='width:50px;border-radius: 50%; position:relative;top:0.5px;' src='./assets/others/teste.png'/></span></a></li></li>";
         }else{
@@ -22,4 +22,7 @@ if ($_COOKIE["temp_user"] == "") {
     }
     $conn->close();
   }
+}else{
+  echo "<li class='user-container' style='background-color: white;'><a href='./login.php'><span><img class='user' style='margin-left:9px' src='../view/assets/others/user.png' /></span></a></li></li>";
+}
 ?>

@@ -1,4 +1,3 @@
-document.cookie = 'temp_user='+localStorage.getItem('temp_user');
 /**
  * ! SEARCH BAR *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*
  */

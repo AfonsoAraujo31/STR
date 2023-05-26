@@ -1,5 +1,3 @@
-document.cookie = "temp_user=" + localStorage.getItem("temp_user");
-
 var swiper = new Swiper(".blog-slider", {
   spaceBetween: 30,
   effect: "fade",
