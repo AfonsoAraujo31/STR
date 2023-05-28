@@ -8,6 +8,8 @@
     <!----======== CSS ======== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/login/style.scss">
+    <link rel="stylesheet" href="./css/admin/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <div id="includedCssContent"></div>
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -18,7 +20,7 @@
     <title>STR</title>
 </head>
 
-<body style="display:none;" id="body">
+<body style="display:none; overflow-y:auto;" id="body">
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -454,7 +456,8 @@
     </div>
     <div id="obs-box" class="box home">
         <div class="container_definicoes" style="overflow-x:auto;">
-            <div class="title">Lista de utilizadores</div>
+            <div class="title">Utilizadores</div>
+            <div id="errorAlertUsers" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
             <table class="table align-middle mt-2 mb-0 bg-white">
                 <thead class="bg-light">
                     <tr>
@@ -464,43 +467,203 @@
                         <th>Telemóvel</th>
                         <th>Nacionalidade</th>
                         <th>Doador Especial</th>
-                        <th>Ações</th>
                         <th>Admin</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php include '../model/common/load_users.php'; ?>
+                    <?php include '../model/admin/load_users.php'; ?>
                 </tbody>
             </table>
         </div>
-    </div>
-    <script>
-        addEventListener("DOMContentLoaded", (event) => {
-            if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=updatefail") {
-                $('#errorAlert').show('medium');
-                setTimeout(function() {
-                    $('#errorAlert').hide('medium');
-                }, 4000);
-            }
-        });
-    </script>
-    <script src="../controller/login/script.js"></script>
-    <script src="../controller/login/script2.js"></script>
-    <script src="../controller/login/script3.js"></script>
-    <!-- Language -->
-    <script type="module" src="./lang/common/header_lang.js"></script>
-    <script type="module" src="./lang/common/language_lang.js"></script>
-    <script type="module" src="./lang/login_lang.js"></script>
-    <script type="module" src="../controller/common/include_components.js"></script>
-    <script type="module" src="../configurations/loadcontent.js"></script>
-    <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-    <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
-    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <br>
+        <div class="container_definicoes" style="overflow-x:auto;height:auto;">
+            <div class="position-relative">
+                <div class="title teste">Comentários</div>
+                <div class="teste button_container position-absolute end-0 text-white">
+                    <button type="button" class="py-2 px-3 rounded-3" style="background-color:#ff9564;" onclick="cookieCV();">CV</button>
+                    <button type="button" class="py-2 px-3 rounded-3" style="background-color:#ff9564;" onclick="cookieCPR();">CPR</button>
+                    <button type="button" class="py-2 px-3 rounded-3" style="background-color:#ff9564;" onclick="cookieAPIRP();">APIRP</button>
+                    <button type="button" class="py-2 px-3 rounded-3" style="background-color:#ff9564;" onclick="cookieALCC();">ALCC</button>
+                    <button type="button" class="py-2 px-3 rounded-3" style="background-color:#ff9564;" onclick="cookieCBL();">CBL</button>
+                </div>
+            </div>
+            <style>
+                .teste {
+                    display: inline;
+                }
+
+                @media only screen and (max-width: 660px) {
+                    .teste {
+                        display: block;
+                    }
+                }
+            </style>
+            <script>
+                addEventListener("DOMContentLoaded", (event) => {
+                    var element = document.getElementById('cpr');
+                    element.style.visibility === 'hidden';
+                });
+                function cookieCV() {
+                    var element = document.getElementById('cv');
+                    if (element.style.visibility === 'hidden') {
+                        element.style.visibility = 'visible';
+                    } else {
+                        element.style.visibility = 'hidden';
+                    }
+                }
+
+                function cookieCPR() {
+                    var element = document.getElementById('cpr');
+                    if (element.style.visibility === 'hidden') {
+                        element.style.visibility = 'visible';
+                    } else {
+                        element.style.visibility = 'hidden';
+                    }
+                }
+
+                function cookieAPIRP() {
+                    document.cookie = "comentarios=APIRP";
+                }
+
+                function cookieALCC() {
+                    document.cookie = "comentarios=ALCC";
+                }
+
+                function cookieCBL() {
+                    document.cookie = "comentarios=CBL";
+                }
+            </script>
+            <div id="errorAlertUsers" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
+            <div class="projects-section">
+                <div class="project-boxes jsGridView" id="cv">
+                    <?php
+                    $colors = array(
+                        '#fee4cb',
+                        '#e9e7fd',
+                        '#dbf6fd',
+                        '#ffd3e2',
+                        '#c8f7dc',
+                        '#d5deff',
+                    );
+                    $sql = "SELECT * FROM comentarios_cv";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_array($result)) {
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $foto_perfil = base64_encode($row1['foto_perfil']);
+                            }
+                            $result1->free();
+                        }
+                        $randomColor = $colors[array_rand($colors)];
+                        echo '
+                        <div class="project-box-wrapper" >
+                            <div class="project-box" style="background-color: ' . $randomColor . ';">
+                                <div class="project-box-header">
+                                    <span>' . $row["data_registo"] . '</span>
+                                </div>
+                                <div class="project-box-content-header">
+                                    <p class="box-content-header">' . $row["nome"] . '</p>
+                                    <p class="box-content-subheader">' . $row["email"] . '</p>
+                                </div>
+                            
+                                <div class="project-box-footer">
+                                    <div class="participants">
+                                        <img src="data:image/*;base64,' . $foto_perfil . '">
+                                    </div>
+                                    <div class="days-left" style="color: #ff942e;">
+                                        2 Days Left
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                    }
+                    ?>
+                </div>
+                <div class="project-boxes jsGridView" id="cpr">
+                    <?php
+                    $colors = array(
+                        '#fee4cb',
+                        '#e9e7fd',
+                        '#dbf6fd',
+                        '#ffd3e2',
+                        '#c8f7dc',
+                        '#d5deff',
+                    );
+                    $sql = "SELECT * FROM comentarios_cpr";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_array($result)) {
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $foto_perfil = base64_encode($row1['foto_perfil']);
+                            }
+                            $result1->free();
+                        }
+                        $randomColor = $colors[array_rand($colors)];
+                        echo '
+                        <div class="project-box-wrapper" >
+                            <div class="project-box" style="background-color: ' . $randomColor . ';">
+                                <div class="project-box-header">
+                                    <span>' . $row["data_registo"] . '</span>
+                                </div>
+                                <div class="project-box-content-header">
+                                    <p class="box-content-header">' . $row["nome"] . '</p>
+                                    <p class="box-content-subheader">' . $row["email"] . '</p>
+                                </div>
+                            
+                                <div class="project-box-footer">
+                                    <div class="participants">
+                                        <img src="data:image/*;base64,' . $foto_perfil . '">
+                                    </div>
+                                    <div class="days-left" style="color: #ff942e;">
+                                        2 Days Left
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                    }
+                    ?>
+                </div>
+            </div>
+            <script>
+                addEventListener("DOMContentLoaded", (event) => {
+                    if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=updatefail") {
+                        $('#errorAlert').show('medium');
+                        setTimeout(function() {
+                            $('#errorAlert').hide('medium');
+                        }, 4000);
+                    }
+                });
+            </script>
+            <script src="../controller/login/script.js"></script>
+            <script src="../controller/login/script2.js"></script>
+            <script src="../controller/login/script3.js"></script>
+            <!-- Language -->
+            <script type="module" src="./lang/common/header_lang.js"></script>
+            <script type="module" src="./lang/common/language_lang.js"></script>
+            <script type="module" src="./lang/login_lang.js"></script>
+            <script type="module" src="../controller/common/include_components.js"></script>
+            <script type="module" src="../configurations/loadcontent.js"></script>
+
+            <script type="module" src="../controller/admin/script.js"></script>
+            <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+            <!-- Font Awesome Kit -->
+            <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
+            <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+            <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </body>
 
 </html>

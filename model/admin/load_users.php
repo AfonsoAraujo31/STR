@@ -26,7 +26,8 @@ if ($result->num_rows > 0) {
                 <td><p class="fw-normal mb-1">' . $doadorEspecial . '</p></td>
                 <td><p class="fw-normal mb-1">' . $doadorAdmin . '</p></td>
                 <td>
-                    <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');">Eliminar</button>
+                    <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="appliance_user('. $row["id"] .');"><img src="../view/assets/admin/appliance.png"></button>
+                    <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/remove.png"></button>
                 </td>
             </tr>
             ';
@@ -49,7 +50,8 @@ if ($result->num_rows > 0) {
             <td><p class="fw-normal mb-1">' . $doadorEspecial . '</p></td>
             <td><p class="fw-normal mb-1">' . $doadorAdmin . '</p></td>
             <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');">Eliminar</button>
+                <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="appliance_user('. $row["id"] .');"><img src="../view/assets/admin/appliance.png"></button>
+                <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/remove.png"></button>
             </td>
         </tr>
         ';
