@@ -1,6 +1,3 @@
-// Bootstrap Template
-
-// Vanilla Javascript
 window.onload = function () {
   var pictureInput = document.getElementById("picture-input");
   pictureInput.addEventListener("change", function () {

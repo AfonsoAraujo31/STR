@@ -455,6 +455,60 @@
         <h2>cand</h2>
     </div>
     <div id="obs-box" class="box home">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat red" href="#">
+                    <div class="visual">
+                        <i class="fa fa-usd"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span>5</span>
+                        </div>
+                        <div class="desc">Associações</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat blue" href="#">
+                    <div class="visual">
+                        <i class="fa fa-bar-chart-o"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span><?php include '../model/admin/count_users.php'; ?></span>
+                        </div>
+                        <div class="desc">Utilizadores</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat hoki" href="#">
+                    <div class="visual">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span><?php include '../model/admin/count_appliances.php'; ?></span>
+                        </div>
+                        <div class="desc">Candidaturas</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat purple" href="#">
+                    <div class="visual">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span><?php include '../model/admin/count_comments.php'; ?></span>
+                        </div>
+                        <div class="desc">Comentários</div>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="container_definicoes" style="overflow-x:auto;">
             <div class="title">Utilizadores</div>
             <div id="errorAlertUsers" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
@@ -690,7 +744,7 @@
             </div>
 
             <div id="CV" class="tabcontent">
-                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;"> 
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
                     <?php
                     $db = 2;
                     $sql = "SELECT * FROM comentarios_cv";
