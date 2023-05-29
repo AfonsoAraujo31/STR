@@ -1,24 +1,27 @@
 .tab {
   overflow: hidden;
+  border: #707070;
 }
 .tab button {
   float: right;
-  border: none;
-  outline: none;
   cursor: pointer;
   padding: 15px;
   font-size: 16px;
 }
 .tab button:hover {
-  background-color: #bbb;
+  background-color: #ff9564;
+}
+.tab button {
+  background-color: #2e2e2e;
+  color: white;
 }
 .tab button.active {
-  background-color: #aaa;
+  background-color: #ff9564;
 }
 .tabcontent {
-    margin-top: 1%;
-    display: none;
-    padding: 5px 15px 5px 15px;
+  margin-top: 1%;
+  display: none;
+  padding: 5px 15px 5px 15px;
 }
 
 .teste {
@@ -27,7 +30,7 @@
 
 @media only screen and (max-width: 660px) {
   .teste {
-      display: block;
+    display: block;
   }
 }
 
@@ -43,25 +46,25 @@
   color: white;
 }
 .tags li {
-    display: inline-block;
-    margin-right: 10px;
-    position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
 }
 .tags a {
-    background: #fda57d;
-    color: #fff;
-    display: block;
-    line-height: 1em;
-    padding: 0.5em;
-    text-decoration: none;
+  background: #fda57d;
+  color: #fff;
+  display: block;
+  line-height: 1em;
+  padding: 0.5em;
+  text-decoration: none;
 
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 
-    -webkit-transition: background 200ms ease;
-    -moz-transition: background 200ms ease;
-    -o-transition: background 200ms ease;
-    -ms-transition: background 200ms ease;
-    transition: background 200ms ease;
+  -webkit-transition: background 200ms ease;
+  -moz-transition: background 200ms ease;
+  -o-transition: background 200ms ease;
+  -ms-transition: background 200ms ease;
+  transition: background 200ms ease;
 }

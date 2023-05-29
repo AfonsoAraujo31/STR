@@ -84,7 +84,10 @@ function singOut(){
   localStorage.setItem("sing_in",0);
   location.href = "http://localhost/STR/view/login.php";
 }
+function delete_user(data) {
+  location.href = "http://localhost/STR/model/admin/delete_user.php?id=" + data;
+}
 
-function delete_user(data){
-  location.href = "http://localhost/STR/model/admin/delete_user.php?id="+data;
+function delete_comment(id, db) {
+  location.href = "http://localhost/STR/model/admin/delete_comment.php?id=" + id +"&db=" + db;
 }

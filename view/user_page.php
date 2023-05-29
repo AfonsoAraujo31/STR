@@ -481,20 +481,21 @@
             <div class="position-relative">
                 <div class="title teste">Comentários</div>
                 <div class="tab teste">
-                    <button class="tablinks active" id="CBL">CBL</button>
+                    <button class="tablinks active" id="CBL" style=" border-radius: 0 10px 10px 0;">CBL</button>
                     <button class="tablinks" id="ALCC">ALCC</button>
                     <button class="tablinks" id="APIRP">APIRP</button>
                     <button class="tablinks" id="CPR">CPR</button>
-                    <button class="tablinks" id="CV">CV</button>
+                    <button class="tablinks" id="CV" style=" border-radius: 10px 0 0 10px;">CV</button>
                 </div>
             </div>
 
             <div id="CBL" class="tabcontent">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
                     <?php
+                    $db = 1;
                     $sql = "SELECT * FROM comentarios_cbl";
                     $result = mysqli_query($conn, $sql);
-                    $counter = 1; // Variável contador
+                    $counter = 1;
                     while ($row = mysqli_fetch_array($result)) {
                         $id = $row['id'];
                         $comentario = $row['comentario'];
@@ -504,20 +505,19 @@
                         $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
                         if ($result1 = $conn->query($query1)) {
                             while ($row1 = $result1->fetch_assoc()) {
-                                $foto_perfil = base64_encode($row1['foto_perfil']);
                                 $sobrenome = $row1['sobrenome'];
                             }
                             $result1->free();
                         }
-                        $aria_controls = "collapse" . $counter;
+                        $aria_controls = "collapseCBL" . $counter;
                         $show_class = ($counter == 1) ? 'show' : '';
                         echo '
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="' . $id . '">
-                                <button class="accordion-button" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                                <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
                                     <ul class="tags">
-                                        <li><a>'.$nome.' '.$sobrenome.'</a></li>
-                                        <li><a>'.$data.'</a></li>
+                                        <li><a>' . $nome . ' ' . $sobrenome . '</a></li>
+                                        <li><a>' . $data . '</a></li>
                                     </ul>
                                 </button>
                             </h2>
@@ -528,7 +528,7 @@
                                 <hr style="margin-left:1%;margin-right:1%;">
                                 <div class="d-flex justify-content-between">
                                     <div class="accordion-body"><b>Email: </b>' . $email . '</div>
-                                    <button type="button" class="btn btn-link btn-sm btn-rounded" style="margin-right:1%;" onclick="delete_comment('. $row["id"] .');"><img src="../view/assets/admin/remove.png"></button>
+                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
                                 </div>
                             </div>
                         </div>
@@ -539,22 +539,204 @@
                 </div>
             </div>
 
-            <div id="ALCC" class="tabcontent ">
-                <h3>ALCC</h3>
-                <p>Tab number two.</p>
+            <div id="ALCC" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_alcc";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
+                            }
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseALCC" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="' . $id . '">
+                                <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                                    <ul class="tags">
+                                        <li><a>' . $nome . ' ' . $sobrenome . '</a></li>
+                                        <li><a>' . $data . '</a></li>
+                                    </ul>
+                                </button>
+                            </h2>
+                            <div id="' . $aria_controls . '" class="accordion-collapse collapse ' . $show_class . '" aria-labelledby="' . $id . '" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    ' . $comentario . '
+                                </div>
+                                <hr style="margin-left:1%;margin-right:1%;">
+                                <div class="d-flex justify-content-between">
+                                    <div class="accordion-body"><b>Email: </b>' . $email . '</div>
+                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                </div>
+                            </div>
+                        </div>
+                        ';
+                        $counter++;
+                    }
+                    ?>
+                </div>
             </div>
 
-            <div id="APIRP" class="tabcontent ">
-
+            <div id="APIRP" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_apirp";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
+                            }
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseAPIRP" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="' . $id . '">
+                                <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                                    <ul class="tags">
+                                        <li><a>' . $nome . ' ' . $sobrenome . '</a></li>
+                                        <li><a>' . $data . '</a></li>
+                                    </ul>
+                                </button>
+                            </h2>
+                            <div id="' . $aria_controls . '" class="accordion-collapse collapse ' . $show_class . '" aria-labelledby="' . $id . '" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    ' . $comentario . '
+                                </div>
+                                <hr style="margin-left:1%;margin-right:1%;">
+                                <div class="d-flex justify-content-between">
+                                    <div class="accordion-body"><b>Email: </b>' . $email . '</div>
+                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                </div>
+                            </div>
+                        </div>
+                        ';
+                        $counter++;
+                    }
+                    ?>
+                </div>
             </div>
 
-            <div id="CPR" class="tabcontent ">
-                <h3>CPR</h3>
-                <p>Tab number four.</p>
+            <div id="CPR" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_cpr";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
+                            }
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseCPR" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="' . $id . '">
+                                <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                                    <ul class="tags">
+                                        <li><a>' . $nome . ' ' . $sobrenome . '</a></li>
+                                        <li><a>' . $data . '</a></li>
+                                    </ul>
+                                </button>
+                            </h2>
+                            <div id="' . $aria_controls . '" class="accordion-collapse collapse ' . $show_class . '" aria-labelledby="' . $id . '" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    ' . $comentario . '
+                                </div>
+                                <hr style="margin-left:1%;margin-right:1%;">
+                                <div class="d-flex justify-content-between">
+                                    <div class="accordion-body"><b>Email: </b>' . $email . '</div>
+                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                </div>
+                            </div>
+                        </div>
+                        ';
+                        $counter++;
+                    }
+                    ?>
+                </div>
             </div>
 
-            <div id="CV" class="tabcontent ">
-
+            <div id="CV" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;"> 
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_cv";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
+                            }
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseCV" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="' . $id . '">
+                                <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                                    <ul class="tags">
+                                        <li><a>' . $nome . ' ' . $sobrenome . '</a></li>
+                                        <li><a>' . $data . '</a></li>
+                                    </ul>
+                                </button>
+                            </h2>
+                            <div id="' . $aria_controls . '" class="accordion-collapse collapse ' . $show_class . '" aria-labelledby="' . $id . '" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    ' . $comentario . '
+                                </div>
+                                <hr style="margin-left:1%;margin-right:1%;">
+                                <div class="d-flex justify-content-between">
+                                    <div class="accordion-body"><b>Email: </b>' . $email . '</div>
+                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                </div>
+                            </div>
+                        </div>
+                        ';
+                        $counter++;
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
@@ -577,7 +759,6 @@
     <script type="module" src="./lang/login_lang.js"></script>
     <script type="module" src="../controller/common/include_components.js"></script>
     <script type="module" src="../configurations/loadcontent.js"></script>
-
     <script type="module" src="../controller/admin/admin.js"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <!-- Font Awesome Kit -->

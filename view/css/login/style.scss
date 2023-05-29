@@ -28,7 +28,7 @@
   position: absolute;
   top: 90px;
   left: 0;
-  height: 115%;
+  height: 110%;
   display: block;
   width: 250px;
   padding: 10px 14px;
@@ -59,7 +59,7 @@
 .sidebar .icon {
   min-width: 60px;
   border-radius: 6px;
-  height: 100%;
+  height: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
