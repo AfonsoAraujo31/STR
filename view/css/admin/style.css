@@ -24,22 +24,29 @@
   padding: 5px 15px 5px 15px;
 }
 
-.teste {
-  display: inline;
-}
-
-@media only screen and (max-width: 660px) {
-  .teste {
-    display: block;
-  }
-}
-
 .accordion-button:focus {
   outline: none !important;
   background-color: transparent;
   box-shadow: none;
 }
-
+@media only screen and (min-width: 632px) {
+  .tab1 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 632px) {
+  .tab2 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: none;
+  }
+  .tab button {
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
 .tags {
   list-style: none;
   margin: 0;
@@ -67,10 +74,6 @@
   -o-transition: background 200ms ease;
   -ms-transition: background 200ms ease;
   transition: background 200ms ease;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .wrapper {

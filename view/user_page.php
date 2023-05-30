@@ -64,7 +64,7 @@
                 ?>
         </ul>
     </header>
-    <nav class="sidebar close">
+    <nav class="sidebar close" id="sidebar">
         <div class="header-nav">
             <div class="image-text">
                 <span class="image_panel">
@@ -459,7 +459,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <a class="dashboard-stat red" href="#">
                     <div class="visual">
-                        <i class="fa fa-usd"></i>
+                        <i class="fa fa-bar-chart-o"></i>
                     </div>
                     <div class="details">
                         <div class="number">
@@ -472,7 +472,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <a class="dashboard-stat blue" href="#">
                     <div class="visual">
-                        <i class="fa fa-bar-chart-o"></i>
+                        <i class="fa-sharp fa-solid fa-person"></i>
                     </div>
                     <div class="details">
                         <div class="number">
@@ -531,20 +531,26 @@
             </table>
         </div>
         <br>
-        <div class="container_definicoes" style="overflow-x:auto;height:auto;">
-            <div class="position-relative">
-                <div class="title teste">Comentários</div>
-                <div class="tab teste">
-                    <button class="tablinks active" id="CBL" style=" border-radius: 0 10px 10px 0;">CBL</button>
+        <div class="container_definicoes" style="height:auto;">
+            <div class="d-flex justify-content-between">
+                <div class="title">Comentários</div>
+                <div class="tab tab2">
+                    <button class="tablinks active" id="CBL" style="border-radius: 0 10px 10px 0;">CBL</button>
                     <button class="tablinks" id="ALCC">ALCC</button>
                     <button class="tablinks" id="APIRP">APIRP</button>
                     <button class="tablinks" id="CPR">CPR</button>
-                    <button class="tablinks" id="CV" style=" border-radius: 10px 0 0 10px;">CV</button>
+                    <button class="tablinks" id="CV" style="border-radius: 10px 0 0 10px;">CV</button>
                 </div>
             </div>
-
+            <div class="tab tab1">
+                <button class="tablinks active" id="CBL" style="border-radius: 0 10px 10px 0;">CBL</button>
+                <button class="tablinks" id="ALCC">ALCC</button>
+                <button class="tablinks" id="APIRP">APIRP</button>
+                <button class="tablinks" id="CPR">CPR</button>
+                <button class="tablinks" id="CV" style="border-radius: 10px 0 0 10px;">CV</button>
+            </div>
             <div id="CBL" class="tabcontent">
-                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;overflow-x:auto;">
                     <?php
                     $db = 1;
                     $sql = "SELECT * FROM comentarios_cbl";

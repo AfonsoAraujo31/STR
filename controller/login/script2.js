@@ -19,6 +19,7 @@ function perfil() {
   $("#perfil").css("background-color", "#ff9564");
   $("#doacao").css("background-color", "#2e2e2e");
   $("#admin").css("background-color", "#2e2e2e");
+  
 }
 function doacao() {
   $(".box").css("display", "none");
@@ -27,6 +28,7 @@ function doacao() {
   $("#perfil").css("background-color", "#2e2e2e ");
   $("#doacao").css("background-color", "#ff9564");
   $("#admin").css("background-color", "#2e2e2e");
+  
 }
 function admin() {
   $(".box").css("display", "none");

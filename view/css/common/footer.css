@@ -5,28 +5,28 @@
   box-shadow: 0 5px 25px rgb(1, 1, 1);
 }
 
-.single-cta i {
+.footer-section .single-cta i {
   font-size: 30px;
   float: left;
   margin-top: 8px;
 }
-.cta-text {
+.footer-section .cta-text {
   padding-left: 15px;
   display: inline-block;
 }
-.cta-text h4 {
+.footer-section .cta-text h4 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 2px;
 }
-.cta-text span {
+.footer-section .cta-text span {
   font-size: 15px;
 }
-.footer-content {
+.footer-section .footer-content {
   position: relative;
   z-index: 2;
 }
-.footer-pattern img {
+.footer-section .footer-pattern img {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,28 +34,28 @@
   background-size: cover;
   background-position: 100% 100%;
 }
-.footer-logo {
+.footer-section .footer-logo {
   margin-bottom: 30px;
 }
-.footer-logo img {
+.footer-section .footer-logo img {
   max-width: 200px;
 }
-.footer-text p {
+.footer-section .footer-text p {
   margin-bottom: 14px;
   font-size: 14px;
   line-height: 28px;
 }
-.footer-social-icon span {
+.footer-section .footer-social-icon span {
   display: block;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.footer-social-icon a {
+.footer-section .footer-social-icon a {
   font-size: 16px;
   margin-right: 15px;
 }
-.footer-social-icon i {
+.footer-section .footer-social-icon i {
   height: 40px;
   width: 40px;
   text-align: center;
@@ -124,6 +124,7 @@
 .footer-menu li {
   display: inline-block;
   margin-left: 20px;
+  color: #7f7f7f;
 }
 
 .footer-menu li a {

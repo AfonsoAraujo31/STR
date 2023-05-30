@@ -28,7 +28,7 @@
   position: absolute;
   top: 90px;
   left: 0;
-  height: 110%;
+  min-height: 120%;
   display: block;
   width: 250px;
   padding: 10px 14px;
@@ -36,12 +36,20 @@
   transition: var(--tran-05);
   z-index: 100;
 }
+@media (max-width: 1400px) {
+  .sidebar {
+    height: 120%;
+  }
+}
+@media (max-width: 1000px) {
+  .sidebar {
+    height: 200%;
+  }
+}
 .sidebar.close {
   width: 88px;
 }
-@media (max-width: 1000px) {
-  .sidebar {height: 200%;}
-}
+
 /* ===== Reusable code - Here ===== */
 .sidebar li {
   height: 50px;
