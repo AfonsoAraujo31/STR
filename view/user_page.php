@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/admin/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <div id="includedCssContent"></div>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap/Font Awsome -->
@@ -115,7 +117,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#" id="candidatura" onclick="candidatar();">
+                        <a href="#" id="candidatar" onclick="candidatar();">
                             <i class='bx bxs-book-heart icon'></i>
                             <span class="text nav-text">Doador Especial</span>
                         </a>
@@ -457,14 +459,18 @@
             </div>
         </div>
     </div>
-
     <div id="candidatar-box" class="box home">
-        <h2>canad</h2>
-        <h2>canad</h2>
-        <h2>canad</h2>
-        <h2>canad</h2>
-        <h2>canad</h2>
-        <h2>canad</h2>
+        <div class="wrapper">
+            <div class="title_doacaoespecial">
+                Queres ser um doador especial?
+            </div>
+            <div class="form">
+                <?php include '../model/common/load_info_specialdonator.php';?>
+                <div class="input_field">
+                    <input type="submit" value="Register" class="btn">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="doacao-box" class="box home">

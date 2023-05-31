@@ -14,6 +14,7 @@ searchBtn.addEventListener("click", () => {
 });
 
 function perfil() {
+  $("html, body").css("overflow", "auto");
   $(".box").css("display", "none");
   //on screen
   $("#home-box").css("display", "block");
@@ -29,6 +30,7 @@ function perfil() {
 }
 
 function candidatar() {
+  $("html, body").css("overflow", "hidden");
   $(".box").css("display", "none");
   $(".box-visible").css("display", "none");
   //on screen
@@ -45,6 +47,7 @@ function candidatar() {
 }
 
 function doacao() {
+  $("html, body").css("overflow", "auto");
   $(".box").css("display", "none");
   $(".box-visible").css("display", "none");
   //on screen
@@ -60,6 +63,7 @@ function doacao() {
   $("#admin").css("background-color", "#2e2e2e");
 }
 function admin() {
+  $("html, body").css("overflow", "auto");
   $(".box").css("display", "none");
   $(".box-visible").css("display", "none");
   //on screen

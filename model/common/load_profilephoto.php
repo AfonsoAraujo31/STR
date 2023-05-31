@@ -25,4 +25,3 @@ if($_COOKIE["sing_in"]){
 }else{
   echo "<li class='user-container' style='background-color: white;'><a href='./login.php'><span><img class='user' style='margin-left:9px' src='../view/assets/others/user.png' /></span></a></li></li>";
 }
-?>
