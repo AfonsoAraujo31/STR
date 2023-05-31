@@ -50,6 +50,7 @@ $(function () {
     $(".title").eq(0).text("Definições de perfil");
     $(".title").eq(1).text("Preferências/Opcões");
     $(".title").eq(2).text("Foto de perfil");
+    $(".title").eq(3).text("Sobre ti");
     $(".details").eq(0).text("Nome");
     $(".details").eq(1).text("Sobrenome");
     $(".details").eq(2).text("Endereço de email");
@@ -166,6 +167,7 @@ $(function () {
     $(".title").eq(0).text("Profile settings");
     $(".title").eq(1).text("Preferences/Options");
     $(".title").eq(2).text("Profile photo");
+    $(".title").eq(3).text("About you");
     $(".details").eq(0).text("Name");
     $(".details").eq(1).text("Second name");
     $(".details").eq(2).text("Email");
@@ -286,6 +288,7 @@ $(function () {
     $(".title").eq(0).text("Paramètres de profil");
     $(".title").eq(1).text("Préférences/Options");
     $(".title").eq(2).text("Photo de profil");
+    $(".title").eq(3).text("Au propos de vous");
     $(".details").eq(0).text("Nom");
     $(".details").eq(1).text("Nom de famille");
     $(".details").eq(2).text("Email");
@@ -402,6 +405,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".title").eq(0).text("Definições de perfil");
       $(".title").eq(1).text("Preferências/Opcões");
       $(".title").eq(2).text("Foto de perfil");
+      $(".title").eq(3).text("Sobre ti");
       $(".details").eq(0).text("Nome");
       $(".details").eq(1).text("Sobrenome");
       $(".details").eq(2).text("Endereço de email");
@@ -512,6 +516,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".title").eq(0).text("Profile settings");
       $(".title").eq(1).text("Preferences/Options");
       $(".title").eq(2).text("Profile photo");
+      $(".title").eq(3).text("About you");
       $(".details").eq(0).text("Name");
       $(".details").eq(1).text("Second name");
       $(".details").eq(2).text("Email");
@@ -626,6 +631,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".title").eq(0).text("Paramètres de profil");
       $(".title").eq(1).text("Préférences/Options");
       $(".title").eq(2).text("Photo de profil");
+      $(".title").eq(3).text("Au propos de vous");
       $(".details").eq(0).text("Nom");
       $(".details").eq(1).text("Nom de famille");
       $(".details").eq(2).text("Email");

@@ -115,6 +115,12 @@
                         </a>
                     </li>
                     <li class="nav-link">
+                        <a href="#" id="candidatura" onclick="candidatar();">
+                            <i class='bx bxs-book-heart icon'></i>
+                            <span class="text nav-text">Doador Especial</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
                         <a href="#" id="doacao" onclick="doacao();">
                             <i class='bx bxs-spreadsheet icon'></i>
                             <span class="text nav-text">Candidaturas</span>
@@ -451,10 +457,21 @@
             </div>
         </div>
     </div>
+
+    <div id="candidatar-box" class="box home">
+        <h2>canad</h2>
+        <h2>canad</h2>
+        <h2>canad</h2>
+        <h2>canad</h2>
+        <h2>canad</h2>
+        <h2>canad</h2>
+    </div>
+
     <div id="doacao-box" class="box home">
         <h2>cand</h2>
     </div>
-    <div id="obs-box" class="box home">
+
+    <div id="admin-box" class="box home">
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <a class="dashboard-stat red" href="#">
@@ -463,7 +480,7 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span>5</span>
+                            <span><?php echo "5"; ?></span>
                         </div>
                         <div class="desc">Associações</div>
                     </div>
@@ -514,7 +531,7 @@
             <div id="errorAlertUsers" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
             <table class="table align-middle mt-2 mb-0 bg-white">
                 <thead class="bg-light">
-                    <tr>
+                    <tr class="lista">
                         <th>Nome</th>
                         <th>Data de Nascimento</th>
                         <th>Morada</th>
@@ -588,7 +605,7 @@
                                 <hr style="margin-left:1%;margin-right:1%;">
                                 <div class="d-flex justify-content-between">
                                     <div class="accordion-body"><b>Email: </b>' . $email . '</div>
-                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                    <button type="button" class="btn btn-outline-danger delete" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
                                 </div>
                             </div>
                         </div>
@@ -638,7 +655,7 @@
                                 <hr style="margin-left:1%;margin-right:1%;">
                                 <div class="d-flex justify-content-between">
                                     <div class="accordion-body"><b>Email: </b>' . $email . '</div>
-                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                    <button type="button" class="btn btn-outline-danger delete" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
                                 </div>
                             </div>
                         </div>
@@ -688,7 +705,7 @@
                                 <hr style="margin-left:1%;margin-right:1%;">
                                 <div class="d-flex justify-content-between">
                                     <div class="accordion-body"><b>Email: </b>' . $email . '</div>
-                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                    <button type="button" class="btn btn-outline-danger delete" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
                                 </div>
                             </div>
                         </div>
@@ -738,7 +755,7 @@
                                 <hr style="margin-left:1%;margin-right:1%;">
                                 <div class="d-flex justify-content-between">
                                     <div class="accordion-body"><b>Email: </b>' . $email . '</div>
-                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                    <button type="button" class="btn btn-outline-danger delete" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
                                 </div>
                             </div>
                         </div>
@@ -788,7 +805,7 @@
                                 <hr style="margin-left:1%;margin-right:1%;">
                                 <div class="d-flex justify-content-between">
                                     <div class="accordion-body"><b>Email: </b>' . $email . '</div>
-                                    <button type="button" class="btn btn-outline-danger" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
+                                    <button type="button" class="btn btn-outline-danger delete" style="background-color:#dc3545;color:white; height:10%;margin-right:1%;margin-top:0.5%;" onclick="delete_comment(' . $id . ',' . $db . ');">Eliminar</button>    
                                 </div>
                             </div>
                         </div>
@@ -817,6 +834,7 @@
     <script type="module" src="./lang/common/header_lang.js"></script>
     <script type="module" src="./lang/common/language_lang.js"></script>
     <script type="module" src="./lang/login_lang.js"></script>
+    <script type="module" src="./lang/admin_lang.js"></script>
     <script type="module" src="../controller/common/include_components.js"></script>
     <script type="module" src="../configurations/loadcontent.js"></script>
     <script type="module" src="../controller/admin/admin.js"></script>

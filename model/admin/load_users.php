@@ -5,8 +5,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $foto_perfil = base64_encode($row['foto_perfil']);
-        $doadorEspecial = ($row["doador_especial"]) ? "Sim" : "Não";
-        $doadorAdmin = ($row["is_admin"]) ? "Sim" : "Não";
+        $doadorEspecial = ($row["doador_especial"]) ? "<img src='../view/assets/admin/accept.png'>" : "<img src='../view/assets/admin/remove.png'>";
+        $doadorAdmin = ($row["is_admin"]) ? "<img src='../view/assets/admin/accept.png'>" : "<img src='../view/assets/admin/remove.png'>";
         if($row['foto_perfil']){
             echo '
             <tr>
@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
                 <td><p class="fw-normal mb-1">' . $doadorAdmin . '</p></td>
                 <td>
                     <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="appliance_user('. $row["id"] .');"><img src="../view/assets/admin/appliance.png"></button>
-                    <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/remove.png"></button>
+                    <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/trash-bin.png"></button>
                 </td>
             </tr>
             ';
@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
             <td><p class="fw-normal mb-1">' . $doadorAdmin . '</p></td>
             <td>
                 <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="appliance_user('. $row["id"] .');"><img src="../view/assets/admin/appliance.png"></button>
-                <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/remove.png"></button>
+                <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/trash-bin.png"></button>
             </td>
         </tr>
         ';

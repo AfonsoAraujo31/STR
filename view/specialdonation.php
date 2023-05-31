@@ -25,6 +25,24 @@
             } else if ($_COOKIE["sing_in"] === "") {
               echo "overflow";
             } ?>>
+  <?php ini_set('display_errors', 0);
+  if ($_COOKIE["sing_in"] == 1) {
+    echo '<div class="hidden">';
+  } else if ($_COOKIE["sing_in"] == "") {
+    echo '<div class="">';
+  } ?>
+  <div class="center-div">
+    <section class="container animate__animated animate__bounceIn">
+      <img src="./assets/specialdonation/image-removebg-preview.png" alt="">
+      <div class="text-center texto">
+        <div class="pb-2 title_widget">Oops, parece que aconteceu algo de inesperado!</div>
+        <div class="content-text_widget">
+          De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito.
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
   <div id="body" style="display:none;">
     <header class="bg-strong-gray">
       <input type="checkbox" id="check" />
@@ -50,26 +68,6 @@
           <?php include '../model/common/load_profilephoto.php'; ?>
       </ul>
     </header>
-  </div>
-  <?php ini_set('display_errors', 0);
-  if ($_COOKIE["sing_in"] == 1) {
-    echo '<div class="hidden">';
-  } else if ($_COOKIE["sing_in"] == "") {
-    echo '<div class="">';
-  } ?>
-  <div class="center-div">
-    <section class="container animate__animated animate__bounceIn">
-      <div class="pricing-card">
-        <img src="./assets/specialdonation/image-removebg-preview.png" alt="">
-        <div class="text-center texto">
-          <div class="pb-2 title_widget">Oops, parece que aconteceu algo de inesperado!</div>
-          <div class="content-text_widget">
-            De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito.
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
   </div>
   <div class=<?php ini_set('display_errors', 0);
               if ($_COOKIE["sing_in"] === 1) {
@@ -132,7 +130,6 @@
   <script type="module" src="../controller/specialdonation.js"></script>
   <script type="module" src="../controller/common/scroll_animation.js"></script>
   <script type="module" src="../controller/common/backtop.js"></script>
-  <script type="module" src="../controller/common/include_components.js"></script>
   <script type="module" src="../controller/common/include_components.js"></script>
   <script type="module" src="../configurations/loadcontent.js"></script>
   <!-- Font Awesome Kit -->

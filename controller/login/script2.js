@@ -15,26 +15,62 @@ searchBtn.addEventListener("click", () => {
 
 function perfil() {
   $(".box").css("display", "none");
+  //on screen
   $("#home-box").css("display", "block");
+  //off screen
+  $("#candidatar-box").css("display", "none");
+  $("#doacao-box").css("display", "none");
+  $("#admin-box").css("display", "none");
+  //Colors
   $("#perfil").css("background-color", "#ff9564");
+  $("#candidatar").css("background-color", "#2e2e2e");
   $("#doacao").css("background-color", "#2e2e2e");
   $("#admin").css("background-color", "#2e2e2e");
-  
 }
+
+function candidatar() {
+  $(".box").css("display", "none");
+  $(".box-visible").css("display", "none");
+  //on screen
+  $("#candidatar-box").css("display", "block");
+  //off screen
+  $("#home-box").css("display", "none");
+  $("#doacao-box").css("display", "none");
+  $("#admin-box").css("display", "none");
+  //Colors
+  $("#perfil").css("background-color", "#2e2e2e");
+  $("#candidatar").css("background-color", "#ff9564");
+  $("#doacao").css("background-color", "#2e2e2e");
+  $("#admin").css("background-color", "#2e2e2e");
+}
+
 function doacao() {
   $(".box").css("display", "none");
   $(".box-visible").css("display", "none");
+  //on screen
   $("#doacao-box").css("display", "block");
-  $("#perfil").css("background-color", "#2e2e2e ");
+  //off screen
+  $("#home-box").css("display", "none");
+  $("#candidatar-box").css("display", "none");
+  $("#admin-box").css("display", "none");
+  //Colors
+  $("#perfil").css("background-color", "#2e2e2e");
+  $("#candidatar").css("background-color", "#2e2e2e");
   $("#doacao").css("background-color", "#ff9564");
   $("#admin").css("background-color", "#2e2e2e");
-  
 }
 function admin() {
   $(".box").css("display", "none");
   $(".box-visible").css("display", "none");
-  $("#obs-box").css("display", "block");
+  //on screen
+  $("#admin-box").css("display", "block");
+  //off screen
+  $("#home-box").css("display", "none");
+  $("#candidatar-box").css("display", "none");
+  $("#doacao-box").css("display", "none");
+  //Colors
   $("#perfil").css("background-color", "#2e2e2e");
+  $("#candidatar").css("background-color", "#2e2e2e");
   $("#doacao").css("background-color", "#2e2e2e");
   $("#admin").css("background-color", "#ff9564");
 }
