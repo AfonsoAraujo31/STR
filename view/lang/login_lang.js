@@ -113,6 +113,8 @@ $(function () {
 
     $(".button").children().val("Atualizar");
     $("#btn_atualizar").text("Atualizar");
+    $(".contant_box_404").children().eq(0).text("Oops... Aguarde mais um pouco!");
+    $(".contant_box_404").children().eq(1).text("A sua candidatura está a ser processada.");
   });
 });
 /**
@@ -230,6 +232,8 @@ $(function () {
 
     $(".button").children().val("Update");
     $("#btn_atualizar").text("Update");
+    $(".contant_box_404").children().eq(0).text("Oops... wait a moment!");
+    $(".contant_box_404").children().eq(1).text("Your application is being processed.");
   });
 });
 /**
@@ -351,6 +355,8 @@ $(function () {
 
     $(".button").children().val("Mettre à jour");
     $("#btn_atualizar").text("Mettre à jour");
+    $(".contant_box_404").children().eq(0).text("Oops... attendez un moment!");
+    $(".contant_box_404").children().eq(1).text("Votre candidature est en cours de traitement.");
   });
 });
 /**
@@ -468,6 +474,8 @@ addEventListener("DOMContentLoaded", (event) => {
 
       $(".button").children().val("Atualizar");
       $("#btn_atualizar").text("Atualizar");
+      $(".contant_box_404").children().eq(0).text("Oops... Aguarde mais um pouco!");
+    $(".contant_box_404").children().eq(1).text("A sua candidatura está a ser processada.");
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
@@ -579,6 +587,8 @@ addEventListener("DOMContentLoaded", (event) => {
 
       $(".button").children().val("Update");
       $("#btn_atualizar").text("Update");
+      $(".contant_box_404").children().eq(0).text("Oops... wait a moment!");
+    $(".contant_box_404").children().eq(1).text("Your application is being processed.");
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
@@ -696,6 +706,8 @@ addEventListener("DOMContentLoaded", (event) => {
 
       $(".button").children().val("Mettre à jour");
       $("#btn_atualizar").text("Mettre à jour");
+      $(".contant_box_404").children().eq(0).text("Oops... attendez un moment!");
+    $(".contant_box_404").children().eq(1).text("Votre candidature est en cours de traitement.");
     });
   }
 });

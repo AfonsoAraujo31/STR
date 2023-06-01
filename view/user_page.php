@@ -461,7 +461,16 @@
         </div>
     </div>
 
-    <div id="candidatar-box" class="box home">
+    <div id="candidatar-box" class="box home <?php
+                                                ini_set('display_errors', 0);
+                                                $sql = "SELECT email FROM candidaturas WHERE email='" . $_COOKIE['current_user'] . "'";
+                                                $result = $conn->query($sql);
+                                                if ($result->num_rows > 0) {
+                                                    echo "back_1";
+                                                } else {
+                                                    echo "back_2";
+                                                }
+                                                ?>">
         <?php
         ini_set('display_errors', 0);
         require_once '../configurations/dbconnection.php';
@@ -470,12 +479,14 @@
         if ($result->num_rows > 0) {
             echo '
             <div class="wrapper_advise">
-                        <div class="row">	
-                                    <div class="four_zero_four_bg"></div>
-                                    <div class="contant_box_404">
-                                        <h3 class="h2 text-center">Look like youre lost</h3>
-                                    </div>
+                <div class="row">	
+                    <div class="four_zero_four_bg"></div>
+                        <div class="contant_box_404">
+                            <h3 class="h2 text-center">Oops... Aguarde mais um pouco!</h3>
+                            <h3 class="h4 text-center">A sua candidatura está a ser processada</h3>
                         </div>
+                    </div>
+                </div>
             </div>
             ';
         } else {
@@ -486,27 +497,27 @@
                     </div>
                     <div class="form">
                         <form action="../model/specialdonation/appliance-specialdonator/send_request_specialdonator.php" method="GET">';
-                        ini_set('display_errors', 0);
-                        require_once '../configurations/dbconnection.php';
-                        $sql = "SELECT nome,sobrenome,email,num_telefone FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
-                        $result = $conn->query($sql);
-                        if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
-                            echo '
+            ini_set('display_errors', 0);
+            require_once '../configurations/dbconnection.php';
+            $sql = "SELECT nome,sobrenome,email,num_telefone FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '
                                 <div class="input_field">
-                                    <label>Nome</label>
+                                    <label class"label_appliance">Nome</label>
                                     <input type="text" class="input disabled" name="nome" value="' . $row['nome'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label>Sobrenome</label>
+                                    <label class"label_appliance">Sobrenome</label>
                                     <input type="text" class="input disabled" name="sobrenome" value="' . $row['sobrenome'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label>Número de identificação</label>
+                                    <label class"label_appliance">Número de identificação</label>
                                     <input type="number" name="num_identificacao" id="myInput" class="input">
                                 </div>
                                 <div class="input_field">
-                                    <label>Estado civil</label>
+                                    <label class"label_appliance">Estado civil</label>
                                     <div class="custom_select">
                                         <select name="estado_civil">
                                             <option>Solteiro/a</option>
@@ -515,7 +526,7 @@
                                     </div>
                                 </div>
                                 <div class="input_field">
-                                    <label>Forma de contacto</label>
+                                    <label class"label_appliance">Forma de contacto</label>
                                     <div class="custom_select">
                                         <select>
                                             <option>Telemóvel</option>
@@ -524,15 +535,15 @@
                                     </div>
                                 </div>
                                 <div class="input_field">
-                                    <label>Número de telemóvel</label>
+                                    <label class"label_appliance">Número de telemóvel</label>
                                     <input type="number" name="num_telefone" class="input disabled" value="' . $row['num_telefone'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label>Email</label>
+                                    <label class"label_appliance">Email</label>
                                     <input type="text" name="email" class="input disabled" value="' . $row['email'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label>Motivação</label>
+                                    <label class"label_appliance">Motivação</label>
                                     <textarea class="textarea" name="motivacao" maxlength="500"></textarea>
                                 </div>
                                 <div class="input_field">
@@ -930,6 +941,7 @@
     <script src="../controller/login/script.js"></script>
     <script src="../controller/login/script2.js"></script>
     <script src="../controller/login/script3.js"></script>
+    <script type="module" src="./lang/appliance_lang.js"></script>
     <!-- Language -->
     <script type="module" src="./lang/common/header_lang.js"></script>
     <script type="module" src="./lang/common/language_lang.js"></script>

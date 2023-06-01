@@ -818,9 +818,17 @@ form .button .save:hover {
     flex-direction: row;
   }
 }
-
-#candidatar-box {
+.back_2 {
   background: url("../../assets/My\ project-2.png") repeat 0 0;
+  -webkit-animation: 15s linear 0s normal none infinite animate;
+  -moz-animation: 15s linear 0s normal none infinite animate;
+  -ms-animation: 15s linear 0s normal none infinite animate;
+  -o-animation: 15s linear 0s normal none infinite animate;
+  animation: 15s linear 0s normal none infinite animate;
+  height: 100vh;
+}
+.back_1 {
+  background: url("../../assets/My\ project-1.png") repeat 0 0;
   -webkit-animation: 15s linear 0s normal none infinite animate;
   -moz-animation: 15s linear 0s normal none infinite animate;
   -ms-animation: 15s linear 0s normal none infinite animate;
@@ -879,14 +887,18 @@ form .button .save:hover {
   }
 }
 
-.wrapper_advise{
-  max-width: 800px;
+.wrapper_advise {
+  position: absolute;
   width: 100%;
   background: #fff;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 10px;
+  right: 0;
+  left: 0;
+  
   align-items: center;
+  padding: 30px;
+  padding-bottom: 50px;
+  margin-top: 110px;
+  box-shadow: 0px 1px 10px #fc7d43;
 }
 
 .page_404 img {
@@ -902,8 +914,9 @@ form .button .save:hover {
 
 .four_zero_four_bg h1 {
   font-size: 80px;
+  padding-bottom: 5px;
 }
 
-.four_zero_four_bg h3 {
-  font-size: 80px;
+.four_zero_four_bg h4 {
+  font-size: 10px;
 }
