@@ -1,5 +1,4 @@
 <?php
-
 require_once '/wamp64/www/STR/configurations/dbconnection.php';
 if (date("m") == 1) {
     $mes = "Jan";
@@ -33,5 +32,5 @@ VALUES ('" . $_GET["nome"] . "','" . $_GET["sobrenome"] . "','" . $_GET["email"]
 if ($conn->query($sql) === TRUE) {
     echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_GET["email"] . "';</script>";
 } else {
-    echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_GET["email"] . "&error=a';</script>";
+    echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_GET["email"] . "&error=appliancefail';</script>";
 }

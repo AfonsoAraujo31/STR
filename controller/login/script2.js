@@ -78,3 +78,4 @@ function admin() {
   $("#doacao").css("background-color", "#2e2e2e");
   $("#admin").css("background-color", "#ff9564");
 }
+

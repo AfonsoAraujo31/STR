@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/admin/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <div id="includedCssContent"></div>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <!----===== Boxicons CSS ===== -->
@@ -459,198 +460,216 @@
             </div>
         </div>
     </div>
+
     <div id="candidatar-box" class="box home">
-        <div class="wrapper">
-            <div class="title_doacaoespecial">
-                Queres ser um doador especial?
+        <?php
+        ini_set('display_errors', 0);
+        require_once '../configurations/dbconnection.php';
+        $sql = "SELECT email FROM candidaturas WHERE email='" . $_COOKIE['current_user'] . "'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            echo '
+            <div class="wrapper_advise">
+                        <div class="row">	
+                                    <div class="four_zero_four_bg"></div>
+                                    <div class="contant_box_404">
+                                        <h3 class="h2 text-center">Look like youre lost</h3>
+                                    </div>
+                        </div>
             </div>
-            <div class="form">
-                <form action="../model/specialdonation/appliance-specialdonator/send_request_specialdonator.php" method="GET">
-                    <?php
-                    ini_set('display_errors', 0);
-                    require_once '../configurations/dbconnection.php';
-                    $sql = "SELECT nome,sobrenome,email,num_telefone FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
+            ';
+        } else {
+            echo '
+                <div class="wrapper">
+                    <div class="title_doacaoespecial">
+                        Queres ser um doador especial?
+                    </div>
+                    <div class="form">
+                        <form action="../model/specialdonation/appliance-specialdonator/send_request_specialdonator.php" method="GET">';
+                        ini_set('display_errors', 0);
+                        require_once '../configurations/dbconnection.php';
+                        $sql = "SELECT nome,sobrenome,email,num_telefone FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
                             echo '
-                            <div class="input_field">
-                    <label>Nome</label>
-                    <input type="text" class="input" name="nome" value="' . $row['nome'] . '">
-                </div>
-                <div class="input_field">
-                    <label>Sobrenome</label>
-                    <input type="text" class="input" name="sobrenome" value="' . $row['sobrenome'] . '">
-                </div>
-                <div class="input_field">
-                    <label>Número de identificação</label>
-                    <input type="number" name="num_identificacao" class="input">
-                </div>
-                <div class="input_field">
-                    <label>Estado civil</label>
-                    <div class="custom_select">
-                        <select name="estado_civil">
-                            <option value="">Selecione</option>
-                            <option value="male">Solteiro/a</option>
-                            <option value="female">Casado/a</option>
-                        </select>
+                                <div class="input_field">
+                                    <label>Nome</label>
+                                    <input type="text" class="input disabled" name="nome" value="' . $row['nome'] . '" readonly>
+                                </div>
+                                <div class="input_field">
+                                    <label>Sobrenome</label>
+                                    <input type="text" class="input disabled" name="sobrenome" value="' . $row['sobrenome'] . '" readonly>
+                                </div>
+                                <div class="input_field">
+                                    <label>Número de identificação</label>
+                                    <input type="number" name="num_identificacao" id="myInput" class="input">
+                                </div>
+                                <div class="input_field">
+                                    <label>Estado civil</label>
+                                    <div class="custom_select">
+                                        <select name="estado_civil">
+                                            <option>Solteiro/a</option>
+                                            <option>Casado/a</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input_field">
+                                    <label>Forma de contacto</label>
+                                    <div class="custom_select">
+                                        <select>
+                                            <option>Telemóvel</option>
+                                            <option>Email</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input_field">
+                                    <label>Número de telemóvel</label>
+                                    <input type="number" name="num_telefone" class="input disabled" value="' . $row['num_telefone'] . '" readonly>
+                                </div>
+                                <div class="input_field">
+                                    <label>Email</label>
+                                    <input type="text" name="email" class="input disabled" value="' . $row['email'] . '" readonly>
+                                </div>
+                                <div class="input_field">
+                                    <label>Motivação</label>
+                                    <textarea class="textarea" name="motivacao" maxlength="500"></textarea>
+                                </div>
+                                <div class="input_field">
+                                    <input type="submit" value="Enviar pedido" class="btn">
+                                </div>
+                            </form>
+                         </div>
+                    </div>';
+                }
+            }
+        }
+        ?>
+    </div>
+
+
+    <div id="doacao-box" class="box home">
+        <h2>cand</h2>
+    </div>
+
+    <div id="admin-box" class="box home">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat red" href="#">
+                    <div class="visual">
+                        <i class="fa fa-bar-chart-o"></i>
                     </div>
-                </div>
-                <div class="input_field">
-                    <label>Forma de contacto</label>
-                    <div class="custom_select">
-                        <select>
-                            <option value="">Selecione</option>
-                            <option value="male">Telemóvel</option>
-                            <option value="female">Email</option>
-                        </select>
+                    <div class="details">
+                        <div class="number">
+                            <span><?php echo "5"; ?></span>
+                        </div>
+                        <div class="desc">Associações</div>
                     </div>
-                </div>
-                <div class="input_field">
-                    <label>Número de telemóvel</label>
-                    <input type="number" name="num_telefone" class="input" value="' . $row['num_telefone'] . '">
-                </div>
-                <div class="input_field">
-                    <label>Email</label>
-                    <input type="text" name="email" class="input" value="' . $row['email'] . '">
-                </div>
-                <div class="input_field">
-                    <label>Motivação</label>
-                    <textarea class="textarea" name="motivacao" maxlength="500"></textarea>
-                </div>
-                        ';
-                        }
-                    }
-                    ?>
-                    <div class="input_field">
-                        <input type="submit" value="Enviar pedido" class="btn">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat blue" href="#">
+                    <div class="visual">
+                        <i class="fa-sharp fa-solid fa-person"></i>
                     </div>
-                </form>
+                    <div class="details">
+                        <div class="number">
+                            <span><?php include '../model/admin/count_users.php'; ?></span>
+                        </div>
+                        <div class="desc">Utilizadores</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat hoki" href="#">
+                    <div class="visual">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span><?php include '../model/admin/count_appliances.php'; ?></span>
+                        </div>
+                        <div class="desc">Candidaturas</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="dashboard-stat purple" href="#">
+                    <div class="visual">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span><?php include '../model/admin/count_comments.php'; ?></span>
+                        </div>
+                        <div class="desc">Comentários</div>
+                    </div>
+                </a>
             </div>
         </div>
-
-        <div id="doacao-box" class="box home">
-            <h2>cand</h2>
+        <div class="container_definicoes" style="overflow-x:auto;">
+            <div class="title">Utilizadores</div>
+            <div id="errorAlertUsers" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
+            <table class="table align-middle mt-2 mb-0 bg-white">
+                <thead class="bg-light">
+                    <tr class="lista">
+                        <th>Nome</th>
+                        <th>Data de Nascimento</th>
+                        <th>Morada</th>
+                        <th>Telemóvel</th>
+                        <th>Nacionalidade</th>
+                        <th>Doador Especial</th>
+                        <th>Admin</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php include '../model/admin/load_users.php'; ?>
+                </tbody>
+            </table>
         </div>
-
-        <div id="admin-box" class="box home">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat red" href="#">
-                        <div class="visual">
-                            <i class="fa fa-bar-chart-o"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number">
-                                <span><?php echo "5"; ?></span>
-                            </div>
-                            <div class="desc">Associações</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat blue" href="#">
-                        <div class="visual">
-                            <i class="fa-sharp fa-solid fa-person"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number">
-                                <span><?php include '../model/admin/count_users.php'; ?></span>
-                            </div>
-                            <div class="desc">Utilizadores</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat hoki" href="#">
-                        <div class="visual">
-                            <i class="fa fa-credit-card"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number">
-                                <span><?php include '../model/admin/count_appliances.php'; ?></span>
-                            </div>
-                            <div class="desc">Candidaturas</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat purple" href="#">
-                        <div class="visual">
-                            <i class="fa fa-comments"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number">
-                                <span><?php include '../model/admin/count_comments.php'; ?></span>
-                            </div>
-                            <div class="desc">Comentários</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="container_definicoes" style="overflow-x:auto;">
-                <div class="title">Utilizadores</div>
-                <div id="errorAlertUsers" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
-                <table class="table align-middle mt-2 mb-0 bg-white">
-                    <thead class="bg-light">
-                        <tr class="lista">
-                            <th>Nome</th>
-                            <th>Data de Nascimento</th>
-                            <th>Morada</th>
-                            <th>Telemóvel</th>
-                            <th>Nacionalidade</th>
-                            <th>Doador Especial</th>
-                            <th>Admin</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php include '../model/admin/load_users.php'; ?>
-                    </tbody>
-                </table>
-            </div>
-            <br>
-            <div class="container_definicoes" style="height:auto;">
-                <div class="d-flex justify-content-between">
-                    <div class="title">Comentários</div>
-                    <div class="tab tab2">
-                        <button class="tablinks active" id="CBL" style="border-radius: 0 10px 10px 0;">CBL</button>
-                        <button class="tablinks" id="ALCC">ALCC</button>
-                        <button class="tablinks" id="APIRP">APIRP</button>
-                        <button class="tablinks" id="CPR">CPR</button>
-                        <button class="tablinks" id="CV" style="border-radius: 10px 0 0 10px;">CV</button>
-                    </div>
-                </div>
-                <div class="tab tab1">
+        <br>
+        <div class="container_definicoes" style="height:auto;">
+            <div class="d-flex justify-content-between">
+                <div class="title">Comentários</div>
+                <div class="tab tab2">
                     <button class="tablinks active" id="CBL" style="border-radius: 0 10px 10px 0;">CBL</button>
                     <button class="tablinks" id="ALCC">ALCC</button>
                     <button class="tablinks" id="APIRP">APIRP</button>
                     <button class="tablinks" id="CPR">CPR</button>
                     <button class="tablinks" id="CV" style="border-radius: 10px 0 0 10px;">CV</button>
                 </div>
-                <div id="CBL" class="tabcontent">
-                    <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;overflow-x:auto;">
-                        <?php
-                        $db = 1;
-                        $sql = "SELECT * FROM comentarios_cbl";
-                        $result = mysqli_query($conn, $sql);
-                        $counter = 1;
-                        while ($row = mysqli_fetch_array($result)) {
-                            $id = $row['id'];
-                            $comentario = $row['comentario'];
-                            $email = $row['utilizador'];
-                            $nome = $row['nome'];
-                            $data = $row['data_registo'];
-                            $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
-                            if ($result1 = $conn->query($query1)) {
-                                while ($row1 = $result1->fetch_assoc()) {
-                                    $sobrenome = $row1['sobrenome'];
-                                }
-                                $result1->free();
+            </div>
+            <div class="tab tab1">
+                <button class="tablinks active" id="CBL" style="border-radius: 0 10px 10px 0;">CBL</button>
+                <button class="tablinks" id="ALCC">ALCC</button>
+                <button class="tablinks" id="APIRP">APIRP</button>
+                <button class="tablinks" id="CPR">CPR</button>
+                <button class="tablinks" id="CV" style="border-radius: 10px 0 0 10px;">CV</button>
+            </div>
+            <div id="CBL" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;overflow-x:auto;">
+                    <?php
+                    $db = 1;
+                    $sql = "SELECT * FROM comentarios_cbl";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
                             }
-                            $aria_controls = "collapseCBL" . $counter;
-                            $show_class = ($counter == 1) ? 'show' : '';
-                            echo '
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseCBL" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="' . $id . '">
                                 <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
@@ -672,35 +691,35 @@
                             </div>
                         </div>
                         ';
-                            $counter++;
-                        }
-                        ?>
-                    </div>
+                        $counter++;
+                    }
+                    ?>
                 </div>
+            </div>
 
-                <div id="ALCC" class="tabcontent">
-                    <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
-                        <?php
-                        $db = 2;
-                        $sql = "SELECT * FROM comentarios_alcc";
-                        $result = mysqli_query($conn, $sql);
-                        $counter = 1;
-                        while ($row = mysqli_fetch_array($result)) {
-                            $id = $row['id'];
-                            $comentario = $row['comentario'];
-                            $email = $row['utilizador'];
-                            $nome = $row['nome'];
-                            $data = $row['data_registo'];
-                            $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
-                            if ($result1 = $conn->query($query1)) {
-                                while ($row1 = $result1->fetch_assoc()) {
-                                    $sobrenome = $row1['sobrenome'];
-                                }
-                                $result1->free();
+            <div id="ALCC" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_alcc";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
                             }
-                            $aria_controls = "collapseALCC" . $counter;
-                            $show_class = ($counter == 1) ? 'show' : '';
-                            echo '
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseALCC" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="' . $id . '">
                                 <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
@@ -722,35 +741,35 @@
                             </div>
                         </div>
                         ';
-                            $counter++;
-                        }
-                        ?>
-                    </div>
+                        $counter++;
+                    }
+                    ?>
                 </div>
+            </div>
 
-                <div id="APIRP" class="tabcontent">
-                    <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
-                        <?php
-                        $db = 2;
-                        $sql = "SELECT * FROM comentarios_apirp";
-                        $result = mysqli_query($conn, $sql);
-                        $counter = 1;
-                        while ($row = mysqli_fetch_array($result)) {
-                            $id = $row['id'];
-                            $comentario = $row['comentario'];
-                            $email = $row['utilizador'];
-                            $nome = $row['nome'];
-                            $data = $row['data_registo'];
-                            $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
-                            if ($result1 = $conn->query($query1)) {
-                                while ($row1 = $result1->fetch_assoc()) {
-                                    $sobrenome = $row1['sobrenome'];
-                                }
-                                $result1->free();
+            <div id="APIRP" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_apirp";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
                             }
-                            $aria_controls = "collapseAPIRP" . $counter;
-                            $show_class = ($counter == 1) ? 'show' : '';
-                            echo '
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseAPIRP" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="' . $id . '">
                                 <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
@@ -772,35 +791,35 @@
                             </div>
                         </div>
                         ';
-                            $counter++;
-                        }
-                        ?>
-                    </div>
+                        $counter++;
+                    }
+                    ?>
                 </div>
+            </div>
 
-                <div id="CPR" class="tabcontent">
-                    <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
-                        <?php
-                        $db = 2;
-                        $sql = "SELECT * FROM comentarios_cpr";
-                        $result = mysqli_query($conn, $sql);
-                        $counter = 1;
-                        while ($row = mysqli_fetch_array($result)) {
-                            $id = $row['id'];
-                            $comentario = $row['comentario'];
-                            $email = $row['utilizador'];
-                            $nome = $row['nome'];
-                            $data = $row['data_registo'];
-                            $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
-                            if ($result1 = $conn->query($query1)) {
-                                while ($row1 = $result1->fetch_assoc()) {
-                                    $sobrenome = $row1['sobrenome'];
-                                }
-                                $result1->free();
+            <div id="CPR" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_cpr";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
                             }
-                            $aria_controls = "collapseCPR" . $counter;
-                            $show_class = ($counter == 1) ? 'show' : '';
-                            echo '
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseCPR" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="' . $id . '">
                                 <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
@@ -822,35 +841,35 @@
                             </div>
                         </div>
                         ';
-                            $counter++;
-                        }
-                        ?>
-                    </div>
+                        $counter++;
+                    }
+                    ?>
                 </div>
+            </div>
 
-                <div id="CV" class="tabcontent">
-                    <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
-                        <?php
-                        $db = 2;
-                        $sql = "SELECT * FROM comentarios_cv";
-                        $result = mysqli_query($conn, $sql);
-                        $counter = 1;
-                        while ($row = mysqli_fetch_array($result)) {
-                            $id = $row['id'];
-                            $comentario = $row['comentario'];
-                            $email = $row['utilizador'];
-                            $nome = $row['nome'];
-                            $data = $row['data_registo'];
-                            $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
-                            if ($result1 = $conn->query($query1)) {
-                                while ($row1 = $result1->fetch_assoc()) {
-                                    $sobrenome = $row1['sobrenome'];
-                                }
-                                $result1->free();
+            <div id="CV" class="tabcontent">
+                <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
+                    <?php
+                    $db = 2;
+                    $sql = "SELECT * FROM comentarios_cv";
+                    $result = mysqli_query($conn, $sql);
+                    $counter = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $comentario = $row['comentario'];
+                        $email = $row['utilizador'];
+                        $nome = $row['nome'];
+                        $data = $row['data_registo'];
+                        $query1 = "SELECT sobrenome,foto_perfil FROM utilizadores WHERE email='" . $email . "'";
+                        if ($result1 = $conn->query($query1)) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                $sobrenome = $row1['sobrenome'];
                             }
-                            $aria_controls = "collapseCV" . $counter;
-                            $show_class = ($counter == 1) ? 'show' : '';
-                            echo '
+                            $result1->free();
+                        }
+                        $aria_controls = "collapseCV" . $counter;
+                        $show_class = ($counter == 1) ? 'show' : '';
+                        echo '
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="' . $id . '">
                                 <button class="accordion-button bg-transparent" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
@@ -872,44 +891,63 @@
                             </div>
                         </div>
                         ';
-                            $counter++;
-                        }
-                        ?>
-                    </div>
+                        $counter++;
+                    }
+                    ?>
                 </div>
             </div>
         </div>
-        <script>
-            addEventListener("DOMContentLoaded", (event) => {
-                if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=updatefail") {
-                    $('#errorAlert').show('medium');
-                    setTimeout(function() {
-                        $('#errorAlert').hide('medium');
-                    }, 4000);
+    </div>
+    <script>
+        addEventListener("DOMContentLoaded", (event) => {
+            if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=updatefail") {
+                $('#errorAlert').show('medium');
+                setTimeout(function() {
+                    $('#errorAlert').hide('medium');
+                }, 4000);
+            }
+            if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=appliancefail#") {
+                $('#errorAlertCandidatura').show('medium');
+                setTimeout(function() {
+                    $('#errorAlertCandidatura').hide('medium');
+                }, 4000);
+            }
+        });
+        var inputElement = document.getElementById('myInput');
+        restrictDigits(inputElement);
+
+        function restrictDigits(inputElement) {
+            inputElement.addEventListener('input', function(event) {
+                var inputValue = event.target.value;
+                var digitCount = inputValue.replace(/[^0-9]/g, '').length;
+
+                if (digitCount > 8) {
+                    event.target.value = inputValue.slice(0, -1);
                 }
             });
-        </script>
-        <script src="../controller/login/script.js"></script>
-        <script src="../controller/login/script2.js"></script>
-        <script src="../controller/login/script3.js"></script>
-        <!-- Language -->
-        <script type="module" src="./lang/common/header_lang.js"></script>
-        <script type="module" src="./lang/common/language_lang.js"></script>
-        <script type="module" src="./lang/login_lang.js"></script>
-        <script type="module" src="./lang/admin_lang.js"></script>
-        <script type="module" src="../controller/common/include_components.js"></script>
-        <script type="module" src="../configurations/loadcontent.js"></script>
-        <script type="module" src="../controller/admin/admin.js"></script>
-        <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-        <!-- Font Awesome Kit -->
-        <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
-        <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
-        <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+        }
+    </script>
+    <script src="../controller/login/script.js"></script>
+    <script src="../controller/login/script2.js"></script>
+    <script src="../controller/login/script3.js"></script>
+    <!-- Language -->
+    <script type="module" src="./lang/common/header_lang.js"></script>
+    <script type="module" src="./lang/common/language_lang.js"></script>
+    <script type="module" src="./lang/login_lang.js"></script>
+    <script type="module" src="./lang/admin_lang.js"></script>
+    <script type="module" src="../controller/common/include_components.js"></script>
+    <script type="module" src="../configurations/loadcontent.js"></script>
+    <script type="module" src="../controller/admin/admin.js"></script>
+    <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 </body>
 
 </html>
