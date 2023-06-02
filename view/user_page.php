@@ -117,7 +117,18 @@
                             <span class="text nav-text">Perfil</span>
                         </a>
                     </li>
-                    <li class="nav-link">
+                    <li class="nav-link" style="display: none;<?php
+                                                                ini_set('display_errors', 0);
+                                                                $sql = "SELECT doador_especial FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                                                $result = $conn->query($sql);
+                                                                if ($result->num_rows > 0) {
+                                                                    while ($row = $result->fetch_assoc()) {
+                                                                        if ($row["doador_especial"] == 0) {
+                                                                            echo 'display: block;';
+                                                                        }
+                                                                    }
+                                                                }
+                                                                ?>">
                         <a href="#" id="candidatar" onclick="candidatar();">
                             <i class='bx bxs-book-heart icon'></i>
                             <span class="text nav-text">Doador Especial</span>
@@ -478,7 +489,7 @@
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             echo '
-            <div class="wrapper_advise">
+            <div class="wrapper_advise ">
                 <div class="row">	
                     <div class="four_zero_four_bg"></div>
                         <div class="contant_box_404">
@@ -492,6 +503,7 @@
         } else {
             echo '
                 <div class="wrapper">
+                <div id="errorAlertRequest" class="alert alert-warning hide-item errorAlertlogin" role="alert">É necessário preencher o(s) campo(s)!</div>
                     <div class="title_doacaoespecial">
                         Queres ser um doador especial?
                     </div>
@@ -505,19 +517,19 @@
                 while ($row = $result->fetch_assoc()) {
                     echo '
                                 <div class="input_field">
-                                    <label class"label_appliance">Nome</label>
+                                    <label id="label_appliance_nome">Nome</label>
                                     <input type="text" class="input disabled" name="nome" value="' . $row['nome'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label class"label_appliance">Sobrenome</label>
+                                    <label id="label_appliance_sobrenome">Sobrenome</label>
                                     <input type="text" class="input disabled" name="sobrenome" value="' . $row['sobrenome'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label class"label_appliance">Número de identificação</label>
-                                    <input type="number" name="num_identificacao" id="myInput" class="input">
+                                    <label id="label_appliance_identificacao">Número de identificação</label>
+                                    <input type="number" name="num_identificacao" id="myInput" class="input" required>
                                 </div>
                                 <div class="input_field">
-                                    <label class"label_appliance">Estado civil</label>
+                                    <label id="label_appliance_civil" required>Estado civil</label>
                                     <div class="custom_select">
                                         <select name="estado_civil">
                                             <option>Solteiro/a</option>
@@ -526,7 +538,7 @@
                                     </div>
                                 </div>
                                 <div class="input_field">
-                                    <label class"label_appliance">Forma de contacto</label>
+                                    <label id="label_appliance_contacto">Forma de contacto</label>
                                     <div class="custom_select">
                                         <select>
                                             <option>Telemóvel</option>
@@ -535,16 +547,16 @@
                                     </div>
                                 </div>
                                 <div class="input_field">
-                                    <label class"label_appliance">Número de telemóvel</label>
+                                    <label id="label_appliance_tel">Número de telemóvel</label>
                                     <input type="number" name="num_telefone" class="input disabled" value="' . $row['num_telefone'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label class"label_appliance">Email</label>
+                                    <label id="label_appliance_email">Email</label>
                                     <input type="text" name="email" class="input disabled" value="' . $row['email'] . '" readonly>
                                 </div>
                                 <div class="input_field">
-                                    <label class"label_appliance">Motivação</label>
-                                    <textarea class="textarea" name="motivacao" maxlength="500"></textarea>
+                                    <label id="label_appliance_motivacao">Motivação</label>
+                                    <textarea class="textarea" name="motivacao" maxlength="500" required></textarea>
                                 </div>
                                 <div class="input_field">
                                     <input type="submit" value="Enviar pedido" class="btn">
@@ -557,7 +569,6 @@
         }
         ?>
     </div>
-
 
     <div id="doacao-box" class="box home">
         <h2>cand</h2>
@@ -915,12 +926,6 @@
                 $('#errorAlert').show('medium');
                 setTimeout(function() {
                     $('#errorAlert').hide('medium');
-                }, 4000);
-            }
-            if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=appliancefail#") {
-                $('#errorAlertCandidatura').show('medium');
-                setTimeout(function() {
-                    $('#errorAlertCandidatura').hide('medium');
                 }, 4000);
             }
         });

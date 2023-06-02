@@ -607,22 +607,11 @@ input::-webkit-inner-spin-button {
 
 .alert {
   display: none;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
   .fa {
     margin-right: 0.5em;
   }
 }
 
-.alert_erro {
-  padding: 5px;
-  bottom: 0px;
-  right: 0px;
-  .fa {
-    margin-right: 0.5em;
-  }
-}
 
 .picture {
   position: relative;

@@ -8,16 +8,16 @@ $(function () {
     //login
     $("#title_login").text("Iniciar sessão em STR");
     $(".btn_login").text("Entrar");
-    $("#input_email").attr('placeholder','Endereço de email');
-    $("#input_password").attr('placeholder','Palavra chave');
+    $("#input_email").attr("placeholder", "Endereço de email");
+    $("#input_password").attr("placeholder", "Palavra chave");
     //register
     $("#title_register").text("Criar conta STR");
-    $("#input_nome_reg").attr('placeholder','Nome');
-    $("#input_sobrenome_reg").attr('placeholder','Sobrenome');
-    $("#input_email_reg").attr('placeholder','Edereço de email');
-    $("#input_telemovel_reg").attr('placeholder','Telemóvel');
+    $("#input_nome_reg").attr("placeholder", "Nome");
+    $("#input_sobrenome_reg").attr("placeholder", "Sobrenome");
+    $("#input_email_reg").attr("placeholder", "Edereço de email");
+    $("#input_telemovel_reg").attr("placeholder", "Telemóvel");
     $("#label_pais_reg").text("Nacionalidade");
-    $("#password").attr('placeholder','Palavra chave');
+    $("#password").attr("placeholder", "Palavra chave");
     $("#label_1").html(
       '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Maiúsculas e Minúsculas</li>'
     );
@@ -92,6 +92,7 @@ $(function () {
     if ($(".selected_coockies").text() == "Ativado") {
       $(".selected_coockies").text("Ativado");
     } else if ($(".selected_coockies").text() == "Desativado") {
+      Do;
       $(".selected_coockies").text("Desativado");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_coockies").text("Sem preferência");
@@ -110,11 +111,24 @@ $(function () {
     $(".dados_login").eq(0).text("Sem preferência");
     $(".dados_login").eq(1).text("Sim");
     $(".dados_login").eq(2).text("Não");
-
     $(".button").children().val("Atualizar");
     $("#btn_atualizar").text("Atualizar");
-    $(".contant_box_404").children().eq(0).text("Oops... Aguarde mais um pouco!");
-    $(".contant_box_404").children().eq(1).text("A sua candidatura está a ser processada.");
+    $(".contant_box_404")
+      .children()
+      .eq(0)
+      .text("Oops... Aguarde mais um pouco!");
+    $(".contant_box_404")
+      .children()
+      .eq(1)
+      .text("A sua candidatura está a ser processada.");
+    $("#label_appliance_nome").text("Nome");
+    $("#label_appliance_sobrenome").text("Sobrenome");
+    $("#label_appliance_identificação").text("Número de identificação");
+    $("#label_appliance_civil").text("Estado civil");
+    $("#label_appliance_contacto").text("Forma de contacto");
+    $("#label_appliance_tel").text("Número de telemóvel");
+    $("#label_appliance_email").text("Endereço de email");
+    $("#label_appliance_motivacao").text("Motivação");
   });
 });
 /**
@@ -127,16 +141,16 @@ $(function () {
     //login
     $("#title_login").text("Sing in into STR");
     $(".btn_login").text("Login");
-    $("#input_email").attr('placeholder','Email');
-    $("#input_password").attr('placeholder','Password');
+    $("#input_email").attr("placeholder", "Email");
+    $("#input_password").attr("placeholder", "Password");
     //register
     $("#title_register").text("Create an account STR");
-    $("#input_nome_reg").attr('placeholder','Name');
-    $("#input_sobrenome_reg").attr('placeholder','Second Name');
-    $("#input_email_reg").attr('placeholder','Email');
-    $("#input_telemovel_reg").attr('placeholder','Phone number');
+    $("#input_nome_reg").attr("placeholder", "Name");
+    $("#input_sobrenome_reg").attr("placeholder", "Second Name");
+    $("#input_email_reg").attr("placeholder", "Email");
+    $("#input_telemovel_reg").attr("placeholder", "Phone number");
     $("#label_pais_reg").text("Nationality");
-    $("#password").attr('placeholder','Password');
+    $("#password").attr("placeholder", "Password");
     $("#label_1").html(
       '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Upper and lowercase</li>'
     );
@@ -233,7 +247,18 @@ $(function () {
     $(".button").children().val("Update");
     $("#btn_atualizar").text("Update");
     $(".contant_box_404").children().eq(0).text("Oops... wait a moment!");
-    $(".contant_box_404").children().eq(1).text("Your application is being processed.");
+    $(".contant_box_404")
+      .children()
+      .eq(1)
+      .text("Your application is being processed.");
+    $("#label_appliance_nome").text("Name");
+    $("#label_appliance_sobrenome").text("Lastname");
+    $("#label_appliance_identificacao").text("Identification number");
+    $("#label_appliance_civil").text("Marital status");
+    $("#label_appliance_contacto").text("Contact form");
+    $("#label_appliance_tel").text("Phone number");
+    $("#label_appliance_email").text("Email");
+    $("#label_appliance_motivacao").text("Motivation");
   });
 });
 /**
@@ -245,17 +270,17 @@ $(function () {
     localStorage.setItem("language", 3);
     //login
     $("#title_login").text("Connexion un STR");
-    $(".input_email").attr('placeholder','Email');
-    $("#input_password").attr('placeholder','Mot de passe');
+    $(".input_email").attr("placeholder", "Email");
+    $("#input_password").attr("placeholder", "Mot de passe");
     $("#btn_login").text("Connexion");
     //register
     $("#title_register").text("Créer un compte STR");
-    $("#input_nome_reg").attr('placeholder','Nom');
-    $("#input_sobrenome_reg").attr('placeholder','Nom de famille');
-    $("#input_email_reg").attr('placeholder','Email');
-    $("#input_telemovel_reg").attr('placeholder','Numéro de téléphone');
+    $("#input_nome_reg").attr("placeholder", "Nom");
+    $("#input_sobrenome_reg").attr("placeholder", "Nom de famille");
+    $("#input_email_reg").attr("placeholder", "Email");
+    $("#input_telemovel_reg").attr("placeholder", "Numéro de téléphone");
     $("#label_pais_reg").text("Nationalité");
-    $("#password").attr('placeholder','Mot de passe');
+    $("#password").attr("placeholder", "Mot de passe");
     $("#label_1").html(
       '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Majuscule et minuscule</li>'
     );
@@ -356,7 +381,18 @@ $(function () {
     $(".button").children().val("Mettre à jour");
     $("#btn_atualizar").text("Mettre à jour");
     $(".contant_box_404").children().eq(0).text("Oops... attendez un moment!");
-    $(".contant_box_404").children().eq(1).text("Votre candidature est en cours de traitement.");
+    $(".contant_box_404")
+      .children()
+      .eq(1)
+      .text("Votre candidature est en cours de traitement.");
+      $("#label_appliance_nome").text("Nom");
+     $("#label_appliance_sobrenome").text("Lastname");
+     $("#label_appliance_identificacao").text("Numéro d'identification");
+     $("#label_appliance_civil").text("état matrimonial");
+     $("#label_appliance_contacto").text("Formulaire de contact");
+     $("#label_appliance_tel").text("Numéro de portable");
+     $("#label_appliance_email").text("Adresse e-mail");
+     $("#label_appliance_motivacao").text("Motivation");
   });
 });
 /**
@@ -369,16 +405,16 @@ addEventListener("DOMContentLoaded", (event) => {
       //login
       $("#title_login").text("Iniciar sessão em STR");
       $(".btn_login").text("Entrar");
-      $("#input_email").attr('placeholder','Endereço de email');
-    $("#input_password").attr('placeholder','Palavra chave');
+      $("#input_email").attr("placeholder", "Endereço de email");
+      $("#input_password").attr("placeholder", "Palavra chave");
       //register
       $("#title_register").text("Criar conta STR");
-      $("#input_nome_reg").attr('placeholder','Nome');
-    $("#input_sobrenome_reg").attr('placeholder','Sobrenome');
-    $("#input_email_reg").attr('placeholder','Edereço de email');
-    $("#input_telemovel_reg").attr('placeholder','Telemóvel');
-    $("#label_pais_reg").text("Nacionalidade");
-    $("#password").attr('placeholder','Palavra chave');
+      $("#input_nome_reg").attr("placeholder", "Nome");
+      $("#input_sobrenome_reg").attr("placeholder", "Sobrenome");
+      $("#input_email_reg").attr("placeholder", "Edereço de email");
+      $("#input_telemovel_reg").attr("placeholder", "Telemóvel");
+      $("#label_pais_reg").text("Nacionalidade");
+      $("#password").attr("placeholder", "Palavra chave");
       $("#label_1").html(
         '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Maiúsculas e Minúsculas</li>'
       );
@@ -474,24 +510,38 @@ addEventListener("DOMContentLoaded", (event) => {
 
       $(".button").children().val("Atualizar");
       $("#btn_atualizar").text("Atualizar");
-      $(".contant_box_404").children().eq(0).text("Oops... Aguarde mais um pouco!");
-    $(".contant_box_404").children().eq(1).text("A sua candidatura está a ser processada.");
+      $(".contant_box_404")
+        .children()
+        .eq(0)
+        .text("Oops... Aguarde mais um pouco!");
+      $(".contant_box_404")
+        .children()
+        .eq(1)
+        .text("A sua candidatura está a ser processada.");
+        $("#label_appliance_nome").text("Nome");
+    $("#label_appliance_sobrenome").text("Sobrenome");
+    $("#label_appliance_identificação").text("Número de identificação");
+    $("#label_appliance_civil").text("Estado civil");
+    $("#label_appliance_contacto").text("Forma de contacto");
+    $("#label_appliance_tel").text("Número de telemóvel");
+    $("#label_appliance_email").text("Endereço de email");
+    $("#label_appliance_motivacao").text("Motivação");
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
       localStorage.setItem("language", 2);
       $("#title_login").text("Sing in into STR");
-      $(".input_email").attr('placeholder','Email');
-    $("#input_password").attr('placeholder','Password');
+      $(".input_email").attr("placeholder", "Email");
+      $("#input_password").attr("placeholder", "Password");
       $("#btn_login").text("Login");
       //register
       $("#title_register").text("Create an account STR");
-      $("#input_nome_reg").attr('placeholder','Name');
-    $("#input_sobrenome_reg").attr('placeholder','Second Name');
-    $("#input_email_reg").attr('placeholder','Email');
-    $("#input_telemovel_reg").attr('placeholder','Phone number');
-    $("#label_pais_reg").text("Nationality");
-    $("#password").attr('placeholder','Password');
+      $("#input_nome_reg").attr("placeholder", "Name");
+      $("#input_sobrenome_reg").attr("placeholder", "Second Name");
+      $("#input_email_reg").attr("placeholder", "Email");
+      $("#input_telemovel_reg").attr("placeholder", "Phone number");
+      $("#label_pais_reg").text("Nationality");
+      $("#password").attr("placeholder", "Password");
       $("#label_1").html(
         '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Upper and lowercase</li>'
       );
@@ -588,23 +638,34 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".button").children().val("Update");
       $("#btn_atualizar").text("Update");
       $(".contant_box_404").children().eq(0).text("Oops... wait a moment!");
-    $(".contant_box_404").children().eq(1).text("Your application is being processed.");
+      $(".contant_box_404")
+        .children()
+        .eq(1)
+        .text("Your application is being processed.");
+        $("#label_appliance_nome").text("Name");
+    $("#label_appliance_sobrenome").text("Lastname");
+    $("#label_appliance_identificacao").text("Identification number");
+    $("#label_appliance_civil").text("Marital status");
+    $("#label_appliance_contacto").text("Contact form");
+    $("#label_appliance_tel").text("Phone number");
+    $("#label_appliance_email").text("Email");
+    $("#label_appliance_motivacao").text("Motivation");
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
       localStorage.setItem("language", 3);
       $("#title_login").text("Connexion un STR");
-      $(".input_email").attr('placeholder','Email');
-    $("#input_password").attr('placeholder','Mot de passe');
+      $(".input_email").attr("placeholder", "Email");
+      $("#input_password").attr("placeholder", "Mot de passe");
       $("#btn_login").text("Connexion");
       //register
       $("#title_register").text("Créer un compte STR");
-      $("#input_nome_reg").attr('placeholder','Nom');
-    $("#input_sobrenome_reg").attr('placeholder','Nom de famille');
-    $("#input_email_reg").attr('placeholder','Email');
-    $("#input_telemovel_reg").attr('placeholder','Numéro de téléphone');
-    $("#label_pais_reg").text("Nationalité");
-    $("#password").attr('placeholder','Mot de passe');
+      $("#input_nome_reg").attr("placeholder", "Nom");
+      $("#input_sobrenome_reg").attr("placeholder", "Nom de famille");
+      $("#input_email_reg").attr("placeholder", "Email");
+      $("#input_telemovel_reg").attr("placeholder", "Numéro de téléphone");
+      $("#label_pais_reg").text("Nationalité");
+      $("#password").attr("placeholder", "Mot de passe");
       $("#label_1").html(
         '<i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; Majuscule et minuscule</li>'
       );
@@ -706,8 +767,22 @@ addEventListener("DOMContentLoaded", (event) => {
 
       $(".button").children().val("Mettre à jour");
       $("#btn_atualizar").text("Mettre à jour");
-      $(".contant_box_404").children().eq(0).text("Oops... attendez un moment!");
-    $(".contant_box_404").children().eq(1).text("Votre candidature est en cours de traitement.");
+      $(".contant_box_404")
+        .children()
+        .eq(0)
+        .text("Oops... attendez un moment!");
+      $(".contant_box_404")
+        .children()
+        .eq(1)
+        .text("Votre candidature est en cours de traitement.");
+        $("#label_appliance_nome").text("Nom");
+     $("#label_appliance_sobrenome").text("Lastname");
+     $("#label_appliance_identificacao").text("Numéro d'identification");
+     $("#label_appliance_civil").text("état matrimonial");
+     $("#label_appliance_contacto").text("Formulaire de contact");
+     $("#label_appliance_tel").text("Numéro de portable");
+     $("#label_appliance_email").text("Adresse e-mail");
+     $("#label_appliance_motivacao").text("Motivation");
     });
   }
 });

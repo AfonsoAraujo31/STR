@@ -91,3 +91,4 @@ function delete_user(data) {
 function delete_comment(id, db) {
   location.href = "http://localhost/STR/model/admin/delete_comment.php?id=" + id +"&db=" + db;
 }
+
