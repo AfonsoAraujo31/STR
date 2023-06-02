@@ -919,6 +919,22 @@
                 </div>
             </div>
         </div>
+        <br>
+        <div class="container_preferencias_fotoperfil">
+            <div class="container_preferencias" style="max-width: 50%;">
+                <div class="title">Candidatos a Doador Especial</div>
+                <br>
+                <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
+                    <?php include '../model/admin/load_appliances.php'; ?>
+                </div>
+            </div>
+
+            <div class="container_obs" style="max-height: 450px;overflow-y:auto;">
+                <div class="title">Candidaturas</div>
+                <br>
+
+            </div>
+        </div>
     </div>
     <script>
         addEventListener("DOMContentLoaded", (event) => {
