@@ -7,7 +7,7 @@ if ($result->num_rows > 0) {
         $nome = $row['nome'];
         $email = $row['email'];
         $sobrenome = $row['sobrenome'];
-        $motivacao = substr($row['motivacao'], 0, 350);
+        $motivacao = substr($row['motivacao'], 0, 300);
         $data_registo = $row['data_registo'];
         $query1 = "SELECT foto_perfil FROM utilizadores WHERE email='" . $email . "'";
         if ($result1 = $conn->query($query1)) {
@@ -28,7 +28,6 @@ if ($result->num_rows > 0) {
                     <p class="card-text">'.$motivacao.'...</p>
                     <p class="card-text">
                         <ul class="tags position-absolute bottom-0 end-0 m-2">
-                            <li><a>' . $email . '</a></li>
                             <li><a>' . $data . '</a></li>
                         </ul>
                     </p>
