@@ -928,13 +928,15 @@
                     <?php include '../model/admin/load_appliances.php'; ?>
                 </div>
             </div>
-
             <div class="container_obs" style="max-height: 450px;overflow-y:auto;">
                 <div class="title">Candidaturas</div>
                 <br>
 
             </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
     <script>
         addEventListener("DOMContentLoaded", (event) => {
@@ -971,8 +973,11 @@
     <script type="module" src="../controller/common/include_components.js"></script>
     <script type="module" src="../configurations/loadcontent.js"></script>
     <script type="module" src="../controller/admin/admin.js"></script>
+    <script type="module" src="../controller/admin/script.js"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <!-- Font Awesome Kit -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
     <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
