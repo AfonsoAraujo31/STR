@@ -28,7 +28,7 @@ if (date("m") == 1) {
 }
 $data = "$mes  " . date("d") . ",   " . date("Y");
 
-$sql_nome = "SELECT nome FROM utilizadores WHERE email = '".$_GET['user']."'";
+$sql_nome = "SELECT nome FROM utilizadores WHERE email = '" . $_GET['user'] . "'";
 
 $result = $conn->query($sql_nome);
 if ($result->num_rows > 0) {
@@ -45,38 +45,52 @@ if ($result->num_rows > 0) {
     } else if ($_GET['db'] == "cbl") {
       $table_name = "comentarios_cbl";
     }
-      $sql = "INSERT INTO `" . $table_name . "`(comentario,utilizador,nome,data_registo) VALUES ('" .$_GET['comentario'] . "','" . $_GET['user'] . "','" . $row["nome"] . "','" . $data . "')";
-      if ($conn->query($sql) === TRUE) {
-        if ($_GET['db'] == "cv") {
+    $sql = "INSERT INTO `" . $table_name . "`(comentario,utilizador,nome,data_registo) VALUES ('" . $_GET['comentario'] . "','" . $_GET['user'] . "','" . $row["nome"] . "','" . $data . "')";
+    if ($conn->query($sql) === TRUE) {
+      if ($_GET['db'] == "cv") {
+        $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $_COOKIE["current_user"] . "','" . $data . "','Comentário Adicionado!','../view/assets/notifications/chat.png')";
+        if ($conn->query($sql) === TRUE) {
           echo "<script>location.href='http://localhost/STR/view/association_cv.php';</script>";
-        } else if ($_GET['db'] == "cpr") {
+        }
+      } else if ($_GET['db'] == "cpr") {
+        $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $_COOKIE["current_user"] . "','" . $data . "','Comentário Adicionado!','../view/assets/notifications/chat.png')";
+        if ($conn->query($sql) === TRUE) {
           echo "<script>location.href='http://localhost/STR/view/association_cpr.php';</script>";
-        } else if ($_GET['db'] == "apirp") {
+        }
+      } else if ($_GET['db'] == "apirp") {
+        $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $_COOKIE["current_user"] . "','" . $data . "','Comentário Adicionado!','../view/assets/notifications/chat.png')";
+        if ($conn->query($sql) === TRUE) {
           echo "<script>location.href='http://localhost/STR/view/association_apirp.php';</script>";
-        } else if ($_GET['db'] == "alcc") {
+        }
+      } else if ($_GET['db'] == "alcc") {
+        $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $_COOKIE["current_user"] . "','" . $data . "','Comentário Adicionado!','../view/assets/notifications/chat.png')";
+        if ($conn->query($sql) === TRUE) {
           echo "<script>location.href='http://localhost/STR/view/association_alcc.php';</script>";
-        } else if ($_GET['db'] == "cbl") {
+        }
+      } else if ($_GET['db'] == "cbl") {
+        $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $_COOKIE["current_user"] . "','" . $data . "','Comentário Adicionado!','../view/assets/notifications/chat.png')";
+        if ($conn->query($sql) === TRUE) {
           echo "<script>location.href='http://localhost/STR/view/association_cbl.php';</script>";
         }
-        $login = 0;
-      } else {
-        $login = 1;
       }
-      if($login = 1){
-        if ($_GET['db'] == "cv") {
-          echo "<script>location.href='http://localhost/STR/view/association_cv.php?error=comment';</script>";
-        } else if ($_GET['db'] == "cpr") {
-          echo "<script>location.href='http://localhost/STR/view/association_cpr.php?error=comment';</script>";
-        } else if ($_GET['db'] == "apirp") {
-          echo "<script>location.href='http://localhost/STR/view/association_apirp.php?error=comment';</script>";
-        } else if ($_GET['db'] == "alcc") {
-          echo "<script>location.href='http://localhost/STR/view/association_alcc.php?error=comment';</script>";
-        } else if ($_GET['db'] == "cbl") {
-          echo "<script>location.href='http://localhost/STR/view/association_cbl.php?error=comment';</script>";
-        }
+      $login = 0;
+    } else {
+      $login = 1;
+    }
+    if ($login = 1) {
+      if ($_GET['db'] == "cv") {
+        echo "<script>location.href='http://localhost/STR/view/association_cv.php?error=comment';</script>";
+      } else if ($_GET['db'] == "cpr") {
+        echo "<script>location.href='http://localhost/STR/view/association_cpr.php?error=comment';</script>";
+      } else if ($_GET['db'] == "apirp") {
+        echo "<script>location.href='http://localhost/STR/view/association_apirp.php?error=comment';</script>";
+      } else if ($_GET['db'] == "alcc") {
+        echo "<script>location.href='http://localhost/STR/view/association_alcc.php?error=comment';</script>";
+      } else if ($_GET['db'] == "cbl") {
+        echo "<script>location.href='http://localhost/STR/view/association_cbl.php?error=comment';</script>";
       }
+    }
   }
 } else {
-  
 }
 $conn->close();

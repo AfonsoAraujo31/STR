@@ -31,7 +31,10 @@ $sql = "INSERT INTO candidaturas(nome,sobrenome,email,num_telefone,num_identific
 VALUES ('" . $_GET["nome"] . "','" . $_GET["sobrenome"] . "','" . $_GET["email"] . "','" . $_GET["num_telefone"] . "','" . $_GET["num_identificacao"] . "','" . $_GET["motivacao"] . "','" . $data . "')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_GET["email"] . "';</script>";
+    $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $_GET["email"] . "','" . $data . "','Candidatura Enviada!','../view/assets/notifications/mail.png')";
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_COOKIE["current_user"] . "';</script>";
+    }
 } else {
     echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_GET["email"] . "&error=appliance';</script>";
 }
