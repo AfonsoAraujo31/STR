@@ -1,11 +1,12 @@
 <?php
 ini_set('display_errors', 0);
-$sql = "SELECT nome, sobrenome, email, motivacao, data_registo FROM candidaturas";
+$sql = "SELECT id, nome, sobrenome, email, motivacao, data_registo FROM candidaturas";
 $result = $conn->query($sql);
 $counter = 1;
 
 if ($result->num_rows > 0) {
     while ($row = mysqli_fetch_array($result)) {
+        $idcandidatura = $row['id'];
         $nome = $row['nome'];
         $email = $row['email'];
         $sobrenome = $row['sobrenome'];
@@ -38,7 +39,6 @@ if ($result->num_rows > 0) {
                                     <p class="card-text">'.$motivacao.'...</p>
                                     <p class="card-text">
                                         <ul class="tags position-absolute bottom-0 end-0 m-2">
-                                            <li><a>' . $email. '</a></li>
                                             <li><a>' . $data_registo . '</a></li>
                                         </ul>
                                     </p>
@@ -54,6 +54,10 @@ if ($result->num_rows > 0) {
                         <hr style="margin:3%;">
                         <div class="card-body">
                         ' . $row['motivacao'] . '
+                        </div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_specialdonator('.$idcandidatura.');">Aprovar</button>
+                            <button type="button" class="btn btn-danger float-end" style="background-color:#dd3445" onclick="reprove_specialdonator(' .$idcandidatura . ');">Rejeitar</button>
                         </div>
                     </div>
                 </div>

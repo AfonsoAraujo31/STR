@@ -556,7 +556,7 @@
                                 </div>
                                 <div class="input_field">
                                     <label id="label_appliance_motivacao">Motivação</label>
-                                    <textarea class="textarea" name="motivacao" maxlength="500" required></textarea>
+                                    <textarea class="textarea" name="motivacao" maxlength="600" required></textarea>
                                 </div>
                                 <div class="input_field">
                                     <input type="submit" value="Enviar pedido" class="btn">

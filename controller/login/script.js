@@ -92,3 +92,10 @@ function delete_comment(id, db) {
   location.href = "http://localhost/STR/model/admin/delete_comment.php?id=" + id +"&db=" + db;
 }
 
+function approve_specialdonator(id){
+  location.href = "http://localhost/STR/model/admin/approve_specialdonator.php?id=" + id;
+}
+
+function reprove_specialdonator(data){
+  alert(data);
+}
