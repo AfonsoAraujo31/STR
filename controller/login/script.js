@@ -96,6 +96,6 @@ function approve_specialdonator(id){
   location.href = "http://localhost/STR/model/admin/approve_specialdonator.php?id=" + id;
 }
 
-function reprove_specialdonator(data){
-  alert(data);
+function reprove_specialdonator(id){
+  location.href = "http://localhost/STR/model/admin/disapprove_specialdonator.php?id=" + id;
 }
