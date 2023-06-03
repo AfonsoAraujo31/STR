@@ -38,13 +38,34 @@
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
-                <div class="language">
+                <div class="language_admin">
                     <div class="language-selected text-white"><img id="flags" src="../view/assets/flags/pt.png" width="35px" height="25px" style="margin-right:10px;">Português</div>
                     <ul cl class="bg-white border-white">
                         <li class="lang"><a href="#" class="pt" style="text-align:left; margin-left:10px;">Português</a></li>
                         <li class="lang"><a href="#" class="en" style="text-align:left; margin-left:10px;">Inglês</a></li>
                         <li class="lang"><a href="#" class="fr" style="text-align:left; margin-left:10px;">Françês</a></li>
                     </ul>
+                </div>
+                <div class="dropdown">
+                    <img class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="position:absolute;right:5%;bottom:2%;padding-bottom:15px;cursor: pointer;" src="./assets/admin/notification.png"/>
+                    <ul class="dropdown-menu" style="width:16%;max-height:250px;overflow-y:auto;">
+                        <?php include '../model/common/load_notification.php' ?>
+                    </ul>
+                </div>
+                <div class="notifications" id="box">
+                    <h2>Notifications - <span>2</span></h2>
+                    <div class="notifications-item"> <img src="https://i.imgur.com/uIgDDDd.jpg" alt="img">
+                        <div class="text">
+                            <h4>Samso aliao</h4>
+                            <p>Samso Nagaro Like your home work</p>
+                        </div>
+                    </div>
+                    <div class="notifications-item"> <img src="https://img.icons8.com/flat_round/64/000000/vote-badge.png" alt="img">
+                        <div class="text">
+                            <h4>John Silvester</h4>
+                            <p>+20 vista badge earned</p>
+                        </div>
+                    </div>
                 </div>
                 <?php
                 ini_set('display_errors', 0);
@@ -58,7 +79,7 @@
                                 echo "<li class='user-container'><a href='http://localhost/STR/view/login.php'><span><img alt='' style='width:50px;border-radius: 50%; position:relative;top:0.5px;' src='./assets/others/teste.png'/></span></a></li></li>";
                             } else {
                                 $foto_perfil = base64_encode($row['foto_perfil']);
-                                echo "<li class='user-container'><a href='http://localhost/STR/view/login.php'><span><img alt='' style='width:50px;border-radius: 50%; position:relative;top:0.5px;  ' src='data:image/*;base64," . $foto_perfil . "' /></span></a></li></li>";
+                                echo "<li class='user-container'><a href='http://localhost/STR/view/login.php'><span><img alt='' style='width:50px;border-radius: 50%; position:relative;top:0.5px;margin-left:10%;' src='data:image/*;base64," . $foto_perfil . "' /></span></a></li></li>";
                             }
                         }
                     }
@@ -961,6 +982,7 @@
             });
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="../controller/login/script.js"></script>
     <script src="../controller/login/script2.js"></script>
     <script src="../controller/login/script3.js"></script>
