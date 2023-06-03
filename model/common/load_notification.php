@@ -5,10 +5,9 @@ $sql = "SELECT email,tipo,data_registo,foto FROM notificacoes WHERE email='" . $
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $foto = base64_encode($row['foto']);
         echo '
             <li class="dropdown-item d-flex">
-                        <div class="p-2"><img style="width:40px;border-radius: 50%; position:relative;top:0.5px;"  src="data:image/*;base64,' . $foto . '"/></div>
+                        <div class="p-2"><img style="width:40px;border-radius: 50%; position:relative;top:0.5px;"  src="'.$row['foto'] . '"/></div>
                         <div class="p-2">
                             <p><b>' . $row["tipo"] . '</b></p>
                             <p>' . $row["data_registo"] . '</p>
@@ -17,5 +16,5 @@ if ($result->num_rows > 0) {
             ';
     }
 } else {
-    echo "<img style='position:absolute;right:5%;top:3.2%;cursor: pointer;' src='./assets/admin/bell.png'/>";
+    echo "";
 }
