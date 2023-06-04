@@ -25,13 +25,12 @@
             } else if ($_COOKIE["sing_in"] === "") {
               echo "overflow";
             } ?>>
-  <?php ini_set('display_errors', 0);
+  <div class="center-div" style="<?php ini_set('display_errors', 0);
   if ($_COOKIE["sing_in"] == 1) {
-    echo '<div class="hidden">';
+    echo 'visibility:hidden;">';
   } else if ($_COOKIE["sing_in"] == "") {
-    echo '<div class="">';
-  } ?>
-  <div class="center-div">
+    echo 'visibility:visible;';
+  } ?>">
     <section class="container animate__animated animate__bounceIn">
       <img src="./assets/specialdonation/image-removebg-preview.png" alt="">
       <div class="text-center texto">
