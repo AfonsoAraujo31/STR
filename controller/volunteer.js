@@ -20,7 +20,7 @@ searchInput.addEventListener("keyup", (event) => {
  * ! SECTION RESPONSIVE NUMBERS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*
  */
 document.body.onresize = function () {
-  if ($(window).width() < "1200") {
+  if ($(window).width() < "1000") {
     document.getElementById("number-cell1").classList.remove("number-cell1");
     document.getElementById("number-cell2").classList.remove("number-cell2");
     document.getElementById("number-cell3").classList.remove("number-cell3");
@@ -36,7 +36,7 @@ document.body.onresize = function () {
 };
 
 addEventListener("DOMContentLoaded", (event) => {
-  if ($(window).width() < "1200") {
+  if ($(window).width() < "1000") {
     document.getElementById("number-cell1").classList.remove("number-cell1");
     document.getElementById("number-cell2").classList.remove("number-cell2");
     document.getElementById("number-cell3").classList.remove("number-cell3");
