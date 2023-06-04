@@ -6,26 +6,27 @@ if (date("m") == 1) {
 } else if (date("m") == 2) {
     $mes = "Fev";
 } else if (date("m") == 3) {
-    $mes  =  $mes = "Abr";
-} else if (date("m") == 4) {
-    $mes = "Maio";
-} else if (date("m") == 5) {
-    $mes = "Jun";
-} else if (date("m") == 6) {
     $mes = "Mar";
-} else if (date("m") == 7) {
+} else if (date("m") == 4) {
+    $mes = "Abr";
+} else if (date("m") == 5) {
+    $mes = "Maio";
+} else if (date("m") == 6) {
+    $mes = "Jun";
+} else if (date("m") == 2) {
     $mes = "Jul";
-} else if (date("m") == 8) {
+} else if (date("m") == 2) {
     $mes = "Ago";
-} else if (date("m") == 9) {
+} else if (date("m") == 2) {
     $mes = "Set";
-} else if (date("m") == 10) {
+} else if (date("m") == 2) {
     $mes = "Out";
-} else if (date("m") == 11) {
+} else if (date("m") == 2) {
     $mes = "Nov";
-} else if (date("m") == 12) {
+} else if (date("m") == 2) {
     $mes = "Dez";
 }
+
 $data = "$mes  " . date("d") . ",   " . date("Y");
 $sql = "INSERT INTO candidaturas(nome,sobrenome,email,num_telefone,num_identificacao,motivacao,data_registo)
 VALUES ('" . $_GET["nome"] . "','" . $_GET["sobrenome"] . "','" . $_GET["email"] . "','" . $_GET["num_telefone"] . "','" . $_GET["num_identificacao"] . "','" . $_GET["motivacao"] . "','" . $data . "')";

@@ -11,4 +11,8 @@ window.addEventListener("DOMContentLoaded", function () {
     let element = document.getElementById("includedFooterContent");
     element.style.display = "block";
   }, 50);
+  setTimeout(function () {
+    let element = document.getElementById("card");
+    element.style.visibility = "visible";
+  }, 50);
 });

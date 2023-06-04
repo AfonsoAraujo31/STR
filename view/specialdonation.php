@@ -111,11 +111,13 @@
       </div>
     </div>
   </div>
-  <div id="blog-slider" class="blog-slider">
-    <div class="blog-slider__wrp swiper-wrapper">
-      <?php include '../model/specialdonation/load_familys.php'; ?>
+  <div id="card" style="visibility:hidden;">
+    <div id="blog-slider" class="blog-slider">
+      <div class="blog-slider__wrp swiper-wrapper">
+        <?php include '../model/specialdonation/load_familys.php'; ?>
+      </div>
+      <div class="blog-slider__pagination"></div>
     </div>
-    <div class="blog-slider__pagination"></div>
   </div>
   </div>
   <div style="display:none;" id="includedFooterContent"></div>

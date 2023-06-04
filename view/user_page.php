@@ -47,22 +47,22 @@
                     </ul>
                 </div>
                 <div class="dropdown">
-                    <img class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="position:absolute;right:5%;bottom:2%;padding-bottom:15px;cursor: pointer;" src="<?php 
-                    ini_set('display_errors', 0);
-                    require '/wamp64/www/STR/configurations/dbconnection.php';
-                    $sql = "SELECT email,tipo,data_registo,foto FROM notificacoes WHERE email='" . $_COOKIE['current_user'] . "'";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        echo "./assets/admin/notification.png";
-                    } else {
-                        echo "./assets/admin/bell.png";
-                    }
-                    ?>">
+                    <img class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="position:absolute;right:5%;bottom:2%;padding-bottom:15px;cursor: pointer;" src="<?php
+                                                                                                                                                                                        ini_set('display_errors', 0);
+                                                                                                                                                                                        require '/wamp64/www/STR/configurations/dbconnection.php';
+                                                                                                                                                                                        $sql = "SELECT email,tipo,data_registo,foto FROM notificacoes WHERE email='" . $_COOKIE['current_user'] . "'";
+                                                                                                                                                                                        $result = $conn->query($sql);
+                                                                                                                                                                                        if ($result->num_rows > 0) {
+                                                                                                                                                                                            echo "./assets/admin/notification.png";
+                                                                                                                                                                                        } else {
+                                                                                                                                                                                            echo "./assets/admin/bell.png";
+                                                                                                                                                                                        }
+                                                                                                                                                                                        ?>">
                     <ul class="dropdown-menu" style="width:16%;max-height:250px;overflow-y:auto;">
                         <?php include '../model/common/load_notification.php' ?>
                     </ul>
                 </div>
-                
+
                 <div class="notifications" id="box">
                     <h2>Notifications - <span>2</span></h2>
                     <div class="notifications-item"> <img src="https://i.imgur.com/uIgDDDd.jpg" alt="img">
@@ -951,6 +951,7 @@
                 </div>
             </div>
         </div>
+                </div>
         <br>
         <div class="container_preferencias_fotoperfil">
             <div class="container_preferencias" style="max-width: 50%;">
