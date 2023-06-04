@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 0);
-$sql = "SELECT id, nome, sobrenome, email, motivacao, data_registo FROM candidaturas";
+$sql = "SELECT * FROM candidaturas_familias";
 $result = $conn->query($sql);
 $counter = 1;
 

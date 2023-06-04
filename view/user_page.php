@@ -14,6 +14,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap/Font Awsome -->
@@ -951,22 +952,24 @@
                 </div>
             </div>
         </div>
-                </div>
-        <br>
-        <div class="container_preferencias_fotoperfil">
-            <div class="container_preferencias" style="max-width: 50%;">
-                <div class="title">Candidatos a Doador Especial</div>
-                <br>
-                <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
-                    <?php include '../model/admin/load_appliances.php'; ?>
-                </div>
-            </div>
-            <div class="container_obs" style="max-height: 450px;overflow-y:auto;">
-                <div class="title">Candidaturas</div>
-                <br>
-
+    </div>
+    <br>
+    <div class="container_preferencias_fotoperfil">
+        <div class="container_preferencias" style="max-width: 50%;">
+            <div class="title">Candidatos a Doador Especial</div>
+            <br>
+            <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
+                <?php include '../model/admin/load_appliances.php'; ?>
             </div>
         </div>
+        <div class="container_obs" style="max-height: 450px;overflow-y:auto;">
+            <div class="title">Candidaturas</div>
+            <br>
+            <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
+                <?php include '../model/admin/load_familys_appliances.php'; ?>
+            </div>
+        </div>
+    </div>
     </div>
     </div>
     </div>
@@ -995,6 +998,7 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="../controller/admin/script.js"></script>
     <script src="../controller/login/script.js"></script>
     <script src="../controller/login/script2.js"></script>
     <script src="../controller/login/script3.js"></script>
@@ -1020,6 +1024,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 </body>
 
 </html>
