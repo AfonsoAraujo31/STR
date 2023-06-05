@@ -88,6 +88,7 @@
 }
 .sidebar.close .text {
   opacity: 0;
+  
 }
 /* =========================== */
 
@@ -188,7 +189,7 @@ body.dark .sidebar li a:hover .text {
 .sidebar .menu-bar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  
   overflow-y: scroll;
 }
 .menu-bar::-webkit-scrollbar {
@@ -481,7 +482,7 @@ form .input-box span.details {
   font-size: 16px;
   border-radius: 5px;
   padding-left: 15px;
-  border-color: #ccc;
+  border-color: #cccccc;
   transition: all 0.3s ease;
 }
 .select:focus {

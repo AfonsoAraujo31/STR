@@ -2,5 +2,10 @@
   "name": "mdb-standard-app",
   "version": "6.3.1",
   "homepage": "https://mdbootstrap.com/docs/standard/",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
+  }
 }

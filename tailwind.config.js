@@ -3,6 +3,10 @@ module.exports = {
   content: ["./view/*.{html,php,js}"],
   theme: {
     extend: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer'),
+      ],    
       colors: {
         //CORES DEFAULT DO WEBSITE
         'label-gray':'#d1cfcf',

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!----======== CSS ======== -->
+    <link href="node_modules/tailwindcss/dist/tailwind.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/login/style.scss">
     <link rel="stylesheet" href="./css/admin/style.css">
@@ -17,10 +19,6 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Bootstrap/Font Awsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>STR</title>
 </head>
 
@@ -64,21 +62,6 @@
                     </ul>
                 </div>
 
-                <div class="notifications" id="box">
-                    <h2>Notifications - <span>2</span></h2>
-                    <div class="notifications-item"> <img src="https://i.imgur.com/uIgDDDd.jpg" alt="img">
-                        <div class="text">
-                            <h4>Samso aliao</h4>
-                            <p>Samso Nagaro Like your home work</p>
-                        </div>
-                    </div>
-                    <div class="notifications-item"> <img src="https://img.icons8.com/flat_round/64/000000/vote-badge.png" alt="img">
-                        <div class="text">
-                            <h4>John Silvester</h4>
-                            <p>+20 vista badge earned</p>
-                        </div>
-                    </div>
-                </div>
                 <?php
                 ini_set('display_errors', 0);
                 require_once '../configurations/dbconnection.php';
@@ -603,6 +586,7 @@
         ?>
     </div>
 
+
     <div id="doacao-box" class="box home">
         <h2>cand</h2>
     </div>
@@ -684,7 +668,7 @@
             </table>
         </div>
         <br>
-        <div class="container_definicoes" style="height:auto;">
+        <div class="container_definicoes" style="height:5%;">
             <div class="d-flex justify-content-between">
                 <div class="title">Comentários</div>
                 <div class="tab tab2">
@@ -973,6 +957,131 @@
     </div>
     </div>
     </div>
+    </div>
+
+    <!-- EDIT MODAL-->
+    <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex">
+                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Editar utilizador</b></h1>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Admin</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Doador Especial</label>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                        <form action="../model/userpage/update_user.php" method="GET">
+                            <div class="user-details">
+                                <div class="input-box">
+                                    <span class="details">Nome</span>
+                                    <?php
+                                    ini_set('display_errors', 0);
+                                    $sql = "SELECT nome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            if ($row["email"] == $_GET["email"]) {
+                                                echo "<input type='text' name='nome' class='custom-select' value='" . $row["nome"] . "'/>";
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Sobrenome</span>
+                                    <?php
+                                    ini_set('display_errors', 0);
+                                    $sql = "SELECT sobrenome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            if ($row["email"] == $_GET["email"]) {
+                                                echo "<input type='text' name='sobrenome' value='" . $row["sobrenome"] . "'/>";
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Endereço de email</span>
+                                    <?php
+                                    ini_set('display_errors', 0);
+                                    $sql = "SELECT email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            if ($row["email"] == $_GET["email"]) {
+                                                echo "<input type='text' name='email' disabled value='" . $row["email"] . "'/>";
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Número de telemóvel</span>
+                                    <?php
+                                    ini_set('display_errors', 0);
+                                    $sql = "SELECT num_telefone, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            if ($row["email"] == $_GET["email"]) {
+                                                echo "<input type='number' name='num_telefone' pattern='[0-9]{9}' value='" . $row["num_telefone"] . "'/>";
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Morada</span>
+                                    <?php
+                                    ini_set('display_errors', 0);
+                                    $sql = "SELECT morada, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            if ($row["email"] == $_GET["email"]) {
+                                                echo "<input type='text' name='morada' value='" . $row["morada"] . "'/>";
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Data de nascimento</span>
+                                    <?php
+                                    ini_set('display_errors', 0);
+                                    $conn = new mysqli("localhost", "root", "", "str");
+                                    if ($conn->connect_error) {
+                                        die("Connection failed: " . $conn->connect_error);
+                                    }
+                                    $sql = "SELECT data_nascimento, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            if ($row["email"] == $_GET["email"]) {
+                                                echo "<input type='date' name='data_nascimento' value='" . $row["data_nascimento"] . "'/>";
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
+                    <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         addEventListener("DOMContentLoaded", (event) => {
