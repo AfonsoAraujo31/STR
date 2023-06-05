@@ -965,125 +965,47 @@
             <div class="modal-content">
                 <div class="modal-header d-flex">
                     <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Editar utilizador</b></h1>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Admin</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Doador Especial</label>
-                    </div>
                 </div>
                 <div class="modal-body">
-                    <div class="content">
-                        <form action="../model/userpage/update_user.php" method="GET">
-                            <div class="user-details">
-                                <div class="input-box">
-                                    <span class="details">Nome</span>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $sql = "SELECT nome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                    $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            if ($row["email"] == $_GET["email"]) {
-                                                echo "<input type='text' name='nome' class='custom-select' value='" . $row["nome"] . "'/>";
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Sobrenome</span>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $sql = "SELECT sobrenome, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                    $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            if ($row["email"] == $_GET["email"]) {
-                                                echo "<input type='text' name='sobrenome' value='" . $row["sobrenome"] . "'/>";
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Endereço de email</span>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $sql = "SELECT email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                    $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            if ($row["email"] == $_GET["email"]) {
-                                                echo "<input type='text' name='email' disabled value='" . $row["email"] . "'/>";
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Número de telemóvel</span>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $sql = "SELECT num_telefone, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                    $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            if ($row["email"] == $_GET["email"]) {
-                                                echo "<input type='number' name='num_telefone' pattern='[0-9]{9}' value='" . $row["num_telefone"] . "'/>";
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Morada</span>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $sql = "SELECT morada, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                    $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            if ($row["email"] == $_GET["email"]) {
-                                                echo "<input type='text' name='morada' value='" . $row["morada"] . "'/>";
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                                <div class="input-box">
-                                    <span class="details">Data de nascimento</span>
-                                    <?php
-                                    ini_set('display_errors', 0);
-                                    $conn = new mysqli("localhost", "root", "", "str");
-                                    if ($conn->connect_error) {
-                                        die("Connection failed: " . $conn->connect_error);
-                                    }
-                                    $sql = "SELECT data_nascimento, email FROM utilizadores WHERE email='" . $_GET['email'] . "'";
-                                    $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            if ($row["email"] == $_GET["email"]) {
-                                                echo "<input type='date' name='data_nascimento' value='" . $row["data_nascimento"] . "'/>";
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
-                    <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                    <button type="button" class="btn btn-success float-end" onclick="sabeInfoDetails();" style="background-color:#188755;margin-left:5px;">Guardar</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script>
+        $(document).ready(function() {
+            $('.button').click(function() {
+                id_emp = $(this).attr('id')
+                $.ajax({
+                    url: "http://localhost/STR/model/admin/load_users_details.php",
+                    method: 'post',
+                    data: {
+                        emp_id: id_emp
+                    },
+                    success: function(result) {
+                        $(".modal-body").html(result);
+                    }
+                });
+
+
+                $('#editModal').modal("show");
+            })
+        })
+
+        function sabeInfoDetails(){
+            var email = document.getElementById('email').value;
+            var nome = document.getElementById('nome').value;
+            var sobrenome = document.getElementById('sobrenome').value;
+            var num_telefone = document.getElementById('num_telefone').value;
+            location.href = "http://localhost/STR/model/admin/update_users_details.php?email=" + email +"&nome="+ nome +"&sobrenome="+ sobrenome +"&num_telefone="+ num_telefone;
+        }
+
         addEventListener("DOMContentLoaded", (event) => {
             if (window.location == "http://localhost/STR/view/user_page.php?email='" + $_COOKIE["current_user"] + "'&error=updatefail") {
                 $('#errorAlert').show('medium');
