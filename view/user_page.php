@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/login/style.scss">
     <link rel="stylesheet" href="./css/admin/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./css/login/style.css">
     <div id="includedCssContent"></div>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -586,9 +586,14 @@
         ?>
     </div>
 
-
     <div id="doacao-box" class="box home">
-        <h2>cand</h2>
+        <div class="container">
+            <div id="products" class="row view-group">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <?php include '../model/specialdonation/load_familys_cards.php' ?>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="admin-box" class="box home">
@@ -971,7 +976,24 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
-                    <button type="button" class="btn btn-success float-end" onclick="sabeInfoDetails();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="sabeInfoDetails();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ALIMENTACAO MODAL-->
+    <div class="modal fade" id="alimentacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex">
+                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
+                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="sabeInfoDetails();" style="background-color:#188755;margin-left:5px;">Guardar</button>
                 </div>
             </div>
         </div>
@@ -992,18 +1014,49 @@
                         $(".modal-body").html(result);
                     }
                 });
-
-
                 $('#editModal').modal("show");
             })
         })
 
-        function sabeInfoDetails(){
-            var email = document.getElementById('email').value;
-            var nome = document.getElementById('nome').value;
-            var sobrenome = document.getElementById('sobrenome').value;
-            var num_telefone = document.getElementById('num_telefone').value;
-            location.href = "http://localhost/STR/model/admin/update_users_details.php?email=" + email +"&nome="+ nome +"&sobrenome="+ sobrenome +"&num_telefone="+ num_telefone;
+        $(document).ready(function() {
+            $('.button_alimentacao').click(function() {
+                id_emp = $(this).attr('id')
+                $.ajax({
+                    url: "http://localhost/STR/model/specialdonation/load_family_food_details.php",
+                    method: 'post',
+                    data: {
+                        emp_id: id_emp
+                    },
+                    success: function(result) {
+                        $(".modal-body").html(result);
+                    }
+                });
+                $('#alimentacaoModal').modal("show");
+            })
+        })
+
+        $(document).ready(function() {
+            $('#list').click(function(event) {
+                event.preventDefault();
+                $('#products .item').addClass('list-group-item');
+            });
+            $('#grid').click(function(event) {
+                event.preventDefault();
+                $('#products .item').removeClass('list-group-item');
+                $('#products .item').addClass('grid-group-item');
+            });
+        });
+
+
+
+        function sabeInfoDetails() {
+            setTimeout(function() {
+                var email = document.getElementById('email').value;
+                var nome = document.getElementById('nome').value;
+                var sobrenome = document.getElementById('sobrenome').value;
+                var num_telefone = document.getElementById('num_telefone').value;
+                location.href = "http://localhost/STR/model/admin/update_users_details.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&num_telefone=" + num_telefone;
+            }, 300);
         }
 
         addEventListener("DOMContentLoaded", (event) => {
