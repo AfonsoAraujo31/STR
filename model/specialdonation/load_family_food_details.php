@@ -1,36 +1,78 @@
 <?php
-if (isset($_POST["emp_id"])) {
-     $output = '';
-     $connect = mysqli_connect("localhost", "root", "", "str");
-     $query = "SELECT * FROM familias_doacaoespecial WHERE id = '" . $_POST["emp_id"] . "'";
-     $result = mysqli_query($connect, $query);
-
-     while ($row = mysqli_fetch_array($result)) {
-          $output = '
-          <div class="content">
-               <form>
-                    <p class="fs-3">Informações</p>
-                    <hr class="border border-2 opacity-75"> 
-                    <div class="user-details">
-                         <div class="input-box">
-                              <span class="details">Nome da familia</span>
-                              <input type="text" id="nome" name="nome" class="custom-select" disabled value="' . $row["nome_familia"] . '">
-                         </div>
-                         <div class="input-box">
-                              <span class="details">Representante</span>
-                              <input type="text" id="sobrenome" name="sobrenome" disabled value="' . $row["representante"] . '">
-                         </div>
-                         <div class="input-box">
-                              <span class="details">História</span>
-                              <textarea class="" name="descricao" disabled rows="5">' . $row["historia"] . '</textarea>
-                         </div>
+$output = '';
+$connect = mysqli_connect("localhost", "root", "", "str");
+$query = "SELECT * FROM familias_doacaoespecial WHERE id = '" . $_POST["emp_id"] . "'";
+$result = mysqli_query($connect, $query);
+$counter = 1;
+while ($row = mysqli_fetch_array($result)) {
+     $id = $row["id"];
+     $nome = $row["nome_familia"];
+     $representante = $row["representante"];
+     $historia = $row["historia"];
+     $data_chegada = $row["data_chegada"];
+     $origem = $row["origem"];
+     $agregado_familiar = $row["agregado_familiar"];
+     $query1 = "SELECT * FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
+     if ($result1 = $connect->query($query1)) {
+          while ($row = mysqli_fetch_array($result1)) {
+               $output = '
+                    <div class="content">
+                         <form>
+                              <p class="fs-3 text-dark text-bold">Informações</p>
+                              <hr class="border border-2 opacity-75 border-dark"> 
+                              <input type="text" id="id" name="id" class="custom-select" hidden value="' . $id . '">
+                              <input type="text" id="email" name="email" class="custom-select" hidden value="' . $row['email'] . '">
+                              <div class="user-details">
+                                   <div class="input-box">
+                                        <span class="details">Nome da familia</span>
+                                        <input type="text" class="custom-select" disabled value="' . $nome . '">
+                                   </div>
+                                   <div class="input-box">
+                                        <span class="details">Representante</span>
+                                        <input type="text" disabled value="' . $representante . '">
+                                   </div>
+                              </div>
+                              <div class="user-details">
+                                   <div class="input-box" style="width:32%">
+                                        <span class="details">Data de chegada</span>
+                                        <input type="text" id="data_chegada" name="data_chegada" class="custom-select" disabled value="' . $data_chegada . '">
+                                   </div>
+                                   <div class="input-box" style="width:32%">
+                                        <span class="details">Origem</span>
+                                        <input type="text" id="origem" name="origem" disabled value="' . $origem . '">
+                                   </div>
+                                   <div class="input-box" style="width:32%">
+                                        <span class="details">Agregado familiar</span>
+                                        <input type="text" id="agregado_familiar" name="agregado_familiar" disabled value="' . $agregado_familiar . '">
+                                   </div>
+                              </div>   
+                              <div class="user-details">
+                                   <div class="input-box">
+                                        <span class="details">História</span>
+                                        <textarea class="" name="descricao" disabled rows="5">' . $historia . '</textarea>
+                                   </div>
+                              </div>
+                              <p class="fs-3 text-dark text-bold">Candidaturas</p>
+                              <hr class="border border-2 opacity-75 border-dark"> 
+                              <div class="user-details">
+                                   <div class="input-box">
+                                        <span class="details">Nome</span>
+                                        <input type="text" id="nome" class="custom-select" disabled value="' . $row['nome'] . '">
+                                   </div>
+                                   <div class="input-box">
+                                        <span class="details">Sobreome</span>
+                                        <input type="text" id="sobrenome" name="sobreome" class="custom-select" disabled value="' . $row['sobrenome'] . '">
+                                   </div>
+                                   <div class="input-box">
+                                        <span class="details">Motivo</span>
+                                        <textarea id="motivacao_doacao" rows="5"></textarea>
+                                   </div>
+                              </div>
+                         </form>
                     </div>
-                    <p class="fs-3">Candidaturas</p>
-                    <hr class="border border-2 opacity-75"> 
-               </form>
-          </div>
-          ';
-     }
+                    ';
+          }
 
-     echo $output;
+          echo $output;
+     }
 }
