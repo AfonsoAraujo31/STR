@@ -5,23 +5,23 @@ $query = "SELECT * FROM familias_doacaoespecial WHERE id = '" . $_POST["emp_id"]
 $result = mysqli_query($connect, $query);
 $counter = 1;
 while ($row = mysqli_fetch_array($result)) {
-     $tipo = "Alimentação";
-     $motivacao = "";
-     $id = $row["id"];
-     $nome = $row["nome_familia"];
-     $representante = $row["representante"];
-     $historia = $row["historia"];
-     $data_chegada = $row["data_chegada"];
-     $origem = $row["origem"];
-     $agregado_familiar = $row["agregado_familiar"];
-     $query1 = "SELECT * FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
-     if ($result1 = $connect->query($query1)) {
-          while ($row = mysqli_fetch_array($result1)) {
-               $output = '
+    $tipo = "Alojamento";
+    $motivacao = "";
+    $id = $row["id"];
+    $nome = $row["nome_familia"];
+    $representante = $row["representante"];
+    $historia = $row["historia"];
+    $data_chegada = $row["data_chegada"];
+    $origem = $row["origem"];
+    $agregado_familiar = $row["agregado_familiar"];
+    $query1 = "SELECT * FROM utilizadores WHERE email='" . $_COOKIE['current_user'] . "'";
+    if ($result1 = $connect->query($query1)) {
+        while ($row = mysqli_fetch_array($result1)) {
+            $output = '
                     <div class="content">
                          <form>
                               <p class="fs-3 text-dark text-bold">Informações</p>
-                              <hr class="border border-2 opacity-75 border-dark"> 
+                              <hr class="border border-2 opacity-75 border-dark">
                               <input type="text" id="tipo" name="tipo" class="custom-select" hidden value="' . $tipo . '">
                               <input type="text" id="id" name="id" class="custom-select" hidden value="' . $id . '">
                               <input type="text" id="email" name="email" class="custom-select" hidden value="' . $row['email'] . '">
@@ -74,8 +74,8 @@ while ($row = mysqli_fetch_array($result)) {
                          </form>
                     </div>
                     ';
-          }
+        }
 
-          echo $output;
-     }
+        echo $output;
+    }
 }

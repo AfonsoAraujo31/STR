@@ -988,12 +988,63 @@
                 <div class="modal-header d-flex">
                     <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="modal-alimentacao">
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
-                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="sabeInfoDetails();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="enviarCandidaturaFamilia();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ALOJAMENTO MODAL-->
+    <div class="modal fade" id="alojamentoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex">
+                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
+                </div>
+                <div class="modal-body" id="modal-alojamento">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
+                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="enviarCandidaturaFamilia();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VESTUARIO MODAL-->
+    <div class="modal fade" id="vestuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex">
+                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
+                </div>
+                <div class="modal-body" id="modal-vestuario">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
+                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="enviarCandidaturaFamilia();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EDUCACAO MODAL-->
+    <div class="modal fade" id="educacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex">
+                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
+                </div>
+                <div class="modal-body" id="modal-educacao">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
+                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="enviarCandidaturaFamilia();" style="background-color:#188755;margin-left:5px;">Guardar</button>
                 </div>
             </div>
         </div>
@@ -1028,10 +1079,61 @@
                         emp_id: id_emp
                     },
                     success: function(result) {
-                        $(".modal-body").html(result);
+                        $("#modal-alimentacao").html(result);
                     }
                 });
                 $('#alimentacaoModal').modal("show");
+            })
+        })
+
+        $(document).ready(function() {
+            $('.button_alojamento').click(function() {
+                id_emp = $(this).attr('id')
+                $.ajax({
+                    url: "http://localhost/STR/model/specialdonation/load_family_house_details.php",
+                    method: 'post',
+                    data: {
+                        emp_id: id_emp
+                    },
+                    success: function(result) {
+                        $("#modal-alojamento").html(result);
+                    }
+                });
+                $('#alojamentoModal').modal("show");
+            })
+        })
+
+        $(document).ready(function() {
+            $('.button_vestuario').click(function() {
+                id_emp = $(this).attr('id')
+                $.ajax({
+                    url: "http://localhost/STR/model/specialdonation/load_family_vestuario_details.php",
+                    method: 'post',
+                    data: {
+                        emp_id: id_emp
+                    },
+                    success: function(result) {
+                        $("#modal-alojamento").html(result);
+                    }
+                });
+                $('#alojamentoModal').modal("show");
+            })
+        })
+
+        $(document).ready(function() {
+            $('.button_educacao').click(function() {
+                id_emp = $(this).attr('id')
+                $.ajax({
+                    url: "http://localhost/STR/model/specialdonation/load_family_education_details.php",
+                    method: 'post',
+                    data: {
+                        emp_id: id_emp
+                    },
+                    success: function(result) {
+                        $("#modal-educacao").html(result);
+                    }
+                });
+                $('#educacaoModal').modal("show");
             })
         })
 
@@ -1047,8 +1149,6 @@
             });
         });
 
-
-
         function sabeInfoDetails() {
             setTimeout(function() {
                 var email = document.getElementById('email').value;
@@ -1056,6 +1156,18 @@
                 var sobrenome = document.getElementById('sobrenome').value;
                 var num_telefone = document.getElementById('num_telefone').value;
                 location.href = "http://localhost/STR/model/admin/update_users_details.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&num_telefone=" + num_telefone;
+            }, 300);
+        }
+
+        function enviarCandidaturaFamilia(){
+            setTimeout(function() {
+                var email = document.getElementById('email').value;
+                var nome = document.getElementById('nome').value;
+                var sobrenome = document.getElementById('sobrenome').value;
+                var motivacao_familia = document.getElementById('motivacao_familia').value;
+                var id = document.getElementById('id').value;
+                var tipo = document.getElementById('tipo').value;
+                location.href = "http://localhost/STR/model/specialdonation/insert_appliances_family.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&id=" + id + "&motivacao_familia=" + motivacao_familia + "&tipo=" + tipo;
             }, 300);
         }
 

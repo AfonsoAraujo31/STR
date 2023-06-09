@@ -21,9 +21,9 @@ $sql = "SELECT id, descricao, foto_familia, nome_familia,alimentacao,educacao,ha
                                     </div>
                                     <div class="d-flex justify-content-center pb-3"> 
                                         <p class="px-3 button_alimentacao" id='.$row["id"].'><img src="../view/assets/specialdonation/diet.png" style="border-radius: 50%;cursor: pointer;'.$show_alimentacao.'" class="class="py-3"></p>
-                                        <p class="px-3" id='.$row["id"].'><img src="../view/assets/specialdonation/house.png" style="border-radius: 50%;cursor: pointer;'.$show_educacao.'" class="class="py-3"></p>
-                                        <p class="px-3" id='.$row["id"].'><img src="../view/assets/specialdonation/clothes-rack.png" style="border-radius: 50%;cursor: pointer;'.$show_habitacao.'" class="class="py-3"></p>
-                                        <p class="px-3" id='.$row["id"].'><img src="../view/assets/specialdonation/education.png" style="border-radius: 50%;cursor: pointer;'.$show_vestuario.'" class="class="py-3"></p>
+                                        <p class="px-3 button_alojamento" id='.$row["id"].'><img src="../view/assets/specialdonation/house.png" style="border-radius: 50%;cursor: pointer;'.$show_educacao.'" class="class="py-3"></p>
+                                        <p class="px-3 button_vestuario" id='.$row["id"].'><img src="../view/assets/specialdonation/clothes-rack.png" style="border-radius: 50%;cursor: pointer;'.$show_habitacao.'" class="class="py-3"></p>
+                                        <p class="px-3 button_educacao" id='.$row["id"].'><img src="../view/assets/specialdonation/education.png" style="border-radius: 50%;cursor: pointer;'.$show_vestuario.'" class="class="py-3"></p>
                                     </div>    
                                 </div>
                             </div>
