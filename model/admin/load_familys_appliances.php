@@ -54,7 +54,6 @@ if ($result->num_rows > 0) {
                         <hr style="margin:3%;">
                         <div class="card-body">
                         ' . $row['motivacao'] . '
-                        ' . $idcandidatura . '
                         </div>
                         <div class="card-body">
                             <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ');">Aprovar</button>

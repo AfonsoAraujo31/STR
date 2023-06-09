@@ -1214,7 +1214,7 @@
             location.href = "http://localhost/STR/model/admin/disapprove_appliance_family.php?id=" + id;
         }
 
-        function approve_family(id) {
+        function approve_family(id, tipo) {
             location.href = "http://localhost/STR/model/admin/approve_appliance_family.php?id=" + id;
         }
     </script>

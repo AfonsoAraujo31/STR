@@ -1,18 +1,18 @@
 <?php 
-// require_once '/wamp64/www/STR/configurations/dbconnection.php';
-// $sql = "INSERT INTO `familias_doacaoespecial` (`nome_familia`, `representante`, `agregado_familiar`, `data_chegada`, `descricao`, `historia`, `origem`, `email`, `telemovel`, `adultos`, `criancas`)
-// VALUES ('Sánchez', 'Luisa Sánchez', '4', 'Jun 29, 2022', 'Família de quatro pessoas que fugiu da Colômbia devido à violência do narcotráfico e busca um lugar seguro para recomeçar a vida.', 'A família Sánchez teve que fugir de sua casa na Colômbia depois de ser ameaçada pela violência do narcotráfico em sua cidade. Eles tiveram que deixar tudo para trás e agora estão lutando para se adaptar a um novo ambiente e recomeçar suas vidas.', 'Colômbia', 'luisa.sanchez@email.com', '789012345', '2', '2')";
-// if ($conn->query($sql) === TRUE) {
-//         echo "top";
-//       }
+ require_once '/wamp64/www/STR/configurations/dbconnection.php';
+ $sql = "INSERT INTO `familias_doacaoespecial` (`nome_familia`, `representante`, `agregado_familiar`, `data_chegada`, `descricao`, `historia`, `origem`, `email`, `telemovel`, `adultos`, `criancas`)
+ VALUES ('Ivanova', 'Olga Ivanova', '4', 'Set 15, 2022', 'Somos os Ivanova, devido á mais recente guerra na ucraniana tivemos que escapar e procurar refúgio num lugar seguro.', 'A família Ivanova foi forçada a deixar sua casa na Ucrânia devido à guerra e à violência em seu país. A mãe, Olga, tomou a difícil decisão de fugir com seus três filhos para buscar segurança e uma nova vida. Agora, eles enfrentam desafios para se adaptar a um ambiente desconhecido e recomeçar suas vidas longe da violência.', 'Ucrânia', 'olga.ivanova@email.com', '123456789', '1', '3')";
+ if ($conn->query($sql) === TRUE) {
+         echo "top";
+       }
 ?>
 
 <?php 
-require_once '/wamp64/www/STR/configurations/dbconnection.php';   
-$sql = "UPDATE familias_doacaoespecial SET descricao = 'Somos mãe e filha, vindas da Nigéria, mas bastantes resilientes. Deixamos para trás a nossa terra em busca de um futuro melhor e em segurança. Com amor e determinação, mantemos viva a esperança de uma vida cheia de oportunidades.' WHERE id = 26";
-if ($conn->query($sql) === TRUE) {
-        echo "top";
-      }else{
-        echo "não top";
-      }
+// require_once '/wamp64/www/STR/configurations/dbconnection.php';   
+// $sql = "UPDATE familias_doacaoespecial SET descricao = 'Somos mãe e filha, vindas da Nigéria, mas bastantes resilientes. Deixamos para trás a nossa terra em busca de um futuro melhor e em segurança. Com amor e determinação, mantemos viva a esperança de uma vida cheia de oportunidades.' WHERE id = 26";
+// if ($conn->query($sql) === TRUE) {
+//         echo "top";
+//       }else{
+//         echo "não top";
+//       }
 ?>

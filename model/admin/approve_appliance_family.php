@@ -7,7 +7,7 @@ $banco = "str";
 $conn = new mysqli($host, $usuario, $senha, $banco);
 
 if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+  die("Falha na conexão: " . $conn->connect_error);
 }
 if (date("m") == 1) {
   $mes = "Jan";
@@ -36,13 +36,22 @@ if (date("m") == 1) {
 }
 $data = "$mes  " . date("d") . ",   " . date("Y");
 
-$query = "SELECT email FROM candidaturas WHERE id = '" . $_GET['id'] . "'";
+$query = "SELECT email,tipo FROM candidaturas_familias WHERE id_familia = '" . $_GET['id'] . "'";
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result)) {
-  $sql = "DELETE FROM candidaturas WHERE email = '" . $row['email'] . "'";
+  if ($row['tipo'] == 'Alimentação') {
+    $table_name = "alimentacao";
+  } else if ($row['tipo'] == 'Alojamento') {
+    $table_name = "habitacao";
+  } else if ($row['tipo'] == 'Vestuario') {
+    $table_name = "vestuario";
+  } else if ($row['tipo'] == 'Educação') {
+    $table_name = "educacao";
+  }
+  $sql = "DELETE FROM candidaturas_familias WHERE id_familia = '" . $_GET['id'] . "'";
   $result1 = mysqli_query($conn, $sql);
   if ($conn->query($sql) === TRUE) {
-    $sql = "UPDATE utilizadores SET doador_especial = 1 WHERE email = '" . $row['email'] . "'";
+    $sql = "UPDATE familias_doacaoespecial SET $table_name = 1 WHERE id = '" . $_GET['id'] . "'";
     $email = $row['email'];
     if ($conn->query($sql) === TRUE) {
       $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $email . "','" . $data . "','Candidatura Aprovada!','../view/assets/notifications/smile.png')";
