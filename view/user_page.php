@@ -981,8 +981,25 @@
             </div>
         </div>
     </div>
+    <style>
+        .scrollable-content {
+            overflow: auto;
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+        }
+
+        /* For Firefox */
+        .scrollable-content::-webkit-scrollbar {
+            width: 0px;
+            background-color: transparent;
+        }
+
+        .scrollable-content::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+    </style>
     <!-- ALIMENTACAO MODAL-->
-    <div class="modal fade" id="alimentacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade scrollable-content" id="alimentacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header d-flex">
@@ -999,7 +1016,7 @@
         </div>
     </div>
     <!-- ALOJAMENTO MODAL-->
-    <div class="modal fade" id="alojamentoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade scrollable-content" id="alojamentoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header d-flex">
@@ -1016,7 +1033,7 @@
         </div>
     </div>
     <!-- VESTUARIO MODAL-->
-    <div class="modal fade" id="vestuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade scrollable-content" id="vestuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header d-flex">
@@ -1033,7 +1050,7 @@
         </div>
     </div>
     <!-- EDUCACAO MODAL-->
-    <div class="modal fade" id="educacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade scrollable-content" id="educacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header d-flex">
@@ -1159,7 +1176,7 @@
             }, 300);
         }
 
-        function enviarCandidaturaFamilia(){
+        function enviarCandidaturaFamilia() {
             setTimeout(function() {
                 var email = document.getElementById('email').value;
                 var nome = document.getElementById('nome').value;
@@ -1191,6 +1208,14 @@
                     event.target.value = inputValue.slice(0, -1);
                 }
             });
+        }
+
+        function reprove_family(id) {
+            location.href = "http://localhost/STR/model/admin/disapprove_appliance_family.php?id=" + id;
+        }
+
+        function approve_family(id) {
+            location.href = "http://localhost/STR/model/admin/approve_appliance_family.php?id=" + id;
         }
     </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
