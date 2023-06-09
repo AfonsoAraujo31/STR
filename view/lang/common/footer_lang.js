@@ -10,6 +10,8 @@ $(function () {
     $(".cta-text").children().eq(5).text("Escreve-nos");
     $(".footer-social-icon").children().eq(0).text("Segue-nos");
     $(".footer-widget-heading").children().eq(1).text("Subscreve");
+    $(".footer-text").children().eq(1).text("Subscreve");
+    $(".footer-text-small").text("No âmbito do STR foi procurado desenvolver o mesmo com objetivos específicos presentes nos Objetivos de Desenvolvimento Sustentável.");
     $(".footer-text")
       .children()
       .eq(1)
@@ -34,6 +36,7 @@ $(function () {
     $(".cta-text").children().eq(4).text("Mail us");
     $(".footer-social-icon").children().eq(0).text("Follow us");
     $(".footer-widget-heading").children().eq(1).text("Subscribe");
+    $(".footer-text-small").text("Within the scope of the STR, efforts were made to develop it with specific objectives present in the Sustainable Development Goals.");
     $(".footer-text")
       .children()
       .eq(1)
@@ -58,6 +61,7 @@ $(function () {
     $(".footer-social-icon").children().eq(0).text("Suivez-nous");
     $(".footer-widget-heading").children().eq(0).text("Liens");
     $(".footer-widget-heading").children().eq(1).text("S'abonner");
+    $(".footer-text-small").text("Dans le cadre du STR, des efforts ont été faits pour le développer avec des objectifs spécifiques présents dans les Objectifs de Développement Durable.");
     $(".footer-text")
       .children()
       .eq(1)
@@ -82,6 +86,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".cta-text").children().eq(5).text("Escreve-nos");
       $(".footer-social-icon").children().eq(0).text("Segue-nos");
       $(".footer-widget-heading").children().eq(1).text("Subscreve");
+      $(".footer-text-small").text("No âmbito do STR foi procurado desenvolver o mesmo com objetivos específicos presentes nos Objetivos de Desenvolvimento Sustentável.");
       $(".footer-text")
         .children()
         .eq(1)
@@ -106,6 +111,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".cta-text").children().eq(4).text("Mail us");
       $(".footer-social-icon").children().eq(0).text("Follow us");
       $(".footer-widget-heading").children().eq(1).text("Subscribe");
+      $(".footer-text-small").text("Within the scope of the STR, efforts were made to develop it with specific objectives present in the Sustainable Development Goals.");
       $(".footer-text")
         .children()
         .eq(1)
@@ -129,6 +135,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".footer-social-icon").children().eq(0).text("Suivez-nous");
       $(".footer-widget-heading").children().eq(0).text("Liens");
       $(".footer-widget-heading").children().eq(1).text("S'abonner");
+      $(".footer-text-small").text("Dans le cadre du STR, des efforts ont été faits pour le développer avec des objectifs spécifiques présents dans les Objectifs de Développement Durable.");
       $(".footer-text")
         .children()
         .eq(1)

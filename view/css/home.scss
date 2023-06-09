@@ -15,7 +15,6 @@
 .btn {
   display: inline-block;
   padding: 13px 20px;
-  color: #fff;
   text-decoration: none;
   position: relative;
   background: transparent;
@@ -27,6 +26,7 @@
   text-transform: uppercase;
   transition: color 0.1s linear 0.05s;
 }
+
 .btn::before {
   content: "";
   display: block;
@@ -48,38 +48,45 @@
   position: relative;
   z-index: 2;
 }
-
 .btn .btn-inner_slide1 {
   position: relative;
   z-index: 2;
+  color:white;
 }
 .btn-inner_slide1:hover {
   position: relative;
   z-index: 2;
+  color:black;
 }
 .btn .btn-inner_slide2 {
   position: relative;
   z-index: 2;
+  color:white;
 }
 .btn-inner_slide2:hover {
   position: relative;
   z-index: 2;
+  color:black;
 }
 .btn .btn-inner_slide3 {
   position: relative;
   z-index: 2;
+  color:white;
 }
 .btn-inner_slide3:hover {
   position: relative;
   z-index: 2;
+  color:black;
 }
 .btn .btn-inner_slide4 {
   position: relative;
   z-index: 2;
+  color:white;
 }
 .btn-inner_slide4:hover {
   position: relative;
   z-index: 2;
+  color:black;
 }
 
 .btn:hover {
@@ -92,7 +99,6 @@
   transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
 }
 .btn:hover::after {
-  border-color: #373737;
   transition: border 0.1s linear 0s;
 }
 
@@ -312,7 +318,7 @@
   left: 0;
   width: 14px;
   height: 26px;
-  fill: #fff;
+  fill: #e30808;
   transition: left 0.2s ease;
 }
 
