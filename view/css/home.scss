@@ -360,12 +360,15 @@
 }
 
 .text {
-  font-size: 13px;
+  font-size: 17px;
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
 }
-
+.skills{
+  text-align: center;
+  font-weight: bold;
+}
 @media screen and (max-width: 1200px) {
   .inner-container {
     padding: 80px;

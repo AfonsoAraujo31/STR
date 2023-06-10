@@ -169,11 +169,7 @@
     <div class="inner-container reveal bg-white">
       <h1 class="about_tittle">Sobre nós</h1>
       <p class="text text-weak-gray">
-        O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Resringe-se a este tema, por ser
-        um assunto da atualidade, e de extrema relevância.
-        Para colmatar este problema o STR disponibliza ferramentas onde particulares e empresas podem candidatar-se no
-        auxílio a famílias refugiadas, permitindo não ser
-        só informativo, mas também interativo.
+      O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Restringir-se a este tema, por ser um assunto da atualidade, e de extrema relevância. Para colmatar este problema o STR disponibiliza ferramentas onde particulares e empresas podem candidatar-se no auxílio a famílias refugiadas, permitindo não ser só informativo, mas também interativo.
       </p>
       <div class="skills">
         <span>Voluntariado</span>

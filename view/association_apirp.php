@@ -90,7 +90,7 @@
                         <div class="vertical"></div>
                     </div>
                 </button>
-                <div class="panel" style="">
+                <div class="panel">
                     <p>APIRP - Associação de Apoio a Imigrantes e Refugiados em Portugal, tem a missão de promover a integração de imigrantes e refugiados em Portugal, através do desenvolvimento de ações e projetos de intervenção, nas áreas socioculturais relacionadas com a consciencialização cívica e autodeterminação de imigrantes e refugiados, através de um diálogo permanente entre imigrante e refugiados e entre este e a sociedade portuguesa na forma das suas instituições.</p>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                 <div class="panel">
                     <ul>
                         <li><i class="fa-solid fa-square squareli"></i>Dar a conhecer aos seus associados os direitos e deveres dos imigrantes e refugiados consagrados na lei portuguesa, a todos os níveis;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Promover o desenvolvimento de iniciativas socio-culturais;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Promover o desenvolvimento de iniciativas socioculturais;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Estabelecer laços sociais e culturais entre os imigrantes e refugiados e entre este sociedade portuguesa;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Estabelecer contactos com as diversas entidade empregadoras com vista a uma maior e mais adequada empregabilidade dos imigrantes e refugiados.</li>
                     </ul>
@@ -123,7 +123,7 @@
                 </button>
                 <div class="panel">
                     <p><b>Os Direitos Humanos</b></p>
-                    <p>O direito a um tecto é inquestionável e é dos mais importantes para viver em dignidade. Pois não há dignidade sem tecto. Espírito de equipa acreditamos que unindo esforços e trabalhando em conjunto, facilitamos a nossa integração no país nos acolheu.</p>
+                    <p>O direito a um teto é inquestionável e é dos mais importantes para viver em dignidade. Pois, não há dignidade sem teto. Espírito de equipa acreditamos que unindo esforços e trabalhando em conjunto, facilitamos a nossa integração no país acolheu-nos.</p>
                 </div>
             </div>
 

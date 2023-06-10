@@ -124,7 +124,7 @@ $(function () {
     associacoes_pt();
     $(".big-text").text("OS NOSSOS ASSOCIADOS");
     $(".content-text").text(
-      "Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para nossos projetos."
+      "Os nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através da sua dedicação e compromisso, temos conseguido ajudar cada vez mais pessoas e causas importantes na nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para os nossos projetos."
     );
     $(".number-text").eq(0).text("ASSOCIAÇÕES");
     $(".number-text").eq(1).text("VOLUNTÁRIOS");
@@ -181,7 +181,7 @@ addEventListener("DOMContentLoaded", (event) => {
       associacoes_pt();
       $(".big-text").text("OS NOSSOS ASSOCIADOS");
       $(".content-text").text(
-        "Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para nossos projetos."
+        "Os nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através da sua dedicação e compromisso, temos conseguido ajudar cada vez mais pessoas e causas importantes na nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para os nossos projetos."
       );
       $(".number-text").eq(0).text("ASSOCIAÇÕES");
       $(".number-text").eq(1).text("VOLUNTÁRIOS");

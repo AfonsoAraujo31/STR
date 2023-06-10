@@ -96,7 +96,9 @@
                     </div>
                 </button>
                 <div class="panel" style="">
-                    <p>A Cruz Vermelha Portuguesa esforça-se para prevenir e aliviar o sofrimento humano, em Portugal e no mundo. Constitui missão da CVP prestar assistência humanitária e social, em especial aos mais vulneraveis, prevenindo e reparando o sofrimento e contribuindo para a defesa da vida, da saúde e da dignidade humana. [Artigo 5º, Decreto-lei nº 281/2007, 7 de Agosto.<br><br>Para o desenvolvimento da nossa actividade, mobilizamos o “Poder da Humanidade”, bem como a generosidade dos doadores e parceiros por todo o país. Na qualidade de Sociedade Nacional do Movimento Internacional da Cruz Vermelha e do Crescente Vermelho, agimos no respeito pelos princípios fundamentais da Humanidade, Imparcialidade, Neutralidade, Independência, Voluntariado, Unidade e Universalidade.<br><br>Saiba mais explorando a nossa infografia repleta de dados e números que explicam como os nossos voluntários, doadores e colaboradores ajudam as pessoas em Portugal e noutras partes do mundo.</p>
+                    <p>A Cruz Vermelha Portuguesa esforça-se para prevenir e aliviar o sofrimento humano, em Portugal e no mundo. Constitui missão da CVP prestar assistência humanitária e social, em especial aos mais vulneráveis, prevenindo e reparando o sofrimento e contribuindo para a defesa da vida, da saúde e da dignidade humana. Artigo 5.º Decreto-lei n.º 281/2007, 7 de agosto.
+                        Para o desenvolvimento da nossa atividade, mobilizamos o “Poder da Humanidade”, bem como a generosidade dos doadores e parceiros por todo o país. Na qualidade de Sociedade Nacional do Movimento Internacional da Cruz Vermelha e do Crescente Vermelho, agimos no respeito pelos princípios fundamentais da Humanidade, Imparcialidade, Neutralidade, Independência, Voluntariado, Unidade e Universalidade.
+                        Saiba mais explorando a nossa infografia repleta de dados e números que explicam como os nossos voluntários, doadores e colaboradores ajudam as pessoas em Portugal e noutras partes do mundo.</p>
                 </div>
             </div>
 
@@ -109,7 +111,7 @@
                     </div>
                 </button>
                 <div class="panel">
-                    <p>A Juventude Cruz Vermelha (JCV) é o departamento juvenil da Cruz Vermelha Portuguesa. Guiados pelos Princípios Fundamentais da instituição, desenvolvemos o nosso trabalho com base no voluntariado e com o objectivo principal de promover a resiliência das crianças e jovens nas comunidades locais. Somos já mais de 2.000 voluntários jovens a trabalhar em mais de 90 locais, com mais de 250 projectos no terreno e cerca de 50.000 beneficiários directos por ano.<br><br>Na JVC encontrarás um espaço aberto à tua energia, às tuas ideias e à tua vontade de fazer mais. Assim, se tens vontade de aumentar os teus conhecimentos e competências pessoais e interesse em contribuir para a felicidade dos mais desfavorecidos, não percas tempo e junta-te a nós!</p>
+                    <p>A Juventude Cruz Vermelha (JCV) é o departamento juvenil da Cruz Vermelha Portuguesa. Guiados pelos Princípios Fundamentais da instituição, desenvolvemos o nosso trabalho com base no voluntariado e com o objetivo principal de promover a resiliência das crianças e jovens nas comunidades locais. Somos já mais de 2.000 voluntários jovens a trabalhar em mais de 90 locais, com mais de 250 projetos no terreno e cerca de 50.000 beneficiários diretos por ano. Na JVC encontrarás um espaço aberto à tua energia, às tuas ideias e à tua vontade de fazer mais. Assim, se tens vontade de aumentar os teus conhecimentos e competências pessoais e interesse em contribuir para a felicidade dos mais desfavorecidos, não percas tempo e junta-te a nós!</p>
                 </div>
             </div>
 
@@ -124,9 +126,9 @@
                 <div class="panel">
                     <ul>
                         <li><i class="fa-solid fa-square squareli"></i>Compromisso, com os valores da instituição;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Proactividade, ter espírito crítico, tomar a iniciativa, querer fazer mais e chegar mais longe;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Envolvimento, acreditar nos objectivos e propósitos da organização, perspectivando sempre resultados positivos;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Entrega, ter a capacidade de abraçar os diversos projectos, mostrando o melhor de ti.</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Produtividade, ter espírito crítico, tomar a iniciativa, querer fazer mais e chegar mais longe;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Envolvimento, acreditar nos objetivos e propósitos da organização, perspetivando sempre resultados positivos;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Entrega, ter a capacidade de abraçar os diversos projetos, mostrando o melhor de ti.</li>
                     </ul>
                 </div>
             </div>
@@ -140,7 +142,7 @@
                     </div>
                 </button>
                 <div class="panel">
-                    <p>O público-alvo da JCV são crianças (5-11 anos), adolescentes (12-17 anos) e jovens adultos (18-35 anos), os quais participam na organização enquanto voluntários, beneficiários ou líderes/ agentes de mudança positiva.<br><br>Desenvolvemos o nosso trabalho numa perspetiva de educação por pares, de jovens para jovens, e com recurso a metodologias de educação não formal, nas seguintes áreas de intervenção:Pode consultar aqui, o Relatório 2021 e projeções para o ano 2022 da Juventuude Cruz Vermelha. </p>
+                    <p>O público-alvo da JCV são crianças (5-11 anos), adolescentes (12-17 anos) e jovens adultos (18-35 anos), os quais participam na organização enquanto voluntários, beneficiários ou líderes/ agentes de mudança positiva.<br><br>Desenvolvemos o nosso trabalho numa perspetiva de educação por pares, de jovens para jovens, e com recurso a metodologias de educação não formal, nas seguintes áreas de intervenção: Pode consultar aqui, o Relatório 2021 e projeções para o ano 2022 da Juventude Cruz Vermelha.</p>
                 </div>
             </div>
             <div class="faq">

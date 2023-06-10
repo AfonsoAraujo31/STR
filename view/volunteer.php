@@ -57,10 +57,7 @@
         </ul>
         <div class="content-box animate__animated animate__fadeIn">
             <h2 class="big-text">Os nossos associados</h2>
-            <p class="content-text">Nossos associados são fundamentais para o sucesso do nosso programa de voluntariado.
-                Através de sua dedicação e comprometimento, temos conseguido ajudar cada vez mais pessoas e
-                causas importantes em nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que
-                são valiosas para nossos projetos.
+            <p class="content-text">Os nossos associados são fundamentais para o sucesso do nosso programa de voluntariado. Através da sua dedicação e compromisso, temos conseguido ajudar cada vez mais pessoas e causas importantes na nossa comunidade. Cada associado traz consigo habilidades e experiências únicas que são valiosas para os nossos projetos.
             </p>
         </div>
 

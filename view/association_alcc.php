@@ -91,13 +91,13 @@
                         <div class="vertical"></div>
                     </div>
                 </button>
-                <div class="panel" style="">
+                <div class="panel">
                     <ul>
                         <li><i class="fa-solid fa-square squareli"></i>Ser um agente defensor eficaz dos direitos dos migrantes, transformando a vida das pessoas e mudando as atitudes públicas para melhor;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Comprometer-se com o princípio de que a migração regular e ordenada beneficia os migrantes e a sociedade;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Auxiliar no atendimento aos crescentes desafios operacionais de gerenciamento de migração;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Incentivar a integração e o desenvolvimento social e econômico por meio da migração;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Defender a dignidade humana e o bem-estar dos migrantes</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Defender a dignidade humana e o bem-estar dos migrantes.</li>
                     </ul>
                 </div>
             </div>
@@ -112,8 +112,10 @@
                 </button>
                 <div class="panel">
                     <p>A Associação Lusofonia Cultura e Cidadania, é uma associação sem fins lucrativos, constituída nos termos da Lei em vigor com o pressuposto da defesa dos legítimos interesses da população imigrante em Portugal, reconhecida pelo Alto Comissariado para as Migrações ACM, como associação representativa da comunidade Brasileira em Portugal, está aberta a todas as nacionalidades.
-                        A Associação iniciou suas atividades em 2000, através de um grupo de pessoas imigrantes e nacionais ,tendo sido constituída em 2007 com o objetivo de promover a integração legal e social desta população e, desde o início, busca soluções para promover a inserção do imigrante na sociedade e facilitar o seu acesso aos serviços necessários à sua sobrevivência, visando minimizar as dificuldades da população imigrante oferecendo, um conjunto de serviços gratuitos, tanto a nível individual como familiar.
+                        A Associação iniciou as suas atividades em 2000, através de um grupo de pessoas imigrantes e nacionais,tendo sido constituída em 2007 com o objetivo de promover a integração legal e social desta população e, desde o início, busca soluções para promover a inserção do imigrante na sociedade e facilitar o seu acesso aos serviços necessários à sua sobrevivência, visando minimizar as dificuldades da população imigrante oferecendo, um conjunto de serviços gratuitos, tanto a nível individual como familiar.
+
                         Pretendemos ser uma organização não governamental representativa dos imigrantes em Portugal, reconhecida pelos serviços prestados, nomeadamente os mais vulneráveis.
+
                         Procuramos diversas formas para sensibilizar, esclarecer, divulgar, promover, integrar e transmitir conhecimentos sobre várias temáticas como Cidadania e Inclusão, Empreendedorismo, Formação, Igualdade de Oportunidades – Género e Imigração, emprego e formação entre outros.</p>
                 </div>
             </div>

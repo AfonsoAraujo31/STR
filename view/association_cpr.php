@@ -90,14 +90,14 @@
                         <div class="vertical"></div>
                     </div>
                 </button>
-                <div class="panel" style="">
+                <div class="panel">
                     <p>Defender e promover o direito de asilo em Portugal</p>
                     <ul>
                         <li><i class="fa-solid fa-square squareli"></i>Nos termos do Direito Internacional, Europeu e Nacional dos Direitos Humanos e dos Refugiados;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Através do apoio directo e gratuito, independente e imparcial, efectuado pelos vários departamentos especificamente direccionados a requerentes e beneficiários de protecção internacional com os objectivos de garantir o acesso à protecção internacional e de capacitar esta população para a integração, respectivamente;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Através do acolhimento inicial e transitório de requerentes de protecção internacional e refugiados reinstalados nos Centros de Acolhimento para Refugiados, sitos na Bobadela e São João da Talha e no Centro de Acolhimento para Crianças Refugiadas;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Através do apoio direto e gratuito, independente e imparcial, efetuado pelos vários departamentos especificamente direcionados a requerentes e beneficiários de proteção internacional com os objetivos de garantir o acesso à proteção internacional e de capacitar esta população para a integração, respetivamente;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Através do acolhimento inicial e transitório de requerentes de proteção internacional e refugiados reinstalados nos Centros de Acolhimento para Refugiados, sitos na Bobadela e São João da Talha e no Centro de Acolhimento para Crianças Refugiadas;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Através de advocacy junto das entidades governamentais, de forma a cumprir a visão e os valores seguidamente descritos;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Através de acções de informação, sensibilização e formação, contribuindo para uma sociedade mais informada e receptiva aos refugiados.</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Através de ações de informação, sensibilização e formação, contribuindo para uma sociedade mais informada e recetiva aos refugiados.</li>
                     </ul>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                     </div>
                 </button>
                 <div class="panel">
-                    <p>O CPR foi constituído em 20 de Setembro de 1991 por um conjunto de personalidades de diversos quadrantes da sociedade portuguesa. Teresa Tito de Morais foi eleita Presidente da Direção, cargo que manteve até março de 2019. É o parceiro operacional do Alto Comissariado das Nações Unidas (ACNUR) para Portugal, mantendo um Protocolo de Cooperação, desde Julho de 1993, que visa a proteção jurídica e social dos requerentes de asilo e dos refugiados. <br><br>A partir de Dezembro de 1998, data do encerramento do ACNUR em Portugal, o CPR passou a representar esta organização no nosso país.<br><br>Em 12 de Dezembro de 2000, o CPR foi distinguido com o “Prémio Direitos Humanos” da Assembleia da República. No dia 20 de Julho de 2012 foi entregue à Presidente da Direção do CPR, a Medalha de Mérito e Dedicação da Câmara Municipal de Loures. No âmbito do seu 50º aniversário, a Comissão Episcopal da Pastoral Social e Mobilidade Humana, numa cerimónia realizada na Fundação Calouste Gulbenkian, em dezembro de 2012, homenageou o CPR “pelo excelente trabalho que desenvolve no apoio aos refugiados e por ser uma instituição parceira de referência para a Obra Católica Portuguesa para as Migrações”.</p>
+                    <p>O CPR foi constituído em 20 de setembro de 1991 por um conjunto de personalidades de diversos quadrantes da sociedade portuguesa. Teresa Tito de Morais foi eleita Presidente da Direção, cargo que manteve até março de 2019. É o parceiro operacional do Alto Comissariado das Nações Unidas (ACNUR) para Portugal, mantendo um Protocolo de Cooperação, desde julho de 1993, que visa a proteção jurídica e social dos requerentes de asilo e dos refugiados. <br><br>A partir de dezembro de 1998, data do encerramento do ACNUR em Portugal, o CPR passou a representar esta organização no nosso país.<br><br>Em 12 de dezembro de 2000, o CPR foi distinguido com o “Prémio Direitos Humanos” da Assembleia da República. No dia 20 de julho de 2012 foi entregue à Presidente da Direção do CPR, a Medalha de Mérito e Dedicação da Câmara Municipal de Loures. No âmbito do seu 50.º aniversário, a Comissão Episcopal da Pastoral Social e Mobilidade Humana, numa cerimónia realizada na Fundação Calouste Gulbenkian, em dezembro de 2012, homenageou o CPR “pelo excelente trabalho que desenvolve no apoio aos refugiados e por ser uma instituição parceira de referência para a Obra Católica Portuguesa para as Migrações”.</p>
                 </div>
             </div>
 
@@ -126,10 +126,10 @@
                 <div class="panel">
                     <ul>
                         <li><i class="fa-solid fa-square squareli"></i>Os Direitos Humanos;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Inclusão e empoderamento dos requerentes e beneficiários de protecção internacional;</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Inclusão e ponderada dos requerentes e beneficiários de proteção internacional;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Sociedade inclusiva e consciente das suas responsabilidades nos domínios do asilo;</li>
                         <li><i class="fa-solid fa-square squareli"></i>Transparência, independência, rigor e integridade;</li>
-                        <li><i class="fa-solid fa-square squareli"></i>Espírito de equipa, trabalho em parceria e em rede (local e comunitária), formas essenciais de cooperação e colaboração para concretizar os objectivos.</li>
+                        <li><i class="fa-solid fa-square squareli"></i>Espírito de equipa, trabalho em parceria e em rede (local e comunitária), formas essenciais de cooperação e colaboração para concretizar os objetivos.</li>
                     </ul>
                 </div>
             </div>
@@ -143,7 +143,7 @@
                     </div>
                 </button>
                 <div class="panel">
-                    <p>Que Portugal cumpra os compromissos internacionalmente assumidos e a legislação relativa a direitos humanos e ao direito de asilo e tenha uma cooperação internacional, assuma responsabilidade acrescida no sistema internacional e europeu de protecção, nomeadamente no âmbito da Reinstalação e de mecanismos de solidariedade. <br><br>Respeite a dignidade dos requerentes de protecção internacional, assegurando a quem seja reconhecida protecção, a possibilidade de se integrar e desenvolver. O CPR é, e continuará a ser, a organização de referência em termos da defesa e promoção do direito de asilo em Portugal.</p>
+                    <p>Que Portugal cumpra os compromissos internacionalmente assumidos e a legislação relativa a direitos humanos e ao direito de asilo e tenha uma cooperação internacional, assuma responsabilidade acrescida no sistema internacional e europeu de proteção, nomeadamente no âmbito da Reinstalação e de mecanismos de solidariedade. <br><br>Respeite a dignidade dos requerentes de proteção internacional, assegurando a quem seja reconhecida proteção, a possibilidade de se integrar e desenvolver. O CPR é, e continuará a ser, a organização de referência em termos da defesa e promoção do direito de asilo em Portugal.</p>
                 </div>
             </div>
 
