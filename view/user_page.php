@@ -57,7 +57,7 @@
                                                                                                                                                                                             echo "./assets/admin/bell.png";
                                                                                                                                                                                         }
                                                                                                                                                                                         ?>">
-                    <ul class="dropdown-menu" style="width:16%;max-height:250px;overflow-y:auto;">
+                    <ul class="dropdown-menu" style="width:20%;max-height:250px;overflow-y:auto;">
                         <?php include '../model/common/load_notification.php' ?>
                     </ul>
                 </div>

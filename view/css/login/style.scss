@@ -28,23 +28,15 @@
   position: absolute;
   top: 90px;
   left: 0;
-  min-height: 120%;
+  min-height: 80%;
   display: block;
   width: 250px;
   padding: 10px 14px;
   background: var(--sidebar-color);
   transition: var(--tran-05);
   z-index: 100;
-}
-@media (max-width: 1400px) {
-  .sidebar {
-    height: 120%;
-  }
-}
-@media (max-width: 1000px) {
-  .sidebar {
-    height: 200%;
-  }
+  border-bottom-right-radius: 40px;
+
 }
 .sidebar.close {
   width: 88px;
