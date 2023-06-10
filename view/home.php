@@ -9,6 +9,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/home.scss" />
   <div id="includedCssContent"></div>
+  <link href="/dist/output.css" rel="stylesheet">
   <!-- Bootstrap -->
   <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -26,6 +27,7 @@
       <li class="li"><a class="active hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
+      <li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria </a></li>
       <li>
         <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <div class="language">

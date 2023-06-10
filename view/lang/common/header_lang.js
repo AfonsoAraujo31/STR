@@ -15,7 +15,7 @@ $(function () {
     $(".li")
       .children()
       .eq(3)
-      .html('<i class="fa-solid fa-newspaper"></i> Notícias');
+      .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Galeria');
   });
 });
 $(function () {
@@ -34,7 +34,7 @@ $(function () {
     $(".li")
       .children()
       .eq(3)
-      .html('<i class="fa-solid fa-newspaper"></i> News');
+      .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Gallery');
   });
 });
 $(function () {
@@ -56,7 +56,7 @@ $(function () {
     $(".li")
       .children()
       .eq(3)
-      .html('<i class="fa-solid fa-newspaper"></i> Des nouvelles');
+      .html('<i class="fa-solid fa-duotone fa-camera-retro"></i>s Galerie');
   });
 });
 
@@ -81,7 +81,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".li")
         .children()
         .eq(3)
-        .html('<i class="fa-solid fa-newspaper"></i> Notícias');
+        .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Galeria');
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
@@ -100,7 +100,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".li")
         .children()
         .eq(3)
-        .html('<i class="fa-solid fa-newspaper"></i> News');
+        .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Gallery');
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
@@ -120,7 +120,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".li")
         .children()
         .eq(3)
-        .html('<i class="fa-solid fa-newspaper"></i> Des nouvelles');
+        .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Galerie  ');
     });
   }
 });
