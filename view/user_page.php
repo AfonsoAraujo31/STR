@@ -337,7 +337,7 @@
         </div>
         <div class="container_preferencias_fotoperfil">
             <div class="container_preferencias">
-                <div class="title">Preferências/Opcões</div>
+                <div class="title">Preferências/Opções</div>
                 <br>
                 <style>
                     p {
@@ -387,7 +387,7 @@
                                     if ($row["email"] == $_GET["email"]) {
                                         echo '
                                     <p>
-                                    <label class="preferencias">Linguagem pré definida ao iniciar sessão</label>
+                                    <label class="preferencias">Linguagem pré-definida ao iniciar sessão</label>
                                     <select class="opc" name="linguagem">
                                         <option selected class="selected_linguagem">' . $row["linguagem"] . '</option>
                                         <option class="linguagem">Sem preferência</option>
@@ -397,7 +397,7 @@
                                     </select>
                                 </p>
                                 <p>
-                                <label for="b" class="preferencias" >Em caso de contacto, forma preferida</label>
+                                <label for="b" class="preferencias">Em caso de contacto, forma preferida</label>
                                 <select class="opc" name="contacto">
                                 <option selected class="selected_contacto">' . $row["contacto"] . '</option>
                                     <option class="contacto">Sem preferência</option>
@@ -415,7 +415,7 @@
                                 </select>
                             </p>
                             <p>
-                                <label for="b" class="preferencias">Exibir definicões após iniciar sessão</label>
+                                <label for="b" class="preferencias">Exibir definições após iniciar sessão</label>
                                 <select class="opc" name="dados_login">
                                 <option selected class="selected_dados_login">' . $row["dados_login"] . '</option>
                                     <option class="dados_login">Sem preferência</option>
@@ -605,7 +605,7 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span><?php echo "5"; ?></span>
+                            <span>5</span>
                         </div>
                         <div class="desc">Associações</div>
                     </div>
@@ -952,7 +952,7 @@
             </div>
         </div>
         <div class="container_obs" style="max-height: 450px;overflow-y:auto;">
-            <div class="title">Candidaturas</div>
+            <div class="title">Candidaturas às famílias</div>
             <br>
             <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
                 <?php include '../model/admin/load_familys_appliances.php'; ?>

@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
                         </div>
                         <div class="blog-slider__content">
                             <span class="blog-slider__code">'.$row['data_chegada'].'</span>
-                            <div class="blog-slider__title">Familia '.$row['nome_familia'].'</div>
+                            <div class="blog-slider__title">Família '.$row['nome_familia'].'</div>
                                 <div class="blog-slider__text">'.$row['descricao'].'</div>
                                 <a href="http://localhost/STR/view/specialdonation_detail.php?id='.$row['id'].'" class="blog-slider__button">VER MAIS</a>
                             </div>
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
                                 </div>
                                 <div class="blog-slider__content">
                                     <span class="blog-slider__code">'.$row['data_chegada'].'</span>
-                                    <div class="blog-slider__title">Familia '.$row['nome_familia'].'</div>
+                                    <div class="blog-slider__title">Família '.$row['nome_familia'].'</div>
                                         <div class="blog-slider__text">'.$row['descricao'].'</div>
                                         <a class="blog-slider__button text-white" tooltip="Não é doador especial">VER MAIS</a>
                                     </div>

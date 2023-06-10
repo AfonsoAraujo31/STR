@@ -20,7 +20,7 @@ $sql = "SELECT id, descricao, foto_familia, nome_familia,alimentacao,educacao,ha
                                 <div class="card h-100">
                                     <img src="data:image/*;base64,' . $foto_perfil . '" class="card-img-top h-100">
                                     <div class="card-body">
-                                        <h5 class="card-title"><b>Familia ' . $row['nome_familia'] . '</b></h5>
+                                        <h5 class="card-title"><b>Família ' . $row['nome_familia'] . '</b></h5>
                                         <p class="card-text">' . $descricao . '...</p>
                                     </div>
                                     <div class="d-flex justify-content-center pb-3"> 

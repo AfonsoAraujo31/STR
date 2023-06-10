@@ -102,9 +102,9 @@
             identificar áreas que necessitam de ser melhoradas,<b> ao nível da nossa gestão interna</b>,
             como parte de um processo de melhoria contínua.
           </p>
-          <p>A privacidade dos utilizadores e das famílias aqui reigstadas é uma questão de <b>extrema importância
+          <p>A privacidade dos utilizadores e das famílias aqui registadas  é uma questão de <b>extrema importância
               na nossa comunidade</b>. As informações fornecidas pelos utilizadores podem incluir dados de identificação
-            pessoal, informações de contato, dados de localização e outras informações sensíveis. Portanto, é essencial
+            pessoal, informações de contacto, dados de localização e outras informações sensíveis. Portanto, é essencial
             que o website em questão tenha <b>medidas adequadas em vigor para proteger a privacidade dos seus utilizadores</b>.
           </p>
         </div>

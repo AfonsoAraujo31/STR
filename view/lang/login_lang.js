@@ -45,10 +45,10 @@ $(function () {
     $(".btn_reg").text("Criar");
     $(".nav-text").eq(0).text("Perfil");
     $(".nav-text").eq(1).text("Candidaturas");
-    $(".nav-text").eq(2).text("Admin");
+    $(".nav-text").eq(2).text("Admin")  ;
     $(".nav-text").eq(3).text("Sair");
     $(".title").eq(0).text("Definições de perfil");
-    $(".title").eq(1).text("Preferências/Opcões");
+    $(".title").eq(1).text("Preferências/Opções");
     $(".title").eq(2).text("Foto de perfil");
     $(".title").eq(3).text("Sobre ti");
     $(".details").eq(0).text("Nome");
@@ -60,10 +60,10 @@ $(function () {
     $(".details").eq(6).text("Nacionalidade");
     $(".details").eq(7).text("Palavra chave");
     $(".details").eq(8).text("Descrição");
-    $(".preferencias").eq(0).text("Linguagem pré definida ao iniciar sessão");
+    $(".preferencias").eq(0).text("Linguagem pré-definida ao iniciar sessão");
     $(".preferencias").eq(1).text("Em caso de contacto, forma preferida");
     $(".preferencias").eq(2).text("Preferência do estado dos cookies");
-    $(".preferencias").eq(3).text("Exibir definicões após iniciar sessão");
+    $(".preferencias").eq(3).text("Exibir definições após iniciar sessão");
     if ($(".selected_linguagem").text() == "Português") {
       $(".selected_linguagem").text("Português");
     } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -445,7 +445,7 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".nav-text").eq(2).text("Admin");
       $(".nav-text").eq(3).text("Sair");
       $(".title").eq(0).text("Definições de perfil");
-      $(".title").eq(1).text("Preferências/Opcões");
+      $(".title").eq(1).text("Preferências/Opções");
       $(".title").eq(2).text("Foto de perfil");
       $(".title").eq(3).text("Sobre ti");
       $(".details").eq(0).text("Nome");
@@ -457,10 +457,10 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".details").eq(6).text("Nacionalidade");
       $(".details").eq(7).text("Palavra chave");
       $(".details").eq(8).text("Descrição");
-      $(".preferencias").eq(0).text("Linguagem pré definida ao iniciar sessão");
+      $(".preferencias").eq(0).text("Linguagem pré-definida ao iniciar sessão");
       $(".preferencias").eq(1).text("Em caso de contacto, forma preferida");
       $(".preferencias").eq(2).text("Preferência do estado dos cookies");
-      $(".preferencias").eq(3).text("Exibir definicões após iniciar sessão");
+      $(".preferencias").eq(3).text("Exibir definições após iniciar sessão");
       if ($(".selected_linguagem").text() == "Português") {
         $(".selected_linguagem").text("Português");
       } else if ($(".selected_linguagem").text() == "Inglês") {
