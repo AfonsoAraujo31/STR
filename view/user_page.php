@@ -150,7 +150,18 @@
                             <span class="text nav-text">Doador Especial</span>
                         </a>
                     </li>
-                    <li class="nav-link">
+                    <li class="nav-link" style="display: none;<?php
+                                                                ini_set('display_errors', 0);
+                                                                $sql = "SELECT doador_especial FROM utilizadores WHERE email='" . $_GET['email'] . "'";
+                                                                $result = $conn->query($sql);
+                                                                if ($result->num_rows > 0) {
+                                                                    while ($row = $result->fetch_assoc()) {
+                                                                        if ($row["doador_especial"] == 1) {
+                                                                            echo 'display: block;';
+                                                                        }
+                                                                    }
+                                                                }
+                                                                ?>">
                         <a href="#" id="doacao" onclick="doacao();">
                             <i class='bx bxs-spreadsheet icon'></i>
                             <span class="text nav-text">Candidaturas</span>
@@ -448,7 +459,11 @@
                             while ($row = $result->fetch_assoc()) {
                                 if ($row["email"] == $_GET["email"]) {
                                     $foto_perfil = base64_encode($row['foto_perfil']);
-                                    echo "<img alt='' id='picture-preview' class='img-fluid card-image rounded-circle' src='data:image/*;base64," . $foto_perfil . "' />";
+                                    if($foto_perfil == ""){
+                                        echo "<img alt='' id='picture-preview' class='img-fluid card-image rounded-circle' src='./assets/others/teste.png' />";
+                                    }else{
+                                        echo "<img alt='' id='picture-preview' class='img-fluid card-image rounded-circle' src='data:image/*;base64," . $foto_perfil . "' />";
+                                    }
                                 }
                             }
                         }

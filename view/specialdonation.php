@@ -72,7 +72,7 @@
   <div class=<?php ini_set('display_errors', 0);
               if ($_COOKIE["sing_in"] === 1) {
                 echo "blur-out";
-              } else if ($_COOKIE["sing_in"] === "") {
+              } else if ($_COOKIE["sing_in"] === "" || $_COOKIE["sing_in"] === 0) {
                 echo "blur-in";
               } ?>>
     <div style="display:none;" id="teste">
