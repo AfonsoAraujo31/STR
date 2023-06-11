@@ -488,7 +488,7 @@
         </div>
     </div>
 
-    <div id="candidatar-box" class="box home <?php
+    <div id="candidatar-box" style="overflow:hidden;" class="box home <?php
                                                 ini_set('display_errors', 0);
                                                 $sql = "SELECT email FROM candidaturas WHERE email='" . $_COOKIE['current_user'] . "'";
                                                 $result = $conn->query($sql);
@@ -505,7 +505,7 @@
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             echo '
-            <div class="wrapper_advise ">
+            <div class="wrapper_advise">
                 <div class="row">	
                     <div class="four_zero_four_bg"></div>
                         <div class="contant_box_404">

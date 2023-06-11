@@ -30,7 +30,7 @@ function perfil() {
 }
 
 function candidatar() {
-  $("html, body").css("overflow", "hidden");
+  $("html, body").css("overflow", "auto");
   $(".box").css("display", "none");
   $(".box-visible").css("display", "none");
   //on screen

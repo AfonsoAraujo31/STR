@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 0);
-if($_COOKIE['sing_in']){
+if ($_COOKIE['sing_in']) {
   ini_set('display_errors', 0);
   require_once '../configurations/dbconnection.php';
   $sql = "SELECT dados_login FROM preferencias WHERE email = '" . $_COOKIE['current_user'] . "'";
@@ -68,7 +68,7 @@ if($_COOKIE['sing_in']){
       outline: none !important;
       border-color: #ff5e14a8;
       box-shadow: none;
-      
+
     }
 
     .custom-select:focus {
@@ -248,11 +248,15 @@ if($_COOKIE['sing_in']){
       }
     });
   </script>
+
   <script type="module" src="../controller/login.js"></script>
   <script type="module" src="../controller/login/script.js"></script>
   <script type="module" src="./lang/login_lang.js"></script>
   <script type="module" src="../controller/common/include_components.js"></script>
   <script type="module" src="../configurations/loadcontent.js"></script>
+  <!-- Language -->
+  <script type="module" src="./lang/common/header_lang.js"></script>
+  <script type="module" src="./lang/common/language_lang.js"></script>
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
   <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
