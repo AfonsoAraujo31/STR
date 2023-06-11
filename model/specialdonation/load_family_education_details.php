@@ -34,8 +34,6 @@ while ($row = mysqli_fetch_array($result)) {
                                         <span class="details">Representante</span>
                                         <input type="text" disabled value="' . $representante . '">
                                    </div>
-                              </div>
-                              <div class="user-details">
                                    <div class="input-box" style="width:32%">
                                         <span class="details">Data de chegada</span>
                                         <input type="text" class="custom-select" disabled value="' . $data_chegada . '">
@@ -48,14 +46,12 @@ while ($row = mysqli_fetch_array($result)) {
                                         <span class="details">Agregado familiar</span>
                                         <input type="text" disabled value="' . $agregado_familiar . '">
                                    </div>
-                              </div>   
-                              <div class="user-details">
                                    <div class="input-box">
                                         <span class="details">História</span>
                                         <textarea disabled rows="5">' . $historia . '</textarea>
                                    </div>
                               </div>
-                              <p class="fs-3 text-dark text-bold">Candidaturas</p>
+                              <p class="fs-3 text-dark text-bold">Candidatura</p>
                               <hr class="border border-2 opacity-75 border-dark"> 
                               <div class="user-details">
                                    <div class="input-box">

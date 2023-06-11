@@ -34,8 +34,6 @@ while ($row = mysqli_fetch_array($result)) {
                                         <span class="details">Representante</span>
                                         <input type="text" disabled value="' . $representante . '">
                                    </div>
-                              </div>
-                              <div class="user-details">
                                    <div class="input-box" style="width:32%">
                                         <span class="details">Data de chegada</span>
                                         <input type="text" class="custom-select" disabled value="' . $data_chegada . '">
@@ -48,14 +46,12 @@ while ($row = mysqli_fetch_array($result)) {
                                         <span class="details">Agregado familiar</span>
                                         <input type="text" disabled value="' . $agregado_familiar . '">
                                    </div>
-                              </div>   
-                              <div class="user-details">
                                    <div class="input-box">
                                         <span class="details">História</span>
                                         <textarea disabled rows="5">' . $historia . '</textarea>
                                    </div>
                               </div>
-                              <p class="fs-3 text-dark text-bold">Candidaturas</p>
+                              <p class="fs-3 text-dark text-bold">Candidatura</p>
                               <hr class="border border-2 opacity-75 border-dark"> 
                               <div class="user-details">
                                    <div class="input-box">
@@ -65,6 +61,30 @@ while ($row = mysqli_fetch_array($result)) {
                                    <div class="input-box">
                                         <span class="details">Sobreome</span>
                                         <input type="text" id="sobrenome" name="sobreome" class="custom-select" disabled value="' . $row['sobrenome'] . '">
+                                   </div>
+                                   <div class="input-box" style="width:33%;">
+                                        <span class="details">Frequência</span>
+                                        <select class="select">
+                                             <option selected>Selecionar</option>
+                                             <option>Semanalmente</option>
+                                             <option>Mensalmente</option>
+                                             <option>Semestralmente</option>
+                                             <option>Anualmente</option>
+                                        </select>
+                                   </div>
+                                   <div class="input-box" style="width:33%;">
+                                        <span class="details">Quantidade</span>
+                                        <select class="select">
+                                        <option selected>Selecionar</option>
+                                        <option>10Kg</option>
+                                        <option>25Kg</option>
+                                        <option>50Kg</option>
+                                        <option>+60Kg</option>
+                                   </select>
+                                   </div>
+                                   <div class="input-box" style="width:33%;">
+                                        <span class="details">Data de início</span>
+                                        <input type="date"/>
                                    </div>
                                    <div class="input-box">
                                         <span class="details">Motivação</span>

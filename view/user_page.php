@@ -967,7 +967,7 @@
             </div>
         </div>
         <div class="container_obs" style="max-height: 450px;overflow-y:auto;">
-            <div class="title">Candidaturas às famílias</div>
+            <div class="title" style="font-size: 25px;">Candidaturas às famílias</div>
             <br>
             <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
                 <?php include '../model/admin/load_familys_appliances.php'; ?>
@@ -1017,9 +1017,6 @@
     <div class="modal fade scrollable-content" id="alimentacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
-                <div class="modal-header d-flex">
-                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
-                </div>
                 <div class="modal-body" id="modal-alimentacao">
 
                 </div>
@@ -1034,9 +1031,6 @@
     <div class="modal fade scrollable-content" id="alojamentoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
-                <div class="modal-header d-flex">
-                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
-                </div>
                 <div class="modal-body" id="modal-alojamento">
 
                 </div>
@@ -1051,9 +1045,6 @@
     <div class="modal fade scrollable-content" id="vestuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
-                <div class="modal-header d-flex">
-                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
-                </div>
                 <div class="modal-body" id="modal-vestuario">
 
                 </div>
@@ -1068,9 +1059,6 @@
     <div class="modal fade scrollable-content" id="educacaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
-                <div class="modal-header d-flex">
-                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Ajudar</b></h1>
-                </div>
                 <div class="modal-body" id="modal-educacao">
 
                 </div>
