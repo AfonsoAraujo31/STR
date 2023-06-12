@@ -38,6 +38,16 @@ if ($result->num_rows > 0) {
         </div>
                 ';
     }
-} else {
-    echo "não existe";
+}else{
+    echo '
+        <div class="card text-center align-middle">
+                <div class="empty-icon-container">
+                    <div>
+                        <h2 class="pt-2">0 resultados encontrados</h2>
+                        <p>Desculpe! Neste momento não existe nenhuma candidatura.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+    ';
 }

@@ -1008,8 +1008,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
-                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="sabeInfoDetails();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Fechar</button>
                 </div>
             </div>
         </div>
