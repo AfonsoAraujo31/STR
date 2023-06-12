@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
                 <td><p class="fw-normal mb-1">' . $doadorAdmin . '</p></td>
                 <td>
                     <button type="button" class="btn btn-link btn-sm btn-rounded button" id='.$row["id"].'><img src="../view/assets/admin/edit.png"></button>
-                    <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="appliance_user('. $row["id"] .');"><img src="../view/assets/admin/appliance.png"></button>
+                    <button type="button" class="btn btn-link btn-sm btn-rounded button_appliance" id='.$row["email"].'><img src="../view/assets/admin/appliance.png"></button>
                     <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/trash-bin.png"></button>
                 </td>
             </tr>
@@ -51,8 +51,8 @@ if ($result->num_rows > 0) {
             <td><p class="fw-normal mb-1">' . $doadorEspecial . '</p></td>
             <td><p class="fw-normal mb-1">' . $doadorAdmin . '</p></td>
             <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded" data-bs-toggle="modal" data-bs-target="#editModal"><img src="../view/assets/admin/edit.png"></button>
-                <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="appliance_user('. $row["id"] .');"><img src="../view/assets/admin/appliance.png"></button>
+                <button type="button" class="btn btn-link btn-sm btn-rounded button" id='.$row["id"].'><img src="../view/assets/admin/edit.png"></button>
+                <button type="button" class="btn btn-link btn-sm btn-rounded button_appliance" id='.$row["email"].'><img src="../view/assets/admin/appliance.png"></button>
                 <button type="button" class="btn btn-link btn-sm btn-rounded" onclick="delete_user('. $row["id"] .');"><img src="../view/assets/admin/trash-bin.png"></button>
             </td>
         </tr>

@@ -621,9 +621,9 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span>5</span>
+                            <span><?php include '../model/admin/count_appliances.php'; ?></span>
                         </div>
-                        <div class="desc">Associações</div>
+                        <div class="desc">Candidaturas</div>
                     </div>
                 </a>
             </div>
@@ -997,6 +997,23 @@
             </div>
         </div>
     </div>
+    <!-- APPLIANCE MODAL-->
+    <div class="modal fade" id="applianceModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header d-flex">
+                    <h1 class="modal-title fs-5 flex-grow-1" id="staticBackdropLabel"><b>Candidaturas</b></h1>
+                </div>
+                <div class="modal-body" id="modal-appliance">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal" style="background-color:#dd3445">Cancelar</button>
+                    <button type="button" class="btn btn-success float-end" data-bs-dismiss="modal" onclick="sabeInfoDetails();" style="background-color:#188755;margin-left:5px;">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <style>
         .scrollable-content {
             overflow: auto;
@@ -1087,6 +1104,23 @@
                     }
                 });
                 $('#editModal').modal("show");
+            })
+        })
+
+        $(document).ready(function() {
+            $('.button_appliance').click(function() {
+                id_emp = $(this).attr('id')
+                $.ajax({
+                    url: "http://localhost/STR/model/admin/load_appliance_user_details.php",
+                    method: 'post',
+                    data: {
+                        emp_id: id_emp
+                    },
+                    success: function(result) {
+                        $("#modal-appliance").html(result);
+                    }
+                });
+                $('#applianceModal').modal("show");
             })
         })
 

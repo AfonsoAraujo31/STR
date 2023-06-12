@@ -131,7 +131,7 @@ if ($result->num_rows > 0) {
     }
 } else {
     echo '
-        <div class="card text-center">
+        <div class="card text-center align-middle">
                 <div class="empty-icon-container">
                     <div class="animation-container">
                         <div class="bounce"></div>
