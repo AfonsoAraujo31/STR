@@ -57,7 +57,7 @@
                                                                                                                                                                                             echo "./assets/admin/bell.png";
                                                                                                                                                                                         }
                                                                                                                                                                                         ?>">
-                    <ul class="dropdown-menu" style="width:20%;max-height:250px;overflow-y:auto;">
+                    <ul class="dropdown-menu" style="width:20%;max-height:250px;overflow-y:auto;overflow-x:hidden;">
                         <?php include '../model/common/load_notification.php' ?>
                     </ul>
                 </div>
@@ -459,9 +459,9 @@
                             while ($row = $result->fetch_assoc()) {
                                 if ($row["email"] == $_GET["email"]) {
                                     $foto_perfil = base64_encode($row['foto_perfil']);
-                                    if($foto_perfil == ""){
+                                    if ($foto_perfil == "") {
                                         echo "<img alt='' id='picture-preview' class='img-fluid card-image rounded-circle' src='./assets/others/teste.png' />";
-                                    }else{
+                                    } else {
                                         echo "<img alt='' id='picture-preview' class='img-fluid card-image rounded-circle' src='data:image/*;base64," . $foto_perfil . "' />";
                                     }
                                 }
@@ -504,15 +504,15 @@
     </div>
 
     <div id="candidatar-box" style="overflow:hidden;" class="box home <?php
-                                                ini_set('display_errors', 0);
-                                                $sql = "SELECT email FROM candidaturas WHERE email='" . $_COOKIE['current_user'] . "'";
-                                                $result = $conn->query($sql);
-                                                if ($result->num_rows > 0) {
-                                                    echo "back_1";
-                                                } else {
-                                                    echo "back_2";
-                                                }
-                                                ?>">
+                                                                        ini_set('display_errors', 0);
+                                                                        $sql = "SELECT email FROM candidaturas WHERE email='" . $_COOKIE['current_user'] . "'";
+                                                                        $result = $conn->query($sql);
+                                                                        if ($result->num_rows > 0) {
+                                                                            echo "back_1";
+                                                                        } else {
+                                                                            echo "back_2";
+                                                                        }
+                                                                        ?>">
         <?php
         ini_set('display_errors', 0);
         require_once '../configurations/dbconnection.php';
@@ -602,6 +602,7 @@
     </div>
 
     <div id="doacao-box" class="box home">
+    <div id="errorAlertModal" class="alert alert-warning hide-item errorAlertlogin" role="alert" style="position:absolute;width:30%;z-index:1;right:10px;">É necessário preencher o(s) campo(s)!</div>
         <div class="container">
             <div id="products" class="row view-group">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -1180,18 +1181,25 @@
         }
 
         function enviarCandidaturaFamilia() {
-            setTimeout(function() {
-                var email = document.getElementById('email').value;
-                var nome = document.getElementById('nome').value;
-                var sobrenome = document.getElementById('sobrenome').value;
-                var motivacao_familia = document.getElementById('motivacao_familia').value;
-                var id = document.getElementById('id').value;
-                var tipo = document.getElementById('tipo').value;
-                var quantidade = document.getElementById('quantidade').value;
-                var frequencia = document.getElementById('frequencia').value;
-                var data_inicio = document.getElementById('data_inicio').value;
-                location.href = "http://localhost/STR/model/specialdonation/insert_appliances_family.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&id=" + id + "&motivacao_familia=" + motivacao_familia + "&tipo=" + tipo + "&frequencia="+ frequencia + "&quantidade="+ quantidade + "&data_inicio="+ data_inicio;
+            var email = document.getElementById('email').value;
+            var nome = document.getElementById('nome').value;
+            var sobrenome = document.getElementById('sobrenome').value;
+            var motivacao_familia = document.getElementById('motivacao_familia').value;
+            var id = document.getElementById('id').value;
+            var tipo = document.getElementById('tipo').value;
+            var quantidade = document.getElementById('quantidade').value;
+            var frequencia = document.getElementById('frequencia').value;
+            var data_inicio = document.getElementById('data_inicio').value;
+            if (document.getElementById('motivacao_familia').value == "" || document.getElementById('quantidade').value == "Selecionar" || document.getElementById('frequencia').value == "Selecionar" || document.getElementById('data_inicio').value == "") {
+                $("#errorAlertModal").show("medium");
+                setTimeout(function() {
+                    $("#errorAlertModal").hide("medium");
+                }, 4000);
+            }else{
+                setTimeout(function() {
+                location.href = "http://localhost/STR/model/specialdonation/insert_appliances_family.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&id=" + id + "&motivacao_familia=" + motivacao_familia + "&tipo=" + tipo + "&frequencia=" + frequencia + "&quantidade=" + quantidade + "&data_inicio=" + data_inicio;
             }, 300);
+            }
         }
 
         addEventListener("DOMContentLoaded", (event) => {
