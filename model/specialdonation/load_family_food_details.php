@@ -64,7 +64,7 @@ while ($row = mysqli_fetch_array($result)) {
                                    </div>
                                    <div class="input-box" style="width:33%;">
                                         <span class="details">Frequência</span>
-                                        <select class="select">
+                                        <select id="frequencia" class="custom-select form-rounded form-control" style="height:45px;">
                                              <option selected>Selecionar</option>
                                              <option>Semanalmente</option>
                                              <option>Mensalmente</option>
@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_array($result)) {
                                    </div>
                                    <div class="input-box" style="width:33%;">
                                         <span class="details">Quantidade</span>
-                                        <select class="select">
+                                        <select id="quantidade" class="custom-select form-rounded form-control" style="height:45px;">
                                         <option selected>Selecionar</option>
                                         <option>10Kg</option>
                                         <option>25Kg</option>
@@ -84,7 +84,7 @@ while ($row = mysqli_fetch_array($result)) {
                                    </div>
                                    <div class="input-box" style="width:33%;">
                                         <span class="details">Data de início</span>
-                                        <input type="date"/>
+                                        <input type="date" id="data_inicio"/>
                                    </div>
                                    <div class="input-box">
                                         <span class="details">Motivação</span>

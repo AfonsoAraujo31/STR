@@ -62,6 +62,30 @@ while ($row = mysqli_fetch_array($result)) {
                                         <span class="details">Sobreome</span>
                                         <input type="text" id="sobrenome" name="sobreome" class="custom-select" disabled value="' . $row['sobrenome'] . '">
                                    </div>
+                                   <div class="input-box" style="width:33%;">
+                                        <span class="details">Frequência</span>
+                                        <select id="frequencia" class="custom-select form-rounded form-control" style="height:45px;">
+                                             <option selected>Selecionar</option>
+                                             <option>Semanalmente</option>
+                                             <option>Mensalmente</option>
+                                             <option>Semestralmente</option>
+                                             <option>Anualmente</option>
+                                        </select>
+                                   </div>
+                                   <div class="input-box" style="width:33%;">
+                                        <span class="details">Quantidade</span>
+                                        <select id="quantidade" class="custom-select form-rounded form-control" style="height:45px;">
+                                        <option selected>Selecionar</option>
+                                        <option>10Kg</option>
+                                        <option>25Kg</option>
+                                        <option>50Kg</option>
+                                        <option>+60Kg</option>
+                                   </select>
+                                   </div>
+                                   <div class="input-box" style="width:33%;">
+                                        <span class="details">Data de início</span>
+                                        <input type="date" id="data_inicio"/>
+                                   </div>
                                    <div class="input-box">
                                         <span class="details">Motivação</span>
                                         <textarea id="motivacao_familia" rows="5">' . $motivacao . '</textarea>

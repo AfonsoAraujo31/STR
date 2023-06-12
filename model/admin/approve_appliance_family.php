@@ -21,23 +21,27 @@ if (date("m") == 1) {
   $mes = "Maio";
 } else if (date("m") == 6) {
   $mes = "Jun";
-} else if (date("m") == 2) {
+} else if (date("m") == 7) {
   $mes = "Jul";
-} else if (date("m") == 2) {
+} else if (date("m") == 8) {
   $mes = "Ago";
-} else if (date("m") == 2) {
+} else if (date("m") == 9) {
   $mes = "Set";
-} else if (date("m") == 2) {
+} else if (date("m") == 10) {
   $mes = "Out";
-} else if (date("m") == 2) {
+} else if (date("m") == 11) {
   $mes = "Nov";
-} else if (date("m") == 2) {
+} else if (date("m") == 12) {
   $mes = "Dez";
 }
 $data = "$mes  " . date("d") . ",   " . date("Y");
 
-$query = "SELECT email,tipo FROM candidaturas_familias WHERE id_familia = '" . $_GET['id'] . "'";
+echo $_GET['id'];
+echo $_GET['tipo'];
+
+$query = "SELECT id,tipo,email FROM candidaturas_familias WHERE id_familia = '" . $_GET['id'] . "' AND tipo = '".$_GET['tipo']."'";
 $result = mysqli_query($conn, $query);
+
 while ($row = mysqli_fetch_assoc($result)) {
   if ($row['tipo'] == 'Alimentação') {
     $table_name = "alimentacao";
@@ -48,7 +52,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   } else if ($row['tipo'] == 'Educação') {
     $table_name = "educacao";
   }
-  $sql = "DELETE FROM candidaturas_familias WHERE id_familia = '" . $_GET['id'] . "'";
+  $sql = "DELETE FROM candidaturas_familias WHERE id = '" . $row['id'] . "'";
   $result1 = mysqli_query($conn, $sql);
   if ($conn->query($sql) === TRUE) {
     $sql = "UPDATE familias_doacaoespecial SET $table_name = 1 WHERE id = '" . $_GET['id'] . "'";

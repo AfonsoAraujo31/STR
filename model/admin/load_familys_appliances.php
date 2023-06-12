@@ -12,6 +12,10 @@ if ($result->num_rows > 0) {
         $sobrenome = $row['sobrenome'];
         $motivacao = substr($row['motivacao'], 0, 250);
         $data_registo = $row['data_registo'];
+        $quantidade = $row['quantidade'];
+        $frequencia = $row['frequencia'];
+        $data_inicio = $row['data_inicio'];
+        $tipo = $row['tipo'];
         $query1 = "SELECT foto_perfil FROM utilizadores WHERE email='" . $email . "'";
 
         if ($result1 = $conn->query($query1)) {
@@ -55,7 +59,13 @@ if ($result->num_rows > 0) {
                         <div class="card border-top-0">
                             <hr style="margin:3%;">
                             <div class="card-body">
-                            ' . $row['motivacao'] . '
+                                <p><b>Tipo:</b> ' . $tipo . '</p>
+                                <p><b>Quantidade:</b> ' . $quantidade . '</p>
+                                <p><b>Frequência:</b> ' . $frequencia . '</p>
+                                <p><b>Data de ínicio:</b> ' . $data_inicio . '</p>
+                                <br>
+                                <b>Motivação:</b>
+                                <p>' . $row['motivacao'] . '</p>
                             </div>
                             <div class="card-body">
                                 <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ');">Aprovar</button>
@@ -98,10 +108,16 @@ if ($result->num_rows > 0) {
                         <div class="card border-top-0">
                             <hr style="margin:3%;">
                             <div class="card-body">
-                            ' . $row['motivacao'] . '
+                                <p><b>Tipo:</b> ' . $tipo . '</p>
+                                <p><b>Quantidade:</b> ' . $quantidade . '</p>
+                                <p><b>Frequência:</b> ' . $frequencia . '</p>
+                                <p><b>Data de ínicio:</b> ' . $data_inicio . '</p>
+                                <br>
+                                <b>Motivação:</b>
+                                <p>' . $row['motivacao'] . '</p>
                             </div>
                             <div class="card-body">
-                                <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ');">Aprovar</button>
+                                <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ', \'' . $tipo . '\');">Aprovar</button>
                                 <button type="button" class="btn btn-danger float-end" style="background-color:#dd3445" onclick="reprove_family(' . $idcandidatura . ');">Rejeitar</button>
                             </div>
                         </div>

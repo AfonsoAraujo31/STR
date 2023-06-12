@@ -239,3 +239,20 @@
       right: 110%;
   }
 }
+
+.form-rounded {
+  border-radius: 5px;
+}
+
+.form-control:focus {
+  outline: none !important;
+  border-color: #ff5e14a8;
+  box-shadow: none;
+
+}
+
+.custom-select:focus {
+  outline: none !important;
+  border-color: #ff5e14a8;
+  box-shadow: none;
+}

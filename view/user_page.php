@@ -1187,7 +1187,10 @@
                 var motivacao_familia = document.getElementById('motivacao_familia').value;
                 var id = document.getElementById('id').value;
                 var tipo = document.getElementById('tipo').value;
-                location.href = "http://localhost/STR/model/specialdonation/insert_appliances_family.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&id=" + id + "&motivacao_familia=" + motivacao_familia + "&tipo=" + tipo;
+                var quantidade = document.getElementById('quantidade').value;
+                var frequencia = document.getElementById('frequencia').value;
+                var data_inicio = document.getElementById('data_inicio').value;
+                location.href = "http://localhost/STR/model/specialdonation/insert_appliances_family.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&id=" + id + "&motivacao_familia=" + motivacao_familia + "&tipo=" + tipo + "&frequencia="+ frequencia + "&quantidade="+ quantidade + "&data_inicio="+ data_inicio;
             }, 300);
         }
 
@@ -1218,7 +1221,7 @@
         }
 
         function approve_family(id, tipo) {
-            location.href = "http://localhost/STR/model/admin/approve_appliance_family.php?id=" + id;
+            location.href = "http://localhost/STR/model/admin/approve_appliance_family.php?id=" + id + "&tipo=" + tipo;
         }
     </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
