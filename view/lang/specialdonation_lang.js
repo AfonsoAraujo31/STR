@@ -6,6 +6,8 @@ $(function () {
   $(".pt").click(function () {
     localStorage.setItem("language", 1);
     if (localStorage.getItem("sing_in") == 0) {
+      $(".title_widget").html("Oops, parece que aconteceu algo de inesperado!");
+      $(".content-text_widget").html("De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito.");
     } else {
       //Header
       $(".title").html("O QUE É A DOAÇÃO ESPECIAL ?");
@@ -38,6 +40,8 @@ $(function () {
   $(".en").click(function () {
     localStorage.setItem("language", 2);
     if (localStorage.getItem("sing_in") == 0) {
+      $(".title_widget").html("Oops, look's like something unexpected happened!");
+      $(".content-text_widget").html("In order to access the Special Donation page, create an account or if you already have an account, log in by accessing the icon in the upper right corner.");
     } else {
       //Header
       $(".title").html("WHAT IS THE SPECIAL DONATION?");
@@ -70,6 +74,8 @@ $(function () {
   $(".fr").click(function () {
     localStorage.setItem("language", 3);
     if (localStorage.getItem("sing_in") == 0) {
+      $(".title_widget").html("Oops, on dirait qu'il s'est passé quelque chose d'inattendu!");
+      $(".content-text_widget").html("Pour accéder à la page de don spécial, créez un compte ou si vous avez déjà un compte, connectez-vous en accédant à l'icône dans le coin supérieur droit.");
     } else {
       $(".title").html("QU'EST-CE QUE LE DON SPÉCIAL ?");
       $(".content-text")
@@ -101,6 +107,8 @@ addEventListener("DOMContentLoaded", (event) => {
     $(function () {
       localStorage.setItem("language", 1);
       if (localStorage.getItem("sing_in") == 0) {
+        $(".title_widget").html("Oops, parece que aconteceu algo de inesperado!");
+      $(".content-text_widget").html("De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito.");
       } else {
         //Header
         $(".title").html("O QUE É A DOAÇÃO ESPECIAL ?");
@@ -128,6 +136,8 @@ addEventListener("DOMContentLoaded", (event) => {
     $(function () {
       localStorage.setItem("language", 2);
       if (localStorage.getItem("sing_in") == 0) {
+        $(".title_widget").html("Oops, look's like something unexpected happened!");
+      $(".content-text_widget").html("In order to access the Special Donation page, create an account or if you already have an account, log in by accessing the icon in the upper right corner.");
       } else {
         //Header
         $(".title").html("WHAT IS THE SPECIAL DONATION?");
@@ -155,6 +165,8 @@ addEventListener("DOMContentLoaded", (event) => {
     $(function () {
       localStorage.setItem("language", 3);
       if (localStorage.getItem("sing_in") == 0) {
+        $(".title_widget").html("Oops, on dirait qu'il s'est passé quelque chose d'inattendu!");
+      $(".content-text_widget").html("Pour accéder à la page de don spécial, créez un compte ou si vous avez déjà un compte, connectez-vous en accédant à l'icône dans le coin supérieur droit.");
       } else {
         $(".title").html("QU'EST-CE QUE LE DON SPÉCIAL ?");
         $(".content-text")

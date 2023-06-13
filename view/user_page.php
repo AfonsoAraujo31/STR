@@ -1020,7 +1020,6 @@
             scrollbar-color: transparent transparent;
         }
 
-        /* For Firefox */
         .scrollable-content::-webkit-scrollbar {
             width: 0px;
             background-color: transparent;

@@ -32,12 +32,10 @@
                                     echo 'visibility:visible;';
                                   } ?>">
     <section class="container animate__animated animate__bounceIn">
-      <img src="./assets/specialdonation/image-removebg-preview.png" alt="">
+      <img src="./assets/specialdonation/image-removebg-preview.png">
       <div class="text-center texto">
-        <div class="pb-2 title_widget">Oops, parece que aconteceu algo de inesperado!</div>
-        <div class="content-text_widget">
-          De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito.
-        </div>
+        <h5 class="title_widget">Oops, parece que aconteceu algo de inesperado!</h5>
+        <span class="content-text_widget">De forma a ter acesso à página Doação Especial crie uma conta ou se já tem conta criada, faça login acedendo ao ícon no canto superior direito.</span>
       </div>
     </section>
   </div>
