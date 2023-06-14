@@ -600,7 +600,6 @@
         }
         ?>
     </div>
-
     <div id="doacao-box" class="box home">
     <div id="errorAlertModal" class="alert alert-warning hide-item errorAlertlogin" role="alert" style="position:absolute;width:30%;z-index:1;right:10px;">É necessário preencher o(s) campo(s)!</div>
         <div class="container">
@@ -1265,6 +1264,7 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="../controller/admin/script.js"></script>
     <script src="../controller/login/script.js"></script>
     <script src="../controller/login/script2.js"></script>

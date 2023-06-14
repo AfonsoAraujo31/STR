@@ -4,6 +4,41 @@
  */
 $(function () {
   $(".pt").click(function () {
+    const descriptionIds = [
+      "descricao1",
+      "descricao2",
+      "descricao3",
+      "descricao4",
+      "descricao5",
+      "descricao6",
+    ];
+    var lang = localStorage.getItem("language");
+    if (lang === "1") {
+      lang = "fr";
+    } else if (lang === "2") {
+      lang = "en";
+    } else if (lang === "3") {
+      lang = "fr";
+    }
+
+    descriptionIds.forEach((descriptionId) => {
+      const textareaFrom = document.getElementById(descriptionId).textContent;
+      fetch(
+        `https://api.mymemory.translated.net/get?q=${textareaFrom}&langpair=${lang}|pt&key=38428e54204d341351e0&de=afonso16araujo@gmail.com`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data && data.responseData && data.responseData.translatedText) {
+            document.getElementById(descriptionId).textContent =
+              data.responseData.translatedText;
+          } else {
+            console.error("Failed to get translated text.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error occurred while fetching translation:", error);
+        });
+    });
     localStorage.setItem("language", 1);
     //login
     $("#title_login").text("Iniciar sessão em STR");
@@ -45,7 +80,7 @@ $(function () {
     $(".btn_reg").text("Criar");
     $(".nav-text").eq(0).text("Perfil");
     $(".nav-text").eq(1).text("Candidaturas");
-    $(".nav-text").eq(2).text("Admin")  ;
+    $(".nav-text").eq(2).text("Admin");
     $(".nav-text").eq(3).text("Sair");
     $(".title").eq(0).text("Definições de perfil");
     $(".title").eq(1).text("Preferências/Opções");
@@ -129,6 +164,7 @@ $(function () {
     $("#label_appliance_tel").text("Número de telemóvel");
     $("#label_appliance_email").text("Endereço de email");
     $("#label_appliance_motivacao").text("Motivação");
+    $(".card-title-inside").text("Família");
   });
 });
 /**
@@ -137,6 +173,41 @@ $(function () {
  */
 $(function () {
   $(".en").click(function () {
+    const descriptionIds = [
+      "descricao1",
+      "descricao2",
+      "descricao3",
+      "descricao4",
+      "descricao5",
+      "descricao6",
+    ];
+    var lang = localStorage.getItem("language");
+    if (lang === "1") {
+      lang = "pt";
+    } else if (lang === "2") {
+      lang = "pt";
+    } else if (lang === "3") {
+      lang = "fr";
+    }
+
+    descriptionIds.forEach((descriptionId) => {
+      const textareaFrom = document.getElementById(descriptionId).textContent;
+      fetch(
+        `https://api.mymemory.translated.net/get?q=${textareaFrom}&langpair=${lang}|en&key=38428e54204d341351e0&de=afonso16araujo@gmail.com`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data && data.responseData && data.responseData.translatedText) {
+            document.getElementById(descriptionId).textContent =
+              data.responseData.translatedText;
+          } else {
+            console.error("Failed to get translated text.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error occurred while fetching translation:", error);
+        });
+    });
     localStorage.setItem("language", 2);
     //login
     $("#title_login").text("Sing in into STR");
@@ -259,6 +330,7 @@ $(function () {
     $("#label_appliance_tel").text("Phone number");
     $("#label_appliance_email").text("Email");
     $("#label_appliance_motivacao").text("Motivation");
+    $(".card-title-inside").text("Family");
   });
 });
 /**
@@ -267,6 +339,41 @@ $(function () {
  */
 $(function () {
   $(".fr").click(function () {
+    const descriptionIds = [
+      "descricao1",
+      "descricao2",
+      "descricao3",
+      "descricao4",
+      "descricao5",
+      "descricao6",
+    ];
+    var lang = localStorage.getItem("language");
+    if (lang === "1") {
+      lang = "pt";
+    } else if (lang === "2") {
+      lang = "en";
+    } else if (lang === "3") {
+      lang = "pt";
+    }
+
+    descriptionIds.forEach((descriptionId) => {
+      const textareaFrom = document.getElementById(descriptionId).textContent;
+      fetch(
+        `https://api.mymemory.translated.net/get?q=${textareaFrom}&langpair=${lang}|fr&key=38428e54204d341351e0&de=afonso16araujo@gmail.com`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data && data.responseData && data.responseData.translatedText) {
+            document.getElementById(descriptionId).textContent =
+              data.responseData.translatedText;
+          } else {
+            console.error("Failed to get translated text.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error occurred while fetching translation:", error);
+        });
+    });
     localStorage.setItem("language", 3);
     //login
     $("#title_login").text("Connexion un STR");
@@ -385,14 +492,15 @@ $(function () {
       .children()
       .eq(1)
       .text("Votre candidature est en cours de traitement.");
-      $("#label_appliance_nome").text("Nom");
-     $("#label_appliance_sobrenome").text("Lastname");
-     $("#label_appliance_identificacao").text("Numéro d'identification");
-     $("#label_appliance_civil").text("état matrimonial");
-     $("#label_appliance_contacto").text("Formulaire de contact");
-     $("#label_appliance_tel").text("Numéro de portable");
-     $("#label_appliance_email").text("Adresse e-mail");
-     $("#label_appliance_motivacao").text("Motivation");
+    $("#label_appliance_nome").text("Nom");
+    $("#label_appliance_sobrenome").text("Lastname");
+    $("#label_appliance_identificacao").text("Numéro d'identification");
+    $("#label_appliance_civil").text("état matrimonial");
+    $("#label_appliance_contacto").text("Formulaire de contact");
+    $("#label_appliance_tel").text("Numéro de portable");
+    $("#label_appliance_email").text("Adresse e-mail");
+    $("#label_appliance_motivacao").text("Motivation");
+    $(".card-title-inside").text("Famille");
   });
 });
 /**
@@ -401,6 +509,41 @@ $(function () {
 addEventListener("DOMContentLoaded", (event) => {
   if (localStorage.getItem("language") == 1) {
     $(function () {
+      const descriptionIds = [
+        "descricao1",
+        "descricao2",
+        "descricao3",
+        "descricao4",
+        "descricao5",
+        "descricao6",
+      ];
+      var lang = localStorage.getItem("language");
+      if (lang === "1") {
+        lang = "fr";
+      } else if (lang === "2") {
+        lang = "en";
+      } else if (lang === "3") {
+        lang = "fr";
+      }
+
+      descriptionIds.forEach((descriptionId) => {
+        const textareaFrom = document.getElementById(descriptionId).textContent;
+        fetch(
+          `https://api.mymemory.translated.net/get?q=${textareaFrom}&langpair=${lang}|pt&key=38428e54204d341351e0&de=afonso16araujo@gmail.com`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if (data && data.responseData && data.responseData.translatedText) {
+              document.getElementById(descriptionId).textContent =
+                data.responseData.translatedText;
+            } else {
+              console.error("Failed to get translated text.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error occurred while fetching translation:", error);
+          });
+      });
       localStorage.setItem("language", 1);
       //login
       $("#title_login").text("Iniciar sessão em STR");
@@ -518,17 +661,53 @@ addEventListener("DOMContentLoaded", (event) => {
         .children()
         .eq(1)
         .text("A sua candidatura está a ser processada.");
-        $("#label_appliance_nome").text("Nome");
-    $("#label_appliance_sobrenome").text("Sobrenome");
-    $("#label_appliance_identificação").text("Número de identificação");
-    $("#label_appliance_civil").text("Estado civil");
-    $("#label_appliance_contacto").text("Forma de contacto");
-    $("#label_appliance_tel").text("Número de telemóvel");
-    $("#label_appliance_email").text("Endereço de email");
-    $("#label_appliance_motivacao").text("Motivação");
+      $("#label_appliance_nome").text("Nome");
+      $("#label_appliance_sobrenome").text("Sobrenome");
+      $("#label_appliance_identificação").text("Número de identificação");
+      $("#label_appliance_civil").text("Estado civil");
+      $("#label_appliance_contacto").text("Forma de contacto");
+      $("#label_appliance_tel").text("Número de telemóvel");
+      $("#label_appliance_email").text("Endereço de email");
+      $("#label_appliance_motivacao").text("Motivação");
+      $(".card-title-inside").text("Família");
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
+      const descriptionIds = [
+        "descricao1",
+        "descricao2",
+        "descricao3",
+        "descricao4",
+        "descricao5",
+        "descricao6",
+      ];
+      var lang = localStorage.getItem("language");
+      if (lang === "1") {
+        lang = "pt";
+      } else if (lang === "2") {
+        lang = "pt";
+      } else if (lang === "3") {
+        lang = "fr";
+      }
+
+      descriptionIds.forEach((descriptionId) => {
+        const textareaFrom = document.getElementById(descriptionId).textContent;
+        fetch(
+          `https://api.mymemory.translated.net/get?q=${textareaFrom}&langpair=${lang}|en&key=38428e54204d341351e0&de=afonso16araujo@gmail.com`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if (data && data.responseData && data.responseData.translatedText) {
+              document.getElementById(descriptionId).textContent =
+                data.responseData.translatedText;
+            } else {
+              console.error("Failed to get translated text.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error occurred while fetching translation:", error);
+          });
+      });
       localStorage.setItem("language", 2);
       $("#title_login").text("Sing in into STR");
       $(".input_email").attr("placeholder", "Email");
@@ -642,17 +821,53 @@ addEventListener("DOMContentLoaded", (event) => {
         .children()
         .eq(1)
         .text("Your application is being processed.");
-        $("#label_appliance_nome").text("Name");
-    $("#label_appliance_sobrenome").text("Lastname");
-    $("#label_appliance_identificacao").text("Identification number");
-    $("#label_appliance_civil").text("Marital status");
-    $("#label_appliance_contacto").text("Contact form");
-    $("#label_appliance_tel").text("Phone number");
-    $("#label_appliance_email").text("Email");
-    $("#label_appliance_motivacao").text("Motivation");
+      $("#label_appliance_nome").text("Name");
+      $("#label_appliance_sobrenome").text("Lastname");
+      $("#label_appliance_identificacao").text("Identification number");
+      $("#label_appliance_civil").text("Marital status");
+      $("#label_appliance_contacto").text("Contact form");
+      $("#label_appliance_tel").text("Phone number");
+      $("#label_appliance_email").text("Email");
+      $("#label_appliance_motivacao").text("Motivation");
+      $(".card-title-inside").text("Family");
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
+      const descriptionIds = [
+        "descricao1",
+        "descricao2",
+        "descricao3",
+        "descricao4",
+        "descricao5",
+        "descricao6",
+      ];
+      var lang = localStorage.getItem("language");
+      if (lang === "1") {
+        lang = "pt";
+      } else if (lang === "2") {
+        lang = "en";
+      } else if (lang === "3") {
+        lang = "pt";
+      }
+
+      descriptionIds.forEach((descriptionId) => {
+        const textareaFrom = document.getElementById(descriptionId).textContent;
+        fetch(
+          `https://api.mymemory.translated.net/get?q=${textareaFrom}&langpair=${lang}|fr&key=38428e54204d341351e0&de=afonso16araujo@gmail.com`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if (data && data.responseData && data.responseData.translatedText) {
+              document.getElementById(descriptionId).textContent =
+                data.responseData.translatedText;
+            } else {
+              console.error("Failed to get translated text.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error occurred while fetching translation:", error);
+          });
+      });
       localStorage.setItem("language", 3);
       $("#title_login").text("Connexion un STR");
       $(".input_email").attr("placeholder", "Email");
@@ -775,14 +990,15 @@ addEventListener("DOMContentLoaded", (event) => {
         .children()
         .eq(1)
         .text("Votre candidature est en cours de traitement.");
-        $("#label_appliance_nome").text("Nom");
-     $("#label_appliance_sobrenome").text("Lastname");
-     $("#label_appliance_identificacao").text("Numéro d'identification");
-     $("#label_appliance_civil").text("état matrimonial");
-     $("#label_appliance_contacto").text("Formulaire de contact");
-     $("#label_appliance_tel").text("Numéro de portable");
-     $("#label_appliance_email").text("Adresse e-mail");
-     $("#label_appliance_motivacao").text("Motivation");
+      $("#label_appliance_nome").text("Nom");
+      $("#label_appliance_sobrenome").text("Lastname");
+      $("#label_appliance_identificacao").text("Numéro d'identification");
+      $("#label_appliance_civil").text("état matrimonial");
+      $("#label_appliance_contacto").text("Formulaire de contact");
+      $("#label_appliance_tel").text("Numéro de portable");
+      $("#label_appliance_email").text("Adresse e-mail");
+      $("#label_appliance_motivacao").text("Motivation");
+      $(".card-title-inside").text("Famille");
     });
   }
 });

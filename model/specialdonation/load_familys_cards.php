@@ -20,8 +20,8 @@ $sql = "SELECT id, descricao, foto_familia, nome_familia,alimentacao,educacao,ha
                                 <div class="card h-100">
                                     <img src="data:image/*;base64,' . $foto_perfil . '" class="card-img-top h-100">
                                     <div class="card-body">
-                                        <h5 class="card-title"><b>Família ' . $row['nome_familia'] . '</b></h5>
-                                        <p class="card-text">' . $descricao . '...</p>
+                                        <h5 class="card-title"><b><p class="card-title-inside">Família</p> ' . $row['nome_familia'] . '</b></h5>
+                                        <p class="card-text" id="descricao'.$counter.'">' . $descricao . '...</p>
                                     </div>
                                     <div class="d-flex justify-content-center pb-3"> 
                                         <p class="px-3 '.$clicked_alimentacao.'" id='.$row["id"].'><img src="../view/assets/specialdonation/diet.png" style="border-radius: 50%;cursor: pointer;'.$show_alimentacao.'" class="class="py-3"></p>
@@ -32,4 +32,5 @@ $sql = "SELECT id, descricao, foto_familia, nome_familia,alimentacao,educacao,ha
                                 </div>
                             </div>
                         ';
+                        $counter++;
                     }
