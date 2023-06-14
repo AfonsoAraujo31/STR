@@ -20,18 +20,18 @@ while ($row = mysqli_fetch_array($result)) {
                $output = '
                     <div class="content">
                          <form>
-                              <p class="fs-3 text-dark text-bold">Informações</p>
+                              <p class="fs-3 text-dark text-bold title_informacoes">Informações</p>
                               <hr class="border border-2 opacity-75 border-dark"> 
                               <input type="text" id="tipo" name="tipo" class="custom-select" hidden value="' . $tipo . '">
                               <input type="text" id="id" name="id" class="custom-select" hidden value="' . $id . '">
                               <input type="text" id="email" name="email" class="custom-select" hidden value="' . $row['email'] . '">
                               <div class="user-details">
                                    <div class="input-box">
-                                        <span class="details">Nome da familia</span>
+                                        <span class="details details_popup">Nome da familia</span>
                                         <input type="text" class="custom-select" disabled value="' . $nome . '">
                                    </div>
                                    <div class="input-box">
-                                        <span class="details">Representante</span>
+                                        <span class="details details_popup">Representante</span>
                                         <input type="text" disabled value="' . $representante . '">
                                    </div>
                                    <div class="input-box" style="width:32%">
@@ -95,7 +95,6 @@ while ($row = mysqli_fetch_array($result)) {
                     </div>
                     ';
           }
-
           echo $output;
      }
 }

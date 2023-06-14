@@ -20,13 +20,13 @@ if ($result->num_rows > 0) {
         <div class="card mb-3">
             <div class="row g-0 p-2">
                 <div class="col-md-3 border-end card-body">
-                    <p><b>Tipo:</b></p>
+                    <p><b >Tipo:</b></p>
                     <p>' . $tipo . '</p>
-                    <p><b>Quantidade:</b></p>
+                    <p><b >Quantidade:</b></p>
                     <p>' . $quantidade . '</p>
-                    <p><b>Frequência:</b></p>
+                    <p><b >Frequência:</b></p>
                     <p>' . $frequencia . '</p>
-                    <p><b>Data de ínicio:</b></p>
+                    <p><b >Data de ínicio:</b></p>
                     <p>' . $data_inicio . '</p>
                 </div>
                 <div class="col-md-9">
@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
     echo '
         <div class="card text-center align-middle">
                 <div class="empty-icon-container">
-                    <div>
+                    <div class="warning_results">
                         <h2 class="pt-2">0 resultados encontrados</h2>
                         <p>Desculpe! Neste momento não existe nenhuma candidatura.</p>
                     </div>

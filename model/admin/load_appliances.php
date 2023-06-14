@@ -123,7 +123,7 @@ if ($result->num_rows > 0) {
                         <div class="pebble2"></div>
                         <div class="pebble3"></div>
                     </div>
-                    <div>
+                    <div class="warning_results">
                         <h2 class="pt-2">0 resultados encontrados</h2>
                         <p>Desculpe! Neste momento não existe nenhuma candidatura.</p>
                     </div>

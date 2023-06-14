@@ -27,27 +27,27 @@ while ($row = mysqli_fetch_array($result)) {
                               <input type="text" id="email" name="email" class="custom-select" hidden value="' . $row['email'] . '">
                               <div class="user-details">
                                    <div class="input-box">
-                                        <span class="details">Nome da familia</span>
+                                        <span class="details" id="nome_familia">Nome da familia</span>
                                         <input type="text" class="custom-select" disabled value="' . $nome . '">
                                    </div>
                                    <div class="input-box">
-                                        <span class="details">Representante</span>
+                                        <span class="details" id="representante">Representante</span>
                                         <input type="text" disabled value="' . $representante . '">
                                    </div>
                                    <div class="input-box" style="width:32%">
-                                        <span class="details">Data de chegada</span>
+                                        <span class="details" id="data_chegada">Data de chegada</span>
                                         <input type="text" class="custom-select" disabled value="' . $data_chegada . '">
                                    </div>
                                    <div class="input-box" style="width:32%">
-                                        <span class="details">Origem</span>
+                                        <span class="details" id="Origem">Origem</span>
                                         <input type="text" disabled value="' . $origem . '">
                                    </div>
                                    <div class="input-box" style="width:32%">
-                                        <span class="details">Agregado familiar</span>
+                                        <span class="details" id="agregado">Agregado familiar</span>
                                         <input type="text" disabled value="' . $agregado_familiar . '">
                                    </div>
                                    <div class="input-box">
-                                        <span class="details">História</span>
+                                        <span class="details" id="historia">História</span>
                                         <textarea disabled rows="5">' . $historia . '</textarea>
                                    </div>
                               </div>

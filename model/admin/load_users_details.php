@@ -11,7 +11,7 @@ if (isset($_POST["emp_id"])) {
                <form>
                     <div class="user-details">
                          <div class="input-box">
-                              <span class="details">Nome</span>
+                              <span class="details details_editar">Nome</span>
                               <input type="text" id="nome" name="nome" class="custom-select" value="' . $row["nome"] . '">
                          </div>
                          <div class="input-box">

@@ -1273,8 +1273,8 @@
     <!-- Language -->
     <script type="module" src="./lang/common/header_lang.js"></script>
     <script type="module" src="./lang/common/language_lang.js"></script>
-    <script type="module" src="./lang/login_lang.js"></script>
     <script type="module" src="./lang/admin_lang.js"></script>
+    <script type="module" src="./lang/userpage_lang.js"></script>
     <script type="module" src="../controller/common/include_components.js"></script>
     <script type="module" src="../configurations/loadcontent.js"></script>
     <script type="module" src="../controller/admin/admin.js"></script>
@@ -1290,6 +1290,7 @@
     <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 </body>

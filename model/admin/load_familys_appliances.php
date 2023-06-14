@@ -108,13 +108,13 @@ if ($result->num_rows > 0) {
                         <div class="card border-top-0">
                             <hr style="margin:3%;">
                             <div class="card-body">
-                                <p><b>Tipo:</b> ' . $tipo . '</p>
-                                <p><b>Quantidade:</b> ' . $quantidade . '</p>
-                                <p><b>Frequência:</b> ' . $frequencia . '</p>
-                                <p><b>Data de ínicio:</b> ' . $data_inicio . '</p>
+                                <p><b class="appliance_familys_description">Tipo:</b> ' . $tipo . '</p>
+                                <p><b class="appliance_familys_description">Quantidade:</b> ' . $quantidade . '</p>
+                                <p><b class="appliance_familys_description">Frequência:</b> ' . $frequencia . '</p>
+                                <p><b class="appliance_familys_description">Data de ínicio:</b> ' . $data_inicio . '</p>
                                 <br>
                                 <b>Motivação:</b>
-                                <p>' . $row['motivacao'] . '</p>
+                                <p class="appliance_familys_description">' . $row['motivacao'] . '</p>
                             </div>
                             <div class="card-body">
                                 <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ', \'' . $tipo . '\');">Aprovar</button>
@@ -139,7 +139,7 @@ if ($result->num_rows > 0) {
                         <div class="pebble2"></div>
                         <div class="pebble3"></div>
                     </div>
-                    <div>
+                    <div class="warning_results">
                         <h2 class="pt-2">0 resultados encontrados</h2>
                         <p>Desculpe! Neste momento não existe nenhuma candidatura.</p>
                     </div>
