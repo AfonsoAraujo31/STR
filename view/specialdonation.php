@@ -53,6 +53,7 @@
         <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
         <li class="li"><a class="active hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
         <li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria </a></li>
+        <li class="li"><a class="text-label-gray hover:text-white login" href="../view/login.php"><i class="fa-solid fa-user"></i> Conta</a></li>
         <li>
           <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
           <div class="language">

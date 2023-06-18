@@ -118,7 +118,7 @@ function familyCardfr() {
 
 $(function () {
   $(".pt").click(function () {
-    familyCardpt();
+    //familyCardpt();
     localStorage.setItem("language", 1);
     //sidebar
     $(".nav-text").eq(0).text("Perfil");
@@ -223,7 +223,7 @@ $(function () {
  */
 $(function () {
   $(".en").click(function () {
-    familyCarden();
+    //familyCarden();
     localStorage.setItem("language", 2);
     //sidebar
     $(".nav-text").eq(0).text("Profile");
@@ -323,7 +323,7 @@ $(function () {
  */
 $(function () {
   $(".fr").click(function () {
-    familyCardfr();
+    //familyCardfr();
     localStorage.setItem("language", 3);
     //sidebar
     $(".nav-text").eq(0).text("Profil");
@@ -423,7 +423,7 @@ $(function () {
 addEventListener("DOMContentLoaded", (event) => {
   if (localStorage.getItem("language") == 1) {
     $(function () {
-      familyCardpt();
+      //familyCardpt();
       localStorage.setItem("language", 1);
       //sidebar
       $(".nav-text").eq(0).text("Perfil");
@@ -521,7 +521,7 @@ addEventListener("DOMContentLoaded", (event) => {
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
-      familyCarden();
+      //familyCarden();
       localStorage.setItem("language", 2);
       //sidebar
       $(".nav-text").eq(0).text("Profile");
@@ -616,7 +616,7 @@ addEventListener("DOMContentLoaded", (event) => {
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
-      familyCardefr();
+      //familyCardefr();
       localStorage.setItem("language", 3);
       //sidebar
       $(".nav-text").eq(0).text("Profil");

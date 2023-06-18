@@ -21,7 +21,6 @@ header ul {
   text-align: center;
 }
 header ul .li {
-  display: inline-block;
   line-height: 80px;
 }
 header ul .li a {
@@ -57,27 +56,40 @@ header ul .li a {
 .user-container:hover {
   transform: translateY(-5px);
 }
+@media (min-width: 1200px) {
+  header ul .li {
+    display: inline-block;
+  }
+  .login{
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
+  .slideshow {
+    box-shadow: 0 5px 25px transparent;
+  }
   .checkbtn {
     display: block;
   }
   .nav_links {
-    position: fixed;
-    margin-top: 0px !important;
-  }
-  .nav_links {
-    max-width: 70%;
-    z-index: 2;
-    position: fixed;
-    height: 100vh;
+    position: relative; 
+    width: 100%;
+    z-index: 10;
+    padding-bottom: 15vh;
     top: 90px;
     left: -100%;
     text-align: left;
-    display: block;
     transition: all 0.5s;
   }
   .nav_links .li a {
+    max-width: 50%;
+    min-width: 50%;
     font-size: 20px;
+  }
+  .nav_links .li{
+    border-bottom: 2px solid #d1cfcf;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   a:hover,
   a.active {
@@ -90,28 +102,17 @@ header ul .li a {
     position: relative;
     bottom: 18px;
   }
-
-  .user-container {
-    position: absolute;
-    right: 100px;
-    top: 420px;
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    transition: transform 0.5s ease;
+  .login{
+    display: block;
   }
-  .language {
-    position: absolute;
-    padding-right: 150px;
-    padding-top: 330px;
-    width: 120px;
-    margin-left: 40px;
-    font-weight: normal;
-    z-index: 5;
+  .user-container{
+    display: none;
+  }
+  .language{
+    margin-top: 420px;
+    padding-right: -25px;
   }
 }
-
 .nav_links .li a {
   position: relative;
   text-decoration: none;

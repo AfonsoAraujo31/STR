@@ -16,6 +16,7 @@ $(function () {
       .children()
       .eq(3)
       .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Galeria');
+    $(".li").children().eq(4).html('<i class="fa-solid fa-user"></i> Conta');
   });
 });
 $(function () {
@@ -35,6 +36,7 @@ $(function () {
       .children()
       .eq(3)
       .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Gallery');
+      $(".li").children().eq(4).html('<i class="fa-solid fa-user"></i> Account');
   });
 });
 $(function () {
@@ -57,6 +59,7 @@ $(function () {
       .children()
       .eq(3)
       .html('<i class="fa-solid fa-duotone fa-camera-retro"></i>s Galerie');
+      $(".li").children().eq(4).html('<i class="fa-solid fa-user"></i> Compte');
   });
 });
 
@@ -82,6 +85,7 @@ addEventListener("DOMContentLoaded", (event) => {
         .children()
         .eq(3)
         .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Galeria');
+        $(".li").children().eq(4).html('<i class="fa-solid fa-user"></i> Conta');
     });
   } else if (localStorage.getItem("language") == 2) {
     $(function () {
@@ -101,6 +105,7 @@ addEventListener("DOMContentLoaded", (event) => {
         .children()
         .eq(3)
         .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Gallery');
+        $(".li").children().eq(4).html('<i class="fa-solid fa-user"></i> Account');
     });
   } else if (localStorage.getItem("language") == 3) {
     $(function () {
@@ -121,6 +126,7 @@ addEventListener("DOMContentLoaded", (event) => {
         .children()
         .eq(3)
         .html('<i class="fa-solid fa-duotone fa-camera-retro"></i> Galerie  ');
+        $(".li").children().eq(4).html('<i class="fa-solid fa-user"></i> Compte');
     });
   }
 });

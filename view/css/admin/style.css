@@ -151,8 +151,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Dosis', sans-serif;
-
+  font-family: "Dosis", sans-serif;
 }
 
 .animation-container {
@@ -174,29 +173,29 @@
   height: 40px;
   margin-left: -20px;
   background-size: contain;
-  animation: bounceAnim 1s cubic-bezier(.63, .09, .75, .46) infinite alternate,
-      spinAnim 3s linear infinite;
+  animation: bounceAnim 1s cubic-bezier(0.63, 0.09, 0.75, 0.46) infinite
+      alternate,
+    spinAnim 3s linear infinite;
 }
 
 @keyframes bounceAnim {
-
   0%,
   10% {
-      bottom: 50%;
+    bottom: 50%;
   }
 
   100% {
-      bottom: 0%;
+    bottom: 0%;
   }
 }
 
 @keyframes spinAnim {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -232,11 +231,11 @@
 
 @keyframes pebblesAnim {
   0% {
-      right: -20%;
+    right: -20%;
   }
 
   100% {
-      right: 110%;
+    right: 110%;
   }
 }
 
@@ -248,7 +247,6 @@
   outline: none !important;
   border-color: #ff5e14a8;
   box-shadow: none;
-
 }
 
 .custom-select:focus {
@@ -256,3 +254,4 @@
   border-color: #ff5e14a8;
   box-shadow: none;
 }
+
