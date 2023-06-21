@@ -1,4 +1,13 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
 $host = "localhost";
 $usuario = "root";
 $senha = "";
@@ -36,10 +45,7 @@ if (date("m") == 1) {
 }
 $data = "$mes  " . date("d") . ",   " . date("Y");
 
-echo $_GET['id'];
-echo $_GET['tipo'];
-
-$query = "SELECT id,tipo,email FROM candidaturas_familias WHERE id_familia = '" . $_GET['id'] . "' AND tipo = '".$_GET['tipo']."'";
+$query = "SELECT id,tipo,email FROM candidaturas_familias WHERE id_familia = '" . $_GET['id'] . "' AND tipo = '" . $_GET['tipo'] . "'";
 $result = mysqli_query($conn, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
@@ -60,7 +66,43 @@ while ($row = mysqli_fetch_assoc($result)) {
     if ($conn->query($sql) === TRUE) {
       $sql = "INSERT INTO notificacoes (`email`, `data_registo`, `tipo`,`foto`) VALUES ('" . $email . "','" . $data . "','Candidatura Aprovada!','../view/assets/notifications/smile.png')";
       if ($conn->query($sql) === TRUE) {
-        echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_COOKIE["current_user"] . "';</script>";
+
+        $mail = new PHPMailer(true);
+
+        try {
+          // Server settings
+          $mail->isSMTP();
+          $mail->Host       = 'smtp.gmail.com';
+          $mail->SMTPAuth   = true;
+          $mail->Username   = 'afonso16araujo@gmail.com';
+          $mail->Password   = 'ybicdcikrodnnabx';
+          $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+          $mail->Port       = 465;
+
+          // Recipients
+          $mail->setFrom('afonso16araujo@gmail.com', 'STR');
+          $mail->addAddress('' . $email . '');
+
+          // Content
+          $mail->isHTML(true);
+          $mail->Subject = 'Candidatura Aceite - Informações de Contacto';
+          $mail->Body    = 'Caro(a) doador especial,<br>
+          É com grande satisfação que lhe informamos que sua candidatura foi aceita na nossa organização. Parabenizamos pela conquista e temos a certeza de que você contribuirá significativamente para a nossa causa.<br><br>
+          Para facilitar a comunicação e garantir uma integração adequada, solicitamos que forneça as seguintes informações de contato:<br>
+            Morada: Rua do Carmo, Lisboa Nº 58<br>
+            Número de Telefone: +351 974 741 635<br>
+            Novamente, parabéns pela aprovação da sua candidatura!<br>
+            Atenciosamente,<br><br>
+            Afonso Araújo,<br>
+            STR
+          ';
+          $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+          $mail->send();
+          echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_COOKIE["current_user"] . "';</script>";
+        } catch (Exception $e) {
+          echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_COOKIE["current_user"] . "';</script>";
+        }
       } else {
         echo "<script>location.href='http://localhost/STR/view/user_page.php?email=" . $_COOKIE["current_user"] . "&error=updatefail';</script>";
       }
