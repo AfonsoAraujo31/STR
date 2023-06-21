@@ -32,8 +32,8 @@ if ($result->num_rows > 0) {
         if ($foto_perfil == "") {
             echo '
             <div class="accordion-item">
-                <h2 class="accordion-header" id="' . $id . '">
-                    <button class="accordion-button bg-transparent" onclick="clicked();" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                <div class="accordion-header" id="' . $id . '" onclick="clicked();" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                    
                         <div class="card border-bottom-0">
                             <div class="row no-gutters">
                                 <div class="col-md-3">
@@ -52,8 +52,8 @@ if ($result->num_rows > 0) {
                                 </div>
                             </div>
                         </div>
-                    </button>
-                </h2>
+                    
+                </div>
                 <div id="' . $aria_controls . '" class="accordion-collapse collapse ' . $show_class . '" aria-labelledby="' . $id . '" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="card border-top-0">
@@ -65,7 +65,7 @@ if ($result->num_rows > 0) {
                                 <p><b>Data de ínicio:</b> ' . $data_inicio . '</p>
                                 <br>
                                 <b>Motivação:</b>
-                                <p>' . $row['motivacao'] . '</p>
+                                <p>' . $motivacao . '</p>
                             </div>
                             <div class="card-body">
                                 <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ');">Aprovar</button>
@@ -81,8 +81,8 @@ if ($result->num_rows > 0) {
         } else {
             echo '
             <div class="accordion-item">
-                <h2 class="accordion-header" id="' . $id . '">
-                    <button class="accordion-button bg-transparent" onclick="clicked();" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                <div class="accordion-header" id="' . $id . '" onclick="clicked();" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                    
                         <div class="card border-bottom-0">
                             <div class="row no-gutters">
                                 <div class="col-md-3">
@@ -101,23 +101,23 @@ if ($result->num_rows > 0) {
                                 </div>
                             </div>
                         </div>
-                    </button>
-                </h2>
+                    
+                </div>
                 <div id="' . $aria_controls . '" class="accordion-collapse collapse ' . $show_class . '" aria-labelledby="' . $id . '" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="card border-top-0">
                             <hr style="margin:3%;">
                             <div class="card-body">
-                                <p><b class="appliance_familys_description">Tipo:</b> ' . $tipo . '</p>
-                                <p><b class="appliance_familys_description">Quantidade:</b> ' . $quantidade . '</p>
-                                <p><b class="appliance_familys_description">Frequência:</b> ' . $frequencia . '</p>
-                                <p><b class="appliance_familys_description">Data de ínicio:</b> ' . $data_inicio . '</p>
+                                <p><b>Tipo:</b> ' . $tipo . '</p>
+                                <p><b>Quantidade:</b> ' . $quantidade . '</p>
+                                <p><b>Frequência:</b> ' . $frequencia . '</p>
+                                <p><b>Data de ínicio:</b> ' . $data_inicio . '</p>
                                 <br>
                                 <b>Motivação:</b>
-                                <p class="appliance_familys_description">' . $row['motivacao'] . '</p>
+                                <p>' . $motivacao . '</p>
                             </div>
                             <div class="card-body">
-                                <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ', \'' . $tipo . '\');">Aprovar</button>
+                                <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ');">Aprovar</button>
                                 <button type="button" class="btn btn-danger float-end" style="background-color:#dd3445" onclick="reprove_family(' . $idcandidatura . ');">Rejeitar</button>
                             </div>
                         </div>

@@ -71,9 +71,8 @@ if ($result->num_rows > 0) {
         } else {
             echo '
         <div class="accordion-item">
-            <h2 class="accordion-header" id="' . $id . '">
-                <button class="accordion-button bg-transparent" onclick="clicked();" style="width:100%;height: 10%;" type="button" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
-                    <div class="card border-bottom-0">
+            <div class="accordion-header" id="' . $id . '" onclick="clicked();" data-bs-toggle="collapse" data-bs-target="#' . $aria_controls . '" aria-expanded="true" aria-controls="' . $aria_controls . '">
+                <div class="card border-bottom-0">
                         <div class="row no-gutters">
                             <div class="col-md-3">
                                 <img src="data:image/*;base64,' . $foto_perfil . '" class="card-img" alt="..." style="height:full;"/>
@@ -91,8 +90,8 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                     </div>
-                </button>
-            </h2>
+                
+            </div>
             <div id="' . $aria_controls . '" class="accordion-collapse collapse ' . $show_class . '" aria-labelledby="' . $id . '" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="card border-top-0">

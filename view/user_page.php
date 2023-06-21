@@ -810,7 +810,7 @@
             <div id="APIRP" class="tabcontent">
                 <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
                     <?php
-                    $db = 2;
+                    $db = 3;
                     $sql = "SELECT * FROM comentarios_apirp";
                     $result = mysqli_query($conn, $sql);
                     $counter = 1;
@@ -860,7 +860,7 @@
             <div id="CPR" class="tabcontent">
                 <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
                     <?php
-                    $db = 2;
+                    $db = 4;
                     $sql = "SELECT * FROM comentarios_cpr";
                     $result = mysqli_query($conn, $sql);
                     $counter = 1;
@@ -910,7 +910,7 @@
             <div id="CV" class="tabcontent">
                 <div class="accordion" id="accordionExample" style="height: 500px;overflow-y:auto;">
                     <?php
-                    $db = 2;
+                    $db = 5;
                     $sql = "SELECT * FROM comentarios_cv";
                     $result = mysqli_query($conn, $sql);
                     $counter = 1;
@@ -960,15 +960,15 @@
     </div>
     <br>
     <div class="container_preferencias_fotoperfil">
-        <div class="container_preferencias" style="max-width: 50%;">
+        <div class="container_preferencias" >
             <div class="title">Candidatos a Doador Especial</div>
             <br>
             <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
                 <?php include '../model/admin/load_appliances.php'; ?>
             </div>
         </div>
-        <div class="container_obs" style="max-height: 450px;overflow-y:auto;">
-            <div class="title" style="font-size: 25px;">Candidaturas às famílias</div>
+        <div class="container_preferencias" >
+            <div class="title">Candidatos às familias</div>
             <br>
             <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
                 <?php include '../model/admin/load_familys_appliances.php'; ?>
