@@ -24,6 +24,7 @@ if ($_COOKIE['sing_in']) {
   <title>STR</title>
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="./css/login.scss">
+  <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
   <div id="includedCssContent"></div>
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -83,6 +84,59 @@ if ($_COOKIE['sing_in']) {
       margin: 0;
     }
   </style>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Recuperar conta</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <input type="text" id="nome" class="form-control w-100" />
+                  <label class="form-label" for="form3Example1">Nome</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <input type="text" id="sobrenome" class="form-control" />
+                  <label class="form-label" for="form3Example2">Sobrenome</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-outline mb-4">
+              <input type="email" id="email" class="form-control" />
+              <label class="form-label" for="form3Example3">Endereço de email</label>
+            </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary" onclick="enviarEmailRecuperacao();">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function enviarEmailRecuperacao() {
+      var email = document.getElementById('email').value;
+      var nome = document.getElementById('nome').value;
+      var sobrenome = document.getElementById('sobrenome').value;
+      if (document.getElementById('email').value == "" || document.getElementById('nome').value == "" || document.getElementById('sobrenome').value == "") {
+        $("#errorAlertModal").show("medium");
+        setTimeout(function() {
+          $("#errorAlertModal").hide("medium");
+        }, 4000);
+      } else {
+        setTimeout(function() {
+          location.href = "http://localhost/STR/model/password_recovery.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome;
+        }, 300);
+      }
+    }
+  </script>
   <div id="container" class="cont">
     <div class="signin-signup">
       <!-- LOGIN -->
@@ -101,6 +155,7 @@ if ($_COOKIE['sing_in']) {
               <input type="password" id="input_password" placeholder="Palavra chave" class="form-control form-control-lg form-rounded" />
             </div>
           </div>
+          <a class="small text-muted button" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal">Esqueceu-se da palavra chave?</a>
           <button class="btn btn-dark btn-lg btn-block btn_login" onclick="login();" type="button">Entrar</button>
         </div>
       </form>

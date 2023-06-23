@@ -8,6 +8,7 @@
     <title>STR</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/association.scss" />
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <div id="includedCssContent"></div>
     <!-- Bootstrap -->
     <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -171,10 +172,65 @@
                                         <button onclick="login();" class="btn btn-dark btn-lg btn-block btn_login" type="button">Entrar</button>
                                     </div>
 
-                                    <a class="small text-muted" href="#!">Esqueceu-se da palavra chave?</a>
+                                    <a class="small text-muted button" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Esqueceu-se da palavra chave?</a>
                                     <p class="mb-5 pb-lg-2 text" style="color: #202020;">Não têm conta? <a href="http://localhost/STR/login/login.php" class="link" style="color: #202020;">Registe-se aqui!</a></p>
                                     <a href="#!" class="small text-muted">Termos.</a>
                                     <a href="#!" class="small text-muted">Política de privacidade</a>
+                                    <!-- MODAL -->
+                                    <div class="modal fade scrollable-content" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div id="errorAlertModal" class="alert alert-warning hide-item" role="alert">É necessário preencher o(s) campo(s)!</div>
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Recuperar conta</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="row mb-4">
+                                                            <div class="col">
+                                                                <div class="form-outline">
+                                                                    <input type="text" id="nome" class="form-control" />
+                                                                    <label class="form-label" for="form3Example1">Nome</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-outline">
+                                                                    <input type="text" id="sobrenome" class="form-control" />
+                                                                    <label class="form-label" for="form3Example2">Sobrenome</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-outline mb-4">
+                                                            <input type="email" id="email" class="form-control" />
+                                                            <label class="form-label" for="form3Example3">Endereço de email</label>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                    <button type="button" class="btn btn-primary" onclick="enviarEmailRecuperacao();">Enviar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        function enviarEmailRecuperacao() {
+                                            var email = document.getElementById('email').value;
+                                            var nome = document.getElementById('nome').value;
+                                            var sobrenome = document.getElementById('sobrenome').value;
+                                            if (document.getElementById('email').value == "" || document.getElementById('nome').value == "" || document.getElementById('sobrenome').value == "") {
+                                                $("#errorAlertModal").show("medium");
+                                                setTimeout(function() {
+                                                    $("#errorAlertModal").hide("medium");
+                                                }, 4000);
+                                            } else {
+                                                setTimeout(function() {
+                                                    location.href = "http://localhost/STR/model/password_recovery.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome;
+                                                }, 300);
+                                            }
+                                        }
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +247,9 @@
                                 <textarea class="form-control" id="textAreaExample" rows="4" style="background: #fff;" name="comment"></textarea>
 
                                 <input name="user" id="idUnico" hidden>
-                                <script>const db = "apirp";</script>
+                                <script>
+                                    const db = "apirp";
+                                </script>
                             </div>
                         </div>
                         <div class="float-end mt-2 pt-1">
