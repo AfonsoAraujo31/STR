@@ -68,7 +68,7 @@ if ($result->num_rows > 0) {
                                 <p>' . $motivacao . '</p>
                             </div>
                             <div class="card-body">
-                                <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ');">Aprovar</button>
+                            <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ', \'' . $tipo . '\');">Aprovar</button>
                                 <button type="button" class="btn btn-danger float-end" style="background-color:#dd3445" onclick="reprove_family(' . $idcandidatura . ');">Rejeitar</button>
                             </div>
                         </div>
@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
                                 <p>' . $motivacao . '</p>
                             </div>
                             <div class="card-body">
-                                <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ');">Aprovar</button>
+                            <button type="button" class="btn btn-success float-end" style="background-color:#188755;margin-left:5px;" onclick="approve_family(' . $idcandidatura . ', \'' . $tipo . '\');">Aprovar</button>
                                 <button type="button" class="btn btn-danger float-end" style="background-color:#dd3445" onclick="reprove_family(' . $idcandidatura . ');">Rejeitar</button>
                             </div>
                         </div>
