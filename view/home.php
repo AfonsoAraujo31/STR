@@ -27,7 +27,7 @@
       <li class="li"><a class="active hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial</a></li>
-      <li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria</a></li>
+      <!--<li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria</a></li>-->
       <li class="li"><a class="text-label-gray hover:text-white login" href="../view/login.php"><i class="fa-solid fa-user"></i> Conta</a></li>
       <li>
         <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -53,9 +53,6 @@
                 <div class="title_slide1 text-white">
                   Bem vindo!
                 </div>
-                <div class="text_slide1 text-white">
-                  <p>Descrição</p>
-                </div>
                 <a href="#about" class="btn">
                   <span class="btn-inner_slide1">Ver mais</span>
                 </a>
@@ -69,25 +66,19 @@
             <div class="slide-content">
               <div class="caption">
                 <div class="title_slide2 text-white">Ajuda os mais necessitados</div>
-                <div class="text_slide2 text-white">
-                  <p>Descrição</p>
-                </div>
                 <a href="#" class="btn">
                   <span class="btn-inner_slide2 ">Ver mais</span>
                 </a>
               </div>
             </div>
             <div class="image-container">
-              <img src="../view/assets/slideshow/image_slide2.png" alt="" class="image" />
+              <img src="../view/assets/slideshow/image_slide4.png" alt="" class="image" />
             </div>
           </div>
           <div class="slide">
             <div class="slide-content">
               <div class="caption">
                 <div class="title_slide3 text-white">Inscreve-te!</div>
-                <div class="text_slide3 text-white">
-                  <p>Descrição</p>
-                </div>
                 <a href="#" class="btn">
                   <span class="btn-inner_slide3">Ver mais</span>
                 </a>
@@ -95,22 +86,6 @@
             </div>
             <div class="image-container">
               <img src="../view/assets/slideshow/image_slide3.png" alt="" class="image" />
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-content">
-              <div class="caption">
-                <div class="title_slide4 text-white">Não sei</div>
-                <div class="text_slide4 text-white">
-                  <p>Descrição</p>
-                </div>
-                <a href="#" class="btn">
-                  <span class="btn-inner_slide4">Ver mais</span>
-                </a>
-              </div>
-            </div>
-            <div class="image-container">
-              <img src="../view/assets/slideshow/image_slide4.png" alt="" class="image" />
             </div>
           </div>
         </div>
@@ -183,7 +158,7 @@
     <div class="item1">
       <div class="relative">
         <h2 class="content-title text-black pb-4">Quantos refugiados existem no mundo?</h2>
-        <p class="content-text text-weak-gray">Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas.
+        <p class="content-text text-weak-gray text-justify">Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas.
           Entre elas estão quase 27,1 milhões de refugiados, cerca de metade dos quais têm menos de 18 anos, pessoas a
           quem foi negada a nacionalidade e
           que não têm acesso a direitos básicos como educação, saúde, emprego e liberdade de movimento. <br><br>O gráfico

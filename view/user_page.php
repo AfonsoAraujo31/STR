@@ -34,7 +34,7 @@
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria </a></li>
+            <!--<li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria</a></li>-->
             <li class="li"><a class="text-label-gray hover:text-white login" href="../view/login.php"><i class="fa-solid fa-user"></i> Conta</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -256,7 +256,7 @@
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     if ($row["email"] == $_GET["email"]) {
-                                        echo "<input type='number' name='num_telefone' pattern='[0-9]{9}' value='" . $row["num_telefone"] . "'/>";
+                                        echo "<input type='number' id='num_telefone_perfil' name='num_telefone' pattern='[0-9]{9}' value='" . $row["num_telefone"] . "'/>";
                                     }
                                 }
                             }
@@ -290,7 +290,7 @@
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     if ($row["email"] == $_GET["email"]) {
-                                        echo "<input type='date' name='data_nascimento' value='" . $row["data_nascimento"] . "'/>";
+                                        echo "<input type='date' name='data_nascimento' max='2005-08-20' value='" . $row["data_nascimento"] . "'/>";
                                     }
                                 }
                             }
@@ -1243,6 +1243,20 @@
             }
         });
         var inputElement = document.getElementById('myInput');
+        restrictDigits(inputElement);
+
+        function restrictDigits(inputElement) {
+            inputElement.addEventListener('input', function(event) {
+                var inputValue = event.target.value;
+                var digitCount = inputValue.replace(/[^0-9]/g, '').length;
+
+                if (digitCount > 8) {
+                    event.target.value = inputValue.slice(0, -1);
+                }
+            });
+        }
+
+        var inputElement = document.getElementById('num_telefone_perfil');
         restrictDigits(inputElement);
 
         function restrictDigits(inputElement) {

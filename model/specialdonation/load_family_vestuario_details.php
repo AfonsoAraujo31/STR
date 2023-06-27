@@ -84,7 +84,7 @@ while ($row = mysqli_fetch_array($result)) {
                                    </div>
                                    <div class="input-box" style="width:33%;">
                                         <span class="details">Data de início</span>
-                                        <input type="date" id="data_inicio"/>
+                                        <input type="date" min="2023-07-20" id="data_inicio"/>
                                    </div>
                                    <div class="input-box">
                                         <span class="details">Motivação</span>

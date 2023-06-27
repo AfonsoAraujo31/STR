@@ -41,6 +41,20 @@ if (isset($_POST["emp_id"])) {
                     </div>
                </form>
           </div>
+          <script>
+          var inputElement = document.getElementById("num_telefone");
+        restrictDigits(inputElement);
+
+        function restrictDigits(inputElement) {
+            inputElement.addEventListener("input", function(event) {
+                var inputValue = event.target.value;
+                var digitCount = inputValue.replace(/[^0-9]/g, "").length;
+
+                if (digitCount > 8) {
+                    event.target.value = inputValue.slice(0, -1);
+                }
+            });
+        }</script>
           ';
      }
 

@@ -13,7 +13,15 @@ $email = $_GET['email'];
 setcookie("recovery_user", $_GET['email'],0,"/");
 try {
     // Server settings
-    //codigo
+    $mail->isSMTP();
+          $mail->Host       = 'smtp.gmail.com';
+          $mail->SMTPAuth   = true;
+          $mail->Username   = 'afonso16araujo@gmail.com';
+          $mail->Password   = 'ybicdcikrodnnabx';
+          $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+          $mail->Port       = 465;
+          // Recipients
+          $mail->setFrom('afonso16araujo@gmail.com', 'STR');
     $mail->addAddress('' . $email . '');
 
     // Content

@@ -28,7 +28,7 @@
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="active" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria </a></li>
+            <!--<li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria</a></li>-->
             <li class="li"><a class="text-label-gray hover:text-white login" href="../view/login.php"><i class="fa-solid fa-user"></i> Conta</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -76,7 +76,7 @@
                             <i class='fa fa-star'></i>
                             <i class='fa fa-star'></i>
                         </div>
-                        <div class="description">
+                        <div class="description text-justify">
                             <p>Ao longo de 30 anos, o CPR prestou apoio a cerca de 14,000 requerentes e refugiados em Portugal, criou respostas especializadas para as necessidades jurídicas, sociais e de integração desta população, construiu três centros de acolhimento, sendo pioneiro no ensino da Língua Portuguesa como Língua Estrangeira e Alfabetização.</p>
                         </div>
                     </div>

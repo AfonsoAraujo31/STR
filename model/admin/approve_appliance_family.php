@@ -71,7 +71,15 @@ while ($row = mysqli_fetch_assoc($result)) {
 
         try {
           // Server settings
-          //codigo aqui
+          $mail->isSMTP();
+          $mail->Host       = 'smtp.gmail.com';
+          $mail->SMTPAuth   = true;
+          $mail->Username   = 'afonso16araujo@gmail.com';
+          $mail->Password   = 'ybicdcikrodnnabx';
+          $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+          $mail->Port       = 465;
+          // Recipients
+          $mail->setFrom('afonso16araujo@gmail.com', 'STR');
           $mail->addAddress('' . $email . '');
 
           // Content

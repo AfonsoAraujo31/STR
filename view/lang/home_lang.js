@@ -26,7 +26,7 @@ $(function () {
       "É rápido e fácil de aceder. <br/> Basta clicares em Iniciar sessão no topo da página e procederes ao registo no nosso website."
     );
     $(".text2_card").text(
-      "Agora que fizeste o registo está apto para te candidatares. Para isso deves ir ao teu perfil e encontrarás a secção da Doação Especial."
+      "Agora que fizeste o registo estás apto para te candidatares. Para isso deves ir ao teu perfil e encontrarás a secção da Doação Especial."
     );
     $(".text3_card").html(
       "Foste aceite? Perfeito! <br/> Agora podes começar a ajudar os mais necessitados. Obrigado pela tua contribuição!"
@@ -34,7 +34,7 @@ $(function () {
     //cards about
     $(".about_tittle").text("Sobre nós");
     $(".text").text(
-      "O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Resringe-se a este tema, por ser um assunto da atualidade, e de extrema relevância. Para colmatar este problema o STR disponibliza ferramentas onde particulares e empresas podem candidatar-se no auxílio a famílias refugiadas, permitindo não ser só informativo, mas também interativo."
+      "O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Resringe-se a este tema, por ser um assunto da atualidade, e de extrema relevância. Para colmatar este problema o STR disponibiliza ferramentas onde particulares e empresas podem candidatar-se no auxílio a famílias refugiadas, permitindo não ser só informativo, mas também interativo."
     );
     $(".skills").children().eq(0).text("Voluntariado");
     $(".skills").children().eq(1).text("Interativo & Informativo");
@@ -42,7 +42,7 @@ $(function () {
     //bar chart
     $(".content-title").text("Quantos refugiados existem no mundo?");
     $(".content-text").html(
-      "Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas. Entre elas estão quase 27,1 milhões de refugiados, cerca de metade dos quais têm menos de 18 anos, pessoas a quem foi negada a nacionalidade e que não têm acesso a direitos básicos como educação, saúde, emprego e liberdade de movimento. <br><br>O gráfico ao lado mostra que 65% saíram de apenas cinco países. Os números não somam 100 por cento devido a arredondamentos, este também exclui refugiados palestinos sob mandato da UNRWA. Este é o número de refugiados venezuelanos e venezuelanos deslocados no exterior. "
+      "Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas. Entre elas estão quase 27,1 milhões de refugiados, cerca de metade dos quais têm menos de 18 anos, pessoas a quem foi negada a nacionalidade e que não têm acesso a direitos básicos como educação, saúde, emprego e liberdade de movimento. <br><br>O gráfico ao lado mostra que 65% saíram de apenas cinco países. Os números não somam 100 por cento devido a arredondamentos, este também exclui refugiados palestinos sob mandato da UNRWA. Este é o número de refugiados venezuelanos deslocados no exterior. "
     );
     $(".chart-caption").eq(0).text("Síria");
     $(".chart-caption").eq(1).text("Venezuela");
@@ -185,7 +185,7 @@ addEventListener("DOMContentLoaded", (event) => {
         "É rápido e fácil de aceder. <br/> Basta clicares em Iniciar sessão no topo da página e procederes ao registo no nosso website."
       );
       $(".text2_card").text(
-        "Agora que fizeste o registo está apto para te candidatares. Para isso deves ir ao teu perfil e encontrarás a secção da Doação Especial."
+        "Agora que fizeste o registo estás apto para te candidatares. Para isso deves ir ao teu perfil e encontrarás a secção da Doação Especial."
       );
       $(".text3_card").html(
         "Foste aceite? Perfeito! <br/> Agora podes começar a ajudar os mais necessitados. Obrigado pela tua contribuição!"
@@ -193,7 +193,7 @@ addEventListener("DOMContentLoaded", (event) => {
       //cards about
       $(".about_tittle").text("Sobre nós");
       $(".text").text(
-        "O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Resringe-se a este tema, por ser um assunto da atualidade, e de extrema relevância. Para colmatar este problema o STR disponibliza ferramentas onde particulares e empresas podem candidatar-se no auxílio a famílias refugiadas, permitindo não ser só informativo, mas também interativo."
+        "O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Resringe-se a este tema, por ser um assunto da atualidade, e de extrema relevância. Para colmatar este problema o STR disponibiliza ferramentas onde particulares e empresas podem candidatar-se no auxílio a famílias refugiadas, permitindo não ser só informativo, mas também interativo."
       );
       $(".skills").children().eq(0).text("Voluntariado");
       $(".skills").children().eq(1).text("Interativo & Informativo");
@@ -201,7 +201,7 @@ addEventListener("DOMContentLoaded", (event) => {
       //bar chart
       $(".content-title").text("Quantos refugiados existem no mundo?");
       $(".content-text").html(
-        "Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas. Entre elas estão quase 27,1 milhões de refugiados, cerca de metade dos quais têm menos de 18 anos, pessoas a quem foi negada a nacionalidade e que não têm acesso a direitos básicos como educação, saúde, emprego e liberdade de movimento. <br><br>O gráfico ao lado mostra que 65% saíram de apenas cinco países. Os números não somam 100 por cento devido a arredondamentos, este também exclui refugiados palestinos sob mandato da UNRWA. Este é o número de refugiados venezuelanos e venezuelanos deslocados no exterior. "
+        "Pelo menos 89,3 milhões de pessoas em todo o mundo foram forçadas a deixar suas casas. Entre elas estão quase 27,1 milhões de refugiados, cerca de metade dos quais têm menos de 18 anos, pessoas a quem foi negada a nacionalidade e que não têm acesso a direitos básicos como educação, saúde, emprego e liberdade de movimento. <br><br>O gráfico ao lado mostra que 65% saíram de apenas cinco países. Os números não somam 100 por cento devido a arredondamentos, este também exclui refugiados palestinos sob mandato da UNRWA. Este é o número de refugiados venezuelanos deslocados no exterior. "
       );
       $(".chart-caption").eq(0).text("Síria");
       $(".chart-caption").eq(1).text("Venezuela");

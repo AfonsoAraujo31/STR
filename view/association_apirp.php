@@ -28,7 +28,7 @@
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i>Início</a></li>
             <li class="li"><a class="active" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
             <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-            <li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria </a></li>
+            <!--<li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria</a></li>-->
             <li class="li"><a class="text-label-gray hover:text-white login" href="../view/login.php"><i class="fa-solid fa-user"></i> Conta</a></li>
             <li>
                 <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -76,7 +76,7 @@
                             <i class='fa fa-star'></i>
                             <i class='fa fa-star'></i>
                         </div>
-                        <div class="description">
+                        <div class="description text-justify">
                             <p>Associação de apoio a Imigrantes e Refugiados em Portugal foi constituída sem fins lucrativos de acordo com a lei portuguesa, no dia 18 de setembro de 2015. Os membros da Associação de apoio a Imigrantes e Refugiados em Portugal que, independentemente da sua origem, língua e género, decidiram unir-se para melhorar as condições de vida APIRP viver em Portugal. Acreditamos que unindo esforços e trabalhando em conjunto, facilitaremos a nossa integração no país que nos acolheu: Portugal!</p>
                         </div>
                     </div>

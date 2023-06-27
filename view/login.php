@@ -45,7 +45,7 @@ if ($_COOKIE['sing_in']) {
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/home.php"><i class="fa-solid fa-house"></i> Início</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/volunteer.php"><i class="fa-solid fa-handshake-angle"></i> Voluntariado</a></li>
       <li class="li"><a class="text-label-gray hover:text-white" href="../view/specialdonation.php"><i class="fa-solid fa-circle-dollar-to-slot"></i> Doação Especial </a></li>
-      <li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria </a></li>
+      <!--<li class="li"><a class="text-label-gray hover:text-white" href="../view/gallery"><i class="fa-solid fa-circle-dollar-to-slot"></i> Galeria</a></li>-->
       <li class="li"><a class="text-label-gray hover:text-white login" href="../view/login.php"><i class="fa-solid fa-user"></i> Conta</a></li>
       <li>
         <!-- LINGUAGE *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
@@ -92,26 +92,26 @@ if ($_COOKIE['sing_in']) {
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          
-            <div class="row mb-4">
-              <div class="col">
-                <div class="form-outline">
-                  <input type="text" id="nome" class="form-control w-100" />
-                  <label class="form-label" for="form3Example1">Nome</label>
-                </div>
-              </div>
-              <div class="col">
-                <div class="form-outline">
-                  <input type="text" id="sobrenome" class="form-control" />
-                  <label class="form-label" for="form3Example2">Sobrenome</label>
-                </div>
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="nome" class="form-control w-100" />
+                <label class="form-label" for="form3Example1">Nome</label>
               </div>
             </div>
-            <div class="form-outline mb-4">
-              <input type="email" id="email" class="form-control" />
-              <label class="form-label" for="form3Example3">Endereço de email</label>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="sobrenome" class="form-control" />
+                <label class="form-label" for="form3Example2">Sobrenome</label>
+              </div>
             </div>
-          
+          </div>
+          <div class="form-outline mb-4">
+            <input type="email" id="email" class="form-control" />
+            <label class="form-label" for="form3Example3">Endereço de email</label>
+          </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -303,6 +303,20 @@ if ($_COOKIE['sing_in']) {
         container.classList.add("sign-up-mode");
       }
     });
+
+    var inputElement = document.getElementById('input_telemovel_reg');
+    restrictDigits(inputElement);
+
+    function restrictDigits(inputElement) {
+      inputElement.addEventListener('input', function(event) {
+        var inputValue = event.target.value;
+        var digitCount = inputValue.replace(/[^0-9]/g, '').length;
+
+        if (digitCount > 8) {
+          event.target.value = inputValue.slice(0, -1);
+        }
+      });
+    }
   </script>
 
   <script type="module" src="../controller/login.js"></script>

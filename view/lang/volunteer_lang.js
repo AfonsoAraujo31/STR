@@ -25,7 +25,7 @@ function associacoes_pt() {
             <div class="stars">
                 ${element.star}
             </div>
-            <p>
+            <p class="text-justify">
             ${element.detail}
             <br><button class="button-28"><a class="button-28-link" href="${element.id}">Ver mais</a></button>
         </div>
@@ -63,7 +63,7 @@ function associacoes_en() {
             <div class="stars">
                 ${element.star}
             </div>
-            <p>
+            <p class="text-justify">
             ${element.detail}
             <br><button class="button-28"><a class="button-28-link" href="${element.id}">See More</a></button>
         </div>
@@ -102,7 +102,7 @@ function associacoes_fr() {
             <div class="stars">
                 ${element.star}
             </div>
-            <p>
+            <p class="text-justify">
             ${element.detail}
             <br><button class="button-28"><a class="button-28-link" href="${element.id}">Voir plus</a></button>
         </div>
