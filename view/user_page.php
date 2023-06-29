@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="./css/admin/style.css">
     <link rel="stylesheet" href="./css/login/style.css">
     <div id="includedCssContent"></div>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <!----===== Boxicons CSS ===== -->
@@ -21,7 +19,7 @@
     <title>STR</title>
 </head>
 
-<body style="display:none; overflow-y:auto;" id="body">
+<body id="body">
     <header class="bg-strong-gray">
         <!-- RESPONSIVE BARS *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*-->
         <input type="checkbox" id="check" />
@@ -621,7 +619,20 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span><?php include '../model/admin/count_appliances.php'; ?></span>
+                        <span><?php
+                            ini_set('display_errors', 0);
+                            require '/wamp64/www/STR/configurations/dbconnection.php';
+                            
+                            $query = "SELECT 'candidaturas' as table_name, COUNT(*) as row_count FROM candidaturas";
+                            
+                            $result = mysqli_query($conn, $query);
+                            $total = 0;
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $rowCount = $row['row_count'];
+                                $total = $total + $rowCount;
+                            }
+                            echo $total;
+                            ?></span>
                         </div>
                         <div class="desc">Candidaturas</div>
                     </div>
@@ -634,7 +645,19 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span><?php include '../model/admin/count_users.php'; ?></span>
+                            <span><?php
+                            ini_set('display_errors', 0);
+                            require '/wamp64/www/STR/configurations/dbconnection.php';
+                            
+                            $query = "SELECT 'utilizadores' as table_name, COUNT(*) as row_count FROM utilizadores";
+                            
+                            $result = mysqli_query($conn, $query);
+                            
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $rowCount = $row['row_count'];
+                            }
+                            echo $rowCount;
+                            ?></span>
                         </div>
                         <div class="desc">Utilizadores</div>
                     </div>
@@ -647,7 +670,20 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span><?php include '../model/admin/count_appliances.php'; ?></span>
+                            <span><?php 
+                            ini_set('display_errors', 0);
+                            require '/wamp64/www/STR/configurations/dbconnection.php';
+                            
+                            $query = "SELECT 'candidaturas_familias' as table_name, COUNT(*) as row_count FROM candidaturas";
+                            
+                            $result = mysqli_query($conn, $query);
+                            $total = 0;
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $rowCount = $row['row_count'];
+                                $total = $total + $rowCount;
+                            }
+                            echo $total;
+                            ?></span>
                         </div>
                         <div class="desc">Candidaturas</div>
                     </div>
@@ -660,7 +696,31 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span><?php include '../model/admin/count_comments.php'; ?></span>
+                            <span><?php 
+                            ini_set('display_errors', 0);
+                            require '/wamp64/www/STR/configurations/dbconnection.php';
+                            
+                            $query = "
+                                SELECT 'comentarios_cv' as table_name, COUNT(*) as row_count FROM comentarios_cv
+                                UNION ALL
+                                SELECT 'comentarios_cpr' as table_name, COUNT(*) as row_count FROM comentarios_cpr
+                                UNION ALL
+                                SELECT 'comentarios_cbl' as table_name, COUNT(*) as row_count FROM comentarios_cbl
+                                UNION ALL
+                                SELECT 'comentarios_apirp' as table_name, COUNT(*) as row_count FROM comentarios_apirp
+                                UNION ALL
+                                SELECT 'comentarios_alcc' as table_name, COUNT(*) as row_count FROM comentarios_alcc
+                            ";
+                            
+                            $result = mysqli_query($conn, $query);
+                            $total = 0;
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $rowCount = $row['row_count'];
+                                $total = $total + $rowCount;
+                            }
+                            echo $total;
+                            
+                            ?></span>
                         </div>
                         <div class="desc">Comentários</div>
                     </div>
@@ -1278,23 +1338,20 @@
             location.href = "http://localhost/STR/model/admin/approve_appliance_family.php?id=" + id + "&tipo=" + tipo;
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+<script src="../controller/common/load_content.js"></script>
+    <script src="../controller/common/include_components.js"></script>
     <script src="../controller/admin/script.js"></script>
     <script src="../controller/login/script.js"></script>
     <script src="../controller/login/script2.js"></script>
     <script src="../controller/login/script3.js"></script>
-    <script type="module" src="./lang/appliance_lang.js"></script>
+    <script src="../controller/admin/admin.js"></script>
     <!-- Language -->
+    <script type="module" src="./lang/appliance_lang.js"></script>
     <script type="module" src="./lang/common/header_lang.js"></script>
     <script type="module" src="./lang/common/language_lang.js"></script>
     <script type="module" src="./lang/admin_lang.js"></script>
     <script type="module" src="./lang/userpage_lang.js"></script>
-    <script type="module" src="../controller/common/include_components.js"></script>
-    <script type="module" src="../configurations/loadcontent.js"></script>
-    <script type="module" src="../controller/admin/admin.js"></script>
-    <script type="module" src="../controller/admin/script.js"></script>
-    <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
     <!-- Font Awesome Kit -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -1308,6 +1365,4 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-</body>
-
 </html>
