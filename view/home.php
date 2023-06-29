@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<script>/*
+<script>
+  /*
   var currentDate = new Date();
   var expirationDate = new Date(currentDate.getFullYear() + 1, currentDate.getMonth(), currentDate.getDate());
 
   // Create the cookies
-  document.cookie = "sing_in=0; path=/; expires=" + expirationDate.toUTCString() + ";";
+  document.cookie = "sing_in=; path=/; expires=" + expirationDate.toUTCString() + ";";
   document.cookie = "_ga=GA1.1.1244421821.1686141423; path=/; expires=" + expirationDate.toUTCString() + ";";
-  document.cookie = "current_user=; path=/; expires=" + expirationDate.toUTCString() + ";";
   document.cookie = "__stripe_mid=f185b29c-bb00-4d35-b609-29680f02f7d6a0f2ce; domain=.fontawesome.com; path=/; expires=" + expirationDate.toUTCString() + "; secure; SameSite=Strict;";
 */
 </script>

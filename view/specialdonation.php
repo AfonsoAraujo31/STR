@@ -22,13 +22,13 @@
 <body class=<?php ini_set('display_errors', 0);
             if ($_COOKIE["sing_in"] == 1 || $_COOKIE["sing_in"] == "1") {
               echo "";
-            } else if ($_COOKIE["sing_in"] == 0 || $_COOKIE["sing_in"] == "") {
+            } else {
               echo "overflow";
             } ?>>
   <div class="center-div" style="<?php ini_set('display_errors', 0);
                                   if ($_COOKIE["sing_in"] == "1" || $_COOKIE["sing_in"] == 1) {
                                     echo 'visibility:hidden;">';
-                                  } else if ($_COOKIE["sing_in"] == "" || $_COOKIE["sing_in"] == 0) {
+                                  } else{
                                     echo 'visibility:visible;';
                                   } ?>">
     <section class="container animate__animated animate__bounceIn">
@@ -71,7 +71,7 @@
   <div class=<?php ini_set('display_errors', 0);
               if ($_COOKIE["sing_in"] == 1 || $_COOKIE["sing_in"] == "1") {
                 echo "blur-out";
-              } else if ($_COOKIE["sing_in"] == "" || $_COOKIE["sing_in"] == 0) {
+              } else{
                 echo "blur-in";
               } ?>>
     <div style="display:none;" id="teste">
@@ -82,7 +82,7 @@
         <?php ini_set('display_errors', 0);
         if ($_COOKIE["sing_in"] == 1 || $_COOKIE["sing_in"] == "1") {
           echo '<div class="wrapper animate__animated animate__fadeIn">';
-        } else if ($_COOKIE["sing_in"] == "" || $_COOKIE["sing_in"] == 0) {
+        } else{
           echo '<div class="wrapper">';
         } ?>
         <div class="title uppercase">O que é a Doação Especial ?</div>

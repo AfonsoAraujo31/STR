@@ -92,12 +92,13 @@ addEventListener("DOMContentLoaded", (event) => {
 addEventListener("DOMContentLoaded", (event) => {
   let db = null;
   //0 = login por fazer || 1 == login feito
-  if (localStorage.getItem("sing_in") == 1) {
+  if (document.cookie.indexOf("sing_in=1") !== -1) {
     document.getElementById("login").innerHTML = ``;
   } else {
     document.getElementById("comments").innerHTML = ``;
     localStorage.setItem("temp_user", "");
   }
+  
 });
 function clear_text() {
   document.getElementById("textAreaExample").value = "";

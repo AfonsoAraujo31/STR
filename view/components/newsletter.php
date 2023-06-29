@@ -17,7 +17,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'afonso16araujo@gmail.com';
-    $mail->Password   = 'ybicdcikrodnnabx';
+    $mail->Password   = 'pntwfrdsbrnqskoh';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
     // Recipients
@@ -63,6 +63,6 @@ try {
 
     $mail->send();
     echo "<script>location.href='http://localhost/STR/view/home.php';</script>";
-} catch (Exception $e) {
+} catch (Exception $e) {  
     echo "<script>location.href='http://localhost/STR/view/home.php?error=newsletter';</script>";
 }
