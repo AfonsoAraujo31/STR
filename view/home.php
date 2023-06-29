@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 
+<script>/*
+  var currentDate = new Date();
+  var expirationDate = new Date(currentDate.getFullYear() + 1, currentDate.getMonth(), currentDate.getDate());
+
+  // Create the cookies
+  document.cookie = "sing_in=0; path=/; expires=" + expirationDate.toUTCString() + ";";
+  document.cookie = "_ga=GA1.1.1244421821.1686141423; path=/; expires=" + expirationDate.toUTCString() + ";";
+  document.cookie = "current_user=; path=/; expires=" + expirationDate.toUTCString() + ";";
+  document.cookie = "__stripe_mid=f185b29c-bb00-4d35-b609-29680f02f7d6a0f2ce; domain=.fontawesome.com; path=/; expires=" + expirationDate.toUTCString() + "; secure; SameSite=Strict;";
+*/
+</script>
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -145,7 +157,7 @@
     <div class="inner-container reveal bg-white">
       <h1 class="about_tittle">Sobre nós</h1>
       <p class="text text-weak-gray">
-      O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Restringir-se a este tema, por ser um assunto da atualidade, e de extrema relevância. Para colmatar este problema o STR disponibiliza ferramentas onde particulares e empresas podem candidatar-se no auxílio a famílias refugiadas, permitindo não ser só informativo, mas também interativo.
+        O STR é um website de Voluntariado Social abrangendo unicamente os Refugiados. Restringir-se a este tema, por ser um assunto da atualidade, e de extrema relevância. Para colmatar este problema o STR disponibiliza ferramentas onde particulares e empresas podem candidatar-se no auxílio a famílias refugiadas, permitindo não ser só informativo, mas também interativo.
       </p>
       <div class="skills">
         <span>Voluntariado</span>

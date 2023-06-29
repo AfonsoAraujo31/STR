@@ -144,7 +144,6 @@ $(function () {
     $(".preferencias").eq(1).text("Em caso de contacto, forma preferida");
     $(".preferencias").eq(2).text("Preferência do estado dos cookies");
     $(".preferencias").eq(3).text("Exibir definições após iniciar sessão");
-    /*
     if ($(".selected_linguagem").text() == "Português") {
       $(".selected_linguagem").text("Português");
     } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -153,41 +152,38 @@ $(function () {
       $(".selected_linguagem").text("Françes");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_linguagem").text("Sem preferência");
-    }*/
+    }
     $(".linguagem").eq(0).text("Sem preferência");
     $(".linguagem").eq(1).text("Português");
     $(".linguagem").eq(2).text("Inglês");
     $(".linguagem").eq(3).text("Françes");
-    /*
     if ($(".selected_contacto").text() == "Telemóvel") {
       $(".selected_contacto").text("Telemóvel");
     } else if ($(".selected_contacto").text() == "Email") {
       $(".selected_contacto").text("Email");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_contacto").text("Sem preferência");
-    }*/
+    }
     $(".contacto").eq(0).text("Sem preferência");
     $(".contacto").eq(1).text("Telemóvel");
     $(".contacto").eq(2).text("Email");
-    /*
     if ($(".selected_coockies").text() == "Ativado") {
       $(".selected_coockies").text("Ativado");
     } else if ($(".selected_coockies").text() == "Desativado") {
       $(".selected_coockies").text("Desativado");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_coockies").text("Sem preferência");
-    }*/
+    }
     $(".coockies").eq(0).text("Sem preferência");
     $(".coockies").eq(1).text("Ativado");
     $(".coockies").eq(2).text("Desativado");
-    /*
     if ($(".selected_dados_login").text() == "Sim") {
       $(".selected_dados_login").text("Sim");
     } else if ($(".selected_dados_login").text() == "Não") {
       $(".selected_dados_login").text("Não");
     } else if ($(".selected_dados_login").text() == "Sem preferência") {
       $(".selected_dados_login").text("Sem preferência");
-    }*/
+    }
     $(".dados_login").eq(0).text("Sem preferência");
     $(".dados_login").eq(1).text("Sim");
     $(".dados_login").eq(2).text("Não");
@@ -214,7 +210,6 @@ $(function () {
     //pagina candidaturas
     $(".card-title-inside").text("Família");
     $(".title_informacoes").text("1");
-
   });
 });
 /**
@@ -249,7 +244,6 @@ $(function () {
     $(".preferencias").eq(1).text("In case of contact, preferred method");
     $(".preferencias").eq(2).text("Cookie state preference");
     $(".preferencias").eq(3).text("Show settings after login");
-    /*
     if ($(".selected_linguagem").text() == "Português") {
       $(".selected_linguagem").text("Portuguese");
     } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -258,41 +252,40 @@ $(function () {
       $(".selected_linguagem").text("French");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_linguagem").text("No preference");
-    }*/
+    }
     $(".linguagem").eq(0).text("No preference");
     $(".linguagem").eq(1).text("Portuguese");
     $(".linguagem").eq(2).text("English");
     $(".linguagem").eq(3).text("French");
-    /*
     if ($(".selected_contacto").text() == "Telemóvel") {
       $(".selected_contacto").text("Phone");
     } else if ($(".selected_contacto").text() == "Email") {
       $(".selected_contacto").text("Email");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_contacto").text("No preference");
-    }*/
+    }
     $(".contacto").eq(0).text("No preference");
     $(".contacto").eq(1).text("Phone");
     $(".contacto").eq(2).text("Email");
-    /*
+
     if ($(".selected_coockies").text() == "Ativado") {
       $(".selected_coockies").text("Activated");
     } else if ($(".selected_coockies").text() == "Desativado") {
       $(".selected_coockies").text("Disabled");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_coockies").text("No preference");
-    }*/
+    }
     $(".coockies").eq(0).text("No preference");
     $(".coockies").eq(1).text("Activated");
     $(".coockies").eq(2).text("Disabled");
-    /*
+
     if ($(".selected_dados_login").text() == "Sim") {
       $(".selected_dados_login").text("Yes");
     } else if ($(".selected_dados_login").text() == "Não") {
       $(".selected_dados_login").text("No");
     } else if ($(".selected_dados_login").text() == "Sem preferência") {
       $(".selected_dados_login").text("No preference");
-    }*/
+    }
     $(".dados_login").eq(0).text("No preference");
     $(".dados_login").eq(1).text("Yes");
     $(".dados_login").eq(2).text("No");
@@ -349,7 +342,7 @@ $(function () {
     $(".preferencias").eq(1).text("En cas de contact, méthode privilégiée");
     $(".preferencias").eq(2).text("Préférence d'état des cookies");
     $(".preferencias").eq(3).text("Afficher les paramètres après la connexion");
-    /*
+
     if ($(".selected_linguagem").text() == "Português") {
       $(".selected_linguagem").text("Portugais");
     } else if ($(".selected_linguagem").text() == "Inglês") {
@@ -358,41 +351,41 @@ $(function () {
       $(".selected_linguagem").text("Français");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_linguagem").text("Pas de préférence");
-    }*/
+    }
     $(".linguagem").eq(0).text("Pas de préférence");
     $(".linguagem").eq(1).text("Portugais");
     $(".linguagem").eq(2).text("Anglaise");
     $(".linguagem").eq(3).text("Français");
-    /*
+
     if ($(".selected_contacto").text() == "Telemóvel") {
       $(".selected_contacto").text("Téléphone");
     } else if ($(".selected_contacto").text() == "Email") {
       $(".selected_contacto").text("Email");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_contacto").text("Pas de préférence");
-    }*/
+    }
     $(".contacto").eq(0).text("Pas de préférence");
     $(".contacto").eq(1).text("Téléphone");
     $(".contacto").eq(2).text("Email");
-    /*
+
     if ($(".selected_coockies").text() == "Ativado") {
       $(".selected_coockies").text("Activé");
     } else if ($(".selected_coockies").text() == "Desativado") {
       $(".selected_coockies").text("Désactivé");
     } else if ($(".selected_linguagem").text() == "Sem preferência") {
       $(".selected_coockies").text("Pas de préférence");
-    }*/
+    }
     $(".coockies").eq(0).text("Pas de préférence");
     $(".coockies").eq(1).text("Activé");
     $(".coockies").eq(2).text("Désactivé");
-    /*
+
     if ($(".selected_dados_login").text() == "Sim") {
       $(".selected_dados_login").text("Oui");
     } else if ($(".selected_dados_login").text() == "Não") {
       $(".selected_dados_login").text("Au");
     } else if ($(".selected_dados_login").text() == "Sem preferência") {
       $(".selected_dados_login").text("Pas de préférence");
-    }*/
+    }
     $(".dados_login").eq(0).text("Pas de préférence");
     $(".dados_login").eq(1).text("Oui");
     $(".dados_login").eq(2).text("Au");
@@ -449,50 +442,50 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".preferencias").eq(1).text("Em caso de contacto, forma preferida");
       $(".preferencias").eq(2).text("Preferência do estado dos cookies");
       $(".preferencias").eq(3).text("Exibir definições após iniciar sessão");
-      /*
-    if ($(".selected_linguagem").text() == "Português") {
-      $(".selected_linguagem").text("Português");
-    } else if ($(".selected_linguagem").text() == "Inglês") {
-      $(".selected_linguagem").text("Inglês");
-    } else if ($(".selected_linguagem").text() == "Françes") {
-      $(".selected_linguagem").text("Françes");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_linguagem").text("Sem preferência");
-    }*/
+
+      if ($(".selected_linguagem").text() == "Português") {
+        $(".selected_linguagem").text("Português");
+      } else if ($(".selected_linguagem").text() == "Inglês") {
+        $(".selected_linguagem").text("Inglês");
+      } else if ($(".selected_linguagem").text() == "Françes") {
+        $(".selected_linguagem").text("Françes");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_linguagem").text("Sem preferência");
+      }
       $(".linguagem").eq(0).text("Sem preferência");
       $(".linguagem").eq(1).text("Português");
       $(".linguagem").eq(2).text("Inglês");
       $(".linguagem").eq(3).text("Françes");
-      /*
-    if ($(".selected_contacto").text() == "Telemóvel") {
-      $(".selected_contacto").text("Telemóvel");
-    } else if ($(".selected_contacto").text() == "Email") {
-      $(".selected_contacto").text("Email");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_contacto").text("Sem preferência");
-    }*/
+
+      if ($(".selected_contacto").text() == "Telemóvel") {
+        $(".selected_contacto").text("Telemóvel");
+      } else if ($(".selected_contacto").text() == "Email") {
+        $(".selected_contacto").text("Email");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_contacto").text("Sem preferência");
+      }
       $(".contacto").eq(0).text("Sem preferência");
       $(".contacto").eq(1).text("Telemóvel");
       $(".contacto").eq(2).text("Email");
-      /*
-    if ($(".selected_coockies").text() == "Ativado") {
-      $(".selected_coockies").text("Ativado");
-    } else if ($(".selected_coockies").text() == "Desativado") {
-      $(".selected_coockies").text("Desativado");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_coockies").text("Sem preferência");
-    }*/
+
+      if ($(".selected_coockies").text() == "Ativado") {
+        $(".selected_coockies").text("Ativado");
+      } else if ($(".selected_coockies").text() == "Desativado") {
+        $(".selected_coockies").text("Desativado");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_coockies").text("Sem preferência");
+      }
       $(".coockies").eq(0).text("Sem preferência");
       $(".coockies").eq(1).text("Ativado");
       $(".coockies").eq(2).text("Desativado");
-      /*
-    if ($(".selected_dados_login").text() == "Sim") {
-      $(".selected_dados_login").text("Sim");
-    } else if ($(".selected_dados_login").text() == "Não") {
-      $(".selected_dados_login").text("Não");
-    } else if ($(".selected_dados_login").text() == "Sem preferência") {
-      $(".selected_dados_login").text("Sem preferência");
-    }*/
+
+      if ($(".selected_dados_login").text() == "Sim") {
+        $(".selected_dados_login").text("Sim");
+      } else if ($(".selected_dados_login").text() == "Não") {
+        $(".selected_dados_login").text("Não");
+      } else if ($(".selected_dados_login").text() == "Sem preferência") {
+        $(".selected_dados_login").text("Sem preferência");
+      }
       $(".dados_login").eq(0).text("Sem preferência");
       $(".dados_login").eq(1).text("Sim");
       $(".dados_login").eq(2).text("Não");
@@ -547,50 +540,50 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".preferencias").eq(1).text("In case of contact, preferred method");
       $(".preferencias").eq(2).text("Cookie state preference");
       $(".preferencias").eq(3).text("Show settings after login");
-      /*
-    if ($(".selected_linguagem").text() == "Português") {
-      $(".selected_linguagem").text("Portuguese");
-    } else if ($(".selected_linguagem").text() == "Inglês") {
-      $(".selected_linguagem").text("English");
-    } else if ($(".selected_linguagem").text() == "Françes") {
-      $(".selected_linguagem").text("French");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_linguagem").text("No preference");
-    }*/
+
+      if ($(".selected_linguagem").text() == "Português") {
+        $(".selected_linguagem").text("Portuguese");
+      } else if ($(".selected_linguagem").text() == "Inglês") {
+        $(".selected_linguagem").text("English");
+      } else if ($(".selected_linguagem").text() == "Françes") {
+        $(".selected_linguagem").text("French");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_linguagem").text("No preference");
+      }
       $(".linguagem").eq(0).text("No preference");
       $(".linguagem").eq(1).text("Portuguese");
       $(".linguagem").eq(2).text("English");
       $(".linguagem").eq(3).text("French");
-      /*
-    if ($(".selected_contacto").text() == "Telemóvel") {
-      $(".selected_contacto").text("Phone");
-    } else if ($(".selected_contacto").text() == "Email") {
-      $(".selected_contacto").text("Email");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_contacto").text("No preference");
-    }*/
+
+      if ($(".selected_contacto").text() == "Telemóvel") {
+        $(".selected_contacto").text("Phone");
+      } else if ($(".selected_contacto").text() == "Email") {
+        $(".selected_contacto").text("Email");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_contacto").text("No preference");
+      }
       $(".contacto").eq(0).text("No preference");
       $(".contacto").eq(1).text("Phone");
       $(".contacto").eq(2).text("Email");
-      /*
-    if ($(".selected_coockies").text() == "Ativado") {
-      $(".selected_coockies").text("Activated");
-    } else if ($(".selected_coockies").text() == "Desativado") {
-      $(".selected_coockies").text("Disabled");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_coockies").text("No preference");
-    }*/
+
+      if ($(".selected_coockies").text() == "Ativado") {
+        $(".selected_coockies").text("Activated");
+      } else if ($(".selected_coockies").text() == "Desativado") {
+        $(".selected_coockies").text("Disabled");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_coockies").text("No preference");
+      }
       $(".coockies").eq(0).text("No preference");
       $(".coockies").eq(1).text("Activated");
       $(".coockies").eq(2).text("Disabled");
-      /*
-    if ($(".selected_dados_login").text() == "Sim") {
-      $(".selected_dados_login").text("Yes");
-    } else if ($(".selected_dados_login").text() == "Não") {
-      $(".selected_dados_login").text("No");
-    } else if ($(".selected_dados_login").text() == "Sem preferência") {
-      $(".selected_dados_login").text("No preference");
-    }*/
+
+      if ($(".selected_dados_login").text() == "Sim") {
+        $(".selected_dados_login").text("Yes");
+      } else if ($(".selected_dados_login").text() == "Não") {
+        $(".selected_dados_login").text("No");
+      } else if ($(".selected_dados_login").text() == "Sem preferência") {
+        $(".selected_dados_login").text("No preference");
+      }
       $(".dados_login").eq(0).text("No preference");
       $(".dados_login").eq(1).text("Yes");
       $(".dados_login").eq(2).text("No");
@@ -644,50 +637,50 @@ addEventListener("DOMContentLoaded", (event) => {
       $(".preferencias")
         .eq(3)
         .text("Afficher les paramètres après la connexion");
-      /*
-    if ($(".selected_linguagem").text() == "Português") {
-      $(".selected_linguagem").text("Portugais");
-    } else if ($(".selected_linguagem").text() == "Inglês") {
-      $(".selected_linguagem").text("Anglaise");
-    } else if ($(".selected_linguagem").text() == "Françes") {
-      $(".selected_linguagem").text("Français");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_linguagem").text("Pas de préférence");
-    }*/
+
+      if ($(".selected_linguagem").text() == "Português") {
+        $(".selected_linguagem").text("Portugais");
+      } else if ($(".selected_linguagem").text() == "Inglês") {
+        $(".selected_linguagem").text("Anglaise");
+      } else if ($(".selected_linguagem").text() == "Françes") {
+        $(".selected_linguagem").text("Français");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_linguagem").text("Pas de préférence");
+      }
       $(".linguagem").eq(0).text("Pas de préférence");
       $(".linguagem").eq(1).text("Portugais");
       $(".linguagem").eq(2).text("Anglaise");
       $(".linguagem").eq(3).text("Français");
-      /*
-    if ($(".selected_contacto").text() == "Telemóvel") {
-      $(".selected_contacto").text("Téléphone");
-    } else if ($(".selected_contacto").text() == "Email") {
-      $(".selected_contacto").text("Email");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_contacto").text("Pas de préférence");
-    }*/
+
+      if ($(".selected_contacto").text() == "Telemóvel") {
+        $(".selected_contacto").text("Téléphone");
+      } else if ($(".selected_contacto").text() == "Email") {
+        $(".selected_contacto").text("Email");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_contacto").text("Pas de préférence");
+      }
       $(".contacto").eq(0).text("Pas de préférence");
       $(".contacto").eq(1).text("Téléphone");
       $(".contacto").eq(2).text("Email");
-      /*
-    if ($(".selected_coockies").text() == "Ativado") {
-      $(".selected_coockies").text("Activé");
-    } else if ($(".selected_coockies").text() == "Desativado") {
-      $(".selected_coockies").text("Désactivé");
-    } else if ($(".selected_linguagem").text() == "Sem preferência") {
-      $(".selected_coockies").text("Pas de préférence");
-    }*/
+
+      if ($(".selected_coockies").text() == "Ativado") {
+        $(".selected_coockies").text("Activé");
+      } else if ($(".selected_coockies").text() == "Desativado") {
+        $(".selected_coockies").text("Désactivé");
+      } else if ($(".selected_linguagem").text() == "Sem preferência") {
+        $(".selected_coockies").text("Pas de préférence");
+      }
       $(".coockies").eq(0).text("Pas de préférence");
       $(".coockies").eq(1).text("Activé");
       $(".coockies").eq(2).text("Désactivé");
-      /*
-    if ($(".selected_dados_login").text() == "Sim") {
-      $(".selected_dados_login").text("Oui");
-    } else if ($(".selected_dados_login").text() == "Não") {
-      $(".selected_dados_login").text("Au");
-    } else if ($(".selected_dados_login").text() == "Sem preferência") {
-      $(".selected_dados_login").text("Pas de préférence");
-    }*/
+
+      if ($(".selected_dados_login").text() == "Sim") {
+        $(".selected_dados_login").text("Oui");
+      } else if ($(".selected_dados_login").text() == "Não") {
+        $(".selected_dados_login").text("Au");
+      } else if ($(".selected_dados_login").text() == "Sem preferência") {
+        $(".selected_dados_login").text("Pas de préférence");
+      }
       $(".dados_login").eq(0).text("Pas de préférence");
       $(".dados_login").eq(1).text("Oui");
       $(".dados_login").eq(2).text("Au");
