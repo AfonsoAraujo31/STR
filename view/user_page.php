@@ -600,7 +600,7 @@
         ?>
     </div>
     <div id="doacao-box" class="box home">
-    <div id="errorAlertModal" class="alert alert-warning hide-item errorAlertlogin" role="alert" style="position:absolute;width:30%;z-index:1;right:10px;">É necessário preencher o(s) campo(s)!</div>
+        <div id="errorAlertModal" class="alert alert-warning hide-item errorAlertlogin" role="alert" style="position:absolute;width:30%;z-index:1;right:10px;">É necessário preencher o(s) campo(s)!</div>
         <div class="container">
             <div id="products" class="row view-group">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -619,20 +619,20 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                        <span><?php
-                            ini_set('display_errors', 0);
-                            require '/wamp64/www/STR/configurations/dbconnection.php';
-                            
-                            $query = "SELECT 'candidaturas' as table_name, COUNT(*) as row_count FROM candidaturas";
-                            
-                            $result = mysqli_query($conn, $query);
-                            $total = 0;
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $rowCount = $row['row_count'];
-                                $total = $total + $rowCount;
-                            }
-                            echo $total;
-                            ?></span>
+                            <span><?php
+                                    ini_set('display_errors', 0);
+                                    require '/wamp64/www/STR/configurations/dbconnection.php';
+
+                                    $query = "SELECT 'candidaturas' as table_name, COUNT(*) as row_count FROM candidaturas";
+
+                                    $result = mysqli_query($conn, $query);
+                                    $total = 0;
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $rowCount = $row['row_count'];
+                                        $total = $total + $rowCount;
+                                    }
+                                    echo $total;
+                                    ?></span>
                         </div>
                         <div class="desc">Candidaturas</div>
                     </div>
@@ -646,18 +646,18 @@
                     <div class="details">
                         <div class="number">
                             <span><?php
-                            ini_set('display_errors', 0);
-                            require '/wamp64/www/STR/configurations/dbconnection.php';
-                            
-                            $query = "SELECT 'utilizadores' as table_name, COUNT(*) as row_count FROM utilizadores";
-                            
-                            $result = mysqli_query($conn, $query);
-                            
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $rowCount = $row['row_count'];
-                            }
-                            echo $rowCount;
-                            ?></span>
+                                    ini_set('display_errors', 0);
+                                    require '/wamp64/www/STR/configurations/dbconnection.php';
+
+                                    $query = "SELECT 'utilizadores' as table_name, COUNT(*) as row_count FROM utilizadores";
+
+                                    $result = mysqli_query($conn, $query);
+
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $rowCount = $row['row_count'];
+                                    }
+                                    echo $rowCount;
+                                    ?></span>
                         </div>
                         <div class="desc">Utilizadores</div>
                     </div>
@@ -670,20 +670,20 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span><?php 
-                            ini_set('display_errors', 0);
-                            require '/wamp64/www/STR/configurations/dbconnection.php';
-                            
-                            $query = "SELECT 'candidaturas_familias' as table_name, COUNT(*) as row_count FROM candidaturas";
-                            
-                            $result = mysqli_query($conn, $query);
-                            $total = 0;
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $rowCount = $row['row_count'];
-                                $total = $total + $rowCount;
-                            }
-                            echo $total;
-                            ?></span>
+                            <span><?php
+                                    ini_set('display_errors', 0);
+                                    require '/wamp64/www/STR/configurations/dbconnection.php';
+
+                                    $query = "SELECT 'candidaturas_familias' as table_name, COUNT(*) as row_count FROM candidaturas";
+
+                                    $result = mysqli_query($conn, $query);
+                                    $total = 0;
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $rowCount = $row['row_count'];
+                                        $total = $total + $rowCount;
+                                    }
+                                    echo $total;
+                                    ?></span>
                         </div>
                         <div class="desc">Candidaturas</div>
                     </div>
@@ -696,11 +696,11 @@
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span><?php 
-                            ini_set('display_errors', 0);
-                            require '/wamp64/www/STR/configurations/dbconnection.php';
-                            
-                            $query = "
+                            <span><?php
+                                    ini_set('display_errors', 0);
+                                    require '/wamp64/www/STR/configurations/dbconnection.php';
+
+                                    $query = "
                                 SELECT 'comentarios_cv' as table_name, COUNT(*) as row_count FROM comentarios_cv
                                 UNION ALL
                                 SELECT 'comentarios_cpr' as table_name, COUNT(*) as row_count FROM comentarios_cpr
@@ -711,16 +711,16 @@
                                 UNION ALL
                                 SELECT 'comentarios_alcc' as table_name, COUNT(*) as row_count FROM comentarios_alcc
                             ";
-                            
-                            $result = mysqli_query($conn, $query);
-                            $total = 0;
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $rowCount = $row['row_count'];
-                                $total = $total + $rowCount;
-                            }
-                            echo $total;
-                            
-                            ?></span>
+
+                                    $result = mysqli_query($conn, $query);
+                                    $total = 0;
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $rowCount = $row['row_count'];
+                                        $total = $total + $rowCount;
+                                    }
+                                    echo $total;
+
+                                    ?></span>
                         </div>
                         <div class="desc">Comentários</div>
                     </div>
@@ -1017,21 +1017,21 @@
                 </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="container_preferencias_fotoperfil">
-        <div class="container_preferencias" >
-            <div class="title">Candidatos a Doador Especial</div>
-            <br>
-            <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
-                <?php include '../model/admin/load_appliances.php'; ?>
+        <br>
+        <div class="container_preferencias_fotoperfil">
+            <div class="container_preferencias">
+                <div class="title">Candidatos a Doador Especial</div>
+                <br>
+                <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
+                    <?php include '../model/admin/load_appliances.php'; ?>
+                </div>
             </div>
-        </div>
-        <div class="container_preferencias" >
-            <div class="title">Candidatos às familias</div>
-            <br>
-            <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
-                <?php include '../model/admin/load_familys_appliances.php'; ?>
+            <div class="container_preferencias">
+                <div class="title">Candidatos às familias</div>
+                <br>
+                <div style="max-height: 450px;overflow-y:auto;overflow-x:hidden;">
+                    <?php include '../model/admin/load_familys_appliances.php'; ?>
+                </div>
             </div>
         </div>
     </div>
@@ -1287,10 +1287,10 @@
                 setTimeout(function() {
                     $("#errorAlertModal").hide("medium");
                 }, 4000);
-            }else{
+            } else {
                 setTimeout(function() {
-                location.href = "http://localhost/STR/model/specialdonation/insert_appliances_family.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&id=" + id + "&motivacao_familia=" + motivacao_familia + "&tipo=" + tipo + "&frequencia=" + frequencia + "&quantidade=" + quantidade + "&data_inicio=" + data_inicio;
-            }, 300);
+                    location.href = "http://localhost/STR/model/specialdonation/insert_appliances_family.php?email=" + email + "&nome=" + nome + "&sobrenome=" + sobrenome + "&id=" + id + "&motivacao_familia=" + motivacao_familia + "&tipo=" + tipo + "&frequencia=" + frequencia + "&quantidade=" + quantidade + "&data_inicio=" + data_inicio;
+                }, 300);
             }
         }
 
@@ -1334,35 +1334,36 @@
             location.href = "http://localhost/STR/model/admin/disapprove_appliance_family.php?id=" + id;
         }
 
-        function approve_family(id,tipo) {
+        function approve_family(id, tipo) {
             location.href = "http://localhost/STR/model/admin/approve_appliance_family.php?id=" + id + "&tipo=" + tipo;
         }
     </script>
 </body>
 <script src="../controller/common/load_content.js"></script>
-    <script src="../controller/common/include_components.js"></script>
-    <script src="../controller/admin/script.js"></script>
-    <script src="../controller/login/script.js"></script>
-    <script src="../controller/login/script2.js"></script>
-    <script src="../controller/login/script3.js"></script>
-    <script src="../controller/admin/admin.js"></script>
-    <!-- Language -->
-    <script type="module" src="./lang/appliance_lang.js"></script>
-    <script type="module" src="./lang/common/header_lang.js"></script>
-    <script type="module" src="./lang/common/language_lang.js"></script>
-    <script type="module" src="./lang/admin_lang.js"></script>
-    <script type="module" src="./lang/userpage_lang.js"></script>
-    <!-- Font Awesome Kit -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
-    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="../controller/common/include_components.js"></script>
+<script src="../controller/admin/script.js"></script>
+<script src="../controller/login/script.js"></script>
+<script src="../controller/login/script2.js"></script>
+<script src="../controller/login/script3.js"></script>
+<script src="../controller/admin/admin.js"></script>
+<!-- Language -->
+<script type="module" src="./lang/appliance_lang.js"></script>
+<script type="module" src="./lang/common/header_lang.js"></script>
+<script type="module" src="./lang/common/language_lang.js"></script>
+<script type="module" src="./lang/admin_lang.js"></script>
+<script type="module" src="./lang/userpage_lang.js"></script>
+<!-- Font Awesome Kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://kit.fontawesome.com/353081318a.js" crossorigin="anonymous"></script>
+<!-- Bootstrap  jQuery, Popper.js *___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___*___* -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
 </html>
